@@ -20,15 +20,17 @@ sass_dir = "sass"
 images_dir = "images"
 generated_images_dir = images_dir + "/generated"
 javascripts_dir = "js"
+fonts_dir = "fonts"
 
 # Require any additional compass plugins installed on your system.
 require 'compass-normalize'
 require 'rgbapng'
 require 'toolkit'
 require 'breakpoint'
-require 'singularitygs'
+# require 'singularitygs'
 require 'susy'
 require 'sass-globbing'
+require 'font-awesome-sass'
 
 ##
 ## You probably don't need to edit anything below this.

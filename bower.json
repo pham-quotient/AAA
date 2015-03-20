@@ -1,5 +1,5 @@
 {
-  "name": "{{ THEME }}",
+  "name": "si_aa",
   "version": "1.0.0",
   "dependencies": {
     "respond": "fubhy/respond",
