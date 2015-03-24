@@ -1,0 +1,129 @@
+/*******************************************************************************
+ * baseline.layout.scss
+ *
+ * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+// Use 'border-box' for the box model.
+@import "toolkit/kickstart";
+@import "susy";
+@import "breakpoint";
+
+// Globbing from within sub-folders only works with relative paths.
+@import "../../variables/**/*";
+
+// Susy Defaults (http://susy.readthedocs.org/en/latest/settings/)
+$susy: (
+  columns:            12,
+  container:          90%,
+  gutters:            $gutter,
+ // debug:              (image:show),
+);
+
+
+.l-container,
+.l-region--navigation {
+  @include container; // Define these elements as the grid containers.
+  margin-bottom: $vert-spacing-unit;
+}
+
+
+.l-region--highlighted,
+.l-region--help,
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  margin-bottom: $vert-spacing-unit;
+}
+
+@include breakpoint($tab) {
+  .l-region--header-preface-left  {
+    @include span(6);
+  }
+  .l-region--header-preface-right {
+    @include span(6 last);
+  }
+  .l-branding {
+    @include span(4);
+  }
+  .l-region--header-wrapper {
+    @include span(8 last);
+    .l-region--header {
+      float: right;
+    }
+  }
+
+  .l-region--navigation {
+    margin-top: $vert-spacing-unit;
+  }
+
+  .has-sidebar-first,
+  .has-sidebar-second,
+  .has-two-sidebars {
+    .l-content {
+      @include span(8); // Span 8 out of 12 columns.
+    }
+    .l-region--sidebar-first,
+    .l-region--sidebar-second {
+      @include span(4 at 9); // Span the last 4 columns of 12.
+    }
+    .l-region--sidebar-second {
+      clear: right;
+    }
+  }
+}
+
+@include breakpoint($desk) {
+  .l-container,
+  .l-region--navigation{
+    @include container(80%); // Set max-width to 80%
+    @include layout(16); // Make 16 column design.
+  }
+  .l-region--header-preface-left  {
+    @include span(8);
+  }
+  .l-region--header-preface-right  {
+    @include span(8 last);
+  }
+  .l-branding {
+    @include span(4); // Span 6 out of 16 columns.
+  }
+  .l-region--header-wrapper{
+    @include span(12 last); // Span the last (omega) 10 columns of 16.
+  }
+
+  .has-sidebar-first {
+    .l-content {
+      @include span(12 last); // Span the last (omega) 12 columns of 16.
+    }
+    .l-region--sidebar-first {
+      @include span(4); // Span 4 out of 16 columns.
+    }
+  }
+  .has-sidebar-second {
+    .l-content {
+      @include span(12); // Span 12 out of 16 columns.
+    }
+    .l-region--sidebar-second {
+      @include span(4 last); // Span the last (omega) 4 columns of 16.
+      clear: none;
+    }
+  }
+
+  .has-two-sidebars {
+    .l-content {
+      @include span(8); // Span 8 out of 16 columns.
+      @include push(4 of 16);  // Push element by adding 4 out of 16 columns of left margin.
+    }
+    .l-region--sidebar-first,
+    .l-region--sidebar-second {
+      @include span(4); // Span 4 out of 16 columns.
+    }
+    .l-region--sidebar-first {
+      @include pull(12); // Pull element by adding 12 out of 16 columns of negative left margin.
+    }
+    .l-region--sidebar-second {
+      @include last; // This element spans the last (omega) column.
+      clear: none;
+    }
+  }
+}

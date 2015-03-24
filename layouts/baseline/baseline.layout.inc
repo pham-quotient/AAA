@@ -1,17 +1,7 @@
-name = SI AAA
-description = Omega 4 based theme for SI AAA.
-base theme = omega
-screenshot = screenshot.png
-engine = phptemplate
-core = 7.x
-
-; Styles
-stylesheets[all][] = css/font-awesome/font-awesome.css
-stylesheets[all][] = css/si_aaa.normalize.css
-stylesheets[all][] = css/si_aaa.hacks.css
-stylesheets[all][] = css/si_aaa.styles.css
-stylesheets[all][] = css/si_aaa.no-query.css
-
+name = Baseline
+description = A simple 3 column Susy layout with a hero area and header and footer prefaces.
+preview = preview.png
+template = baseline-layout
 
 ; Regions
 regions[branding]             = Branding
@@ -28,5 +18,6 @@ regions[sidebar_second]       = Second sidebar
 regions[footer_preface]       = Footer Preface
 regions[footer]               = Footer
 
-; Scripts
-; scripts[] = js/si_aaa.behaviors.js
+; Stylesheets
+stylesheets[all][] = css/layouts/baseline/baseline.layout.css
+stylesheets[all][] = css/layouts/baseline/baseline.layout.no-query.css

@@ -100,18 +100,49 @@
 html {
   font-family: $gt-walsheim;
   color: $dark-grey;
-  @include font-size(14px); // set the font-size in REMs
-  line-height: 1.618;
 }
 
 /**
  * $LINKS
  */
 a {
-  @include link-colors($mid-blue, $dark-blue, $orange, $mid-blue, $dark-blue);
+  @include link-colors($mid-blue, $dark-blue, $salmon, $mid-blue, $dark-blue);
+  text-decoration: none;
 }
 
+
 #{headings()} {
+  @include rhythm(0, 0, 0, 0.2);
   font-family: $gt-walsheim;
   color: $mid-blue;
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $dark-blue;
+  }
 }
+
+h1 {
+  @include font-size(37px);
+}
+
+h2 {
+  @include font-size(23px);
+}
+
+h3 {
+  @include font-size(18px);
+}
+
+h4 {
+  @include font-size(16px);
+}
+
+p {
+  margin: 0;
+  @include rhythm(0, 0, 0, 1);
+}
+

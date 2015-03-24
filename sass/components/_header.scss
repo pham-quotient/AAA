@@ -1,0 +1,28 @@
+.l-header {
+  background-color: $mid-blue;
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+.l-header-preface-wrapper {
+  background-color: $dark-blue;
+  margin-bottom: 1.13em;
+  .l-region--header-preface-left {
+    img {
+      height: 1.5em;
+      width: auto;
+    }
+  }
+  .menu {
+    @include navigation-list;
+  a {
+      color: #fff;
+    }
+  }
+}
+.l-branding img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+

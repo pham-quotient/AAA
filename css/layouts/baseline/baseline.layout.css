@@ -1,0 +1,181 @@
+/*******************************************************************************
+ * baseline.layout.scss
+ *
+ * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+/* line 1, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 11, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 15, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto; }
+
+/* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container,
+.l-region--navigation {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+  /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .l-container:after,
+  .l-region--navigation:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 31, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--highlighted,
+.l-region--help,
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  margin-bottom: 1em; }
+
+@media (min-width: 600px) {
+  /* line 39, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-preface-left {
+    width: 48.93617%;
+    float: left;
+    margin-right: 2.12766%; }
+
+  /* line 42, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-preface-right {
+    width: 48.93617%;
+    float: right;
+    margin-right: 0; }
+
+  /* line 45, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-branding {
+    width: 31.91489%;
+    float: left;
+    margin-right: 2.12766%; }
+
+  /* line 48, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-wrapper {
+    width: 65.95745%;
+    float: right;
+    margin-right: 0; }
+    /* line 50, ../../../sass/layouts/baseline/baseline.layout.scss */
+    .l-region--header-wrapper .l-region--header {
+      float: right; }
+
+  /* line 55, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--navigation {
+    margin-top: 1em; }
+
+  /* line 62, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-first .l-content,
+  .has-sidebar-second .l-content,
+  .has-two-sidebars .l-content {
+    width: 65.95745%;
+    float: left;
+    margin-right: 2.12766%; }
+  /* line 65, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-first .l-region--sidebar-first,
+  .has-sidebar-first .l-region--sidebar-second,
+  .has-sidebar-second .l-region--sidebar-first,
+  .has-sidebar-second .l-region--sidebar-second,
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 31.91489%;
+    float: right;
+    margin-right: 0; }
+  /* line 69, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-first .l-region--sidebar-second,
+  .has-sidebar-second .l-region--sidebar-second,
+  .has-two-sidebars .l-region--sidebar-second {
+    clear: right; } }
+@media (min-width: 980px) {
+  /* line 76, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-container,
+  .l-region--navigation {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+    .l-container:after,
+    .l-region--navigation:after {
+      content: " ";
+      display: block;
+      clear: both; }
+
+  /* line 81, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-preface-left {
+    width: 49.20635%;
+    float: left;
+    margin-right: 1.5873%; }
+
+  /* line 84, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-preface-right {
+    width: 49.20635%;
+    float: right;
+    margin-right: 0; }
+
+  /* line 87, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-branding {
+    width: 23.80952%;
+    float: left;
+    margin-right: 1.5873%; }
+
+  /* line 90, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-wrapper {
+    width: 74.60317%;
+    float: right;
+    margin-right: 0; }
+
+  /* line 95, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-first .l-content {
+    width: 74.60317%;
+    float: right;
+    margin-right: 0; }
+  /* line 98, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-first .l-region--sidebar-first {
+    width: 23.80952%;
+    float: left;
+    margin-right: 1.5873%; }
+
+  /* line 103, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-second .l-content {
+    width: 74.60317%;
+    float: left;
+    margin-right: 1.5873%; }
+  /* line 106, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-sidebar-second .l-region--sidebar-second {
+    width: 23.80952%;
+    float: right;
+    margin-right: 0;
+    clear: none; }
+
+  /* line 113, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-two-sidebars .l-content {
+    width: 49.20635%;
+    float: left;
+    margin-right: 1.5873%;
+    margin-left: 25.39683%; }
+  /* line 117, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-two-sidebars .l-region--sidebar-first,
+  .has-two-sidebars .l-region--sidebar-second {
+    width: 23.80952%;
+    float: left;
+    margin-right: 1.5873%; }
+  /* line 121, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-two-sidebars .l-region--sidebar-first {
+    margin-left: -76.19048%; }
+  /* line 124, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .has-two-sidebars .l-region--sidebar-second {
+    float: right;
+    margin-right: 0;
+    clear: none; } }
+
+/*# sourceMappingURL=baseline.layout.css.map */

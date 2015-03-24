@@ -1,0 +1,45 @@
+/*******************************************************************************
+ * baseline.layout.scss
+ *
+ * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+/* line 1, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 11, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 15, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
+embed,
+img,
+object,
+video {
+  max-width: 100%;
+  height: auto; }
+
+/* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container,
+.l-region--navigation {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+  /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .l-container:after,
+  .l-region--navigation:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 31, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--highlighted,
+.l-region--help,
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  margin-bottom: 1em; }
+
+/*# sourceMappingURL=baseline.layout.no-query.css.map */

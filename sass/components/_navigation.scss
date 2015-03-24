@@ -1,0 +1,92 @@
+// Global settings for all megamenu
+.tb-megamenu {
+  background: none;
+  color: #fff;
+  .nav {
+    > li {
+      > a,
+      &.active > a {
+        // Set ($normal, $hover, $active, $visited, $focus)
+         @include link-colors(#fff);
+          padding: .5em 1em;
+          background-image: none;
+          border-left: 1px solid $light-blue;
+          background-color: $mid-blue;
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
+      }
+
+      &.dropdown.open > .dropdown-toggle,
+      &.dropdown.open.active > .dropdown-toggle,
+      &.dropdown.open.active > a:hover,
+      &.dropdown.open.active > a:focus {
+        background-color: $mid-blue;
+        color: $light-blue;
+      }
+
+      &.active > a {
+        text-decoration: underline;
+      }
+    }
+    .mega-nav .mega-group > .mega-group-title,
+    .dropdown-menu .mega-nav .mega-group > .mega-group-title,
+    .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+      color: $mid-blue;
+    }
+  }
+}
+
+.l-region--header-preface-right nav {
+  float: right;
+  .menu {
+    > li {
+      color: #fff;
+      margin-right: 1em;
+      padding: 1em 0;
+     > a {
+        @extend %screen-reader;
+      }
+    }
+  }
+}
+
+.l-region--header .tb-megamenu {
+  background: none;
+  .nav {
+    > li {
+       > a,
+      &.active > a {
+        padding: 0 1em;
+        @include font-size(12px);
+        @include link-colors($light-blue);
+
+      }
+    }
+  }
+}
+
+.l-region--navigation .tb-megamenu {
+  .nav {
+    li {
+      > a,
+       &.dropdown.open > .dropdown-toggle,
+      &.dropdown.open.active > .dropdown-toggle {
+         @include link-colors(#fff);
+         border: none;
+      }
+    .dropdown-menu {
+      background-color: #f6f6f6;
+      @include box-shadow(rgba(black, .25) 1px 5px 5px);
+      li {
+      > a,
+       &.dropdown.open > .dropdown-toggle,
+      &.dropdown.open.active > .dropdown-toggle {
+         @include link-colors(#1a74c1);
+         border: none;
+      }
+    }
+    }
+  }
+}
+}

@@ -1,9 +1,10 @@
 // Import external libraries.
 @import "compass";
-@import "compass/reset";
 @import "breakpoint";
 @import "susy";
 @import "toolkit";
+ @import "font-awesome-sprockets";
+  @import "font-awesome";
 
 // Import variables, abstractions, base styles and components using globbing.
 //
@@ -21,3 +22,4 @@
 @import "abstractions/**/*";
 @import "base/**/*";
 @import "components/**/*";
+

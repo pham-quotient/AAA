@@ -20,7 +20,7 @@ sass_dir = "sass"
 images_dir = "images"
 generated_images_dir = images_dir + "/generated"
 javascripts_dir = "js"
-fonts_dir = "fonts"
+fonts_dir = "css/fonts"
 
 # Require any additional compass plugins installed on your system.
 require 'compass-normalize'
@@ -38,7 +38,7 @@ require 'font-awesome-sass'
 
 # You can select your preferred output style here (:expanded, :nested, :compact
 # or :compressed).
-output_style = (environment == :production) ? :expanded : :nested
+output_style = (environment == :production) ? :compressed : :nested
 
 # To enable relative paths to assets via compass helper functions. Since Drupal
 # themes can be installed in multiple locations, we don't need to worry about
