@@ -7,7 +7,9 @@
             <?php print render($page['header_preface_left']); ?>
           <?php endif; ?>
           <?php if (!empty($page['header_preface_right'])): ?>
-            <?php print render($page['header_preface_right']); ?>
+          	<div class="l-region-header-preface-right-wrapper">
+            	<?php print render($page['header_preface_right']); ?>
+            </div>
           <?php endif; ?>
         </div>
       </div>
@@ -24,9 +26,7 @@
           <?php endif; ?>
             <?php print render($page['branding']); ?>
       	</div>
-        <div class="l-region--header-wrapper">
       	<?php print render($page['header']); ?>
-      </div>
       </div>
 
       <?php print render($page['navigation']); ?>

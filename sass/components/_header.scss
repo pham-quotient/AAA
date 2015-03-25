@@ -1,28 +1,79 @@
 .l-header {
   background-color: $mid-blue;
+
+  .menu {
+    @extend %navigation-list;
+    > li {
+      color: #fff;
+     > a {
+        // link-colors($normal, $hover, $active, $visited, $focus)
+        @include link-colors(#fff, $light-blue, #fff, #fff, #fff);
+      }
+    }
+  } // end menu
+
   p {
     margin: 0;
-    padding: 1em 0;
+    padding: .75em 0;
+    line-height: 1em;
   }
-.l-header-preface-wrapper {
-  background-color: $dark-blue;
-  margin-bottom: 1.13em;
-  .l-region--header-preface-left {
-    img {
-      height: 1.5em;
-      width: auto;
+  .l-header-preface-wrapper {
+    background-color: $dark-blue;
+    margin-bottom: 1.13em;
+    .l-region--header-preface-left {
+      img {
+        height: 1.5em;
+        width: auto;
+      }
     }
-  }
-  .menu {
-    @include navigation-list;
-  a {
-      color: #fff;
+
+    .l-region--header-preface-right {
+      float: right;
+      @include clearfix;
+      nav {
+        float: left;
+        .menu {
+          > li {
+            margin-right: $horz-spacing-unit;
+            padding: 1.1em 0;
+           > a {
+              @extend %screen-reader;
+            }
+          }
+        }
+      }
+
+      .btn {
+        background-color: #134979;
+      }
+      .block--donate-link {
+        float: left;
+      }
+    } // end l-region--header-preface-right
+
+  } // end l-region-header-preface
+
+  .l-region--header {
+    padding-top: 1em;
+    .menu {
+      float: right;
+      > li {
+        > a {
+          @include link-colors($light-blue, #fff, $light-blue, $light-blue, $light-blue);
+          @include font-size(12px);
+          padding: 0 1em;
+          border-left: 1px solid $light-blue;
+        }
+        &:first-child > a {
+          border-left: none;
+        }
+      }
     }
-  }
-}
+  } // end l-region--header
+
 .l-branding img {
     width: 100%;
     max-width: 400px;
-  }
-}
+  } // end l-branding
+} // end l-header
 

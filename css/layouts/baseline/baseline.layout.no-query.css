@@ -4,23 +4,6 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-/* line 1, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
-html {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 11, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-/* line 15, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/toolkit-2.9.0/stylesheets/toolkit/_kickstart.scss */
-embed,
-img,
-object,
-video {
-  max-width: 100%;
-  height: auto; }
-
 /* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-container,
 .l-region--navigation {
@@ -35,7 +18,12 @@ video {
     display: block;
     clear: both; }
 
-/* line 31, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 29, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container {
+  overflow: hidden;
+  *zoom: 1; }
+
+/* line 33, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--highlighted,
 .l-region--help,
 .l-region--sidebar-first,

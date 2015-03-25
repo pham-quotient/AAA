@@ -28,5 +28,7 @@ regions[sidebar_second]       = Second sidebar
 regions[footer_preface]       = Footer Preface
 regions[footer]               = Footer
 
+; Plugins
+plugins[panels][layouts] = panels/layouts
 ; Scripts
 ; scripts[] = js/si_aaa.behaviors.js

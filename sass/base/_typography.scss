@@ -92,6 +92,25 @@
   ),
   bold,
   italic);
+@include font-face(
+  'GT Walsheim',
+  (
+    'eot': 'GT-Walsheim/GT-Walsheim-Medium.eot',
+    'woff': 'GT-Walsheim/GT-Walsheim-Medium.woff',
+    'ttf': 'GT-Walsheim/GT-Walsheim-Medium.ttf',
+    'svg': 'GT-Walsheim/GT-Walsheim-Medium.svg'
+  ),
+  600);
+@include font-face(
+  'GT Walsheim',
+  (
+    'eot': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.eot',
+    'woff': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.woff',
+    'ttf': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.ttf',
+    'svg': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.svg'
+  ),
+  600,
+  italic);
 @include establish-baseline($base-font-size);
 
 /**
@@ -109,7 +128,9 @@ a {
   @include link-colors($mid-blue, $dark-blue, $salmon, $mid-blue, $dark-blue);
   text-decoration: none;
 }
-
+a:hover {
+  text-decoration: underline;
+}
 
 #{headings()} {
   @include rhythm(0, 0, 0, 0.2);

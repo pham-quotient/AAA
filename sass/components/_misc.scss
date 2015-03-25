@@ -1,3 +1,14 @@
 .sr-only {
   @extend %screen-reader;
 }
+
+.btn {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .8px;
+  @include font-size(11px);
+  background-color: $mid-blue;
+  color: #fff;
+}
