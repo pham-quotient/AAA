@@ -4,7 +4,7 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-@import "toolkit";
+@import "toolkit"; // use border-box box model instead of default
 @import "compass";
 @import "susy";
 @import "breakpoint";
@@ -15,7 +15,7 @@
 
 // Susy Defaults (http://susy.readthedocs.org/en/latest/settings/)
 $susy: (
-  columns:            12,
+  columns:            4,
   container:          90%,
   gutters:            $gutter,
  // debug:              (image:show),
@@ -25,9 +25,17 @@ $susy: (
 .l-region--navigation {
   @include container; // Define these elements as the grid containers.
   margin-bottom: $vert-spacing-unit;
-}
-.l-container {
   @include clearfix;
+}
+
+.l-main {
+  padding: $vert-spacing-unit*2 0;
+}
+.l-region--header-preface-left  {
+  @include span(1);
+}
+.l-region-header-preface-right-wrapper {
+  @include span(3 last);
 }
 
 .l-region--highlighted,
@@ -38,6 +46,10 @@ $susy: (
 }
 
 @include breakpoint($tab) {
+  .l-container,
+  .l-region--navigation{
+    @include layout(12); // Make 16 column design.
+  }
   .l-region--header-preface-left  {
     @include span(6);
   }
@@ -72,6 +84,13 @@ $susy: (
       clear: right;
     }
   }
+  .l-region--footer-left {
+    @include span(4);
+  }
+  .l-region--footer-right {
+    @include span(8 last);
+  }
+
 }
 
 @include breakpoint($desk) {
@@ -127,5 +146,16 @@ $susy: (
       @include last; // This element spans the last (omega) column.
       clear: none;
     }
+  }
+  .l-region--footer-preface {
+    @include prefix(1);
+    @include suffix(1);
+  }
+  .l-region--footer-left {
+    @include span(6);
+  }
+  .l-region--footer-right {
+    @include span(10 last);
+    @include prefix(1);
   }
 }

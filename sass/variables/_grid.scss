@@ -8,3 +8,12 @@ $desk: 980px;
 
 // space between columns
 $gutter     : 1/3;
+
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

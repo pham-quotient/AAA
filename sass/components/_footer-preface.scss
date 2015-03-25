@@ -1,1 +1,16 @@
-_footer-preface.scss
+
+.l-footer-preface {
+  background: url("../images/mission-bg.jpg") center top no-repeat $light-grey;
+  background-size: cover;
+  padding: 2em 0;
+  text-align: center;
+  color: $darker-grey;
+  h2 {
+    color: $darker-grey;
+  }
+  p {
+    @include adjust-font-size-to(18px);
+    &:last-child {margin-bottom: 0}
+  }
+
+}

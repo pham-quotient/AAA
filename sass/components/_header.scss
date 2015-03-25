@@ -1,5 +1,5 @@
 .l-header {
-  background-color: $mid-blue;
+  background-color: $blue;
 
   .menu {
     @extend %navigation-list;
@@ -14,7 +14,7 @@
 
   p {
     margin: 0;
-    padding: .75em 0;
+    padding: 1em 0;
     line-height: 1em;
   }
   .l-header-preface-wrapper {
@@ -22,7 +22,7 @@
     margin-bottom: 1.13em;
     .l-region--header-preface-left {
       img {
-        height: 1.5em;
+        max-height: 1.6em;
         width: auto;
       }
     }
@@ -30,21 +30,18 @@
     .l-region--header-preface-right {
       float: right;
       @include clearfix;
-      nav {
+      .pane-social-media-links {
         float: left;
-        .menu {
-          > li {
-            margin-right: $horz-spacing-unit;
-            padding: 1.1em 0;
-           > a {
-              @extend %screen-reader;
-            }
+        .links-social-media {
+         > a {
+            @include link-colors(white, $light-blue);
           }
         }
       }
 
       .btn {
         background-color: #134979;
+        border: 1px solid #f2f2f2;
       }
       .block--donate-link {
         float: left;
@@ -54,20 +51,34 @@
   } // end l-region-header-preface
 
   .l-region--header {
-    padding-top: 1em;
+    padding-top: .5em;
     .menu {
       float: right;
       > li {
         > a {
-          @include link-colors($light-blue, #fff, $light-blue, $light-blue, $light-blue);
-          @include font-size(12px);
-          padding: 0 1em;
+          font-weight: 600;
+          @include link-colors($light-blue);
+          padding: 0 .75em;
+          @include breakpoint($desk) {
+            padding: 0 1em;
+          }
           border-left: 1px solid $light-blue;
         }
         &:first-child > a {
           border-left: none;
         }
+        &.fa-search {
+          color: $light-blue;
+          padding-top: 3px;
+          > a {
+            @extend %screen-reader;
+          }
+        }
       }
+    }
+    .icon-list {
+      float: left;
+      a {color: white}
     }
   } // end l-region--header
 

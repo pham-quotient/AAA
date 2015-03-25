@@ -16,7 +16,8 @@ regions[content]              = Content
 regions[sidebar_first]        = First sidebar
 regions[sidebar_second]       = Second sidebar
 regions[footer_preface]       = Footer Preface
-regions[footer]               = Footer
+regions[footer_left]          = Footer Left
+regions[footer_right]          = Footer Right
 
 ; Stylesheets
 stylesheets[all][] = css/layouts/baseline/baseline.layout.css

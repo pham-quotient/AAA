@@ -111,7 +111,9 @@
   ),
   600,
   italic);
+
 @include establish-baseline($base-font-size);
+
 
 /**
  * $BASE-TYPOGRAPHY
@@ -125,7 +127,7 @@ html {
  * $LINKS
  */
 a {
-  @include link-colors($mid-blue, $dark-blue, $salmon, $mid-blue, $dark-blue);
+  @include link-colors($blue, $dark-blue, $salmon, $blue, $dark-blue);
   text-decoration: none;
 }
 a:hover {
@@ -135,7 +137,7 @@ a:hover {
 #{headings()} {
   @include rhythm(0, 0, 0, 0.2);
   font-family: $gt-walsheim;
-  color: $mid-blue;
+  color: $blue;
   a,
   a:visited {
     color: inherit;
@@ -151,7 +153,7 @@ h1 {
 }
 
 h2 {
-  @include font-size(23px);
+  @include font-size(26px);
 }
 
 h3 {
