@@ -10,7 +10,7 @@
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.618em;
+  margin-bottom: 1em;
   overflow: hidden;
   *zoom: 1; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
@@ -21,8 +21,8 @@
     clear: both; }
 
 /* line 31, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-main, .l-footer-wrapper {
-  padding: 1.618em 0; }
+.l-main {
+  padding: 2em 0; }
 
 /* line 34, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-preface-left {
@@ -41,6 +41,6 @@
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: 1.618em; }
+  margin-bottom: 1em; }
 
 /*# sourceMappingURL=baseline.layout.no-query.css.map */

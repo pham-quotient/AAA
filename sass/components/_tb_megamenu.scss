@@ -88,9 +88,11 @@
   }
   .nav-collapse{
     background-color: $lighter-grey;
+  }
+  .nav-collapse {
     @include box-shadow(rgba(black, .25) 1px 5px 5px);
     @include breakpoint($desk) {
-      background: none;
+      background-color: none;
       box-shadow: none;
       .dropdown-menu {
         background-color: $lighter-grey;

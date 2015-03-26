@@ -28,8 +28,8 @@ $susy: (
   @include clearfix;
 }
 
-.l-main, .l-footer-wrapper {
-  padding: $vert-spacing-unit 0;
+.l-main {
+  padding: $vert-spacing-unit*2 0;
 }
 .l-region--header-preface-left  {
   @include span(1);
@@ -55,23 +55,17 @@ $susy: (
   }
   .l-region-header-preface-right-wrapper {
     @include span(6 last);
-    .l-region--header-preface-right {
-      float: right;
-      @include clearfix;
-      .panel-pane {float: left;}
-    }
   }
   .l-branding {
     @include span(4);
   }
-  .l-region--header-wrapper {
+  .l-region--header {
     @include span(8 last);
     .l-region--header {
       float: right;
-      @include clearfix;
-      .panel-pane {float: left;}
     }
   }
+
   .l-region--navigation {
     margin-top: $vert-spacing-unit;
   }
@@ -95,7 +89,6 @@ $susy: (
   }
   .l-region--footer-right {
     @include span(8 last);
-    @include prefix(1);
   }
 
 }
@@ -113,10 +106,10 @@ $susy: (
     @include span(8 last);
   }
   .l-branding {
-    @include span(5); // Span 6 out of 16 columns.
+    @include span(4); // Span 6 out of 16 columns.
   }
-  .l-region--header-wrapper {
-    @include span(11 last);
+  .l-region--header{
+    @include span(12 last); // Span the last (omega) 10 columns of 16.
   }
 
   .has-sidebar-first {

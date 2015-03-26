@@ -1,57 +1,12 @@
-.l-footer-preface {
-  background: url("../images/mission-bg.jpg") center top no-repeat $light-grey;
-  background-size: cover;
-  padding: 2em 0;
-  text-align: center;
-  color: $darker-grey;
-  h2 {
-    color: $darker-grey;
-  }
-  p {
-    @include font-size(18px);
-    line-height: $vert-spacing-unit;
-    &:last-child {margin-bottom: 0}
-  }
-
-} // end l-footer-preface
-
-.l-footer-wrapper .l-container {
-  background: url("../images/AAA-logo-grey.png") left top no-repeat;
-  padding-top: 2em + $vert-spacing-unit;
-  .panel-pane {
-    margin-bottom: $vert-spacing-unit;
-  }
-  .l-region--footer-left{
-    .links-social-media {
-      @extend %navigation-list;
-      > li {
-        padding: 1.1em 0;
-       > a {
-  //        @include link-colors(white, $light-blue);
-        }
+.l-region--footer-left{
+  .links-social-media {
+    @extend %navigation-list;
+    > li {
+      margin-right: $horz-spacing-unit *  1.5;
+      padding: 1.1em 0;
+     > a {
+//        @include link-colors(white, $light-blue);
       }
     }
-  } // end l-region--footer-left
-
-  .l-region--footer-right{
-    .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      .leaf, .collapsed {
-        list-style-image: none;
-        list-style-type: none;
-      }
-    }
-    .pane-system-main-menu .list-0 {margin-left: 0};
-    @include breakpoint($desk) {
-      .pane-menu-menu-quick-links-menu,
-      .pane-system-main-menu {
-        float: left;
-      }
-      .pane-system-main-menu {
-        padding-left: $horz-spacing-unit * 2;
-      }
-    }
-  } // end l-region--footer-right
-} // end .l-footer-wrapper .l-container
+  }
+} // end l-region--footer-left

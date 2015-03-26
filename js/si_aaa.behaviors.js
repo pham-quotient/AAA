@@ -39,34 +39,36 @@
    *   modifications made by the Ajax callback that also produced 'context'.
    */
 
-  Drupal.behaviors.si_aaa_SplitList = {
+  Drupal.behaviors.si_aaa.SplitList` = {
     attach: function (context, settings) {
-      var num_cols = 2,
-      container = $('.split-list ul'),
-      listItem = 'li',
-      listClass = 'sub-list';
-      container.each(function() {
+    var num_cols = 3,
+    container = $('.split-list'),
+    listItem = 'li',
+    listClass = 'sub-list';
+    container.each(function() {
         var items_per_col = new Array(),
         items = $(this).find(listItem),
         min_items_per_col = Math.floor(items.length / num_cols),
         difference = items.length - (min_items_per_col * num_cols);
         for (var i = 0; i < num_cols; i++) {
-          items_per_col[i] = i < difference ?  min_items_per_col + 1 : min_items_per_col;
+            if (i < difference) {
+                items_per_col[i] = min_items_per_col + 1;
+            } else {
+                items_per_col[i] = min_items_per_col;
+            }
         }
         for (var i = 0; i < num_cols; i++) {
-		  var subClass = 'list-' + i;	
-          $(this).append($('<ul ></ul>').addClass(listClass +' ' + subClass));
-          for (var j = 0; j < items_per_col[i]; j++) {
-            var pointer = 0;
-            for (var k = 0; k < i; k++) {
-              pointer += items_per_col[k];
+            $(this).append($('<ul ></ul>').addClass(listClass));
+            for (var j = 0; j < items_per_col[i]; j++) {
+                var pointer = 0;
+                for (var k = 0; k < i; k++) {
+                    pointer += items_per_col[k];
+                }
+                $(this).find('.' + listClass).last().append(items[j + pointer]);
             }
-            $(this).find('.' + subClass).last().append(items[j + pointer]);
-          }
         }
-      });
-    }
-  }
+    });
+});
 //  Drupal.behaviors.si_aaa.ExampleBehavior = {
 //    attach: function (context, settings) {
       // By using the 'context' variable we make sure that our code only runs on
