@@ -10,10 +10,10 @@
    * In most cases, there is no good reason to NOT wrap your markup producing
    * JavaScript in a theme function.
    */
- // Drupal.theme.prototype.si_aaa.ExampleButton = function (path, title) {
+  Drupal.theme.prototype.si_aaa.ExampleButton = function (path, title) {
     // Create an anchor element with jQuery.
- //   return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
- // };
+    return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
+  };
 
   /**
    * Behaviors are Drupal's way of applying JavaScript to a page. In short, the
@@ -38,54 +38,23 @@
    *   Drupal.settings directly you should use this because of potential
    *   modifications made by the Ajax callback that also produced 'context'.
    */
-
-  Drupal.behaviors.si_aaa.SplitList` = {
+  Drupal.behaviors.si_aaa.ExampleBehavior = {
     attach: function (context, settings) {
-    var num_cols = 3,
-    container = $('.split-list'),
-    listItem = 'li',
-    listClass = 'sub-list';
-    container.each(function() {
-        var items_per_col = new Array(),
-        items = $(this).find(listItem),
-        min_items_per_col = Math.floor(items.length / num_cols),
-        difference = items.length - (min_items_per_col * num_cols);
-        for (var i = 0; i < num_cols; i++) {
-            if (i < difference) {
-                items_per_col[i] = min_items_per_col + 1;
-            } else {
-                items_per_col[i] = min_items_per_col;
-            }
-        }
-        for (var i = 0; i < num_cols; i++) {
-            $(this).append($('<ul ></ul>').addClass(listClass));
-            for (var j = 0; j < items_per_col[i]; j++) {
-                var pointer = 0;
-                for (var k = 0; k < i; k++) {
-                    pointer += items_per_col[k];
-                }
-                $(this).find('.' + listClass).last().append(items[j + pointer]);
-            }
-        }
-    });
-});
-//  Drupal.behaviors.si_aaa.ExampleBehavior = {
-//    attach: function (context, settings) {
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
       // processed previously. By using .once('foo') all processed elements will
       // get tagged with a 'foo-processed' class, causing all future invocations
       // of this behavior to ignore them.
-//      $('.some-selector', context).once('foo', function () {
+      $('.some-selector', context).once('foo', function () {
         // Now, we are invoking the previously declared theme function using two
         // settings as arguments.
-//        var $anchor = Drupal.theme('si_aaa.ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
+        var $anchor = Drupal.theme('si_aaa.ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
 
         // The anchor is then appended to the current element.
-//        $anchor.appendTo(this);
-//      });
-//    }
-//  };
+        $anchor.appendTo(this);
+      });
+    }
+  };
 
 })(jQuery);

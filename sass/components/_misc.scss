@@ -9,20 +9,6 @@
   font-weight: 600;
   letter-spacing: .8px;
   @include font-size(11px);
-  background-color: $blue;
+  background-color: $mid-blue;
   color: #fff;
-}
-
-.icon-only {
-  display: inline-block; /* Fix for clickability issue in WebKit */
-}
-
-.icon-list {
-  ul {
-    @extend %navigation-list;
-    > li {
-      margin-right: $horz-spacing-unit *  1.5;
-      padding: 1.1em 0;
-    }
-  }
 }

@@ -79,8 +79,7 @@
 
   <footer class="l-footer-wrapper" role="contentinfo">
     <div class="l-container">
-      <?php print render($page['footer_left']); ?>
-      <?php print render($page['footer_right']); ?>
+      <?php print render($page['footer']); ?>
     </div>
   </footer>
 </div>

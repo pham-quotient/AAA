@@ -1,5 +1,5 @@
 // Global settings for all megamenu
-.tb-megamenu, .tb-megamenu .nav-collapse {
+.tb-megamenu {
   background: none;
   color: #fff;
   .nav {
@@ -10,11 +10,11 @@
          @include link-colors(#fff);
           padding: .5em 1em;
           background-image: none;
-          border: none;
-          background-color: none;
+          border-left: 1px solid $light-blue;
+          background-color: $mid-blue;
           &:focus, &:hover {
             text-decoration: underline;
-            background: none;
+            background-color: $mid-blue;
           }
       }
       &:first-child > a {
@@ -25,7 +25,7 @@
       &.dropdown.open.active > .dropdown-toggle,
       &.dropdown.open.active > a:focus,
       &.dropdown.open.active > a:hover {
-        background: none;
+        background-color: $mid-blue;
         color: $light-blue;
       }
 
@@ -36,7 +36,7 @@
     .mega-nav .mega-group > .mega-group-title,
     .dropdown-menu .mega-nav .mega-group > .mega-group-title,
     .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
-      color: $blue;
+      color: $mid-blue;
     }
   }
 }
@@ -47,17 +47,12 @@
       > a,
         &.active > a {
           // Set ($normal, $hover, $active, $visited, $focus)
-           @include link-colors($darker-grey);
-           letter-spacing: .5px;
-          border-left: none;
-          &:focus, &:hover {
-//              text-decoration: underline;
-            background: none;
-          }
-          @include breakpoint($desk) {
-              @include link-colors(#fff);
-          }
-
+           @include link-colors(#fff);
+            border-left: none;
+            &:focus, &:hover {
+              text-decoration: underline;
+              background-color: none;
+            }
         }
 
         &.dropdown.active > .dropdown-toggle,
@@ -65,47 +60,22 @@
         &.dropdown.open.active > .dropdown-toggle,
         &.dropdown.open.active > a:focus,
         &.dropdown.open.active > a:hover {
-          background: none;
-          color: $darker-grey;
-          @include breakpoint($desk) {
-            color: #fff;
-          }
+          background-color: none;
+          color: #fff;
         }
 
     .dropdown-menu {
-      background-color: $lighter-grey;
+      background-color: #f6f6f6;
+      @include box-shadow(rgba(black, .25) 1px 5px 5px);
       li {
       > a,
        &.dropdown.open > .dropdown-toggle,
       &.dropdown.open.active > .dropdown-toggle {
-            @include link-colors(#1a74c1);
-            border: none;
-            letter-spacing: none;
-          }
-        }
+         @include link-colors(#1a74c1);
+         border: none;
       }
     }
-  }
-  .nav-collapse{
-    background-color: $lighter-grey;
-  }
-  .nav-collapse {
-    @include box-shadow(rgba(black, .25) 1px 5px 5px);
-    @include breakpoint($desk) {
-      background-color: none;
-      box-shadow: none;
-      .dropdown-menu {
-        background-color: $lighter-grey;
-        @include box-shadow(rgba(black, .25) 1px 5px 5px);
-      }
     }
   }
-  .btn-navbar {
-    color: $dark-grey;
-    background-color: #f0f0f0;
-    @include background-image(linear-gradient(white, $lighter-grey));
-    &:hover {
-      color: $darker-grey;
-    }
-  }
-} // end .l-region--navigation .tb-megamenu
+}
+}
