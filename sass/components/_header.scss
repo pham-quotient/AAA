@@ -1,7 +1,7 @@
 .l-header {
   background-color: $blue;
 
-  .menu {
+  ul {
     @extend %navigation-list;
     > li {
       color: #fff;
@@ -19,7 +19,7 @@
   }
   .l-header-preface-wrapper {
     background-color: $dark-blue;
-    margin-bottom: 1.13em;
+    margin-bottom: $vert-spacing-unit;
     .l-region--header-preface-left {
       img {
         max-height: 1.6em;
@@ -28,17 +28,12 @@
     }
 
     .l-region--header-preface-right {
-      float: right;
-      @include clearfix;
-      .pane-social-media-links {
-        float: left;
-        .links-social-media {
-         > a {
-            @include link-colors(white, $light-blue);
-          }
+      .icon-list {
+        .icon-only {
+          @include link-colors(#fff, $light-blue);
         }
+        margin-right: $horz-spacing-unit * 2;
       }
-
       .btn {
         background-color: #134979;
         border: 1px solid #f2f2f2;
@@ -51,34 +46,26 @@
   } // end l-region-header-preface
 
   .l-region--header {
-    padding-top: .5em;
-    .menu {
-      float: right;
-      > li {
-        > a {
-          font-weight: 600;
-          @include link-colors($light-blue);
-          padding: 0 .75em;
-          @include breakpoint($desk) {
-            padding: 0 1em;
-          }
-          border-left: 1px solid $light-blue;
+    ul > li {
+      > a {
+        font-weight: 600;
+        @include link-colors($light-blue);
+        padding: 0 $horz-spacing-unit*.75;
+        @include breakpoint($desk) {
+          padding: $vert-spacing-unit*.3 $horz-spacing-unit 0;
         }
-        &:first-child > a {
-          border-left: none;
-        }
-        &.fa-search {
-          color: $light-blue;
-          padding-top: 3px;
-          > a {
-            @extend %screen-reader;
-          }
-        }
+        border-left: 1px solid $light-blue;
+      }
+      &:first-child > a {
+        border-left: none;
       }
     }
-    .icon-list {
-      float: left;
-      a {color: white}
+    .icon-list ul > li {
+      padding:0;
+      > a {
+        border-left: none;
+        padding: 0;
+      }
     }
   } // end l-region--header
 
@@ -86,5 +73,5 @@
     width: 100%;
     max-width: 400px;
   } // end l-branding
-} // end l-header
+} // end l-region--header
 

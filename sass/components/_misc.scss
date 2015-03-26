@@ -4,13 +4,16 @@
 
 .btn {
   display: inline-block;
-  padding: 0.4em 1.2em;
+  padding: $vert-spacing-unit*.25 $horz-spacing-unit;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: .8px;
   @include font-size(11px);
   background-color: $blue;
   color: #fff;
+  a {
+    @include link-colors(white, $light-blue);
+  }
 }
 
 .icon-only {
@@ -21,8 +24,16 @@
   ul {
     @extend %navigation-list;
     > li {
-      margin-right: $horz-spacing-unit *  1.5;
-      padding: 1.1em 0;
+      margin-right: $horz-spacing-unit *  2;
+      padding: $vert-spacing-unit*.7 0;
     }
+  }
+}
+
+.split-list ul {
+  .sub-list {
+    float: left;
+    margin-left: $horz-spacing-unit *  2;
+    padding: 0;
   }
 }

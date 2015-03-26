@@ -26,9 +26,11 @@
           <?php endif; ?>
             <?php print render($page['branding']); ?>
       	</div>
-      	<?php print render($page['header']); ?>
+        <div class="l-region--header-wrapper">
+      		<?php print render($page['header']); ?>
+        </div>
       </div>
-
+		
       <?php print render($page['navigation']); ?>
 
 
