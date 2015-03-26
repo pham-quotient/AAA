@@ -1,0 +1,60 @@
+.l-footer-preface {
+  background: url("../images/mission-bg.jpg") center top no-repeat $light-grey;
+  background-size: cover;
+  text-align: center;
+  padding: $vert-spacing-unit 0;
+  color: $darker-grey;
+  h2 {
+    color: $darker-grey;
+  }
+  p {
+    @include font-size(18px);
+    line-height: $vert-spacing-unit;
+    &:last-child {margin-bottom: 0}
+  }
+
+} // end l-footer-preface
+
+.l-footer .l-container {
+  background: url("../images/AAA-logo-grey.png") left top no-repeat;
+  padding-top: 2em + $vert-spacing-unit;
+  .panel-pane {
+    margin-bottom: $vert-spacing-unit;
+  }
+  h2 {
+    @extend h4;
+    color: $dark-grey;
+  }
+  .l-region--footer-left{
+    .links-social-media {
+      > li {
+        padding: 0;
+       > a {
+  //        @include link-colors(white, $light-blue);
+        }
+      }
+    }
+  } // end l-region--footer-left
+
+  .l-region--footer-right{
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .leaf, .collapsed, .expanded {
+        list-style-image: none;
+        list-style-type: none;
+      }
+    }
+    .pane-system-main-menu .list-0 {margin-left: 0};
+    @include breakpoint($desk) {
+      .pane-menu-menu-quick-links-menu,
+      .pane-system-main-menu {
+        float: left;
+      }
+      .pane-system-main-menu {
+        padding-left: $horz-spacing-unit * 2;
+      }
+    }
+  } // end l-region--footer-right
+} // end .l-footer-wrapper .l-container

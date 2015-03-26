@@ -7,10 +7,9 @@
 /* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-container,
 .l-region--navigation {
-  max-width: 90%;
+  max-width: 96%;
   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em; }
+  margin-right: auto; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
   .l-container:after,
   .l-region--navigation:after {
@@ -23,11 +22,27 @@
   overflow: hidden;
   *zoom: 1; }
 
-/* line 33, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 32, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-header-preface-wrapper,
+.l-header-middle,
+header,
+.l-main,
+.l-hero,
+.l-highlighted,
+.l-main,
+.l-footer-preface,
 .l-region--highlighted,
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: 1em; }
+  margin-bottom: 1.618em; }
+
+/* line 49, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-wrapper .l-region--header .panel-pane {
+  float: left; }
+
+/* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-preface-right .panel-pane {
+  float: left; }
 
 /*# sourceMappingURL=baseline.layout.no-query.css.map */

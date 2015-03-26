@@ -14,7 +14,7 @@
         </div>
       </div>
     <?php endif; ?>
-    <div class="l-container">
+    <div class="l-container l-header-middle">
       	<div class="l-region l-branding site-branding">
           <?php if ($logo):
             $logo_title = $site_name ? $site_name : t('Home');
@@ -26,7 +26,9 @@
           <?php endif; ?>
             <?php print render($page['branding']); ?>
       	</div>
+        <div class="l-region--header-wrapper">
       	<?php print render($page['header']); ?>
+        </div>
       </div>
 
       <?php print render($page['navigation']); ?>
@@ -77,9 +79,10 @@
     </div>
   </div>
 
-  <footer class="l-footer-wrapper" role="contentinfo">
+  <footer class="l-footer" role="contentinfo">
     <div class="l-container">
-      <?php print render($page['footer']); ?>
+      <?php print render($page['footer_left']); ?>
+      <?php print render($page['footer_right']); ?>
     </div>
   </footer>
 </div>
