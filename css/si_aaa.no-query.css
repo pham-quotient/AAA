@@ -2465,19 +2465,19 @@ a {
     color: #1668b3; }
   /* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
   a:focus {
-    color: #12395c; }
+    color: #1668b3; }
   /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
   a:hover {
     color: #12395c; }
   /* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
   a:active {
-    color: #f5865f; }
+    color: #1668b3; }
 
-/* line 131, ../sass/base/_typography.scss */
+/* line 132, ../sass/base/_typography.scss */
 a:hover {
   text-decoration: underline; }
 
-/* line 135, ../sass/base/_typography.scss */
+/* line 136, ../sass/base/_typography.scss */
 h1, h2, h3, h4, .l-footer .l-container h2, h5, h6 {
   margin-top: 0em;
   padding-top: 0em;
@@ -2485,7 +2485,7 @@ h1, h2, h3, h4, .l-footer .l-container h2, h5, h6 {
   margin-bottom: 0.32857em;
   font-family: "GT Walsheim", Helvetica, Arial, sans-serif;
   color: #1668b3; }
-  /* line 139, ../sass/base/_typography.scss */
+  /* line 140, ../sass/base/_typography.scss */
   h1 a,
   h1 a:visited, h2 a,
   h2 a:visited, h3 a,
@@ -2496,31 +2496,31 @@ h1, h2, h3, h4, .l-footer .l-container h2, h5, h6 {
   h6 a:visited {
     color: inherit;
     text-decoration: none; }
-  /* line 144, ../sass/base/_typography.scss */
+  /* line 145, ../sass/base/_typography.scss */
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, .l-footer .l-container h2 a:hover, h5 a:hover, h6 a:hover {
     color: #12395c; }
 
-/* line 149, ../sass/base/_typography.scss */
+/* line 150, ../sass/base/_typography.scss */
 h1 {
   font-size: 37px;
   font-size: 2.64286rem; }
 
-/* line 153, ../sass/base/_typography.scss */
+/* line 154, ../sass/base/_typography.scss */
 h2 {
   font-size: 23px;
   font-size: 1.64286rem; }
 
-/* line 157, ../sass/base/_typography.scss */
+/* line 158, ../sass/base/_typography.scss */
 h3 {
   font-size: 18px;
   font-size: 1.28571rem; }
 
-/* line 161, ../sass/base/_typography.scss */
+/* line 162, ../sass/base/_typography.scss */
 h4, .l-footer .l-container h2 {
   font-size: 14px;
   font-size: 1rem; }
 
-/* line 165, ../sass/base/_typography.scss */
+/* line 166, ../sass/base/_typography.scss */
 p {
   margin: 0;
   margin-top: 0em;
@@ -2558,8 +2558,12 @@ p {
   .l-footer .l-container h2 {
     color: #515151; }
   /* line 30, ../sass/components/_footer.scss */
-  .l-footer .l-container .l-region--footer-left .links-social-media > li {
+  .l-footer .l-container .l-region--footer-left .icon-list ul > li {
     padding: 0; }
+  /* line 34, ../sass/components/_footer.scss */
+  .l-footer .l-container .l-region--footer-left .si-terms-privacy {
+    font-size: 12px;
+    font-size: 0.85714rem; }
   /* line 40, ../sass/components/_footer.scss */
   .l-footer .l-container .l-region--footer-right .menu {
     list-style: none;
@@ -2659,25 +2663,31 @@ p {
   font-size: 11px;
   font-size: 0.78571rem;
   background-color: #1668b3;
-  color: #fff; }
-  /* line 14, ../sass/components/_misc.scss */
-  .btn a {
+  color: white; }
+  /* line 18, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+  .btn:visited {
     color: white; }
-    /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-    .btn a:hover {
-      color: #91bce3; }
+  /* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+  .btn:focus {
+    color: white; }
+  /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+  .btn:hover {
+    color: #91bce3; }
+  /* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+  .btn:active {
+    color: white; }
 
-/* line 19, ../sass/components/_misc.scss */
+/* line 16, ../sass/components/_misc.scss */
 .icon-only {
   display: inline-block;
   /* Fix for clickability issue in WebKit */ }
 
-/* line 26, ../sass/components/_misc.scss */
+/* line 23, ../sass/components/_misc.scss */
 .icon-list ul > li {
   margin-right: 2em;
   padding: 1.1326em 0; }
 
-/* line 34, ../sass/components/_misc.scss */
+/* line 31, ../sass/components/_misc.scss */
 .split-list ul .sub-list {
   padding: 0;
   margin-left: 0; }

@@ -26,13 +26,13 @@
     color: $dark-grey;
   }
   .l-region--footer-left{
-    .links-social-media {
+    .icon-list ul {
       > li {
         padding: 0;
-       > a {
-  //        @include link-colors(white, $light-blue);
-        }
       }
+    }
+    .si-terms-privacy {
+      @include font-size(12px);
     }
   } // end l-region--footer-left
 

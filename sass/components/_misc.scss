@@ -10,10 +10,7 @@
   letter-spacing: .8px;
   @include font-size(11px);
   background-color: $blue;
-  color: #fff;
-  a {
-    @include link-colors(white, $light-blue);
-  }
+  @include link-colors(white, $light-blue, white, white, white);
 }
 
 .icon-only {

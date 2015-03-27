@@ -125,7 +125,8 @@ html {
  * $LINKS
  */
 a {
-  @include link-colors($blue, $dark-blue, $salmon, $blue, $dark-blue);
+  //       link-colors($normal, $hover, $active, $visited, $focus)
+  @include link-colors($blue, $dark-blue, $blue, $blue, $blue);
   text-decoration: none;
 }
 a:hover {

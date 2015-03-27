@@ -5,31 +5,97 @@ screenshot = screenshot.png
 engine = phptemplate
 core = 7.x
 
-; Styles
+; ========================================
+; Stylesheets
+; ========================================
 stylesheets[all][] = css/font-awesome/font-awesome.css
 stylesheets[all][] = css/si_aaa.normalize.css
 stylesheets[all][] = css/si_aaa.hacks.css
 stylesheets[all][] = css/si_aaa.styles.css
 stylesheets[all][] = css/si_aaa.no-query.css
 
-
+; ========================================
 ; Regions
-regions[branding]             = Branding
-regions[header_preface_left]  = Header Preface Left
+; ========================================
+regions[branding] = Branding
+regions[header_preface_left] = Header Preface Left
 regions[header_preface_right] = Header Preface Right
-regions[header]               = Header
-regions[navigation]           = Navigation bar
-regions[hero]                 = Hero
-regions[highlighted]          = Highlighted
-regions[help]                 = Help
-regions[content]              = Content
-regions[sidebar_first]        = First sidebar
-regions[sidebar_second]       = Second sidebar
-regions[footer_preface]       = Footer Preface
-regions[footer_left]          = Footer Left
-regions[footer_right]         = Footer Right
+regions[header] = Header
+regions[navigation] = Navigation bar
+regions[hero] = Hero
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer_preface] = Footer Preface
+regions[footer_left] = Footer Left
+regions[footer_right] = Footer Right
 
-; Plugins
-plugins[panels][layouts] = panels/layouts
+; ========================================
 ; Scripts
- scripts[] = js/si_aaa.behaviors.js
+; ========================================
+scripts[] = js/si_aaa.behaviors.js
+
+; ========================================
+; Settings
+; ========================================
+settings[toggle_logo] = 1
+settings[toggle_name] = 1
+settings[toggle_slogan] = 1
+settings[toggle_node_user_picture] = 1
+settings[toggle_comment_user_picture] = 1
+settings[toggle_comment_user_verification] = 1
+settings[toggle_favicon] = 1
+settings[toggle_main_menu] = 1
+settings[toggle_secondary_menu] = 1
+settings[omega_toggle_front_page_content] = 1
+settings[default_logo] = 1
+settings[logo_path] = ""
+settings[logo_upload] = ""
+settings[default_favicon] = 1
+settings[favicon_path] = ""
+settings[favicon_upload] = ""
+settings[omega_enable_warning] = 1
+settings[omega_toggle_extension_development] = 1
+settings[omega_enable_export_reminder] = 1
+settings[omega_rebuild_theme_registry] = 0
+settings[omega_rebuild_aggregates] = 0
+settings[omega_browser_width_indicator] = 0
+settings[omega_livereload] = 1
+settings[omega_livereload_script] = http://localhost:35729/livereload.js
+settings[omega_livereload_host] = localhost
+settings[omega_livereload_port] = 35729
+settings[omega_demo_regions] = 1
+settings[omega_demo_regions_list][branding] = branding
+settings[omega_demo_regions_list][header_preface_left] = header_preface_left
+settings[omega_demo_regions_list][header_preface_right] = header_preface_right
+settings[omega_demo_regions_list][header] = header
+settings[omega_demo_regions_list][navigation] = navigation
+settings[omega_demo_regions_list][hero] = hero
+settings[omega_demo_regions_list][highlighted] = highlighted
+settings[omega_demo_regions_list][help] = help
+settings[omega_demo_regions_list][content] = content
+settings[omega_demo_regions_list][sidebar_first] = sidebar_first
+settings[omega_demo_regions_list][sidebar_second] = sidebar_second
+settings[omega_demo_regions_list][footer_preface] = footer_preface
+settings[omega_demo_regions_list][footer_left] = footer_left
+settings[omega_demo_regions_list][footer_right] = footer_right
+settings[omega_toggle_extension_layouts] = 0
+settings[omega_layout] = ""
+settings[omega_toggle_extension_compatibility] = 1
+settings[omega_conditional_classes_html] = 1
+settings[omega_apple_touch] = 1
+settings[omega_cleartype] = 1
+settings[omega_handheld_friendly] = 1
+settings[omega_mobile_optimized] = 1
+settings[omega_viewport] = 1
+settings[omega_viewport_user_scaleable] = 1
+settings[omega_chrome_edge] = 1
+settings[omega_internet_explorer_support] = 6
+settings[omega_toggle_extension_assets] = 1
+settings[omega_libraries][selectivizr][status] = 1
+settings[omega_libraries][respond][status] = 0
+settings[omega_libraries][pie][status] = 1
+settings[omega_libraries][html5shiv][status] = 1
+settings[nice_menus_custom_css] = ""
