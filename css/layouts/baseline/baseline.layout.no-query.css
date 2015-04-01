@@ -7,9 +7,10 @@
 /* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-container,
 .l-region--navigation {
-  max-width: 96%;
+  max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 0 1%; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
   .l-container:after,
   .l-region--navigation:after {
@@ -17,12 +18,25 @@
     display: block;
     clear: both; }
 
-/* line 29, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container {
-  overflow: hidden;
-  *zoom: 1; }
+/* line 30, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
 
-/* line 32, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* IE6 */
+/* line 38, ../../../sass/layouts/baseline/baseline.layout.scss */
+* html .l-container {
+  height: 1%; }
+
+/* IE7 */
+/* line 42, ../../../sass/layouts/baseline/baseline.layout.scss */
+*:first-child + html .l-container {
+  min-height: 1%; }
+
+/* line 46, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-preface-wrapper,
 .l-header-middle,
 header,
@@ -37,12 +51,25 @@ header,
 .l-region--sidebar-second {
   margin-bottom: 1.618em; }
 
-/* line 49, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 60, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-header-preface-wrapper .l-container {
+  overflow: visible; }
+
+/* line 63, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-wrapper .l-region--header .panel-pane {
   float: left; }
 
-/* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header-preface-right .panel-pane {
-  float: left; }
+/* line 69, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-wrapper .l-region--header {
+  float: right; }
+
+/* line 74, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-preface-right {
+  width: 100%;
+  float: right;
+  margin-right: 0; }
+  /* line 75, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region--header-preface-right .panel-pane {
+    float: left; }
 
 /*# sourceMappingURL=baseline.layout.no-query.css.map */

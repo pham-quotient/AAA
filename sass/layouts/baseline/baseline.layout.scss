@@ -5,7 +5,7 @@
  * and building mobile first layouts.
  ******************************************************************************/
 @import "toolkit";
-@import "compass";
+//@import "compass";
 @import "susy";
 @import "breakpoint";
 
@@ -16,7 +16,7 @@
 // Susy Defaults (http://susy.readthedocs.org/en/latest/settings/)
 $susy: (
   columns:            12,
-  container:          96%,
+  container:          100%,
   gutters:            $gutter,
  // debug:              (image:show),
 );
@@ -24,11 +24,25 @@ $susy: (
 .l-container,
 .l-region--navigation {
   @include container; // Define these elements as the grid containers.
+  padding: 0 1%;
 }
 
-.l-container {
-  @include clearfix;
+.l-container:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
+/* IE6 */
+* html .l-container {
+  height: 1%;
+}
+/* IE7 */
+*:first-child + html .l-container {
+  min-height: 1%;
+}
+
 .l-header-preface-wrapper,
 .l-header-middle,
 header,
@@ -43,7 +57,7 @@ header,
 .l-region--sidebar-second {
   margin-bottom: $vert-spacing-unit;
 }
-
+.l-header-preface-wrapper .l-container {overflow: visible;}
 .l-region--header-wrapper {
   .l-region--header {
     .panel-pane {
@@ -51,19 +65,32 @@ header,
     }
   }
 }
+.l-region--header-wrapper {
+    .l-region--header {
+      float: right;
+    }
+  }
 
 .l-region--header-preface-right {
   .panel-pane {
     float: left;
   }
+  @include span(12 last);
 }
 
 @include breakpoint($tab) {
+  .l-container,
+  .l-region--navigation{
+    @include container(98%); // Set max-width to 98%
+    padding: 0;
+  }
+  .l-header-preface-wrapper .l-container {overflow: hidden;}
+
   .l-region--header-preface-left  {
-    @include span(6);
+    @include span(3);
   }
   .l-region-header-preface-right-wrapper {
-    @include span(6 last);
+    @include span(9 last);
     .l-region--header-preface-right {
       float: right;
     }
@@ -73,9 +100,7 @@ header,
   }
   .l-region--header-wrapper {
     @include span(8 last);
-    .l-region--header {
-      float: right;
-    }
+
   }
 
   .l-region--navigation {
@@ -97,11 +122,10 @@ header,
     }
   }
   .l-region--footer-left {
-    @include span(4);
+    @include span(5);
   }
   .l-region--footer-right {
     @include span(7 last);
-    @include prefix(1);
   }
 }
 
@@ -111,10 +135,10 @@ header,
     @include layout(16); // Make 16 column design.
   }
   .l-region--header-preface-left  {
-    @include span(8);
+    @include span(4);
   }
   .l-region-header-preface-right-wrapper  {
-    @include span(8 last);
+    @include span(6 last);
   }
   .l-branding {
     @include span(4); // Span 6 out of 16 columns.
@@ -159,11 +183,10 @@ header,
     }
   }
   .l-region--footer-left {
-    @include span(6);
+    @include span(7);
   }
   .l-region--footer-right {
     @include span(9 last);
-    @include prefix(1);
   }
 }
 

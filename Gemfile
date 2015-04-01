@@ -15,12 +15,13 @@ group :development do
   gem 'breakpoint'              # Manages CSS media queries.
   gem 'oily_png'                # Faster Compass sprite generation.
   gem 'css_parser'              # Helps `compass stats` output statistics.
-  gem 'font-awesome-sass'       #Font Awesome Icons
+  gem 'font-awesome-sass'       # Font Awesome Icons
 
   # Guard
   gem 'guard'                   # Guard event handler.
   gem 'guard-compass'           # Compile on sass/scss change.
   gem 'guard-shell'             # Run shell commands.
+#  gem 'guard-uglify'            # Compress javascript files
  # gem 'guard-livereload'        # Browser reload.
  # gem 'yajl-ruby'               # Faster JSON with LiveReload in the browser.
 

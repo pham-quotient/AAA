@@ -54,7 +54,7 @@
           items_per_col[i] = i < difference ?  min_items_per_col + 1 : min_items_per_col;
         }
         for (var i = 0; i < num_cols; i++) {
-		  var subClass = 'list-' + i;	
+		  var subClass = 'list-' + i;
           $(this).append($('<ul ></ul>').addClass(listClass +' ' + subClass));
           for (var j = 0; j < items_per_col[i]; j++) {
             var pointer = 0;

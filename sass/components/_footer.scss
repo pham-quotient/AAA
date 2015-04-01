@@ -12,6 +12,7 @@
     line-height: $vert-spacing-unit;
     &:last-child {margin-bottom: 0}
   }
+  .panel-pane {margin: $vert-spacing-unit 0;}
 
 } // end l-footer-preface
 
@@ -32,7 +33,7 @@
       }
     }
     .si-terms-privacy {
-      @include font-size(12px);
+      @include font-size(11px);
     }
   } // end l-region--footer-left
 
@@ -52,8 +53,8 @@
       .pane-system-main-menu {
         float: left;
       }
-      .pane-system-main-menu {
-        padding-left: $horz-spacing-unit * 2;
+      .pane-menu-menu-quick-links-menu{
+        padding-right: $horz-spacing-unit * 2;
       }
     }
   } // end l-region--footer-right

@@ -13,11 +13,8 @@
   @include link-colors(white, $light-blue, white, white, white);
 }
 
-.icon-only {
-  display: inline-block; /* Fix for clickability issue in WebKit */
-}
 
-.icon-list {
+.menu-list {
   ul {
     @extend %navigation-list;
     > li {
@@ -26,7 +23,13 @@
     }
   }
 }
-
+.list-icon {
+  margin-right: $horz-spacing-unit *  2;
+  padding: $vert-spacing-unit*.7 0;
+  .menu-title {
+    @extend %screen-reader;
+  }
+}
 .split-list ul {
   .sub-list {
     padding: 0;

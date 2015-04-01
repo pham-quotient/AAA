@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Template for the Mondrian layout.
+ * Template for the Omega Grid 3 layout.
  *
  * Variables:
  * - $css_id: An optional CSS id to use for the layout.

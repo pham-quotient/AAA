@@ -1,0 +1,79 @@
+/*******************************************************************************
+ * baseline.layout.scss
+ *
+ * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+@import "toolkit";
+@import "susy";
+@import "breakpoint";
+
+
+// Globbing from within sub-folders only works with relative paths.
+@import "../../variables/**/*";
+
+
+.panel-display {
+  .two-col-region--main, .two-col-region--aside {
+    margin-bottom: $vert-spacing-unit;
+  }
+}
+@include breakpoint($tab) {
+  @include layout(12);
+  .panel-display--two-col-right{
+    .two-col-region--main {
+      @include span(7);
+    }
+    .two-col-region--aside {
+      @include span(5 last);
+    }
+  }
+  .panel-display--two-col-left{
+    .two-col-region--aside {
+      @include span(5);
+    }
+    .two-col-region--main {
+      @include span(7 last);
+    }
+  }
+}
+
+@include breakpoint($desk) {
+  @include layout(16);
+  .panel-display--two-col-right{
+    .two-col-region--main {
+      @include span(10);
+    }
+    .two-col-region--aside {
+      @include span(6 last);
+    }
+  }
+  .panel-display--two-col-left{
+    .two-col-region--aside {
+      @include span(10);
+    }
+    .two-col-region--main {
+      @include span(6 last);
+    }
+  }
+}
+
+@include breakpoint($wide) {
+  @include layout(16);
+  .panel-display--two-col-right{
+    .two-col-region--main {
+      @include span(12);
+    }
+    .two-col-region--aside {
+      @include span(4 last);
+    }
+  }
+  .panel-display--two-col-left{
+    .two-col-region--aside {
+      @include span(12);
+    }
+    .two-col-region--main {
+      @include span(4 last);
+    }
+  }
+}

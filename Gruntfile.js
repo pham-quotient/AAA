@@ -116,7 +116,8 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'uglify:dist',
     'compass:dist',
-    'jshint'
+    'jshint',
+    'watch'
   ]);
 
 };

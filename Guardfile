@@ -31,4 +31,15 @@ group :development do
   #  watch(%r{^((?!\.normalize\.).)*\.(css|js)$})
   # end
 
+  ###
+  # Compresses javascript to one file named script.min.js. uncomment if you are not asking Drupal to take care of this
+  # :input        - input file to compress
+  # :output       - file to write compressed output to
+  # :run_at_start - compressed input file when guard starts
+  # :uglifier     - options to be passed to the uglifier gem
+  ###
+ # guard "uglify", :input => "js/*.js", :output => "js/script.min.js" do
+ #   watch(%r{.+\.js$})
+ # end
+
 end
