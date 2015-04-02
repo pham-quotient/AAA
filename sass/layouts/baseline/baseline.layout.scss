@@ -4,11 +4,15 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
+
 @import "toolkit";
 //@import "compass";
 @import "susy";
 @import "breakpoint";
-
+@mixin box-sizing($value) {
+    -moz-box-sizing: $value;
+         box-sizing: $value;
+}
 
 // Globbing from within sub-folders only works with relative paths.
 @import "../../variables/**/*";
@@ -24,24 +28,9 @@ $susy: (
 .l-container,
 .l-region--navigation {
   @include container; // Define these elements as the grid containers.
-  padding: 0 1%;
+  padding: 0 2%;
 }
 
-.l-container:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-/* IE6 */
-* html .l-container {
-  height: 1%;
-}
-/* IE7 */
-*:first-child + html .l-container {
-  min-height: 1%;
-}
 
 .l-header-preface-wrapper,
 .l-header-middle,
@@ -57,7 +46,6 @@ header,
 .l-region--sidebar-second {
   margin-bottom: $vert-spacing-unit;
 }
-.l-header-preface-wrapper .l-container {overflow: visible;}
 .l-region--header-wrapper {
   .l-region--header {
     .panel-pane {

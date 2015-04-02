@@ -25,19 +25,22 @@
   h2 {
     @extend h4;
     color: $dark-grey;
+    margin-bottom: 0;
   }
-  .l-region--footer-left{
-    .icon-list ul {
-      > li {
+  .panel-col-first{
+    .item-list ul, .menu {@extend %navigation-list }
+    .menu  {
+      .list-icon {
         padding: 0;
       }
     }
+
     .si-terms-privacy {
       @include font-size(11px);
     }
   } // end l-region--footer-left
 
-  .l-region--footer-right{
+  .panel-col-last{
     .menu {
       list-style: none;
       margin: 0;
