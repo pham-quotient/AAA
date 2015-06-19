@@ -1,4 +1,8 @@
-<li <?php print $attributes;?> class="<?php print $classes;?>">
+<li <?php print $attributes;?>
+	<?php if (!empty($classes)) :  ?>
+	 class="<?php print $classes;?>"
+  	<?php endif;?>
+  >
   <a href="<?php print in_array($item['link']['href'], array('<nolink>')) ? "#" : url($item['link']['href']);?>" class="<?php print implode(" ", $a_classes);?>">
     <?php if(!empty($item_config['xicon'])) : ?>
       <span class="<?php print $item_config['xicon'];?>"></span>

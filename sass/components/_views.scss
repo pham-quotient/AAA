@@ -1,0 +1,6 @@
+.slick-wrapper {
+  .node__content {
+    @include rem(padding, $vert-spacing-unit $horz-spacing-unit*1.5);
+  }
+}
+

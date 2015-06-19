@@ -1,22 +1,18 @@
 .sr-only {
-  @extend %screen-reader;
+  @extend %hide-text;
 }
 
 .btn {
-  display: inline-block;
-  padding: $vert-spacing-unit*.25 $horz-spacing-unit;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: .8px;
-  @include font-size(11px);
-  background-color: $blue;
-  @include link-colors(white, $light-blue, white, white, white);
+  @include button();
 }
 
+a.btn {
+  @include link-colors(white, $light-blue, white, white, white)
+}
 
 .menu-list {
   ul {
-    @extend %navigation-list;
+    @include float-list;
     > li {
       margin-right: $horz-spacing-unit *  2;
       padding: $vert-spacing-unit*.7 0;
@@ -27,7 +23,7 @@
   margin-right: $horz-spacing-unit *  2;
   padding: $vert-spacing-unit*.7 0;
   .menu-title {
-    @extend %screen-reader;
+    @extend %hide-text;
   }
 }
 .split-list ul {
@@ -40,4 +36,9 @@
       float: left;
     }
   }
+}
+
+.highlight {
+  font-family: $scala;
+  font-style: italic;
 }

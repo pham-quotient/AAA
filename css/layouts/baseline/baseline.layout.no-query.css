@@ -4,21 +4,28 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-/* line 28, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container,
-.l-region--navigation {
+/* line 29, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  padding: 0 2%; }
+  margin-right: auto; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
-  .l-container:after,
-  .l-region--navigation:after {
+  .l-container:after {
     content: " ";
     display: block;
     clear: both; }
 
-/* line 35, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 33, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container {
+  overflow: hidden;
+  *zoom: 1; }
+
+/* line 37, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container > div,
+.l-region--navigation > div {
+  padding: 0 2%; }
+
+/* line 42, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-preface-wrapper,
 .l-header-middle,
 header,
@@ -31,23 +38,33 @@ header,
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: 1.618em; }
+  margin-bottom: 26px; }
 
-/* line 51, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header-wrapper .l-region--header .panel-pane {
-  float: left; }
+/* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-preface-left {
+  height: 45px; }
 
-/* line 57, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header-wrapper .l-region--header {
+/* line 59, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header .block:last-child,
+.l-region--navigation {
+  position: absolute;
+  top: 56px;
+  left: 2%; }
+
+/* line 65, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header .block:last-child {
+  left: 30%; }
+
+/* line 69, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region-header-preface-right-wrapper {
   float: right; }
-
-/* line 62, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header-preface-right {
-  width: 100%;
-  float: right;
-  margin-right: 0; }
-  /* line 63, ../../../sass/layouts/baseline/baseline.layout.scss */
-  .l-region--header-preface-right .panel-pane {
-    float: left; }
+  /* line 71, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region-header-preface-right-wrapper .l-region--header-preface-right {
+    float: right;
+    overflow: hidden;
+    *zoom: 1; }
+    /* line 72, ../../../sass/layouts/baseline/baseline.layout.scss */
+    .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
+      float: left; }
 
 /*# sourceMappingURL=baseline.layout.no-query.css.map */

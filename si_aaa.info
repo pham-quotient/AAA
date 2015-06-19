@@ -34,11 +34,12 @@ regions[footer] = Footer
 ; regions[footer_right] = Footer Right
 
 ; Panel plugins
-plugins[panels][layouts] = panels/layouts
+; plugins[panels][layouts] = panels/layouts
 
 ; ========================================
 ; Scripts
 ; ========================================
+scripts[] = js/slick.min.js
 scripts[] = js/si_aaa.behaviors.js
 
 ; ========================================

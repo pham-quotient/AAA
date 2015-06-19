@@ -15,7 +15,7 @@ group :development do
   gem 'breakpoint'              # Manages CSS media queries.
   gem 'oily_png'                # Faster Compass sprite generation.
   gem 'css_parser'              # Helps `compass stats` output statistics.
-  gem 'font-awesome-sass'       # Font Awesome Icons
+  # gem 'font-awesome-sass'       # Font Awesome Icons
 
   # Guard
   gem 'guard'                   # Guard event handler.

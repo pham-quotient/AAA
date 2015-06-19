@@ -1,24 +1,25 @@
 .l-header {
   background-color: $blue;
-
+  a {
+    // link-colors($normal, $hover, $active, $visited, $focus)
+    @include link-colors($light-blue, #fff);
+  }
   .menu {
-    @extend %navigation-list;
-    > li {
-      color: #fff;
-     > a {
-        // link-colors($normal, $hover, $active, $visited, $focus)
-        @include link-colors(#fff, $light-blue, #fff, #fff, #fff);
-      }
-    }
+    @include float-list;
   } // end menu
 
   p {
     margin: 0;
-    padding: $vert-spacing-unit*.5 0;
   }
   .l-header-preface-wrapper {
     background-color: $dark-blue;
     .l-region--header-preface-left {
+      background-color: $darker-blue;
+      @include breakpoint($tab, true) {
+        background: none;
+      }
+      padding-top: $vert-spacing-unit*.5;
+      padding-bottom: $vert-spacing-unit*.25;
       img {
         max-height: $vert-spacing-unit;
         width: auto;
@@ -26,28 +27,29 @@
     }
 
     .l-region--header-preface-right {
-      .pane-social-media-links {
-        .icon-only {
-           @include link-colors(#fff, $light-blue);
-        }
-        margin-right: $horz-spacing-unit * 2;
+      padding-top: $vert-spacing-unit*.5;
+      padding-bottom: $vert-spacing-unit;
+      @include breakpoint($tab, true) {
+        padding-bottom: $vert-spacing-unit *.5;
       }
-      .donate-link {margin-left: $horz-spacing-unit * 2;}
-      .btn {
-        background-color: #134979;
-        border: 1px solid #f2f2f2;
+      .donate-link .btn {
+        @include button;
+        @include button_style(white, lighten($dark-blue, 10%), $dark-blue);
+        @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit, $font-size-small, floor(($baseLineHeight * .75)/$font-size-small));
+        text-transform: uppercase;
+        // @include breakpoint($tab, true) {
+        //   border-width: 0;
+        // }
       }
 
     } // end l-region--header-preface-right
-
   } // end l-region-header-preface
 
   .l-region--header {
-    padding-top: $vert-spacing-unit*.6;
     .menu {
+      display: none;
       > li {
         > a {
-          @include link-colors($light-blue, #fff);
           padding: 0 1em;
           border-left: 1px solid $light-blue;
           &:hover {
@@ -58,21 +60,51 @@
           border-left: none;
         }
       }
+      @include breakpoint($tab) {
+        display: block;
+      }
+    }//end quick-link menu
+    // .icon-only {
+    //   @include btn_style(#11406a);
+    //   @include link-colors(white, $light-blue, white, white, white);
+    //   @include breakpoint($desk) {
+    //     background: none;
+    //     @include rem(font-size, 14px);
+    //     @include link-colors($light-blue, white);
+    //     border: 0;
+    //     text-shadow: none;
+    //     padding: 0;
+    //     box-shadow: none;
+    //     vertical-align: top;
+    //   }
+    // }
+
+  } // end l-region--header
+
+  .l-branding  {
+    img{
+      width: 100%;
+      max-width: 400px;
     }
-    .icon-list {
-      p {
-        padding: 0;
-        > a {
-          @include link-colors($light-blue, #fff);
+    .site-name {
+      margin: 0;
+      a {
+        display: block;
+        background: {
+          image: image-url("logo.svg");
+          repeat: no-repeat;
+          position:  top left;
+          size: contain;
+          //color: $background;
+        }
+        padding-left: 100%;
+        padding-top: 13%;
+        span {
+          @extend %hide-text;
         }
       }
     }
 
-  } // end l-region--header
-
-.l-branding img {
-    width: 100%;
-    max-width: 400px;
   } // end l-branding
 } // end l-header
 

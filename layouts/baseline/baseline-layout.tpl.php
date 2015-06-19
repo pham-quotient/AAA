@@ -21,10 +21,18 @@
           ?>
             <a href="<?php print $front_page; ?>" title="<?php print $logo_title; ?>" rel="home" class="site-branding__logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" title="<?php print $site_name; ?>" /></a>
           <?php endif; ?>
-          <?php if ($site_slogan): ?>
-            <h2 class="site-branding__slogan"><?php print $site_slogan; ?></h2>
+          <?php if ($site_name || $site_slogan): ?>
+            <?php if ($site_name): ?>
+              <h1 class="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </h1>
+            <?php endif; ?>
+
+            <?php if ($site_slogan): ?>
+              <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
+            <?php endif; ?>
           <?php endif; ?>
-            <?php print render($page['branding']); ?>
+          <?php print render($page['branding']); ?>
       	</div>
         <div class="l-region--header-wrapper">
       	<?php print render($page['header']); ?>
@@ -51,8 +59,9 @@
 
   <div class="l-main l-container">
     <a id="main-content"></a>
-    <?php print render($tabs); ?>
-    <?php print $breadcrumb; ?>
+<?php /*?>    <?php print $breadcrumb; ?>
+<?php */?>
+		<?php print render($tabs); ?>
     <?php print $messages; ?>
     <?php print render($page['help']); ?>
 

@@ -1,8 +1,8 @@
 $pale-blue      : #92cfe8;
 $light-blue     : #91bce3;
 $blue           : #1668b3;
-$mid-blue       : #134979;
 $dark-blue      : #12395c;
+$darker-blue    : darken($dark-blue, 25%);
 
 $orange         : #e4621c;
 $pale-orange    : #efa47b;
@@ -16,9 +16,11 @@ $red            : #eb3717;
 
 $purple         : #a32a57;
 
-$lighter-grey   : #ededed;
-$light-grey     : #efefef;
-$mid-grey       : #c9c9c9;
-$grey           : #9c9b9b;
-$dark-grey      : #515151;
-$darker-grey    : #2c2c2c;
+$base-gray       : #000000;
+$lighter-gray    : lighten($base-gray, 94%);
+$light-gray      : lighten($base-gray, 79%);
+$gray            : lighten($base-gray, 61%);
+$dark-gray       : lighten($base-gray, 35%);
+$darker-gray     : lighten($base-gray, 17%);
+
+

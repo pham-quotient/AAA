@@ -6,9 +6,9 @@
  ******************************************************************************/
 /* line 17, ../../../sass/layouts/two-col/two-col.layout.scss */
 .panel-display .two-col-region--main, .panel-display .two-col-region--aside {
-  margin-bottom: 1.618em; }
+  margin-bottom: 26px; }
 
-@media (min-width: 600px) {
+@media (min-width: 680px) {
   /* line 24, ../../../sass/layouts/two-col/two-col.layout.scss */
   .panel-display--two-col-right .two-col-region--main {
     width: 57.62712%;

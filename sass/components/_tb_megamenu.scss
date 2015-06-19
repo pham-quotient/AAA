@@ -1,14 +1,14 @@
 // Global settings for all megamenu
 .tb-megamenu, .tb-megamenu .nav-collapse {
   background: none;
-  color: #fff;
+  color: white;
   .nav {
     > li {
       > a,
       &.active > a {
         // Set ($normal, $hover, $active, $visited, $focus)
-         @include link-colors(#fff);
-          padding: .5em 1em;
+         @include link-colors(white, $light-blue, white, white, white);
+          padding: .2em 1em;
           background-image: none;
           border: none;
           background: none;
@@ -40,80 +40,141 @@
     }
   }
   .btn {
-    background-image: none;
-    background-color: $mid-blue;
+    @include button;
+    @include button_style(white, #134979, darken(#134979, 1%));
+    &:hover {
+      background: none;
+      color: $light-blue;
+    }
+    @include breakpoint($desk, true) {
+      display: none;
+    }
+  }
+}
+
+.l-region--header-preface-right .tb-megamenu {
+  margin-right:  $horz-spacing-unit;
+  @include breakpoint($desk, true) {
+    margin-right:  $horz-spacing-unit * 2;
+  }
+   button .icon-reorder {@extend %hide-text;}
+  .nav-collapse {
+    width: 300%;
+    .nav {
+      > li {
+        margin: 0;
+        a {
+          padding-right: $horz-spacing-unit * 2;
+          padding-left: 0;
+          .menu-title {
+            @extend %hide-text;
+          }
+        }
+        &:last-child a {padding-right:0}
+      }
+    }
   }
 }
 
 .l-region--navigation .tb-megamenu {
-  .nav {
-    li {
-      > a,
-        &.active > a {
-          // Set ($normal, $hover, $active, $visited, $focus)
-          @include link-colors($darker-grey);
-          letter-spacing: .5px;
-          border-left: none;
-          padding: .5*$vert-spacing-unit $horz-spacing-unit .5*$vert-spacing-unit 0;
-          @include breakpoint($wide) {
-            padding-right: $horz-spacing-unit * 2;
-          }
-          &:focus, &:hover {
-//              text-decoration: underline;
-            background: none;
-          }
-          @include breakpoint($desk) {
-              @include link-colors(#fff);
-          }
-
-        }
-
-        &.dropdown.active > .dropdown-toggle,
-        &.dropdown.open > .dropdown-toggle,
-        &.dropdown.open.active > .dropdown-toggle,
-        &.dropdown.open.active > a:focus,
-        &.dropdown.open.active > a:hover {
-          background: none;
-          color: $darker-grey;
-          @include breakpoint($desk) {
-            color: #fff;
-          }
-        }
-
-      .dropdown-menu {
-        background-color: $lighter-grey;
-        border: none;
-        li {
-          > a,
-          &.dropdown.open > .dropdown-toggle,
-          &.dropdown.open.active > .dropdown-toggle {
-          @include link-colors(#1a74c1);
-            border: none;
-            letter-spacing: none;
-          }
-          &.active a {background: none;}
-        }
-      }
-    }
-  }
   .nav-collapse{
-    background-color: $lighter-grey;
+    background-color: $lighter-gray;
+    width: 1000%;
     @include box-shadow(rgba(black, .25) 1px 5px 5px);
     @include breakpoint($desk) {
+      width: 100%;
       background: none;
       box-shadow: none;
       .dropdown-menu {
-        background-color: $lighter-grey;
+      background-color: $lighter-gray;
         @include box-shadow(rgba(black, .25) 1px 5px 5px);
       }
     }
-  }
-  .btn-navbar {
-    color: $dark-grey;
-    background-color: #f0f0f0;
-    @include background-image(linear-gradient(white, $lighter-grey));
-    &:hover {
-      color: $darker-grey;
+    .nav {
+      li {
+        > a,
+          &.active > a {
+            // Set ($normal, $hover, $active, $visited, $focus)
+            @include link-colors($darker-gray);
+            letter-spacing: .5px;
+            border-left: none;
+            padding: .5*$vert-spacing-unit $horz-spacing-unit .5*$vert-spacing-unit 0;
+            @include breakpoint($wide) {
+              padding-right: $horz-spacing-unit * 2;
+            }
+            &:focus, &:hover {
+  //              text-decoration: underline;
+              background: none;
+            }
+            @include breakpoint($desk) {
+                @include link-colors(#fff);
+            }
+          }
+
+          &.dropdown.active > .dropdown-toggle,
+          &.dropdown.open > .dropdown-toggle,
+          &.dropdown.open.active > .dropdown-toggle,
+          &.dropdown.open.active > a:focus,
+          &.dropdown.open.active > a:hover {
+            background: none;
+            color: $darker-gray;
+            @include breakpoint($desk) {
+              color: #fff;
+            }
+          }
+
+        .dropdown-menu {
+          background-color: $lighter-gray;
+          border: none;
+          li {
+            > a,
+            &.dropdown.open > .dropdown-toggle,
+            &.dropdown.open.active > .dropdown-toggle {
+            @include link-colors(#1a74c1);
+              border: none;
+              letter-spacing: none;
+            }
+            &.active a {background: none;}
+          }
+        }
+      }
+    }// end nav
+  }// end nav-collapse
+  .btn, .btn:hover {
+    background-image: none;
+    background-color: $dark-blue;
+    border: none;
+    box-shadow: none;
+    .menu-title {
+      @extend %hide-text;
     }
   }
+
+  .btn-navbar [class^="icon-"],
+  .btn-navbar [class^=" icon-"] {
+    color: white;
+    box-shadow: none;
+   // background: url("../images/menu-icon.png") top left no-repeat;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    .menu-icon {
+       &:before {
+        content: "\f0c9";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+       // color: #000;
+        @include rem(padding-left, 10px);
+        @include rem(font-size, 30px);
+      }
+    }
+  }
+  .btn-navbar:hover [class^="icon-"],
+  .btn-navbar:hover [class^=" icon-"] {
+    background-position: 0 -20px;
+  }
+
 } // end .l-region--navigation .tb-megamenu

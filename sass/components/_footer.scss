@@ -1,42 +1,71 @@
 .l-footer-preface {
-  background: url("../images/mission-bg.jpg") center top no-repeat $light-grey;
+  background: url("../images/mission-bg.jpg") center top no-repeat $light-gray;
   background-size: cover;
   text-align: center;
   padding: $vert-spacing-unit 0;
-  color: $darker-grey;
+  color: $darker-gray;
   h2 {
-    color: $darker-grey;
+    color: $darker-gray;
   }
   p {
-    @include font-size(18px);
-    line-height: $vert-spacing-unit;
+    @include rem(font-size, 20px);
+    line-height: 1.3;
     &:last-child {margin-bottom: 0}
   }
   .panel-pane {margin: $vert-spacing-unit 0;}
-
+  .donate-link .btn {
+        @include button;
+        @include button_style(white, $blue, darken($blue, 5%));
+        @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit * 1.5, $font-size-small, floor(($baseLineHeight * .75)/$font-size-small));
+        text-transform: uppercase;
+  }
 } // end l-footer-preface
 
 .l-footer .l-container {
-  background: url("../images/AAA-logo-grey.png") left top no-repeat;
-  padding-top: 2em + $vert-spacing-unit;
+  * {
+    @include rem(font-size, 13px);
+    line-height: 1.538;
+  }
+  ul {
+    @extend %reset-list;
+  }
+  background: url("../images/AAA-logo-gray.png") left top no-repeat;
+    @include rem(padding-top, $baseLineHeight * 2);
   .panel-pane {
-    margin-bottom: $vert-spacing-unit;
+    @include rem(margin, 0 0 $baseLineHeight);
+
   }
   h2 {
-    @extend h4;
-    color: $dark-grey;
+    @include rem(font-size, 16px);
+    line-height: 1.25;
     margin-bottom: 0;
+    color: $dark-gray;
   }
+
   .panel-col-first{
-    .item-list ul, .menu {@extend %navigation-list }
+    .item-list ul, .menu {
+      @include float-list;
+     }
+     .item-list li {
+        width: 40%;
+        @include rem(margin-left, 20px);
+        &:first-child {
+          margin-left: 0;
+        }
+     }
     .menu  {
       .list-icon {
+        margin-left: 2em;
         padding: 0;
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
 
     .si-terms-privacy {
-      @include font-size(11px);
+      @include rem(font-size, 10px);
+      line-height: 10;
     }
   } // end l-region--footer-left
 

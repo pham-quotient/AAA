@@ -111,14 +111,19 @@
   ),
   600,
   italic);
-@include establish-baseline($base-font-size);
 
 /**
  * $BASE-TYPOGRAPHY
  */
 html {
+  font-size: 62.5%
+}
+
+body {
   font-family: $gt-walsheim;
-  color: $dark-grey;
+  color: $dark-gray;
+  @include rem(font-size, 16px);
+  line-height: 1.625;
 }
 
 /**
@@ -134,8 +139,8 @@ a:hover {
 }
 
 #{headings()} {
-  @include rhythm(0, 0, 0, 0.2);
   font-family: $gt-walsheim;
+  @include rem(margin, 0 0 $baseLineHeight);
   color: $blue;
   a,
   a:visited {
@@ -148,23 +153,37 @@ a:hover {
 }
 
 h1 {
-  @include font-size(37px);
+  @include rem(font-size,$font-size-h1);
+  line-height: ($baseLineHeight * 2)/$font-size-h1;
 }
 
 h2 {
-  @include font-size(23px);
+  @include rem(font-size,$font-size-h2);
+  line-height: ($baseLineHeight * 1.5)/$font-size-h2;
 }
 
 h3 {
-  @include font-size(18px);
+  @include rem(font-size,$font-size-h3);
+  line-height: ($baseLineHeight * 1.25)/$font-size-h3;
 }
 
 h4 {
-  @include font-size(14px);
+  @include rem(font-size,$font-size-h4);
+  line-height: $baseLineHeight/$font-size-h4;
+}
+
+h5 {
+  @include rem(font-size,$font-size-h5);
 }
 
 p {
-  margin: 0;
-  @include rhythm(0, 0, 0, 1);
+  @include rem(margin, 0 0 $baseLineHeight);
+ // &:last-child {margin-bottom: 0;}
 }
 
+ul {
+  @include rem(margin, 0 0 $baseLineHeight);
+  li {
+  @include rem(margin, $baseLineHeight/2);
+  }
+}

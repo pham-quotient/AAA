@@ -1,0 +1,20 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+
+
+.l-header {
+    .l-branding  {
+
+    .site-name {
+      a {
+        display: block;
+        background: {
+          image: image-url("logo.png");
+
+        }
+      }
+    }
+
+  } // end l-branding
+}

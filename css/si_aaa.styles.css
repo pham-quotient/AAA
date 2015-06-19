@@ -1,2344 +1,6 @@
-@charset "UTF-8";
-/*!
- *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-/* FONT PATH
- * -------------------------- */
-@font-face {
-  font-family: 'FontAwesome';
-  src: url(font-path("font-awesome/fontawesome-webfont.eot"));
-  src: url(font-path("font-awesome/fontawesome-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("font-awesome/fontawesome-webfont.woff2")) format("woff2"), url(font-path("font-awesome/fontawesome-webfont.woff")) format("woff"), url(font-path("font-awesome/fontawesome-webfont.ttf")) format("truetype"), url(font-path("font-awesome/fontawesome-webfont.svg#fontawesomeregular")) format("svg");
-  font-weight: normal;
-  font-style: normal; }
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_core.scss */
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0); }
-
-/* makes the font 33% larger relative to the icon container */
-/* line 5, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
-.fa-lg {
-  font-size: 1.33333em;
-  line-height: 0.75em;
-  vertical-align: -15%; }
-
-/* line 10, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
-.fa-2x {
-  font-size: 2em; }
-
-/* line 11, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
-.fa-3x {
-  font-size: 3em; }
-
-/* line 12, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
-.fa-4x {
-  font-size: 4em; }
-
-/* line 13, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_larger.scss */
-.fa-5x {
-  font-size: 5em; }
-
-/* line 3, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_fixed-width.scss */
-.fa-fw {
-  width: 1.28571em;
-  text-align: center; }
-
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
-.fa-ul {
-  padding-left: 0;
-  margin-left: 2.14286em;
-  list-style-type: none; }
-  /* line 8, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
-  .fa-ul > li {
-    position: relative; }
-
-/* line 10, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
-.fa-li {
-  position: absolute;
-  left: -2.14286em;
-  width: 2.14286em;
-  top: 0.14286em;
-  text-align: center; }
-  /* line 16, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_list.scss */
-  .fa-li.fa-lg {
-    left: -1.85714em; }
-
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
-.fa-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eee;
-  border-radius: .1em; }
-
-/* line 10, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
-.pull-right {
-  float: right; }
-
-/* line 11, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
-.pull-left {
-  float: left; }
-
-/* line 14, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
-.fa.pull-left {
-  margin-right: .3em; }
-/* line 15, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_bordered-pulled.scss */
-.fa.pull-right {
-  margin-left: .3em; }
-
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_animated.scss */
-.fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear; }
-
-/* line 9, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_animated.scss */
-.fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-  animation: fa-spin 1s infinite steps(8); }
-
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-@keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-.fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
-
-/* line 5, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-.fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
-/* line 6, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-.fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg); }
-
-/* line 8, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-.fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1); }
-
-/* line 9, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-.fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
-  transform: scale(1, -1); }
-
-/* line 14, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_rotated-flipped.scss */
-:root .fa-rotate-90,
-:root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
-  filter: none; }
-
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
-.fa-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle; }
-
-/* line 12, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
-.fa-stack-1x, .fa-stack-2x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center; }
-
-/* line 18, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
-.fa-stack-1x {
-  line-height: inherit; }
-
-/* line 19, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
-.fa-stack-2x {
-  font-size: 2em; }
-
-/* line 20, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_stacked.scss */
-.fa-inverse {
-  color: #fff; }
-
-/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-   readers do not read off random characters that represent icons */
-/* line 4, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-glass:before {
-  content: ""; }
-
-/* line 5, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-music:before {
-  content: ""; }
-
-/* line 6, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-search:before {
-  content: ""; }
-
-/* line 7, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-envelope-o:before {
-  content: ""; }
-
-/* line 8, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-heart:before {
-  content: ""; }
-
-/* line 9, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-star:before {
-  content: ""; }
-
-/* line 10, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-star-o:before {
-  content: ""; }
-
-/* line 11, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-user:before {
-  content: ""; }
-
-/* line 12, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-film:before {
-  content: ""; }
-
-/* line 13, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-th-large:before {
-  content: ""; }
-
-/* line 14, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-th:before {
-  content: ""; }
-
-/* line 15, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-th-list:before {
-  content: ""; }
-
-/* line 16, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-check:before {
-  content: ""; }
-
-/* line 17, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-remove:before,
-.fa-close:before,
-.fa-times:before {
-  content: ""; }
-
-/* line 20, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-search-plus:before {
-  content: ""; }
-
-/* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-search-minus:before {
-  content: ""; }
-
-/* line 22, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-power-off:before {
-  content: ""; }
-
-/* line 23, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-signal:before {
-  content: ""; }
-
-/* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gear:before,
-.fa-cog:before {
-  content: ""; }
-
-/* line 26, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-trash-o:before {
-  content: ""; }
-
-/* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-home:before {
-  content: ""; }
-
-/* line 28, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-o:before {
-  content: ""; }
-
-/* line 29, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-clock-o:before {
-  content: ""; }
-
-/* line 30, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-road:before {
-  content: ""; }
-
-/* line 31, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-download:before {
-  content: ""; }
-
-/* line 32, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-o-down:before {
-  content: ""; }
-
-/* line 33, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-o-up:before {
-  content: ""; }
-
-/* line 34, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-inbox:before {
-  content: ""; }
-
-/* line 35, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-play-circle-o:before {
-  content: ""; }
-
-/* line 36, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rotate-right:before,
-.fa-repeat:before {
-  content: ""; }
-
-/* line 38, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-refresh:before {
-  content: ""; }
-
-/* line 39, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-list-alt:before {
-  content: ""; }
-
-/* line 40, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-lock:before {
-  content: ""; }
-
-/* line 41, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flag:before {
-  content: ""; }
-
-/* line 42, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-headphones:before {
-  content: ""; }
-
-/* line 43, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-volume-off:before {
-  content: ""; }
-
-/* line 44, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-volume-down:before {
-  content: ""; }
-
-/* line 45, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-volume-up:before {
-  content: ""; }
-
-/* line 46, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-qrcode:before {
-  content: ""; }
-
-/* line 47, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-barcode:before {
-  content: ""; }
-
-/* line 48, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tag:before {
-  content: ""; }
-
-/* line 49, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tags:before {
-  content: ""; }
-
-/* line 50, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-book:before {
-  content: ""; }
-
-/* line 51, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bookmark:before {
-  content: ""; }
-
-/* line 52, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-print:before {
-  content: ""; }
-
-/* line 53, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-camera:before {
-  content: ""; }
-
-/* line 54, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-font:before {
-  content: ""; }
-
-/* line 55, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bold:before {
-  content: ""; }
-
-/* line 56, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-italic:before {
-  content: ""; }
-
-/* line 57, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-text-height:before {
-  content: ""; }
-
-/* line 58, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-text-width:before {
-  content: ""; }
-
-/* line 59, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-align-left:before {
-  content: ""; }
-
-/* line 60, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-align-center:before {
-  content: ""; }
-
-/* line 61, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-align-right:before {
-  content: ""; }
-
-/* line 62, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-align-justify:before {
-  content: ""; }
-
-/* line 63, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-list:before {
-  content: ""; }
-
-/* line 64, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dedent:before,
-.fa-outdent:before {
-  content: ""; }
-
-/* line 66, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-indent:before {
-  content: ""; }
-
-/* line 67, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-video-camera:before {
-  content: ""; }
-
-/* line 68, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-photo:before,
-.fa-image:before,
-.fa-picture-o:before {
-  content: ""; }
-
-/* line 71, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pencil:before {
-  content: ""; }
-
-/* line 72, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-map-marker:before {
-  content: ""; }
-
-/* line 73, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-adjust:before {
-  content: ""; }
-
-/* line 74, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tint:before {
-  content: ""; }
-
-/* line 75, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-edit:before,
-.fa-pencil-square-o:before {
-  content: ""; }
-
-/* line 77, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-share-square-o:before {
-  content: ""; }
-
-/* line 78, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-check-square-o:before {
-  content: ""; }
-
-/* line 79, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrows:before {
-  content: ""; }
-
-/* line 80, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-step-backward:before {
-  content: ""; }
-
-/* line 81, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fast-backward:before {
-  content: ""; }
-
-/* line 82, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-backward:before {
-  content: ""; }
-
-/* line 83, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-play:before {
-  content: ""; }
-
-/* line 84, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pause:before {
-  content: ""; }
-
-/* line 85, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stop:before {
-  content: ""; }
-
-/* line 86, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-forward:before {
-  content: ""; }
-
-/* line 87, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fast-forward:before {
-  content: ""; }
-
-/* line 88, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-step-forward:before {
-  content: ""; }
-
-/* line 89, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-eject:before {
-  content: ""; }
-
-/* line 90, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-left:before {
-  content: ""; }
-
-/* line 91, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-right:before {
-  content: ""; }
-
-/* line 92, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plus-circle:before {
-  content: ""; }
-
-/* line 93, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-minus-circle:before {
-  content: ""; }
-
-/* line 94, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-times-circle:before {
-  content: ""; }
-
-/* line 95, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-check-circle:before {
-  content: ""; }
-
-/* line 96, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-question-circle:before {
-  content: ""; }
-
-/* line 97, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-info-circle:before {
-  content: ""; }
-
-/* line 98, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-crosshairs:before {
-  content: ""; }
-
-/* line 99, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-times-circle-o:before {
-  content: ""; }
-
-/* line 100, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-check-circle-o:before {
-  content: ""; }
-
-/* line 101, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ban:before {
-  content: ""; }
-
-/* line 102, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-left:before {
-  content: ""; }
-
-/* line 103, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-right:before {
-  content: ""; }
-
-/* line 104, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-up:before {
-  content: ""; }
-
-/* line 105, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-down:before {
-  content: ""; }
-
-/* line 106, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mail-forward:before,
-.fa-share:before {
-  content: ""; }
-
-/* line 108, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-expand:before {
-  content: ""; }
-
-/* line 109, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-compress:before {
-  content: ""; }
-
-/* line 110, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plus:before {
-  content: ""; }
-
-/* line 111, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-minus:before {
-  content: ""; }
-
-/* line 112, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-asterisk:before {
-  content: ""; }
-
-/* line 113, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-exclamation-circle:before {
-  content: ""; }
-
-/* line 114, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gift:before {
-  content: ""; }
-
-/* line 115, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-leaf:before {
-  content: ""; }
-
-/* line 116, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fire:before {
-  content: ""; }
-
-/* line 117, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-eye:before {
-  content: ""; }
-
-/* line 118, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-eye-slash:before {
-  content: ""; }
-
-/* line 119, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-warning:before,
-.fa-exclamation-triangle:before {
-  content: ""; }
-
-/* line 121, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plane:before {
-  content: ""; }
-
-/* line 122, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-calendar:before {
-  content: ""; }
-
-/* line 123, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-random:before {
-  content: ""; }
-
-/* line 124, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-comment:before {
-  content: ""; }
-
-/* line 125, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-magnet:before {
-  content: ""; }
-
-/* line 126, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-up:before {
-  content: ""; }
-
-/* line 127, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-down:before {
-  content: ""; }
-
-/* line 128, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-retweet:before {
-  content: ""; }
-
-/* line 129, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-shopping-cart:before {
-  content: ""; }
-
-/* line 130, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-folder:before {
-  content: ""; }
-
-/* line 131, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-folder-open:before {
-  content: ""; }
-
-/* line 132, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrows-v:before {
-  content: ""; }
-
-/* line 133, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrows-h:before {
-  content: ""; }
-
-/* line 134, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bar-chart-o:before,
-.fa-bar-chart:before {
-  content: ""; }
-
-/* line 136, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-twitter-square:before {
-  content: ""; }
-
-/* line 137, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-facebook-square:before {
-  content: ""; }
-
-/* line 138, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-camera-retro:before {
-  content: ""; }
-
-/* line 139, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-key:before {
-  content: ""; }
-
-/* line 140, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gears:before,
-.fa-cogs:before {
-  content: ""; }
-
-/* line 142, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-comments:before {
-  content: ""; }
-
-/* line 143, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-thumbs-o-up:before {
-  content: ""; }
-
-/* line 144, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-thumbs-o-down:before {
-  content: ""; }
-
-/* line 145, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-star-half:before {
-  content: ""; }
-
-/* line 146, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-heart-o:before {
-  content: ""; }
-
-/* line 147, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sign-out:before {
-  content: ""; }
-
-/* line 148, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-linkedin-square:before {
-  content: ""; }
-
-/* line 149, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-thumb-tack:before {
-  content: ""; }
-
-/* line 150, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-external-link:before {
-  content: ""; }
-
-/* line 151, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sign-in:before {
-  content: ""; }
-
-/* line 152, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-trophy:before {
-  content: ""; }
-
-/* line 153, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-github-square:before {
-  content: ""; }
-
-/* line 154, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-upload:before {
-  content: ""; }
-
-/* line 155, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-lemon-o:before {
-  content: ""; }
-
-/* line 156, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-phone:before {
-  content: ""; }
-
-/* line 157, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-square-o:before {
-  content: ""; }
-
-/* line 158, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bookmark-o:before {
-  content: ""; }
-
-/* line 159, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-phone-square:before {
-  content: ""; }
-
-/* line 160, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-twitter:before {
-  content: ""; }
-
-/* line 161, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-facebook-f:before,
-.fa-facebook:before {
-  content: ""; }
-
-/* line 163, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-github:before {
-  content: ""; }
-
-/* line 164, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-unlock:before {
-  content: ""; }
-
-/* line 165, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-credit-card:before {
-  content: ""; }
-
-/* line 166, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rss:before {
-  content: ""; }
-
-/* line 167, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hdd-o:before {
-  content: ""; }
-
-/* line 168, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bullhorn:before {
-  content: ""; }
-
-/* line 169, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bell:before {
-  content: ""; }
-
-/* line 170, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-certificate:before {
-  content: ""; }
-
-/* line 171, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hand-o-right:before {
-  content: ""; }
-
-/* line 172, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hand-o-left:before {
-  content: ""; }
-
-/* line 173, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hand-o-up:before {
-  content: ""; }
-
-/* line 174, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hand-o-down:before {
-  content: ""; }
-
-/* line 175, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-left:before {
-  content: ""; }
-
-/* line 176, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-right:before {
-  content: ""; }
-
-/* line 177, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-up:before {
-  content: ""; }
-
-/* line 178, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-down:before {
-  content: ""; }
-
-/* line 179, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-globe:before {
-  content: ""; }
-
-/* line 180, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-wrench:before {
-  content: ""; }
-
-/* line 181, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tasks:before {
-  content: ""; }
-
-/* line 182, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-filter:before {
-  content: ""; }
-
-/* line 183, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-briefcase:before {
-  content: ""; }
-
-/* line 184, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrows-alt:before {
-  content: ""; }
-
-/* line 185, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-group:before,
-.fa-users:before {
-  content: ""; }
-
-/* line 187, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chain:before,
-.fa-link:before {
-  content: ""; }
-
-/* line 189, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cloud:before {
-  content: ""; }
-
-/* line 190, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flask:before {
-  content: ""; }
-
-/* line 191, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cut:before,
-.fa-scissors:before {
-  content: ""; }
-
-/* line 193, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-copy:before,
-.fa-files-o:before {
-  content: ""; }
-
-/* line 195, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paperclip:before {
-  content: ""; }
-
-/* line 196, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-save:before,
-.fa-floppy-o:before {
-  content: ""; }
-
-/* line 198, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-square:before {
-  content: ""; }
-
-/* line 199, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-navicon:before,
-.fa-reorder:before,
-.fa-bars:before {
-  content: ""; }
-
-/* line 202, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-list-ul:before {
-  content: ""; }
-
-/* line 203, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-list-ol:before {
-  content: ""; }
-
-/* line 204, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-strikethrough:before {
-  content: ""; }
-
-/* line 205, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-underline:before {
-  content: ""; }
-
-/* line 206, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-table:before {
-  content: ""; }
-
-/* line 207, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-magic:before {
-  content: ""; }
-
-/* line 208, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-truck:before {
-  content: ""; }
-
-/* line 209, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pinterest:before {
-  content: ""; }
-
-/* line 210, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pinterest-square:before {
-  content: ""; }
-
-/* line 211, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-google-plus-square:before {
-  content: ""; }
-
-/* line 212, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-google-plus:before {
-  content: ""; }
-
-/* line 213, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-money:before {
-  content: ""; }
-
-/* line 214, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-caret-down:before {
-  content: ""; }
-
-/* line 215, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-caret-up:before {
-  content: ""; }
-
-/* line 216, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-caret-left:before {
-  content: ""; }
-
-/* line 217, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-caret-right:before {
-  content: ""; }
-
-/* line 218, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-columns:before {
-  content: ""; }
-
-/* line 219, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-unsorted:before,
-.fa-sort:before {
-  content: ""; }
-
-/* line 221, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-down:before,
-.fa-sort-desc:before {
-  content: ""; }
-
-/* line 223, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-up:before,
-.fa-sort-asc:before {
-  content: ""; }
-
-/* line 225, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-envelope:before {
-  content: ""; }
-
-/* line 226, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-linkedin:before {
-  content: ""; }
-
-/* line 227, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rotate-left:before,
-.fa-undo:before {
-  content: ""; }
-
-/* line 229, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-legal:before,
-.fa-gavel:before {
-  content: ""; }
-
-/* line 231, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dashboard:before,
-.fa-tachometer:before {
-  content: ""; }
-
-/* line 233, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-comment-o:before {
-  content: ""; }
-
-/* line 234, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-comments-o:before {
-  content: ""; }
-
-/* line 235, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flash:before,
-.fa-bolt:before {
-  content: ""; }
-
-/* line 237, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sitemap:before {
-  content: ""; }
-
-/* line 238, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-umbrella:before {
-  content: ""; }
-
-/* line 239, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paste:before,
-.fa-clipboard:before {
-  content: ""; }
-
-/* line 241, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-lightbulb-o:before {
-  content: ""; }
-
-/* line 242, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-exchange:before {
-  content: ""; }
-
-/* line 243, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cloud-download:before {
-  content: ""; }
-
-/* line 244, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cloud-upload:before {
-  content: ""; }
-
-/* line 245, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-user-md:before {
-  content: ""; }
-
-/* line 246, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stethoscope:before {
-  content: ""; }
-
-/* line 247, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-suitcase:before {
-  content: ""; }
-
-/* line 248, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bell-o:before {
-  content: ""; }
-
-/* line 249, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-coffee:before {
-  content: ""; }
-
-/* line 250, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cutlery:before {
-  content: ""; }
-
-/* line 251, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-text-o:before {
-  content: ""; }
-
-/* line 252, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-building-o:before {
-  content: ""; }
-
-/* line 253, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hospital-o:before {
-  content: ""; }
-
-/* line 254, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ambulance:before {
-  content: ""; }
-
-/* line 255, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-medkit:before {
-  content: ""; }
-
-/* line 256, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fighter-jet:before {
-  content: ""; }
-
-/* line 257, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-beer:before {
-  content: ""; }
-
-/* line 258, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-h-square:before {
-  content: ""; }
-
-/* line 259, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plus-square:before {
-  content: ""; }
-
-/* line 260, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-double-left:before {
-  content: ""; }
-
-/* line 261, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-double-right:before {
-  content: ""; }
-
-/* line 262, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-double-up:before {
-  content: ""; }
-
-/* line 263, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-double-down:before {
-  content: ""; }
-
-/* line 264, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-left:before {
-  content: ""; }
-
-/* line 265, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-right:before {
-  content: ""; }
-
-/* line 266, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-up:before {
-  content: ""; }
-
-/* line 267, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angle-down:before {
-  content: ""; }
-
-/* line 268, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-desktop:before {
-  content: ""; }
-
-/* line 269, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-laptop:before {
-  content: ""; }
-
-/* line 270, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tablet:before {
-  content: ""; }
-
-/* line 271, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mobile-phone:before,
-.fa-mobile:before {
-  content: ""; }
-
-/* line 273, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-circle-o:before {
-  content: ""; }
-
-/* line 274, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-quote-left:before {
-  content: ""; }
-
-/* line 275, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-quote-right:before {
-  content: ""; }
-
-/* line 276, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-spinner:before {
-  content: ""; }
-
-/* line 277, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-circle:before {
-  content: ""; }
-
-/* line 278, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mail-reply:before,
-.fa-reply:before {
-  content: ""; }
-
-/* line 280, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-github-alt:before {
-  content: ""; }
-
-/* line 281, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-folder-o:before {
-  content: ""; }
-
-/* line 282, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-folder-open-o:before {
-  content: ""; }
-
-/* line 283, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-smile-o:before {
-  content: ""; }
-
-/* line 284, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-frown-o:before {
-  content: ""; }
-
-/* line 285, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-meh-o:before {
-  content: ""; }
-
-/* line 286, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gamepad:before {
-  content: ""; }
-
-/* line 287, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-keyboard-o:before {
-  content: ""; }
-
-/* line 288, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flag-o:before {
-  content: ""; }
-
-/* line 289, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flag-checkered:before {
-  content: ""; }
-
-/* line 290, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-terminal:before {
-  content: ""; }
-
-/* line 291, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-code:before {
-  content: ""; }
-
-/* line 292, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mail-reply-all:before,
-.fa-reply-all:before {
-  content: ""; }
-
-/* line 294, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-star-half-empty:before,
-.fa-star-half-full:before,
-.fa-star-half-o:before {
-  content: ""; }
-
-/* line 297, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-location-arrow:before {
-  content: ""; }
-
-/* line 298, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-crop:before {
-  content: ""; }
-
-/* line 299, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-code-fork:before {
-  content: ""; }
-
-/* line 300, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-unlink:before,
-.fa-chain-broken:before {
-  content: ""; }
-
-/* line 302, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-question:before {
-  content: ""; }
-
-/* line 303, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-info:before {
-  content: ""; }
-
-/* line 304, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-exclamation:before {
-  content: ""; }
-
-/* line 305, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-superscript:before {
-  content: ""; }
-
-/* line 306, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-subscript:before {
-  content: ""; }
-
-/* line 307, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-eraser:before {
-  content: ""; }
-
-/* line 308, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-puzzle-piece:before {
-  content: ""; }
-
-/* line 309, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-microphone:before {
-  content: ""; }
-
-/* line 310, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-microphone-slash:before {
-  content: ""; }
-
-/* line 311, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-shield:before {
-  content: ""; }
-
-/* line 312, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-calendar-o:before {
-  content: ""; }
-
-/* line 313, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fire-extinguisher:before {
-  content: ""; }
-
-/* line 314, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rocket:before {
-  content: ""; }
-
-/* line 315, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-maxcdn:before {
-  content: ""; }
-
-/* line 316, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-circle-left:before {
-  content: ""; }
-
-/* line 317, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-circle-right:before {
-  content: ""; }
-
-/* line 318, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-circle-up:before {
-  content: ""; }
-
-/* line 319, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-chevron-circle-down:before {
-  content: ""; }
-
-/* line 320, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-html5:before {
-  content: ""; }
-
-/* line 321, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-css3:before {
-  content: ""; }
-
-/* line 322, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-anchor:before {
-  content: ""; }
-
-/* line 323, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-unlock-alt:before {
-  content: ""; }
-
-/* line 324, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bullseye:before {
-  content: ""; }
-
-/* line 325, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ellipsis-h:before {
-  content: ""; }
-
-/* line 326, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ellipsis-v:before {
-  content: ""; }
-
-/* line 327, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rss-square:before {
-  content: ""; }
-
-/* line 328, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-play-circle:before {
-  content: ""; }
-
-/* line 329, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ticket:before {
-  content: ""; }
-
-/* line 330, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-minus-square:before {
-  content: ""; }
-
-/* line 331, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-minus-square-o:before {
-  content: ""; }
-
-/* line 332, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-level-up:before {
-  content: ""; }
-
-/* line 333, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-level-down:before {
-  content: ""; }
-
-/* line 334, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-check-square:before {
-  content: ""; }
-
-/* line 335, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pencil-square:before {
-  content: ""; }
-
-/* line 336, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-external-link-square:before {
-  content: ""; }
-
-/* line 337, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-share-square:before {
-  content: ""; }
-
-/* line 338, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-compass:before {
-  content: ""; }
-
-/* line 339, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-down:before,
-.fa-caret-square-o-down:before {
-  content: ""; }
-
-/* line 341, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-up:before,
-.fa-caret-square-o-up:before {
-  content: ""; }
-
-/* line 343, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-right:before,
-.fa-caret-square-o-right:before {
-  content: ""; }
-
-/* line 345, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-euro:before,
-.fa-eur:before {
-  content: ""; }
-
-/* line 347, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gbp:before {
-  content: ""; }
-
-/* line 348, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dollar:before,
-.fa-usd:before {
-  content: ""; }
-
-/* line 350, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-rupee:before,
-.fa-inr:before {
-  content: ""; }
-
-/* line 352, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cny:before,
-.fa-rmb:before,
-.fa-yen:before,
-.fa-jpy:before {
-  content: ""; }
-
-/* line 356, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ruble:before,
-.fa-rouble:before,
-.fa-rub:before {
-  content: ""; }
-
-/* line 359, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-won:before,
-.fa-krw:before {
-  content: ""; }
-
-/* line 361, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bitcoin:before,
-.fa-btc:before {
-  content: ""; }
-
-/* line 363, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file:before {
-  content: ""; }
-
-/* line 364, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-text:before {
-  content: ""; }
-
-/* line 365, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-alpha-asc:before {
-  content: ""; }
-
-/* line 366, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-alpha-desc:before {
-  content: ""; }
-
-/* line 367, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-amount-asc:before {
-  content: ""; }
-
-/* line 368, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-amount-desc:before {
-  content: ""; }
-
-/* line 369, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-numeric-asc:before {
-  content: ""; }
-
-/* line 370, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sort-numeric-desc:before {
-  content: ""; }
-
-/* line 371, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-thumbs-up:before {
-  content: ""; }
-
-/* line 372, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-thumbs-down:before {
-  content: ""; }
-
-/* line 373, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-youtube-square:before {
-  content: ""; }
-
-/* line 374, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-youtube:before {
-  content: ""; }
-
-/* line 375, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-xing:before {
-  content: ""; }
-
-/* line 376, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-xing-square:before {
-  content: ""; }
-
-/* line 377, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-youtube-play:before {
-  content: ""; }
-
-/* line 378, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dropbox:before {
-  content: ""; }
-
-/* line 379, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stack-overflow:before {
-  content: ""; }
-
-/* line 380, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-instagram:before {
-  content: ""; }
-
-/* line 381, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-flickr:before {
-  content: ""; }
-
-/* line 382, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-adn:before {
-  content: ""; }
-
-/* line 383, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bitbucket:before {
-  content: ""; }
-
-/* line 384, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bitbucket-square:before {
-  content: ""; }
-
-/* line 385, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tumblr:before {
-  content: ""; }
-
-/* line 386, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tumblr-square:before {
-  content: ""; }
-
-/* line 387, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-long-arrow-down:before {
-  content: ""; }
-
-/* line 388, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-long-arrow-up:before {
-  content: ""; }
-
-/* line 389, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-long-arrow-left:before {
-  content: ""; }
-
-/* line 390, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-long-arrow-right:before {
-  content: ""; }
-
-/* line 391, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-apple:before {
-  content: ""; }
-
-/* line 392, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-windows:before {
-  content: ""; }
-
-/* line 393, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-android:before {
-  content: ""; }
-
-/* line 394, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-linux:before {
-  content: ""; }
-
-/* line 395, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dribbble:before {
-  content: ""; }
-
-/* line 396, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-skype:before {
-  content: ""; }
-
-/* line 397, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-foursquare:before {
-  content: ""; }
-
-/* line 398, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-trello:before {
-  content: ""; }
-
-/* line 399, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-female:before {
-  content: ""; }
-
-/* line 400, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-male:before {
-  content: ""; }
-
-/* line 401, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-gittip:before,
-.fa-gratipay:before {
-  content: ""; }
-
-/* line 403, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sun-o:before {
-  content: ""; }
-
-/* line 404, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-moon-o:before {
-  content: ""; }
-
-/* line 405, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-archive:before {
-  content: ""; }
-
-/* line 406, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bug:before {
-  content: ""; }
-
-/* line 407, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-vk:before {
-  content: ""; }
-
-/* line 408, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-weibo:before {
-  content: ""; }
-
-/* line 409, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-renren:before {
-  content: ""; }
-
-/* line 410, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pagelines:before {
-  content: ""; }
-
-/* line 411, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stack-exchange:before {
-  content: ""; }
-
-/* line 412, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-o-right:before {
-  content: ""; }
-
-/* line 413, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-arrow-circle-o-left:before {
-  content: ""; }
-
-/* line 414, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-left:before,
-.fa-caret-square-o-left:before {
-  content: ""; }
-
-/* line 416, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dot-circle-o:before {
-  content: ""; }
-
-/* line 417, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-wheelchair:before {
-  content: ""; }
-
-/* line 418, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-vimeo-square:before {
-  content: ""; }
-
-/* line 419, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-turkish-lira:before,
-.fa-try:before {
-  content: ""; }
-
-/* line 421, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plus-square-o:before {
-  content: ""; }
-
-/* line 422, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-space-shuttle:before {
-  content: ""; }
-
-/* line 423, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-slack:before {
-  content: ""; }
-
-/* line 424, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-envelope-square:before {
-  content: ""; }
-
-/* line 425, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-wordpress:before {
-  content: ""; }
-
-/* line 426, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-openid:before {
-  content: ""; }
-
-/* line 427, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-institution:before,
-.fa-bank:before,
-.fa-university:before {
-  content: ""; }
-
-/* line 430, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mortar-board:before,
-.fa-graduation-cap:before {
-  content: ""; }
-
-/* line 432, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-yahoo:before {
-  content: ""; }
-
-/* line 433, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-google:before {
-  content: ""; }
-
-/* line 434, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-reddit:before {
-  content: ""; }
-
-/* line 435, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-reddit-square:before {
-  content: ""; }
-
-/* line 436, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stumbleupon-circle:before {
-  content: ""; }
-
-/* line 437, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-stumbleupon:before {
-  content: ""; }
-
-/* line 438, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-delicious:before {
-  content: ""; }
-
-/* line 439, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-digg:before {
-  content: ""; }
-
-/* line 440, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pied-piper:before {
-  content: ""; }
-
-/* line 441, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pied-piper-alt:before {
-  content: ""; }
-
-/* line 442, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-drupal:before {
-  content: ""; }
-
-/* line 443, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-joomla:before {
-  content: ""; }
-
-/* line 444, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-language:before {
-  content: ""; }
-
-/* line 445, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-fax:before {
-  content: ""; }
-
-/* line 446, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-building:before {
-  content: ""; }
-
-/* line 447, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-child:before {
-  content: ""; }
-
-/* line 448, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paw:before {
-  content: ""; }
-
-/* line 449, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-spoon:before {
-  content: ""; }
-
-/* line 450, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cube:before {
-  content: ""; }
-
-/* line 451, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cubes:before {
-  content: ""; }
-
-/* line 452, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-behance:before {
-  content: ""; }
-
-/* line 453, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-behance-square:before {
-  content: ""; }
-
-/* line 454, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-steam:before {
-  content: ""; }
-
-/* line 455, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-steam-square:before {
-  content: ""; }
-
-/* line 456, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-recycle:before {
-  content: ""; }
-
-/* line 457, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-automobile:before,
-.fa-car:before {
-  content: ""; }
-
-/* line 459, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cab:before,
-.fa-taxi:before {
-  content: ""; }
-
-/* line 461, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tree:before {
-  content: ""; }
-
-/* line 462, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-spotify:before {
-  content: ""; }
-
-/* line 463, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-deviantart:before {
-  content: ""; }
-
-/* line 464, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-soundcloud:before {
-  content: ""; }
-
-/* line 465, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-database:before {
-  content: ""; }
-
-/* line 466, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-pdf-o:before {
-  content: ""; }
-
-/* line 467, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-word-o:before {
-  content: ""; }
-
-/* line 468, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-excel-o:before {
-  content: ""; }
-
-/* line 469, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-powerpoint-o:before {
-  content: ""; }
-
-/* line 470, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-photo-o:before,
-.fa-file-picture-o:before,
-.fa-file-image-o:before {
-  content: ""; }
-
-/* line 473, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-zip-o:before,
-.fa-file-archive-o:before {
-  content: ""; }
-
-/* line 475, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-sound-o:before,
-.fa-file-audio-o:before {
-  content: ""; }
-
-/* line 477, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-movie-o:before,
-.fa-file-video-o:before {
-  content: ""; }
-
-/* line 479, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-file-code-o:before {
-  content: ""; }
-
-/* line 480, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-vine:before {
-  content: ""; }
-
-/* line 481, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-codepen:before {
-  content: ""; }
-
-/* line 482, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-jsfiddle:before {
-  content: ""; }
-
-/* line 483, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-life-bouy:before,
-.fa-life-buoy:before,
-.fa-life-saver:before,
-.fa-support:before,
-.fa-life-ring:before {
-  content: ""; }
-
-/* line 488, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-circle-o-notch:before {
-  content: ""; }
-
-/* line 489, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ra:before,
-.fa-rebel:before {
-  content: ""; }
-
-/* line 491, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ge:before,
-.fa-empire:before {
-  content: ""; }
-
-/* line 493, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-git-square:before {
-  content: ""; }
-
-/* line 494, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-git:before {
-  content: ""; }
-
-/* line 495, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hacker-news:before {
-  content: ""; }
-
-/* line 496, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tencent-weibo:before {
-  content: ""; }
-
-/* line 497, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-qq:before {
-  content: ""; }
-
-/* line 498, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-wechat:before,
-.fa-weixin:before {
-  content: ""; }
-
-/* line 500, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-send:before,
-.fa-paper-plane:before {
-  content: ""; }
-
-/* line 502, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-send-o:before,
-.fa-paper-plane-o:before {
-  content: ""; }
-
-/* line 504, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-history:before {
-  content: ""; }
-
-/* line 505, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-genderless:before,
-.fa-circle-thin:before {
-  content: ""; }
-
-/* line 507, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-header:before {
-  content: ""; }
-
-/* line 508, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paragraph:before {
-  content: ""; }
-
-/* line 509, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sliders:before {
-  content: ""; }
-
-/* line 510, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-share-alt:before {
-  content: ""; }
-
-/* line 511, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-share-alt-square:before {
-  content: ""; }
-
-/* line 512, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bomb:before {
-  content: ""; }
-
-/* line 513, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-soccer-ball-o:before,
-.fa-futbol-o:before {
-  content: ""; }
-
-/* line 515, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-tty:before {
-  content: ""; }
-
-/* line 516, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-binoculars:before {
-  content: ""; }
-
-/* line 517, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-plug:before {
-  content: ""; }
-
-/* line 518, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-slideshare:before {
-  content: ""; }
-
-/* line 519, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-twitch:before {
-  content: ""; }
-
-/* line 520, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-yelp:before {
-  content: ""; }
-
-/* line 521, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-newspaper-o:before {
-  content: ""; }
-
-/* line 522, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-wifi:before {
-  content: ""; }
-
-/* line 523, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-calculator:before {
-  content: ""; }
-
-/* line 524, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paypal:before {
-  content: ""; }
-
-/* line 525, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-google-wallet:before {
-  content: ""; }
-
-/* line 526, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-visa:before {
-  content: ""; }
-
-/* line 527, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-mastercard:before {
-  content: ""; }
-
-/* line 528, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-discover:before {
-  content: ""; }
-
-/* line 529, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-amex:before {
-  content: ""; }
-
-/* line 530, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-paypal:before {
-  content: ""; }
-
-/* line 531, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc-stripe:before {
-  content: ""; }
-
-/* line 532, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bell-slash:before {
-  content: ""; }
-
-/* line 533, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bell-slash-o:before {
-  content: ""; }
-
-/* line 534, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-trash:before {
-  content: ""; }
-
-/* line 535, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-copyright:before {
-  content: ""; }
-
-/* line 536, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-at:before {
-  content: ""; }
-
-/* line 537, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-eyedropper:before {
-  content: ""; }
-
-/* line 538, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-paint-brush:before {
-  content: ""; }
-
-/* line 539, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-birthday-cake:before {
-  content: ""; }
-
-/* line 540, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-area-chart:before {
-  content: ""; }
-
-/* line 541, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pie-chart:before {
-  content: ""; }
-
-/* line 542, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-line-chart:before {
-  content: ""; }
-
-/* line 543, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-lastfm:before {
-  content: ""; }
-
-/* line 544, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-lastfm-square:before {
-  content: ""; }
-
-/* line 545, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-off:before {
-  content: ""; }
-
-/* line 546, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-toggle-on:before {
-  content: ""; }
-
-/* line 547, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bicycle:before {
-  content: ""; }
-
-/* line 548, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-bus:before {
-  content: ""; }
-
-/* line 549, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ioxhost:before {
-  content: ""; }
-
-/* line 550, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-angellist:before {
-  content: ""; }
-
-/* line 551, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cc:before {
-  content: ""; }
-
-/* line 552, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-shekel:before,
-.fa-sheqel:before,
-.fa-ils:before {
-  content: ""; }
-
-/* line 555, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-meanpath:before {
-  content: ""; }
-
-/* line 556, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-buysellads:before {
-  content: ""; }
-
-/* line 557, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-connectdevelop:before {
-  content: ""; }
-
-/* line 558, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-dashcube:before {
-  content: ""; }
-
-/* line 559, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-forumbee:before {
-  content: ""; }
-
-/* line 560, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-leanpub:before {
-  content: ""; }
-
-/* line 561, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-sellsy:before {
-  content: ""; }
-
-/* line 562, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-shirtsinbulk:before {
-  content: ""; }
-
-/* line 563, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-simplybuilt:before {
-  content: ""; }
-
-/* line 564, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-skyatlas:before {
-  content: ""; }
-
-/* line 565, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cart-plus:before {
-  content: ""; }
-
-/* line 566, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-cart-arrow-down:before {
-  content: ""; }
-
-/* line 567, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-diamond:before {
-  content: ""; }
-
-/* line 568, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-ship:before {
-  content: ""; }
-
-/* line 569, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-user-secret:before {
-  content: ""; }
-
-/* line 570, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-motorcycle:before {
-  content: ""; }
-
-/* line 571, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-street-view:before {
-  content: ""; }
-
-/* line 572, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-heartbeat:before {
-  content: ""; }
-
-/* line 573, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-venus:before {
-  content: ""; }
-
-/* line 574, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mars:before {
-  content: ""; }
-
-/* line 575, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mercury:before {
-  content: ""; }
-
-/* line 576, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-transgender:before {
-  content: ""; }
-
-/* line 577, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-transgender-alt:before {
-  content: ""; }
-
-/* line 578, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-venus-double:before {
-  content: ""; }
-
-/* line 579, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mars-double:before {
-  content: ""; }
-
-/* line 580, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-venus-mars:before {
-  content: ""; }
-
-/* line 581, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mars-stroke:before {
-  content: ""; }
-
-/* line 582, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mars-stroke-v:before {
-  content: ""; }
-
-/* line 583, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-mars-stroke-h:before {
-  content: ""; }
-
-/* line 584, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-neuter:before {
-  content: ""; }
-
-/* line 585, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-facebook-official:before {
-  content: ""; }
-
-/* line 586, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-pinterest-p:before {
-  content: ""; }
-
-/* line 587, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-whatsapp:before {
-  content: ""; }
-
-/* line 588, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-server:before {
-  content: ""; }
-
-/* line 589, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-user-plus:before {
-  content: ""; }
-
-/* line 590, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-user-times:before {
-  content: ""; }
-
-/* line 591, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-hotel:before,
-.fa-bed:before {
-  content: ""; }
-
-/* line 593, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-viacoin:before {
-  content: ""; }
-
-/* line 594, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-train:before {
-  content: ""; }
-
-/* line 595, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-subway:before {
-  content: ""; }
-
-/* line 596, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/font-awesome-sass-4.3.2.1/assets/stylesheets/font-awesome/_icons.scss */
-.fa-medium:before {
-  content: ""; }
-
-/* line 1, ../sass/abstractions/_accessibility.scss */
-.sr-only, .list-icon .menu-title {
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+/* line 1, ../sass/mixins/_hide-text.scss */
+.l-header .l-branding .site-name a span, .sr-only, .list-icon .menu-title, .l-region--header-preface-right .tb-megamenu button .icon-reorder, .l-region--header-preface-right .tb-megamenu .nav-collapse .nav > li a .menu-title, .l-region--navigation .tb-megamenu .btn .menu-title, .l-region--navigation .tb-megamenu .btn:hover .menu-title {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -2346,20 +8,18 @@
   height: 1px;
   overflow: hidden; }
 
-/* line 2, ../sass/abstractions/_lists.scss */
-.l-footer .l-container .panel-col-first .item-list ul, .l-footer .l-container .panel-col-first .menu, .l-header .menu, .menu-list ul {
+/* line 55, ../sass/mixins/_list.scss */
+.l-footer .l-container ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  overflow: hidden; }
-  /* line 7, ../sass/abstractions/_lists.scss */
-  .l-footer .l-container .panel-col-first .item-list ul > li, .l-footer .l-container .panel-col-first .menu > li, .l-header .menu > li, .menu-list ul > li {
+  margin: 0; }
+  /* line 59, ../sass/mixins/_list.scss */
+  .l-footer .l-container ul > li {
     display: block;
     list-style-type: none;
-    float: left; }
-    /* line 11, ../sass/abstractions/_lists.scss */
-    .l-footer .l-container .panel-col-first .item-list ul > li:last-child, .l-footer .l-container .panel-col-first .menu > li:last-child, .l-header .menu > li:last-child, .menu-list ul > li:last-child {
-      margin-right: 0px; }
+    list-style-image: none;
+    padding: 0;
+    margin: 0; }
 
 /* line 1, ../sass/base/_media.scss */
 img, media {
@@ -2440,23 +100,25 @@ img, media {
   font-style: italic;
   src: url('fonts/GT-Walsheim/GT-Walsheim-Medium-Oblique.eot?1409617488') format("embedded-opentype");
   src: url('fonts/GT-Walsheim/GT-Walsheim-Medium-Oblique.eot?1409617488#iefix') format("embedded-opentype"), url('fonts/GT-Walsheim/GT-Walsheim-Medium-Oblique.woff?1409617488') format("woff"), url('fonts/GT-Walsheim/GT-Walsheim-Medium-Oblique.ttf?1409617488') format("truetype"), url('fonts/GT-Walsheim/GT-Walsheim-Medium-Oblique.svg?1409617488') format("svg"); }
-/* line 106, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
-html {
-  font-size: 87.5%;
-  line-height: 1.64286em; }
-
 /**
  * $BASE-TYPOGRAPHY
  */
-/* line 119, ../sass/base/_typography.scss */
+/* line 118, ../sass/base/_typography.scss */
 html {
+  font-size: 62.5%; }
+
+/* line 122, ../sass/base/_typography.scss */
+body {
   font-family: "GT Walsheim", Helvetica, Arial, sans-serif;
-  color: #515151; }
+  color: #595959;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625; }
 
 /**
  * $LINKS
  */
-/* line 127, ../sass/base/_typography.scss */
+/* line 132, ../sass/base/_typography.scss */
 a {
   color: #1668b3;
   text-decoration: none; }
@@ -2473,256 +135,721 @@ a {
   a:active {
     color: #1668b3; }
 
-/* line 132, ../sass/base/_typography.scss */
+/* line 137, ../sass/base/_typography.scss */
 a:hover {
   text-decoration: underline; }
 
-/* line 136, ../sass/base/_typography.scss */
-h1, h2, h3, h4, .l-footer .l-container h2, h5, h6 {
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 0.32857em;
+/* line 141, ../sass/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
   font-family: "GT Walsheim", Helvetica, Arial, sans-serif;
+  margin: 0 0 26px;
+  margin: 0 0 2.6rem;
   color: #1668b3; }
-  /* line 140, ../sass/base/_typography.scss */
+  /* line 145, ../sass/base/_typography.scss */
   h1 a,
   h1 a:visited, h2 a,
   h2 a:visited, h3 a,
-  h3 a:visited, h4 a, .l-footer .l-container h2 a,
-  h4 a:visited,
-  .l-footer .l-container h2 a:visited, h5 a,
+  h3 a:visited, h4 a,
+  h4 a:visited, h5 a,
   h5 a:visited, h6 a,
   h6 a:visited {
     color: inherit;
     text-decoration: none; }
-  /* line 145, ../sass/base/_typography.scss */
-  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, .l-footer .l-container h2 a:hover, h5 a:hover, h6 a:hover {
+  /* line 150, ../sass/base/_typography.scss */
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: #12395c; }
 
-/* line 150, ../sass/base/_typography.scss */
+/* line 155, ../sass/base/_typography.scss */
 h1 {
-  font-size: 37px;
-  font-size: 2.64286rem; }
+  font-size: 42px;
+  font-size: 4.2rem;
+  line-height: 1.2381; }
 
-/* line 154, ../sass/base/_typography.scss */
+/* line 160, ../sass/base/_typography.scss */
 h2 {
-  font-size: 23px;
-  font-size: 1.64286rem; }
+  font-size: 26px;
+  font-size: 2.6rem;
+  line-height: 1.5; }
 
-/* line 158, ../sass/base/_typography.scss */
+/* line 165, ../sass/base/_typography.scss */
 h3 {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.625; }
+
+/* line 170, ../sass/base/_typography.scss */
+h4 {
   font-size: 18px;
-  font-size: 1.28571rem; }
+  font-size: 1.8rem;
+  line-height: 1.44444; }
 
-/* line 162, ../sass/base/_typography.scss */
-h4, .l-footer .l-container h2 {
-  font-size: 14px;
-  font-size: 1rem; }
+/* line 175, ../sass/base/_typography.scss */
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem; }
 
-/* line 166, ../sass/base/_typography.scss */
+/* line 179, ../sass/base/_typography.scss */
 p {
-  margin: 0;
-  margin-top: 0em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  margin-bottom: 1.64286em; }
+  margin: 0 0 26px;
+  margin: 0 0 2.6rem; }
+
+/* line 184, ../sass/base/_typography.scss */
+ul {
+  margin: 0 0 26px;
+  margin: 0 0 2.6rem; }
+  /* line 186, ../sass/base/_typography.scss */
+  ul li {
+    margin: 13px;
+    margin: 1.3rem; }
 
 /* line 1, ../sass/components/_footer.scss */
 .l-footer-preface {
-  background: url("../images/mission-bg.jpg") center top no-repeat #efefef;
+  background: url("../images/mission-bg.jpg") center top no-repeat #c9c9c9;
   background-size: cover;
   text-align: center;
-  padding: 1.618em 0;
-  color: #2c2c2c; }
+  padding: 26px 0;
+  color: #2b2b2b; }
   /* line 7, ../sass/components/_footer.scss */
   .l-footer-preface h2 {
-    color: #2c2c2c; }
+    color: #2b2b2b; }
   /* line 10, ../sass/components/_footer.scss */
   .l-footer-preface p {
-    font-size: 18px;
-    font-size: 1.28571rem;
-    line-height: 1.618em; }
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.3; }
     /* line 13, ../sass/components/_footer.scss */
     .l-footer-preface p:last-child {
       margin-bottom: 0; }
   /* line 15, ../sass/components/_footer.scss */
   .l-footer-preface .panel-pane {
-    margin: 1.618em 0; }
+    margin: 26px 0; }
+  /* line 16, ../sass/components/_footer.scss */
+  .l-footer-preface .donate-link .btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    background-color: #1668b3;
+    color: white;
+    border-color: #135b9c;
+    *border: 0;
+    border-bottom-color: #0e406f;
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+    padding: 8px;
+    padding: 0.8rem;
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1;
+    border-radius: 0;
+    text-transform: uppercase; }
+    /* line 32, ../sass/mixins/_buttons.scss */
+    .l-footer-preface .donate-link .btn:focus, .l-footer-preface .donate-link .btn.focus, .l-footer-preface .donate-link .btn:active:focus, .l-footer-preface .donate-link .btn:active.focus, .l-footer-preface .donate-link .btn.active:focus, .l-footer-preface .donate-link .btn.active.focus {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+      color: white; }
+    /* line 39, ../sass/mixins/_buttons.scss */
+    .l-footer-preface .donate-link .btn:active, .l-footer-preface .donate-link .btn.active {
+      outline: 0;
+      -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      color: white; }
+    /* line 45, ../sass/mixins/_buttons.scss */
+    .l-footer-preface .donate-link .btn:hover, .l-footer-preface .donate-link .btn:focus, .l-footer-preface .donate-link .btn.focus, .l-footer-preface .donate-link .btn:active, .l-footer-preface .donate-link .btn.active, .open > .l-footer-preface .donate-link .btn.dropdown-toggle {
+      color: white;
+      text-decoration: none;
+      background-color: #104e86;
+      border-color: #0d3b66; }
+    /* line 59, ../sass/mixins/_buttons.scss */
+    .l-footer-preface .donate-link .btn:active, .l-footer-preface .donate-link .btn.active, .open > .l-footer-preface .donate-link .btn.dropdown-toggle {
+      background-image: none; }
+    /* line 67, ../sass/mixins/_buttons.scss */
+    .l-footer-preface .donate-link .btn.disabled, .l-footer-preface .donate-link .btn.disabled:hover, .l-footer-preface .donate-link .btn.disabled:focus, .l-footer-preface .donate-link .btn.disabled.focus, .l-footer-preface .donate-link .btn.disabled:active, .l-footer-preface .donate-link .btn.disabled.active, .l-footer-preface .donate-link .btn[disabled], .l-footer-preface .donate-link .btn[disabled]:hover, .l-footer-preface .donate-link .btn[disabled]:focus, .l-footer-preface .donate-link .btn[disabled].focus, .l-footer-preface .donate-link .btn[disabled]:active, .l-footer-preface .donate-link .btn[disabled].active, fieldset[disabled] .l-footer-preface .donate-link .btn, fieldset[disabled] .l-footer-preface .donate-link .btn:hover, fieldset[disabled] .l-footer-preface .donate-link .btn:focus, fieldset[disabled] .l-footer-preface .donate-link .btn.focus, fieldset[disabled] .l-footer-preface .donate-link .btn:active, fieldset[disabled] .l-footer-preface .donate-link .btn.active {
+      background-color: #1668b3;
+      border-color: #135b9c;
+      pointer-events: none;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+      opacity: 0.65;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
 
-/* line 19, ../sass/components/_footer.scss */
+/* line 24, ../sass/components/_footer.scss */
 .l-footer .l-container {
-  background: url("../images/AAA-logo-grey.png") left top no-repeat;
-  padding-top: 3.618em; }
-  /* line 22, ../sass/components/_footer.scss */
-  .l-footer .l-container .panel-pane {
-    margin-bottom: 1.618em; }
+  background: url("../images/AAA-logo-gray.png") left top no-repeat;
+  padding-top: 52px;
+  padding-top: 5.2rem; }
   /* line 25, ../sass/components/_footer.scss */
-  .l-footer .l-container h2 {
-    color: #515151;
-    margin-bottom: 0; }
-  /* line 33, ../sass/components/_footer.scss */
-  .l-footer .l-container .panel-col-first .menu .list-icon {
-    padding: 0; }
+  .l-footer .l-container * {
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.538; }
+  /* line 34, ../sass/components/_footer.scss */
+  .l-footer .l-container .panel-pane {
+    margin: 0 0 26px;
+    margin: 0 0 2.6rem; }
   /* line 38, ../sass/components/_footer.scss */
+  .l-footer .l-container h2 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 0;
+    color: #595959; }
+  /* line 46, ../sass/components/_footer.scss */
+  .l-footer .l-container .panel-col-first .item-list ul, .l-footer .l-container .panel-col-first .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; }
+    /* line 39, ../sass/mixins/_list.scss */
+    .l-footer .l-container .panel-col-first .item-list ul > li, .l-footer .l-container .panel-col-first .menu > li {
+      list-style-type: none;
+      display: block;
+      float: left; }
+      /* line 48, ../sass/mixins/_list.scss */
+      .l-footer .l-container .panel-col-first .item-list ul > li:last-child, .l-footer .l-container .panel-col-first .menu > li:last-child {
+        margin-right: 0px; }
+  /* line 49, ../sass/components/_footer.scss */
+  .l-footer .l-container .panel-col-first .item-list li {
+    width: 40%;
+    margin-left: 20px;
+    margin-left: 2rem; }
+    /* line 52, ../sass/components/_footer.scss */
+    .l-footer .l-container .panel-col-first .item-list li:first-child {
+      margin-left: 0; }
+  /* line 57, ../sass/components/_footer.scss */
+  .l-footer .l-container .panel-col-first .menu .list-icon {
+    margin-left: 2em;
+    padding: 0; }
+    /* line 60, ../sass/components/_footer.scss */
+    .l-footer .l-container .panel-col-first .menu .list-icon:first-child {
+      margin-left: 0; }
+  /* line 66, ../sass/components/_footer.scss */
   .l-footer .l-container .panel-col-first .si-terms-privacy {
-    font-size: 11px;
-    font-size: 0.78571rem; }
-  /* line 44, ../sass/components/_footer.scss */
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 10; }
+  /* line 73, ../sass/components/_footer.scss */
   .l-footer .l-container .panel-col-last .menu {
     list-style: none;
     margin: 0;
     padding: 0; }
-    /* line 48, ../sass/components/_footer.scss */
+    /* line 77, ../sass/components/_footer.scss */
     .l-footer .l-container .panel-col-last .menu .leaf, .l-footer .l-container .panel-col-last .menu .collapsed, .l-footer .l-container .panel-col-last .menu .expanded {
       list-style-image: none;
       list-style-type: none; }
-  /* line 53, ../sass/components/_footer.scss */
+  /* line 82, ../sass/components/_footer.scss */
   .l-footer .l-container .panel-col-last .pane-system-main-menu .list-0 {
     margin-left: 0; }
   @media (min-width: 980px) {
-    /* line 55, ../sass/components/_footer.scss */
+    /* line 84, ../sass/components/_footer.scss */
     .l-footer .l-container .panel-col-last .pane-menu-menu-quick-links-menu,
     .l-footer .l-container .panel-col-last .pane-system-main-menu {
       float: left; }
-    /* line 59, ../sass/components/_footer.scss */
+    /* line 88, ../sass/components/_footer.scss */
     .l-footer .l-container .panel-col-last .pane-menu-menu-quick-links-menu {
       padding-right: 2em; } }
 
 /* line 1, ../sass/components/_header.scss */
 .l-header {
   background-color: #1668b3; }
-  /* line 6, ../sass/components/_header.scss */
-  .l-header .menu > li {
-    color: #fff; }
-    /* line 8, ../sass/components/_header.scss */
-    .l-header .menu > li > a {
+  /* line 3, ../sass/components/_header.scss */
+  .l-header a {
+    color: #91bce3; }
+    /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+    .l-header a:hover {
       color: #fff; }
-      /* line 18, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-      .l-header .menu > li > a:visited {
-        color: #fff; }
-      /* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-      .l-header .menu > li > a:focus {
-        color: #fff; }
-      /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-      .l-header .menu > li > a:hover {
-        color: #91bce3; }
-      /* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-      .l-header .menu > li > a:active {
-        color: #fff; }
-  /* line 15, ../sass/components/_header.scss */
-  .l-header p {
+  /* line 7, ../sass/components/_header.scss */
+  .l-header .menu {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    padding: 0.809em 0; }
-  /* line 19, ../sass/components/_header.scss */
+    overflow: hidden; }
+    /* line 39, ../sass/mixins/_list.scss */
+    .l-header .menu > li {
+      list-style-type: none;
+      display: block;
+      float: left; }
+      /* line 48, ../sass/mixins/_list.scss */
+      .l-header .menu > li:last-child {
+        margin-right: 0px; }
+  /* line 11, ../sass/components/_header.scss */
+  .l-header p {
+    margin: 0; }
+  /* line 14, ../sass/components/_header.scss */
   .l-header .l-header-preface-wrapper {
     background-color: #12395c; }
-    /* line 22, ../sass/components/_header.scss */
-    .l-header .l-header-preface-wrapper .l-region--header-preface-left img {
-      max-height: 1.618em;
-      width: auto; }
+    /* line 16, ../sass/components/_header.scss */
+    .l-header .l-header-preface-wrapper .l-region--header-preface-left {
+      background-color: black;
+      padding-top: 13px;
+      padding-bottom: 6.5px; }
+      @media (min-width: 680px) {
+        /* line 16, ../sass/components/_header.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-left {
+          background: none; } }
+      /* line 23, ../sass/components/_header.scss */
+      .l-header .l-header-preface-wrapper .l-region--header-preface-left img {
+        max-height: 26px;
+        width: auto; }
     /* line 29, ../sass/components/_header.scss */
-    .l-header .l-header-preface-wrapper .l-region--header-preface-right .pane-social-media-links {
-      margin-right: 2em; }
-      /* line 30, ../sass/components/_header.scss */
-      .l-header .l-header-preface-wrapper .l-region--header-preface-right .pane-social-media-links .icon-only {
-        color: #fff; }
-        /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-        .l-header .l-header-preface-wrapper .l-region--header-preface-right .pane-social-media-links .icon-only:hover {
-          color: #91bce3; }
-    /* line 35, ../sass/components/_header.scss */
-    .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link {
-      margin-left: 2em; }
-    /* line 36, ../sass/components/_header.scss */
-    .l-header .l-header-preface-wrapper .l-region--header-preface-right .btn {
-      background-color: #134979;
-      border: 1px solid #f2f2f2; }
-  /* line 45, ../sass/components/_header.scss */
-  .l-header .l-region--header {
-    padding-top: 0.9708em; }
-    /* line 49, ../sass/components/_header.scss */
+    .l-header .l-header-preface-wrapper .l-region--header-preface-right {
+      padding-top: 13px;
+      padding-bottom: 26px; }
+      @media (min-width: 680px) {
+        /* line 29, ../sass/components/_header.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right {
+          padding-bottom: 13px; } }
+      /* line 35, ../sass/components/_header.scss */
+      .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-bottom: 0;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        background-color: #1a5387;
+        color: white;
+        border-color: #12395c;
+        *border: 0;
+        border-bottom-color: #0a1f31;
+        border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+        padding: 8px;
+        padding: 0.8rem;
+        font-size: 13px;
+        font-size: 1.3rem;
+        line-height: 1;
+        border-radius: 0;
+        text-transform: uppercase; }
+        /* line 32, ../sass/mixins/_buttons.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active.focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active.focus {
+          outline: thin dotted;
+          outline: 5px auto -webkit-focus-ring-color;
+          outline-offset: -2px;
+          color: white; }
+        /* line 39, ../sass/mixins/_buttons.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active {
+          outline: 0;
+          -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          color: white; }
+        /* line 45, ../sass/mixins/_buttons.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:hover, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active, .open > .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.dropdown-toggle {
+          color: white;
+          text-decoration: none;
+          background-color: #12395c;
+          border-color: #081929; }
+        /* line 59, ../sass/mixins/_buttons.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active, .open > .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.dropdown-toggle {
+          background-image: none; }
+        /* line 67, ../sass/mixins/_buttons.scss */
+        .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled:hover, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled.focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled:active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.disabled.active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled], .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled]:hover, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled]:focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled].focus, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled]:active, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn[disabled].active, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:hover, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:focus, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.focus, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn:active, fieldset[disabled] .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn.active {
+          background-color: #1a5387;
+          border-color: #12395c;
+          pointer-events: none;
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+          opacity: 0.65;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none; }
+  /* line 49, ../sass/components/_header.scss */
+  .l-header .l-region--header .menu {
+    display: none; }
+    /* line 52, ../sass/components/_header.scss */
     .l-header .l-region--header .menu > li > a {
-      color: #91bce3;
       padding: 0 1em;
       border-left: 1px solid #91bce3; }
-      /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-      .l-header .l-region--header .menu > li > a:hover {
-        color: #fff; }
-      /* line 53, ../sass/components/_header.scss */
+      /* line 55, ../sass/components/_header.scss */
       .l-header .l-region--header .menu > li > a:hover {
         border-color: #fff; }
-    /* line 57, ../sass/components/_header.scss */
+    /* line 59, ../sass/components/_header.scss */
     .l-header .l-region--header .menu > li:first-child > a {
       border-left: none; }
-    /* line 63, ../sass/components/_header.scss */
-    .l-header .l-region--header .icon-list p {
-      padding: 0; }
-      /* line 65, ../sass/components/_header.scss */
-      .l-header .l-region--header .icon-list p > a {
-        color: #91bce3; }
-        /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-        .l-header .l-region--header .icon-list p > a:hover {
-          color: #fff; }
-  /* line 73, ../sass/components/_header.scss */
+    @media (min-width: 680px) {
+      /* line 49, ../sass/components/_header.scss */
+      .l-header .l-region--header .menu {
+        display: block; } }
+  /* line 85, ../sass/components/_header.scss */
   .l-header .l-branding img {
     width: 100%;
     max-width: 400px; }
+  /* line 89, ../sass/components/_header.scss */
+  .l-header .l-branding .site-name {
+    margin: 0; }
+    /* line 91, ../sass/components/_header.scss */
+    .l-header .l-branding .site-name a {
+      display: block;
+      background-image: url('../images/logo.svg?1434486770');
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: contain;
+      padding-left: 100%;
+      padding-top: 13%; }
 
 /* line 5, ../sass/components/_misc.scss */
 .btn {
   display: inline-block;
-  padding: 0.4045em 1em;
-  text-transform: uppercase;
+  *display: inline;
+  *zoom: 1;
+  margin-bottom: 0;
   font-weight: 600;
-  letter-spacing: .8px;
-  font-size: 11px;
-  font-size: 0.78571rem;
-  background-color: #1668b3;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap; }
+
+/* line 9, ../sass/components/_misc.scss */
+a.btn {
   color: white; }
   /* line 18, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .btn:visited {
+  a.btn:visited {
     color: white; }
   /* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .btn:focus {
+  a.btn:focus {
     color: white; }
   /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .btn:hover {
+  a.btn:hover {
     color: #91bce3; }
   /* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
-  .btn:active {
+  a.btn:active {
     color: white; }
 
-/* line 20, ../sass/components/_misc.scss */
-.menu-list ul > li {
-  margin-right: 2em;
-  padding: 1.1326em 0; }
+/* line 14, ../sass/components/_misc.scss */
+.menu-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  /* line 39, ../sass/mixins/_list.scss */
+  .menu-list ul > li {
+    list-style-type: none;
+    display: block;
+    float: left; }
+    /* line 48, ../sass/mixins/_list.scss */
+    .menu-list ul > li:last-child {
+      margin-right: 0px; }
+  /* line 16, ../sass/components/_misc.scss */
+  .menu-list ul > li {
+    margin-right: 2em;
+    padding: 18.2px 0; }
 
-/* line 26, ../sass/components/_misc.scss */
+/* line 22, ../sass/components/_misc.scss */
 .list-icon {
   margin-right: 2em;
-  padding: 1.1326em 0; }
+  padding: 18.2px 0; }
 
-/* line 34, ../sass/components/_misc.scss */
+/* line 30, ../sass/components/_misc.scss */
 .split-list ul .sub-list {
   padding: 0;
   margin-left: 0; }
   @media (min-width: 980px) {
-    /* line 34, ../sass/components/_misc.scss */
+    /* line 30, ../sass/components/_misc.scss */
     .split-list ul .sub-list {
       margin-left: 2em;
       float: left; } }
 
+/* line 41, ../sass/components/_misc.scss */
+.highlight, .field--name-field-caption {
+  font-family: Scala, Helvetica, Arial, sans-serif;
+  font-style: italic; }
+
+/* Slider */
+/* line 3, ../sass/components/_slick-theme.scss */
+.slick-loading .slick-list {
+  background: #fff url('../images/ajax-loader.gif?1428165300') center center no-repeat; }
+
+/* line 9, ../sass/components/_slick-theme.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 5%;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: url('../images/rgbapng/ffffffbf-5.png?1434660945');
+  background: rgba(255, 255, 255, 0.75);
+  color: transparent;
+  padding: 0;
+  border: none;
+  outline: none; }
+  /* line 24, ../sass/components/_slick-theme.scss */
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    color: transparent;
+    opacity: .9; }
+  /* line 30, ../sass/components/_slick-theme.scss */
+  .slick-prev .slick-arrow,
+  .slick-next .slick-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 10%;
+    background-image: url('../images/arrow-prev.svg?1434663494');
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: contain; }
+  /* line 45, ../sass/components/_slick-theme.scss */
+  .slick-prev.slick-disabled .slick-arrow,
+  .slick-next.slick-disabled .slick-arrow {
+    opacity: .35; }
+
+/* line 51, ../sass/components/_slick-theme.scss */
+.slick-prev {
+  left: -1%; }
+
+/* line 61, ../sass/components/_slick-theme.scss */
+.slick-next {
+  right: 0; }
+  /* line 63, ../sass/components/_slick-theme.scss */
+  .slick-next .slick-arrow {
+    background-image: url('../images/arrow-next.svg?1434663477'); }
+
+/* Dots */
+/* line 75, ../sass/components/_slick-theme.scss */
+.slick-slider {
+  margin-bottom: 30px; }
+
+/* line 79, ../sass/components/_slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%; }
+  /* line 87, ../sass/components/_slick-theme.scss */
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    /* line 95, ../sass/components/_slick-theme.scss */
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      /* line 107, ../sass/components/_slick-theme.scss */
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        /* line 109, ../sass/components/_slick-theme.scss */
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: .7; }
+      /* line 113, ../sass/components/_slick-theme.scss */
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '\f111';
+        width: 20px;
+        height: 20px;
+        font-family: FontAwesome;
+        font-size: 8px;
+        font-size: 0.8rem;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: .35;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    /* line 130, ../sass/components/_slick-theme.scss */
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: .7; }
+
+/* Slider */
+/* line 3, ../sass/components/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 18, ../sass/components/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  /* line 25, ../sass/components/_slick.scss */
+  .slick-list:focus {
+    outline: none; }
+  /* line 29, ../sass/components/_slick.scss */
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+/* line 34, ../sass/components/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* line 43, ../sass/components/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  /* line 49, ../sass/components/_slick.scss */
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  /* line 55, ../sass/components/_slick.scss */
+  .slick-track:after {
+    clear: both; }
+  /* line 59, ../sass/components/_slick.scss */
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+/* line 63, ../sass/components/_slick.scss */
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  display: none; }
+  /* line 67, ../sass/components/_slick.scss */
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  /* line 70, ../sass/components/_slick.scss */
+  .slick-slide img {
+    display: block; }
+  /* line 73, ../sass/components/_slick.scss */
+  .slick-slide.slick-loading img {
+    display: none; }
+  /* line 79, ../sass/components/_slick.scss */
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  /* line 83, ../sass/components/_slick.scss */
+  .slick-initialized .slick-slide {
+    display: block; }
+  /* line 87, ../sass/components/_slick.scss */
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  /* line 91, ../sass/components/_slick.scss */
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+  /* line 97, ../sass/components/_slick.scss */
+  .slick-slide.slick-active h2,
+  .slick-slide.slick-active a {
+    color: white; }
+  /* line 101, ../sass/components/_slick.scss */
+  .slick-slide.slick-active img {
+    max-height: 100%;
+    max-width: auto; }
+  /* line 105, ../sass/components/_slick.scss */
+  .slick-slide.slick-active .node__content {
+    position: absolute;
+    bottom: 0; }
+  /* line 109, ../sass/components/_slick.scss */
+  .slick-slide.slick-active .slide-bg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0; }
+  /* line 118, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:first-child .overlay .slide-bg {
+    background: url('../images/rgbapng/47ba697f-5.png?1434666437');
+    background: rgba(71, 186, 105, 0.5); }
+  /* line 123, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:first-child .solid-bg .slide-bg {
+    background: #47ba69; }
+  /* line 131, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(2) .overlay .slide-bg {
+    background: url('../images/rgbapng/1668b37f-5.png?1434666437');
+    background: rgba(22, 104, 179, 0.5); }
+  /* line 136, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(2) .solid-bg .slide-bg {
+    background: #1668b3; }
+  /* line 145, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(3) .overlay .slide-bg {
+    background: url('../images/rgbapng/a32a577f-5.png?1434666437');
+    background: rgba(163, 42, 87, 0.5); }
+  /* line 150, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(3) .solid-bg .slide-bg {
+    background: #a32a57; }
+  /* line 157, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(4) .overlay .slide-bg {
+    background: url('../images/rgbapng/e4621c7f-5.png?1434667760');
+    background: rgba(228, 98, 28, 0.5); }
+  /* line 162, ../sass/components/_slick.scss */
+  .slick-slide.slick-active:nth-child(4) .solid-bg .slide-bg {
+    background: #e4621c; }
+
 /* line 2, ../sass/components/_tb_megamenu.scss */
 .tb-megamenu, .tb-megamenu .nav-collapse {
   background: none;
-  color: #fff; }
+  color: white; }
   /* line 7, ../sass/components/_tb_megamenu.scss */
   .tb-megamenu .nav > li > a, .tb-megamenu .nav > li.active > a, .tb-megamenu .nav-collapse .nav > li > a, .tb-megamenu .nav-collapse .nav > li.active > a {
-    color: #fff;
-    padding: .5em 1em;
+    color: white;
+    padding: .2em 1em;
     background-image: none;
     border: none;
     background: none; }
+    /* line 18, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+    .tb-megamenu .nav > li > a:visited, .tb-megamenu .nav > li.active > a:visited, .tb-megamenu .nav-collapse .nav > li > a:visited, .tb-megamenu .nav-collapse .nav > li.active > a:visited {
+      color: white; }
+    /* line 21, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+    .tb-megamenu .nav > li > a:focus, .tb-megamenu .nav > li.active > a:focus, .tb-megamenu .nav-collapse .nav > li > a:focus, .tb-megamenu .nav-collapse .nav > li.active > a:focus {
+      color: white; }
+    /* line 24, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+    .tb-megamenu .nav > li > a:hover, .tb-megamenu .nav > li.active > a:hover, .tb-megamenu .nav-collapse .nav > li > a:hover, .tb-megamenu .nav-collapse .nav > li.active > a:hover {
+      color: #91bce3; }
+    /* line 27, ../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+    .tb-megamenu .nav > li > a:active, .tb-megamenu .nav > li.active > a:active, .tb-megamenu .nav-collapse .nav > li > a:active, .tb-megamenu .nav-collapse .nav > li.active > a:active {
+      color: white; }
     /* line 15, ../sass/components/_tb_megamenu.scss */
     .tb-megamenu .nav > li > a:focus, .tb-megamenu .nav > li > a:hover, .tb-megamenu .nav > li.active > a:focus, .tb-megamenu .nav > li.active > a:hover, .tb-megamenu .nav-collapse .nav > li > a:focus, .tb-megamenu .nav-collapse .nav > li > a:hover, .tb-megamenu .nav-collapse .nav > li.active > a:focus, .tb-megamenu .nav-collapse .nav > li.active > a:hover {
       text-decoration: underline;
@@ -2746,79 +873,224 @@ p {
     color: #1668b3; }
   /* line 42, ../sass/components/_tb_megamenu.scss */
   .tb-megamenu .btn, .tb-megamenu .nav-collapse .btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
     background-image: none;
-    background-color: #134979; }
+    border: 1px solid transparent;
+    white-space: nowrap;
+    background-color: #134979;
+    color: white;
+    border-color: #124675;
+    *border: 0;
+    border-bottom-color: #0b2c49;
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25); }
+    /* line 32, ../sass/mixins/_buttons.scss */
+    .tb-megamenu .btn:focus, .tb-megamenu .btn.focus, .tb-megamenu .btn:active:focus, .tb-megamenu .btn:active.focus, .tb-megamenu .btn.active:focus, .tb-megamenu .btn.active.focus, .tb-megamenu .nav-collapse .btn:focus, .tb-megamenu .nav-collapse .btn.focus, .tb-megamenu .nav-collapse .btn:active:focus, .tb-megamenu .nav-collapse .btn:active.focus, .tb-megamenu .nav-collapse .btn.active:focus, .tb-megamenu .nav-collapse .btn.active.focus {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+      color: white; }
+    /* line 39, ../sass/mixins/_buttons.scss */
+    .tb-megamenu .btn:active, .tb-megamenu .btn.active, .tb-megamenu .nav-collapse .btn:active, .tb-megamenu .nav-collapse .btn.active {
+      outline: 0;
+      -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      color: white; }
+    /* line 45, ../sass/mixins/_buttons.scss */
+    .tb-megamenu .btn:hover, .tb-megamenu .btn:focus, .tb-megamenu .btn.focus, .tb-megamenu .btn:active, .tb-megamenu .btn.active, .open > .tb-megamenu .btn.dropdown-toggle, .tb-megamenu .nav-collapse .btn:hover, .tb-megamenu .nav-collapse .btn:focus, .tb-megamenu .nav-collapse .btn.focus, .tb-megamenu .nav-collapse .btn:active, .tb-megamenu .nav-collapse .btn.active, .open > .tb-megamenu .nav-collapse .btn.dropdown-toggle {
+      color: white;
+      text-decoration: none;
+      background-color: #0c2e4d;
+      border-color: #0a2640; }
+    /* line 59, ../sass/mixins/_buttons.scss */
+    .tb-megamenu .btn:active, .tb-megamenu .btn.active, .open > .tb-megamenu .btn.dropdown-toggle, .tb-megamenu .nav-collapse .btn:active, .tb-megamenu .nav-collapse .btn.active, .open > .tb-megamenu .nav-collapse .btn.dropdown-toggle {
+      background-image: none; }
+    /* line 67, ../sass/mixins/_buttons.scss */
+    .tb-megamenu .btn.disabled, .tb-megamenu .btn.disabled:hover, .tb-megamenu .btn.disabled:focus, .tb-megamenu .btn.disabled.focus, .tb-megamenu .btn.disabled:active, .tb-megamenu .btn.disabled.active, .tb-megamenu .btn[disabled], .tb-megamenu .btn[disabled]:hover, .tb-megamenu .btn[disabled]:focus, .tb-megamenu .btn[disabled].focus, .tb-megamenu .btn[disabled]:active, .tb-megamenu .btn[disabled].active, fieldset[disabled] .tb-megamenu .btn, fieldset[disabled] .tb-megamenu .btn:hover, fieldset[disabled] .tb-megamenu .btn:focus, fieldset[disabled] .tb-megamenu .btn.focus, fieldset[disabled] .tb-megamenu .btn:active, fieldset[disabled] .tb-megamenu .btn.active, .tb-megamenu .nav-collapse .btn.disabled, .tb-megamenu .nav-collapse .btn.disabled:hover, .tb-megamenu .nav-collapse .btn.disabled:focus, .tb-megamenu .nav-collapse .btn.disabled.focus, .tb-megamenu .nav-collapse .btn.disabled:active, .tb-megamenu .nav-collapse .btn.disabled.active, .tb-megamenu .nav-collapse .btn[disabled], .tb-megamenu .nav-collapse .btn[disabled]:hover, .tb-megamenu .nav-collapse .btn[disabled]:focus, .tb-megamenu .nav-collapse .btn[disabled].focus, .tb-megamenu .nav-collapse .btn[disabled]:active, .tb-megamenu .nav-collapse .btn[disabled].active, fieldset[disabled] .tb-megamenu .nav-collapse .btn, fieldset[disabled] .tb-megamenu .nav-collapse .btn:hover, fieldset[disabled] .tb-megamenu .nav-collapse .btn:focus, fieldset[disabled] .tb-megamenu .nav-collapse .btn.focus, fieldset[disabled] .tb-megamenu .nav-collapse .btn:active, fieldset[disabled] .tb-megamenu .nav-collapse .btn.active {
+      background-color: #134979;
+      border-color: #124675;
+      pointer-events: none;
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+      opacity: 0.65;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    /* line 45, ../sass/components/_tb_megamenu.scss */
+    .tb-megamenu .btn:hover, .tb-megamenu .nav-collapse .btn:hover {
+      background: none;
+      color: #91bce3; }
+    @media (min-width: 980px) {
+      /* line 42, ../sass/components/_tb_megamenu.scss */
+      .tb-megamenu .btn, .tb-megamenu .nav-collapse .btn {
+        display: none; } }
 
-/* line 51, ../sass/components/_tb_megamenu.scss */
-.l-region--navigation .tb-megamenu .nav li > a, .l-region--navigation .tb-megamenu .nav li.active > a {
-  color: #2c2c2c;
-  letter-spacing: .5px;
-  border-left: none;
-  padding: 0.809em 1em 0.809em 0; }
-  @media (min-width: 1280px) {
-    /* line 51, ../sass/components/_tb_megamenu.scss */
-    .l-region--navigation .tb-megamenu .nav li > a, .l-region--navigation .tb-megamenu .nav li.active > a {
-      padding-right: 2em; } }
+/* line 55, ../sass/components/_tb_megamenu.scss */
+.l-region--header-preface-right .tb-megamenu {
+  margin-right: 1em; }
+  @media (min-width: 980px) {
+    /* line 55, ../sass/components/_tb_megamenu.scss */
+    .l-region--header-preface-right .tb-megamenu {
+      margin-right: 2em; } }
   /* line 61, ../sass/components/_tb_megamenu.scss */
-  .l-region--navigation .tb-megamenu .nav li > a:focus, .l-region--navigation .tb-megamenu .nav li > a:hover, .l-region--navigation .tb-megamenu .nav li.active > a:focus, .l-region--navigation .tb-megamenu .nav li.active > a:hover {
-    background: none; }
-  @media (min-width: 980px) {
-    /* line 51, ../sass/components/_tb_megamenu.scss */
-    .l-region--navigation .tb-megamenu .nav li > a, .l-region--navigation .tb-megamenu .nav li.active > a {
-      color: #fff; } }
-/* line 71, ../sass/components/_tb_megamenu.scss */
-.l-region--navigation .tb-megamenu .nav li.dropdown.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > a:focus, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > a:hover {
-  background: none;
-  color: #2c2c2c; }
-  @media (min-width: 980px) {
-    /* line 71, ../sass/components/_tb_megamenu.scss */
-    .l-region--navigation .tb-megamenu .nav li.dropdown.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > a:focus, .l-region--navigation .tb-megamenu .nav li.dropdown.open.active > a:hover {
-      color: #fff; } }
-/* line 83, ../sass/components/_tb_megamenu.scss */
-.l-region--navigation .tb-megamenu .nav li .dropdown-menu {
-  background-color: #ededed;
-  border: none; }
-  /* line 87, ../sass/components/_tb_megamenu.scss */
-  .l-region--navigation .tb-megamenu .nav li .dropdown-menu li > a, .l-region--navigation .tb-megamenu .nav li .dropdown-menu li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav li .dropdown-menu li.dropdown.open.active > .dropdown-toggle {
-    color: #1a74c1;
-    border: none;
-    letter-spacing: none; }
-  /* line 94, ../sass/components/_tb_megamenu.scss */
-  .l-region--navigation .tb-megamenu .nav li .dropdown-menu li.active a {
-    background: none; }
-/* line 99, ../sass/components/_tb_megamenu.scss */
+  .l-region--header-preface-right .tb-megamenu .nav-collapse {
+    width: 300%; }
+    /* line 64, ../sass/components/_tb_megamenu.scss */
+    .l-region--header-preface-right .tb-megamenu .nav-collapse .nav > li {
+      margin: 0; }
+      /* line 66, ../sass/components/_tb_megamenu.scss */
+      .l-region--header-preface-right .tb-megamenu .nav-collapse .nav > li a {
+        padding-right: 2em;
+        padding-left: 0; }
+      /* line 73, ../sass/components/_tb_megamenu.scss */
+      .l-region--header-preface-right .tb-megamenu .nav-collapse .nav > li:last-child a {
+        padding-right: 0; }
+
+/* line 80, ../sass/components/_tb_megamenu.scss */
 .l-region--navigation .tb-megamenu .nav-collapse {
-  background-color: #ededed;
+  background-color: #f0f0f0;
+  width: 1000%;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px; }
   @media (min-width: 980px) {
-    /* line 99, ../sass/components/_tb_megamenu.scss */
+    /* line 80, ../sass/components/_tb_megamenu.scss */
     .l-region--navigation .tb-megamenu .nav-collapse {
+      width: 100%;
       background: none;
       box-shadow: none; }
-      /* line 105, ../sass/components/_tb_megamenu.scss */
+      /* line 88, ../sass/components/_tb_megamenu.scss */
       .l-region--navigation .tb-megamenu .nav-collapse .dropdown-menu {
-        background-color: #ededed;
+        background-color: #f0f0f0;
         -moz-box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px;
         box-shadow: rgba(0, 0, 0, 0.25) 1px 5px 5px; } }
-/* line 111, ../sass/components/_tb_megamenu.scss */
-.l-region--navigation .tb-megamenu .btn-navbar {
-  color: #515151;
-  background-color: #f0f0f0;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ededed));
-  background-image: -moz-linear-gradient(#ffffff, #ededed);
-  background-image: -webkit-linear-gradient(#ffffff, #ededed);
-  background-image: linear-gradient(#ffffff, #ededed); }
-  /* line 115, ../sass/components/_tb_megamenu.scss */
-  .l-region--navigation .tb-megamenu .btn-navbar:hover {
-    color: #2c2c2c; }
+  /* line 95, ../sass/components/_tb_megamenu.scss */
+  .l-region--navigation .tb-megamenu .nav-collapse .nav li > a, .l-region--navigation .tb-megamenu .nav-collapse .nav li.active > a {
+    color: #2b2b2b;
+    letter-spacing: .5px;
+    border-left: none;
+    padding: 13px 1em 13px 0; }
+    @media (min-width: 1280px) {
+      /* line 95, ../sass/components/_tb_megamenu.scss */
+      .l-region--navigation .tb-megamenu .nav-collapse .nav li > a, .l-region--navigation .tb-megamenu .nav-collapse .nav li.active > a {
+        padding-right: 2em; } }
+    /* line 105, ../sass/components/_tb_megamenu.scss */
+    .l-region--navigation .tb-megamenu .nav-collapse .nav li > a:focus, .l-region--navigation .tb-megamenu .nav-collapse .nav li > a:hover, .l-region--navigation .tb-megamenu .nav-collapse .nav li.active > a:focus, .l-region--navigation .tb-megamenu .nav-collapse .nav li.active > a:hover {
+      background: none; }
+    @media (min-width: 980px) {
+      /* line 95, ../sass/components/_tb_megamenu.scss */
+      .l-region--navigation .tb-megamenu .nav-collapse .nav li > a, .l-region--navigation .tb-megamenu .nav-collapse .nav li.active > a {
+        color: #fff; } }
+  /* line 114, ../sass/components/_tb_megamenu.scss */
+  .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > a:focus, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > a:hover {
+    background: none;
+    color: #2b2b2b; }
+    @media (min-width: 980px) {
+      /* line 114, ../sass/components/_tb_megamenu.scss */
+      .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > a:focus, .l-region--navigation .tb-megamenu .nav-collapse .nav li.dropdown.open.active > a:hover {
+        color: #fff; } }
+  /* line 126, ../sass/components/_tb_megamenu.scss */
+  .l-region--navigation .tb-megamenu .nav-collapse .nav li .dropdown-menu {
+    background-color: #f0f0f0;
+    border: none; }
+    /* line 130, ../sass/components/_tb_megamenu.scss */
+    .l-region--navigation .tb-megamenu .nav-collapse .nav li .dropdown-menu li > a, .l-region--navigation .tb-megamenu .nav-collapse .nav li .dropdown-menu li.dropdown.open > .dropdown-toggle, .l-region--navigation .tb-megamenu .nav-collapse .nav li .dropdown-menu li.dropdown.open.active > .dropdown-toggle {
+      color: #1a74c1;
+      border: none;
+      letter-spacing: none; }
+    /* line 137, ../sass/components/_tb_megamenu.scss */
+    .l-region--navigation .tb-megamenu .nav-collapse .nav li .dropdown-menu li.active a {
+      background: none; }
+/* line 143, ../sass/components/_tb_megamenu.scss */
+.l-region--navigation .tb-megamenu .btn, .l-region--navigation .tb-megamenu .btn:hover {
+  background-image: none;
+  background-color: #12395c;
+  border: none;
+  box-shadow: none; }
+/* line 153, ../sass/components/_tb_megamenu.scss */
+.l-region--navigation .tb-megamenu .btn-navbar [class^="icon-"],
+.l-region--navigation .tb-megamenu .btn-navbar [class^=" icon-"] {
+  color: white;
+  box-shadow: none;
+  width: 30px;
+  height: 20px;
+  line-height: 20px; }
+  /* line 162, ../sass/components/_tb_megamenu.scss */
+  .l-region--navigation .tb-megamenu .btn-navbar [class^="icon-"] .menu-icon:before,
+  .l-region--navigation .tb-megamenu .btn-navbar [class^=" icon-"] .menu-icon:before {
+    content: "\f0c9";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    /*--adjust as necessary--*/
+    padding-left: 10px;
+    padding-left: 1rem;
+    font-size: 30px;
+    font-size: 3rem; }
+/* line 175, ../sass/components/_tb_megamenu.scss */
+.l-region--navigation .tb-megamenu .btn-navbar:hover [class^="icon-"],
+.l-region--navigation .tb-megamenu .btn-navbar:hover [class^=" icon-"] {
+  background-position: 0 -20px; }
 
-/* line 2, ../sass/components/node/_node.scss */
-.street-address .additional {
-  display: block; }
+/* line 2, ../sass/components/_views.scss */
+.slick-wrapper .node__content {
+  padding: 26px;
+  padding: 2.6rem; }
+
+/* line 1, ../sass/components/node/_node.scss */
+.field--type-location {
+  margin-bottom: 26px; }
+  /* line 4, ../sass/components/node/_node.scss */
+  .field--type-location .street-address .additional {
+    display: block; }
+
+/* line 10, ../sass/components/node/_node.scss */
+.flt-left, .flt-left-n {
+  display: block;
+  float: left;
+  margin: 1em 1em 1em 0;
+  width: 50%; }
+
+/* line 16, ../sass/components/node/_node.scss */
+.flt-right, .flt-right-n {
+  display: block;
+  float: left;
+  margin: 1em 1em 1em 0;
+  width: 50%; }
+
+/* line 23, ../sass/components/node/_node.scss */
+.flt-left-n, .flt-right-n {
+  width: 30%; }
+
+/* line 25, ../sass/components/node/_node.scss */
+.field--name-field-accordion {
+  margin-top: 26px;
+  margin-top: 2.6rem; }
+
+/* line 29, ../sass/components/node/_node.scss */
+.field--type-addthis {
+  *zoom: 1; }
+  /* line 15, ../sass/mixins/_clearfix.scss */
+  .field--type-addthis:before, .field--type-addthis:after {
+    content: " ";
+    display: table;
+    line-height: 0; }
+  /* line 21, ../sass/mixins/_clearfix.scss */
+  .field--type-addthis:after {
+    clear: both; }
+  /* line 31, ../sass/components/node/_node.scss */
+  .field--type-addthis .field-item {
+    float: right;
+    margin-bottom: 26px;
+    margin-bottom: 2.6rem; }
 
 /*# sourceMappingURL=si_aaa.styles.css.map */

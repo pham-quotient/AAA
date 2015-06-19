@@ -7,11 +7,11 @@
 
 // Plugin definition.
 $plugin = array(
-  'title' => t('Fluid Two Column Stacked, Left Aside'),
+  'title' => t('Two Column Stacked, 60/40'),
   'icon' => 'preview.png',
-  'category' => t('Omega content layouts'),
+  'category' => t('Columns: 2'),
   'theme' => 'two_col_stacked',
-  'css' => '../../../css/layouts/two-col/two-col.layout.css',
+ // 'css' => '../../../css/layouts/two-col/two-col.layout.css',
   'regions' => array(
     'feature' => t('Feature Content'),
     'main' => t('Main Column'),
@@ -24,7 +24,7 @@ $plugin = array(
  */
 function template_preprocess_two_col_stacked(&$variables) {
   $variables['attributes_array']['class'][] = 'panel-display';
-  $variables['attributes_array']['class'][] = 'panel-display--two-col-left';
+  $variables['attributes_array']['class'][] = 'panel-display--two-col-60-40';
 
   foreach($variables['content'] as $name => $item) {
     $variables['region_attributes_array'][$name]['class'][] = 'two-col-region';

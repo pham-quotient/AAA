@@ -6,7 +6,7 @@
  ******************************************************************************/
 
 @import "toolkit";
-//@import "compass";
+@import "compass";
 @import "susy";
 @import "breakpoint";
 @mixin box-sizing($value) {
@@ -23,14 +23,21 @@ $susy: (
   container:          100%,
   gutters:            $gutter,
  // debug:              (image:show),
+  global-box-sizing:  border-box
 );
 
-.l-container,
-.l-region--navigation {
+.l-container {
   @include container; // Define these elements as the grid containers.
-  padding: 0 2%;
 }
 
+.l-container {
+  @include clearfix;
+}
+
+.l-container > div,
+.l-region--navigation > div {
+  padding: 0 2%;
+}
 
 .l-header-preface-wrapper,
 .l-header-middle,
@@ -46,60 +53,107 @@ header,
 .l-region--sidebar-second {
   margin-bottom: $vert-spacing-unit;
 }
-.l-region--header-wrapper {
-  .l-region--header {
-    .panel-pane {
+  .l-region--header-preface-left {
+    height: 45px;
+  }
+.l-region--header .block:last-child,
+.l-region--navigation {
+  position: absolute;
+  top: 56px;
+  left: 2%;
+}
+.l-region--header .block:last-child {
+  left: 30%;
+}
+
+.l-region-header-preface-right-wrapper{
+  float: right;
+  .l-region--header-preface-right {
+    > div {
       float: left;
     }
+    float: right;
+    @include clearfix;
   }
 }
-.l-region--header-wrapper {
-    .l-region--header {
-      float: right;
-    }
-  }
+//.l-header-preface-wrapper .l-container, .l-region--header-preface-right {overflow: visible;} //allow megamenu to display on mobile
 
-.l-region--header-preface-right {
-  .panel-pane {
-    float: left;
-  }
-  @include span(12 last);
-}
 
 @include breakpoint($tab) {
   .l-container,
-  .l-region--navigation{
-    @include container(98%); // Set max-width to 98%
+  .l-region--navigation {
+    @include container(96%); // Set max-width to 96%
+  }
+  .l-container > div,
+  .l-region--navigation > div {
     padding: 0;
   }
-  .l-header-preface-wrapper .l-container {overflow: hidden;}
-
+ .l-region--navigation {
+  top: 6px;
+  left: 51%;
+ }
+  .l-region--header .block:last-child {
+    top: 11px;
+    left: 60%;
+  }
   .l-region--header-preface-left  {
+    height: auto;
     @include span(3);
   }
   .l-region-header-preface-right-wrapper {
     @include span(9 last);
-    .l-region--header-preface-right {
-      float: right;
-    }
   }
   .l-branding {
     @include span(4);
   }
   .l-region--header-wrapper {
     @include span(8 last);
-
+    .l-region--header {
+      float: right;
+      > div, > nav {
+        float: left
+      }
+    }
   }
-
-  .l-region--navigation {
-    margin-top: $vert-spacing-unit;
+  .paragraphs-item-2-columns {
+    .l-content-left {
+      @include span(6);
+    }
+    .l-content-right {
+      @include span(6 last);
+    }
+    @include clearfix;
   }
-
+  .paragraphs-item-2-columns-aside {
+    .l-content-left {
+      @include span(8);
+    }
+    .l-content-right {
+      @include span(4 last);
+    }
+    @include clearfix;
+  }
   .has-sidebar-first,
   .has-sidebar-second,
   .has-two-sidebars {
     .l-content {
-      @include span(8); // Span 8 out of 12 columns.
+     @include span(8); // Span 8 out of 12 columns.
+      .paragraphs-item-2-columns{
+        .l-content-left {
+          @include span(4);
+        }
+        .l-content-right {
+          @include span(4 last);
+        }
+      }
+      .paragraphs-item-2-columns-aside{
+        .l-content-left {
+          @include span(5);
+        }
+        .l-content-right {
+          @include span(3 last);
+        }
+      }
     }
     .l-region--sidebar-first,
     .l-region--sidebar-second {
@@ -122,6 +176,13 @@ header,
   .l-region--navigation{
     @include layout(16); // Make 16 column design.
   }
+
+  .l-region--header .block:last-child, .l-region--navigation{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
   .l-region--header-preface-left  {
     @include span(4);
   }
@@ -129,15 +190,47 @@ header,
     @include span(6 last);
   }
   .l-branding {
-    @include span(4); // Span 6 out of 16 columns.
+    @include span(5); // Span 6 out of 16 columns.
   }
   .l-region--header-wrapper{
-    @include span(12 last); // Span the last (omega) 10 columns of 16.
+    @include span(11 last); // Span the last (omega) 10 columns of 16.
   }
 
+  .paragraphs-item-2-columns {
+    .l-content-left {
+      @include span(8);
+    }
+    .l-content-right {
+      @include span(8 last);
+    }
+  }
+  .paragraphs-item-2-columns-aside {
+    .l-content-left {
+      @include span(10);
+    }
+    .l-content-right {
+      @include span(4 last);
+    }
+  }
   .has-sidebar-first {
     .l-content {
       @include span(12 last); // Span the last (omega) 12 columns of 16.
+      .paragraphs-item-2-columns {
+        .l-content-left {
+          @include span(6);
+        }
+        .l-content-right {
+          @include span(6 last);
+        }
+      }
+      .paragraphs-item-2-columns-aside {
+        .l-content-left {
+          @include span(8);
+        }
+        .l-content-right {
+          @include span(4 last);
+        }
+      }
     }
     .l-region--sidebar-first {
       @include span(4); // Span 4 out of 16 columns.
@@ -146,6 +239,22 @@ header,
   .has-sidebar-second {
     .l-content {
       @include span(12); // Span 12 out of 16 columns.
+      .paragraphs-item-2-columns {
+        .l-content-left {
+          @include span(6);
+        }
+        .l-content-right {
+          @include span(6 last);
+        }
+      }
+      .paragraphs-item-2-columns-aside {
+        .l-content-left {
+          @include span(8);
+        }
+        .l-content-right {
+          @include span(4 last);
+        }
+      }
     }
     .l-region--sidebar-second {
       @include span(4 last); // Span the last (omega) 4 columns of 16.
@@ -157,6 +266,22 @@ header,
     .l-content {
       @include span(8); // Span 8 out of 16 columns.
       @include push(4 of 16);  // Push element by adding 4 out of 16 columns of left margin.
+      .paragraphs-item-2-columns {
+        .l-content-left {
+          @include span(4);
+        }
+        .l-content-right {
+          @include span(4 last);
+        }
+      }
+      .paragraphs-item-2-columns-aside {
+        .l-content-left {
+          @include span(5);
+        }
+        .l-content-right {
+          @include span(3 last);
+        }
+      }
     }
     .l-region--sidebar-first,
     .l-region--sidebar-second {
@@ -178,10 +303,9 @@ header,
   }
 }
 
-
 @include breakpoint($wide) {
-  .l-container,
-  .l-region--navigation{
-    @include container(80%); // Set max-width to 80%
-  }
+  // .l-container,
+  // .l-region--navigation{
+  //   @include container(80%); // Set max-width to 80%
+  // }
 }
