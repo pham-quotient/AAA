@@ -1,39 +1,143 @@
-.field--type-location {
-  margin-bottom: $baseLineHeight;
-  .street-address {
-    .additional {
-      display: block;
+.page-node {
+  &.node-type-survey {
+    .field--name-field-collection-title {
+      @include rem(font-size, $font-size-h1);
+    }
+    .field--name-field-inclusive-dates {
+      @include rem(font-size, $font-size-h2);
     }
   }
-}
-
-.flt-left, .flt-left-n {
-  display: block;
-  float: left;
-  margin: 1em 1em 1em 0;
-  width: 50%;
-}
-.flt-right, .flt-right-n {
-  display: block;
-  float: left;
-  margin: 1em 1em 1em 0;
-  width: 50%;
-}
-
-.flt-left-n, .flt-right-n {width:30%}
-
-.field--name-field-accordion {
-    @include rem(margin-top, $vert-spacing-unit);
-}
-
-.field--type-addthis {
-  @include clearfix;
-  .field-item {
-    float: right;
-    @include rem(margin-bottom, $vert-spacing-unit);
+  .node__submitted {
+    p {
+      a {
+        @include link-colors($gray-dark, $link-color-hover, $link-color-hover, $gray-dark, $gray-dark);
+      }
+      margin: 0;
+    }
+    font-weight: 600;
+    @include rem(margin-bottom, $line-height-base*2);
   }
-}
+  article,
+  .node-form {
+    ul {
+      @include rem(margin, 0 0 $line-height-base/2 -20px);
+      li {
+        @include rem(margin, $line-height-base/2 0);
+      }
+      &.node__links {
+        margin-left: 0;
+        li {
+          @include rem(margin, $line-height-base 0);
+        }
+      }
+    }
+    .field-collection-container {
+      border: none;
+    }
+    .field-collection-view {
+      padding: 0;
+      @include rem(margin, 0 0 $line-height-base);
+      border: none;
+    }
+    .field-collection-item-field-hours {
+      .field--name-field-hours-details * {
+        margin: 0;
+      }
+    }
+    .field--type-location {
+      margin-bottom: $line-height-base;
+      .street-address {
+        .additional {
+          display: block;
+        }
+      }
+    }
 
-.field--name-field-caption {
-  @extend .highlight;
-}
+
+
+    .field--name-field-accordion {
+        @include rem(margin-top, $vert-spacing-unit);
+    }
+
+    .field--name-field-subheading {
+      font-weight: bold;
+      @include rem(margin-bottom, $line-height-base);
+    }
+    .field--name-field-caption {
+      @extend .highlight;
+    }
+  } // end article, node-form
+} //end page-node
+
+
+.node--book--full ul { width: 100%; }
+@include breakpoint($tab) {
+  .page-node {
+    article,
+    .node-form  {
+      h3 {
+        @include rem(margin-top, $line-height-base);
+      }
+      .field--label-inline {
+        .field-items{
+          float:right;
+          width: 75%;
+        }
+        .field-label {
+          float: left;
+          width: 25%;
+          font-weight: 600;
+          @include rem(padding-right, $horz-spacing-unit);
+        }
+      }
+      .field--name-field-hours {
+        .entity-field-collection-item {
+          margin: 0;
+          border: 1px solid $gray-light;
+          border-width: 0 1px 1px;
+          background: $gray-lighter;
+          &:first-child {
+            border-top: 1px solid $gray-light;
+          }
+          .field--name-field-hours-name {
+            float: left;
+            width: 25%;
+            @include rem(padding, $line-height-base $horz-spacing-unit);
+            font-weight: 600;
+          }
+          .field--name-field-hours-details {
+            float:right;
+            width: 75% !important;
+            @include rem(padding, $line-height-base $horz-spacing-unit);
+            background: white;
+          }
+        }
+      }
+    }
+    &.node-type-location article,
+    article.node--location {
+          .field--label-inline {
+            border: 1px solid $gray-light;
+            border-width: 0 1px 1px;
+            background: $gray-lighter;
+            &:first-child {
+              border-top: 1px solid $gray-light;
+            }
+            .field-label {
+              @include rem(padding, $line-height-base $horz-spacing-unit);
+            }
+            .field-items {
+              @include rem(padding, $line-height-base $horz-spacing-unit);
+              background: white;
+              p:last-child {
+                margin: 0;
+              }
+            }
+          }
+          .field--type-location {
+            margin-bottom: 0;
+          }
+
+    }
+  }
+} //end breakpoint($tab)

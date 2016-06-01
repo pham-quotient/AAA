@@ -1,0 +1,92 @@
+.panel-separator {
+  margin-bottom: em($vert-spacing-unit);
+}
+
+.panel-2col-bricks,
+.panel-2col-stacked,
+.panel-3col-stacked,
+.panel-3col-33-stacked {
+  .panel-col-top .inside {
+    margin-bottom: em($vert-spacing-unit);
+  }
+  .panel-col-bottom .inside {
+    margin-top: em($vert-spacing-unit);
+  }
+}
+.panel-2col-bricks {
+  .panel-col-middle .inside {
+    margin-bottom: em($vert-spacing-unit);
+  }
+}
+
+.panel-col-bottom {
+  background: $gray-lighter;
+  .inside {
+    @include set-layout($max-width);
+    padding: em($vert-spacing-unit) 0;
+  }
+}
+
+@include breakpoint($tab) {
+  .panel-2col-stacked,
+   .panel-2col-bricks {
+    margin-top: 0;
+    padding-top: 0;
+    .panel-col-top,
+    .panel-col-bottom {
+      @include clearfix;
+      width: 100%;
+    }
+  }
+
+  .panel-2col-bricks {
+    .panel-col-middle {
+      @include clearfix;
+      width: 100%;
+    }
+  }
+
+  .panel-2col,
+  .panel-2col-bricks,
+  .panel-2col-stacked {
+    .panel-col-first,
+    .panel-col-last {
+      @include span(6);
+    }
+    .panel-col-last {
+      @include last;
+    }
+  }
+}
+
+@include breakpoint($desk) {
+// panels 25/50/15
+
+  .panel-3col,
+  .panel-3col-stacked {
+    .panel-col-first,
+    .panel-col-last {
+      @include span(3);
+    }
+    .panel-col {
+      @include span(6);
+    }
+  }
+
+  .panel-3col-33,
+  .panel-3col-33-stacked {
+    .panel-col-first,
+    .panel-col,
+    .panel-col-last {
+      @include span(4);
+    }
+  }
+  .panel-3col,
+  .panel-3col-stacked,
+  .panel-3col-33,
+  .panel-3col-33-stacked  {
+    .panel-col-last {
+      @include last;
+    }
+  }
+}

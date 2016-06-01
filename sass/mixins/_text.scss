@@ -18,7 +18,7 @@
 
 @mixin letterpress($opacity){
   // ($hoff, $voff, $blur, $spread, $color)
-  @include single-text-shadow(0, 1px, 0, 0, rgba(white, $opacity));
+  @include text-shadow(0, 1px, 0, 0, rgba(white, $opacity));
 }
 
 // Create REM values with PX fall back

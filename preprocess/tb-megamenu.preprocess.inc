@@ -61,4 +61,5 @@ function si_aaa_preprocess_tb_megamenu(&$vars) {
     drupal_add_css(implode("\n", $css), array('type' => 'inline'));
   }
   $vars['menu_title'] = $menu_name == 'main-menu' ? t('Menu') : $menu_names[$menu_name];
+	$vars['icon_class'] = $menu_name == 'main-menu' ? 'fa fa-bars' : '';
 }

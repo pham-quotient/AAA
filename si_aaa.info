@@ -34,13 +34,24 @@ regions[footer] = Footer
 ; regions[footer_right] = Footer Right
 
 ; Panel plugins
-; plugins[panels][layouts] = panels/layouts
+ plugins[panels][layouts] = panels/layouts
 
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/slick.min.js
+scripts[] = js/jquery.matchHeight.js
+scripts[] = js/swiper.min.js
+scripts[] = js/uisearch.js
 scripts[] = js/si_aaa.behaviors.js
+
+; ========================================
+; Breakpoints
+; ========================================
+breakpoints[tv] = only screen and (min-width: 3456px)
+breakpoints[wide] = (min-width: 1500px)
+breakpoints[desktop] = (min-width: 980px)
+breakpoints[tab] = (min-width: 750px)
+breakpoints[mobile] = (min-width: 0px)
 
 ; ========================================
 ; Settings

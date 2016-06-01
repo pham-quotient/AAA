@@ -1,0 +1,213 @@
+.sr-only {
+  @extend %hide-text;
+}
+
+.btn {
+  @include button;
+  // ($color, $background, $border, $gradient, $hover
+  @include button_style(white, $blue, false, false, $purple);
+  @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1px;
+}
+
+.menu-list {
+  ul {
+    @include float-list;
+    > li {
+      @include rem(margin-right, $horz-spacing-unit);
+      padding: $vert-spacing-unit*.7 0;
+    }
+  }
+}
+.list-icon {
+  margin-right: $horz-spacing-unit;
+  padding: $vert-spacing-unit*.7 0;
+  .menu-title {
+    @extend %hide-text;
+  }
+}
+.split-list ul {
+  .sub-list {
+    padding: 0;
+    margin-left: 0;
+
+    @include breakpoint($desk) {
+      @include rem(margin-left, $horz-spacing-unit);
+      float: left;
+    }
+  }
+}
+
+.highlight {
+  font-family: $font-secondary;
+  font-style: italic;
+}
+
+.rteindent1 {
+  @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+}
+[style*="float: right"],
+[style*="float:right"] {
+   @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+}
+[style*="float: left"]
+[style*="float:left"] {
+   @include rem(margin, 0 $horz-spacing-unit $vert-spacing-unit 0);
+}
+
+figure {
+  @include rem(margin-bottom, $vert-spacing-unit);
+  line-height: 0;
+  figcaption {
+    @include rem(font-size, 12px);
+    @include rem(padding-top, $vert-spacing-unit/2);
+    line-height: $line-height-base*.75/$font-size-small;
+    color: $gray;
+  }
+}
+
+.flt-left{
+ float:left;
+ @include rem(margin, 0 $horz-spacing-unit $vert-spacing-unit 0);
+}
+.flt-right {
+ float:right;
+ @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+}
+
+.flt-left,
+.flt-right {
+  figure,
+  img {
+    width: 100% !important;
+    float: none !important;
+    margin: 0;
+  }
+  p {
+    .clearfix & {
+      @include rem(font-size, $font-size-base);
+      margin-bottom: 0;
+      line-height: $line-height-base;
+      color: $gray-dark;
+    }
+  }
+  @include clearfix;
+}
+
+.flt-left p,
+.flt-right p,
+.item-center p,
+.img-caption {
+    @include rem(margin-bottom, $vert-spacing-unit/2);
+    @include rem(font-size, 12px);
+    line-height: $line-height-small;
+    color: $gray;
+}
+.flt-left p,
+.flt-right p,
+.item-center p {
+  &:first-child {
+    @include rem(margin-bottom, $vert-spacing-unit/4);
+  }
+}
+
+.flt-25 {
+ width: 25%;
+}
+.flt-30 {
+ width: 30%;
+}
+.flt-40 {
+ width: 40%;
+}
+.flt-50 {
+ width: 50%;
+}
+.flt-60 {
+ width: 60%;
+}
+.flt-75 {
+ width: 75%;
+}
+.flt-25,
+.flt-30,
+.flt-40,
+.flt-50,
+.flt-60,
+.flt-70 {
+  img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+.cke_toolgroup,
+.cke_toolbar {
+  .flt-right,
+  .flt-left {
+    float: none;
+  }
+  .flt-25,
+  .flt-30,
+  .flt-40,
+  .flt-50,
+  .flt-60,
+  .flt-75 {
+   width: 100%;
+  }
+}
+
+.large {
+  @include rem(font-size, ceil($font-size-base*$large-factor));
+  line-height: $line-height-base/floor($font-size-base*$large-factor);
+
+}
+h1.large, h1 .large  {
+  @include rem(font-size, floor($font-size-h1*$large-factor));
+  line-height: $line-height-base*4/floor($font-size-h1*$large-factor);
+}
+h2.large, h2 .large   {
+  @include rem(font-size, floor($font-size-h2*$large-factor));
+  line-height: $line-height-base*2.5/floor($font-size-h2*$large-factor);
+  .front & {
+    @include rem(font-size, $font-size-h1);
+    line-height: $line-height-h1;
+  }
+}
+h3.large, h3 .large   {
+  @include rem(font-size, floor($font-size-h3*$large-factor));
+  line-height: $line-height-base*2/floor($font-size-h3*$large-factor);
+}
+h4.large, h4 .large   {
+  @include rem(font-size, floor($font-size-h4*$large-factor));
+  line-height: $line-height-base*2/floor($font-size-h4*$large-factor);
+}
+
+.small {
+  @include rem(font-size, ceil($font-size-base*$small-factor));
+  line-height:$line-height-small;
+}
+h1.small, h1 .small {
+  @include rem(font-size, floor($font-size-h1*$small-factor));
+  line-height: $line-height-base*2.5/floor($font-size-h1*$small-factor);// $line-height*4
+}
+h2.small, h2 .small {
+  @include rem(font-size, floor($font-size-h2*$small-factor));
+  line-height: $line-height-base*2/floor($font-size-h2*$small-factor);
+}
+h3.small, h3 .small {
+  @include rem(font-size, floor($font-size-h3*$small-factor));
+  line-height: $line-height-base*1.5/floor($font-size-h3*$small-factor);
+}
+h4.small, h4 .small {
+  @include rem(font-size, floor($font-size-h4*$small-factor));
+  line-height: $line-height-base/floor($font-size-h4*$small-factor);
+}
+
+@include breakpoint($desk) {
+  .page-title {
+    @include rem(margin-right, 110px);
+  }
+}

@@ -1,0 +1,50 @@
+.field--type-addthis {
+  display: none;
+}
+.addthis_button {
+  display: inline-block;
+  border: 1px solid lighten($base-gray, 69%);
+  @include link-colors($gray, $link-color-hover, $link-color-hover, $gray, $gray);
+  @include rem(padding, 0 30px 0 12px);
+  background: #fff;
+  @include rem(margin-left, 10px);
+  &:before {
+    content: "SHARE";
+    @include rem(font-size, $font-size-small);
+  }
+  &:after {
+    content: "\f0fe";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: $gray;
+    @include rem(font-size, $font-size-base);
+    @include rem(padding-left, $font-size-base/2);
+    position: absolute;
+    @include rem(top,  2px);
+    @include rem(right,  7px);
+  }
+  &:hover {
+   &:after {
+    content: "\f146";
+   }
+  }
+  img {display: none};
+}
+
+#at15pf.atm-f {
+ @include rem(padding, 15px);
+}
+
+@include breakpoint($tab) {
+  .field--type-addthis {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    //@include rem(top, $font-size-h1);
+    @include rem(margin-left, $horz-spacing-unit);
+  }
+}

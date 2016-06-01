@@ -7,15 +7,20 @@
       > a,
       &.active > a {
         // Set ($normal, $hover, $active, $visited, $focus)
-         @include link-colors(white, $light-blue, white, white, white);
-          padding: .2em 1em;
-          background-image: none;
-          border: none;
-          background: none;
-          &:focus, &:hover {
+        @include link-colors(white, $blue-light, white, white, white);
+        @include rem(padding, ceil($vert-spacing-unit/8) $horz-spacing-unit/2);
+        background-image: none;
+        border: none;
+        background: none;
+        @include font-smoothing;
+        letter-spacing: .5px;
+        &:focus, &:hover {
+          text-decoration: none;
+          .menu-title {
             text-decoration: underline;
-            background: none;
           }
+          background: none;
+        }
       }
       &:first-child > a {
         border-left: none;
@@ -26,11 +31,15 @@
       &.dropdown.open.active > a:focus,
       &.dropdown.open.active > a:hover {
         background: none;
-        color: $light-blue;
+        color: $blue-light;
       }
 
       &.active > a {
-        text-decoration: underline;
+        text-decoration: none;
+        .menu-title {
+          text-decoration: underline;
+        }
+
       }
     }
     .mega-nav .mega-group > .mega-group-title,
@@ -38,13 +47,26 @@
     .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
       color: $blue;
     }
-  }
+    label {
+      color: $blue;
+    }
+  } // end .nav
   .btn {
     @include button;
     @include button_style(white, #134979, darken(#134979, 1%));
+    @include button_size(9px, $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1px;
+    border-radius:0;
+    box-shadow: none;
+    background-image: none;
     &:hover {
       background: none;
-      color: $light-blue;
+      color: $blue-light;
+    }
+    .fa {
+      @include rem(font-size, $font-size-h1)
     }
     @include breakpoint($desk, true) {
       display: none;
@@ -52,20 +74,28 @@
   }
 }
 
+@include  breakpoint('screen' max-width 979px) {
+  .tb-megamenu-menu-social-media.tb-megamenu .nav-collapse .nav > li {
+    float: left;
+  }
+}
+
 .l-region--header-preface-right .tb-megamenu {
-  margin-right:  $horz-spacing-unit;
+  margin:  0 $horz-spacing-unit/2;
   @include breakpoint($desk, true) {
-    margin-right:  $horz-spacing-unit * 2;
+    margin: 0;
+    margin-right:  $horz-spacing-unit;
   }
    button .icon-reorder {@extend %hide-text;}
   .nav-collapse {
-    width: 300%;
+    //width: 300%;
+    background: $blue-dark;
     .nav {
       > li {
         margin: 0;
         a {
-          padding-right: $horz-spacing-unit * 2;
-          padding-left: 0;
+          padding: 0 $horz-spacing-unit/2;
+          //padding-left: 0;
           .menu-title {
             @extend %hide-text;
           }
@@ -76,105 +106,153 @@
   }
 }
 
-.l-region--navigation .tb-megamenu {
-  .nav-collapse{
-    background-color: $lighter-gray;
-    width: 1000%;
-    @include box-shadow(rgba(black, .25) 1px 5px 5px);
-    @include breakpoint($desk) {
-      width: 100%;
-      background: none;
+.l-region--navigation {
+  .tb-megamenu {
+    .nav-collapse{
+      background-color: $gray-lighter;
+      width: 700%;
+      @include box-shadow(rgba(black, .25) 1px 5px 5px);
+      @include breakpoint($desk) {
+        width: 100%;
+        background: none;
+        box-shadow: none;
+        .dropdown-menu {
+        background-color: $gray-lighter;
+          @include box-shadow(rgba(black, .25) 1px 5px 5px);
+        }
+      }
+      .nav {
+        li {
+          > a,
+            &.active > a {
+              // Set ($normal, $hover, $active, $visited, $focus)
+              @include link-colors($gray-darker);
+              border-left: none;
+              @include rem(padding, $vert-spacing-unit/2 $vert-spacing-unit/2  $vert-spacing-unit);
+              @include breakpoint($wide) {
+                @include rem(padding-right, $horz-spacing-unit);
+              }
+              &:focus, &:hover {
+                background: none;
+              }
+              @include breakpoint($desk) {
+                  @include link-colors(#fff);
+              }
+            }
+
+            &.dropdown.active > .dropdown-toggle,
+            &.dropdown.open > .dropdown-toggle,
+            &.dropdown.open.active > .dropdown-toggle,
+            &.dropdown.open.active > a:focus,
+            &.dropdown.open.active > a:hover {
+              background: none;
+              color: $gray-darker;
+              @include breakpoint($desk) {
+                color: #fff;
+              }
+            }
+
+          .dropdown-menu {
+            background-color: $gray-lighter;
+            border: none;
+            li {
+              > a,
+              &.dropdown.open > .dropdown-toggle,
+              &.dropdown.open.active > .dropdown-toggle {
+              @include link-colors(#1a74c1);
+                border: none;
+                letter-spacing: none;
+              }
+              &.active a {background: none;}
+            }
+            .mega-caption {
+               @include link-colors(#1a74c1);
+            }
+            .dropdown-menu {
+              display: none;
+            }
+          }
+        }
+      }// end nav
+    }// end nav-collapse
+    .mega-nav .dropdown-submenu > a:after {
+      border: none;
+    }
+    .btn, .btn:hover {
+      background-image: none;
+      background-color: transparent;
+      border: none;
       box-shadow: none;
-      .dropdown-menu {
-      background-color: $lighter-gray;
-        @include box-shadow(rgba(black, .25) 1px 5px 5px);
+      .menu-title {
+        @extend %hide-text;
       }
     }
-    .nav {
-      li {
-        > a,
-          &.active > a {
-            // Set ($normal, $hover, $active, $visited, $focus)
-            @include link-colors($darker-gray);
-            letter-spacing: .5px;
-            border-left: none;
-            padding: .5*$vert-spacing-unit $horz-spacing-unit .5*$vert-spacing-unit 0;
-            @include breakpoint($wide) {
-              padding-right: $horz-spacing-unit * 2;
-            }
-            &:focus, &:hover {
-  //              text-decoration: underline;
-              background: none;
-            }
-            @include breakpoint($desk) {
-                @include link-colors(#fff);
-            }
-          }
 
-          &.dropdown.active > .dropdown-toggle,
-          &.dropdown.open > .dropdown-toggle,
-          &.dropdown.open.active > .dropdown-toggle,
-          &.dropdown.open.active > a:focus,
-          &.dropdown.open.active > a:hover {
-            background: none;
-            color: $darker-gray;
-            @include breakpoint($desk) {
-              color: #fff;
-            }
-          }
+    .btn-navbar [class^="icon-"],
+    .btn-navbar [class^=" icon-"] {
+      color: white;
+      box-shadow: none;
+     // background: url("../images/menu-icon.png") top left no-repeat;
+      width: 30px;
+      height: 20px;
+      line-height: 20px;
+      .menu-icon {
+         &:before {
+          content: "\f0c9";
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          text-decoration: inherit;
+          /*--adjust as necessary--*/
+         // color: #000;
+          @include rem(padding-left, 10px);
+          @include rem(font-size, 30px);
+        }
+      }
+    }
+    .btn-navbar:hover [class^="icon-"],
+    .btn-navbar:hover [class^=" icon-"] {
+      background-position: 0 -20px;
+    }
+    .mega-caption {
+      @include rem(font-size, $font-size-small);
+      line-height: $line-height-small;
+      color: #FFF;
+    }
+  }
+} // end .l-region--navigation .tb-megamenu
 
-        .dropdown-menu {
-          background-color: $lighter-gray;
-          border: none;
-          li {
-            > a,
-            &.dropdown.open > .dropdown-toggle,
-            &.dropdown.open.active > .dropdown-toggle {
-            @include link-colors(#1a74c1);
-              border: none;
-              letter-spacing: none;
+@include breakpoint($desk) {
+  .l-region--navigation .tb-megamenu {
+    .nav-collapse{
+      .nav {
+        > li {
+          max-width: 16%;
+          &.wider {
+            max-width: 20%;
+          }
+          > a {
+            &,
+            .menu-title,
+            .mega-caption  {
+              white-space: normal;
             }
-            &.active a {background: none;}
           }
         }
       }
-    }// end nav
-  }// end nav-collapse
-  .btn, .btn:hover {
-    background-image: none;
-    background-color: $dark-blue;
-    border: none;
-    box-shadow: none;
-    .menu-title {
-      @extend %hide-text;
     }
   }
+}
 
-  .btn-navbar [class^="icon-"],
-  .btn-navbar [class^=" icon-"] {
-    color: white;
-    box-shadow: none;
-   // background: url("../images/menu-icon.png") top left no-repeat;
-    width: 30px;
-    height: 20px;
-    line-height: 20px;
-    .menu-icon {
-       &:before {
-        content: "\f0c9";
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        /*--adjust as necessary--*/
-       // color: #000;
-        @include rem(padding-left, 10px);
-        @include rem(font-size, 30px);
+@include breakpoint('screen' 1780px) {
+  .l-region--navigation .tb-megamenu {
+    .nav-collapse{
+      .nav {
+        > li
+        > li.wider {
+          max-width: auto;
+        }
       }
     }
   }
-  .btn-navbar:hover [class^="icon-"],
-  .btn-navbar:hover [class^=" icon-"] {
-    background-position: 0 -20px;
-  }
-
-} // end .l-region--navigation .tb-megamenu
+}

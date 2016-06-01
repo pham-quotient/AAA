@@ -1,11 +1,11 @@
 .l-footer-preface {
-  background: url("../images/mission-bg.jpg") center top no-repeat $light-gray;
+  background: url("../images/mission-bg.jpg") center top no-repeat $gray-light;
   background-size: cover;
   text-align: center;
   padding: $vert-spacing-unit 0;
-  color: $darker-gray;
+  color: $gray-darker;
   h2 {
-    color: $darker-gray;
+    color: $gray-darker;
   }
   p {
     @include rem(font-size, 20px);
@@ -16,8 +16,11 @@
   .donate-link .btn {
         @include button;
         @include button_style(white, $blue, darken($blue, 5%));
-        @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit * 1.5, $font-size-small, floor(($baseLineHeight * .75)/$font-size-small));
+        @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit*.75, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
         text-transform: uppercase;
+        @include font-smoothing;
+        font-weight: bold;
+        letter-spacing: .1px;
   }
 } // end l-footer-preface
 
@@ -28,18 +31,24 @@
   }
   ul {
     @extend %reset-list;
+    .list-icon a {
+      @include rem(font-size, $font-size-base);
+      line-height: $baseLineHeight;
+    }
   }
-  background: url("../images/AAA-logo-gray.png") left top no-repeat;
-    @include rem(padding-top, $baseLineHeight * 2);
+  #block-panels-mini-footer-left {
+    background: url("../images/AAA-logo-gray.png") left top no-repeat;
+    @include rem(padding-top, $line-height-base * 2);
+  }
   .panel-pane {
-    @include rem(margin, 0 0 $baseLineHeight);
+    @include rem(margin, 0 0 $line-height-base);
 
   }
   h2 {
     @include rem(font-size, 16px);
     line-height: 1.25;
     margin-bottom: 0;
-    color: $dark-gray;
+    color: $gray-dark;
   }
 
   .panel-col-first{
@@ -86,7 +95,7 @@
         float: left;
       }
       .pane-menu-menu-quick-links-menu{
-        padding-right: $horz-spacing-unit * 2;
+        padding-right: $horz-spacing-unit;
       }
     }
   } // end l-region--footer-right

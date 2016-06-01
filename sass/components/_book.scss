@@ -1,0 +1,68 @@
+.page-previous,
+.page-next,
+.page-up {
+	display: block;
+	border: $btn-default-border solid 1px;
+	border-width: 1px 1px 0;
+	text-transform: uppercase;
+	@include rem(padding, 6px);
+	background-color: $btn-default-bg;
+	@include link-colors($link-color-default, white, white, $link-color-default, $link-color-default);
+	&:hover {
+		background-color: $btn-default-hover;
+	}
+}
+.page-next {
+	border-bottom-width: 1px;
+}
+
+.links--inline  li.book_printer {
+  position: relative;
+  float: right;
+	&:before {
+    content: "\f02f";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: $link-color-default;
+    position: absolute;
+    top: 0;
+    left: 0;
+	}
+	&:hover:before {
+		color: $link-color-hover;
+	}
+	a {
+		@include rem(padding-left, $vert-spacing-unit);
+	}
+}
+
+@include breakpoint($desk) {
+	.page-previous,
+	.page-next,
+	.page-up {
+		border-width: 1px 0 1px 1px;
+	}
+	.page-next {
+		border-right-width: 1px;
+	}
+	.page-previous,
+	.page-up {
+		float: left;
+	}
+	.page-next {
+		text-align: right;
+		float: right;
+	}
+
+	.page-previous,
+	.page-next {
+		width: 42%;
+	}
+
+	.page-up {
+		width: 16%;
+		text-align: center;
+	}
+}

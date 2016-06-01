@@ -4,7 +4,7 @@
 @import "breakpoint";
 @import "susy";
 @import "toolkit";
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 
 // Import variables, abstractions, base styles and components using globbing.
@@ -19,7 +19,7 @@
 // directly. Variables-, function- or mixin providing partials should never
 // output any styles themselves: Importing them multiple times to resolve
 // dependencies shouldn't be a problem.
-@import "variables/**/*";
+@import "_variables.scss";
 @import "mixins/**/*";
 @import "base/**/*";
 @import "components/**/*";

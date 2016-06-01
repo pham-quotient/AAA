@@ -1,0 +1,9 @@
+#mini-panel-header {
+  .block__content {
+    @include display-flex;
+    @include flex-wrap(wrap);
+  }
+  .panel-pane {
+    @include flex(1);
+  }
+}

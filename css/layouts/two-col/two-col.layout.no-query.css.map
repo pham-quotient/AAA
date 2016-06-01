@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;AAgBE,2EAA8C;EAC5C,aAAa,EChBG,IAAI",
-"sources": ["../../../sass/layouts/two-col/two-col.layout.scss","../../../sass/variables/_grid.scss"],
-"names": [],
-"file": "two-col.layout.no-query.css"
-}

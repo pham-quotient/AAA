@@ -63,11 +63,22 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
             */
-      { name : 'Highlight'  , element : 'span', attributes : { 'class' : 'highlight' } },
-      { name : 'Float Left: Equal Width'  , element : ['div', 'p'], attributes : { 'class' : 'flt-left' } },
-      { name : 'Float Left: Narrow' , element : ['div', 'p'], attributes : { 'class' : 'flt-left-n' } },
-        { name : 'Float Right: Equal Width' , element : ['div', 'p'], attributes : { 'class' : 'flt-right' } },
-      { name : 'Float Right: Narrow'    , element : ['div', 'p'], attributes : { 'class' : 'flt-right-n' } },
+						{ name: 'Left 30%', element : 'div', attributes : { 'class' : 'flt-left flt-30' }},
+						{ name: 'Left 40%', element : 'div', attributes : { 'class' : 'flt-left flt-40' }},
+						{ name: 'Left 50%', element : 'div', attributes : { 'class' : 'flt-left flt-50' }},
+						{ name: 'Left 60%', element : 'div', attributes : { 'class' : 'flt-left flt-60' }},
+						{ name: 'Left 70%', element : 'div', attributes : { 'class' : 'flt-left flt-70' }},
+  					{ name: 'Right 25%', element : 'div', attributes : { 'class' : 'flt-right flt-25' }},
+						{ name: 'Right 30%', element : 'div', attributes : { 'class' : 'flt-right flt-30' }},
+						{ name: 'Right 40%', element : 'div', attributes : { 'class' : 'flt-right flt-40' }},
+						{ name: 'Right 50%', element : 'div', attributes : { 'class' : 'flt-right flt-50' }},
+						{ name: 'Right 60%', element : 'div', attributes : { 'class' : 'flt-right flt-60' }},
+						{ name: 'Right 70%', element : 'div', attributes : { 'class' : 'flt-right flt-70' }},   					          
+            { name : 'Highlight'    , element : ['p', 'h2', 'h3'], attributes : { 'class' : 'highlight' } },
+            { name : 'Image Caption'    , element :  'span', attributes : { 'class' : 'img-caption' } },
+            { name : 'Small Text'    , element :  'span', attributes : { 'class' : 'small' } },
+            { name : 'Large Text'    , element :  'span', attributes : { 'class' : 'large' } },
+
 
            /* Object Styles
 

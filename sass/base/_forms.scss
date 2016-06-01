@@ -1,0 +1,24 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+ @include button;
+ @include button_style(white, $blue, false, false, #104E86);
+ @include button_size(10px, 25px, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+ text-transform: uppercase;
+ border:0;
+ @include rem(margin-top, $vert-spacing-unit);
+  max-width: 100%;
+}
+
+.container-inline {
+ input[type="button"],
+ input[type="reset"],
+ input[type="submit"]  {
+  margin-top: 0;
+ }
+}
+
+.form-text {
+  max-width: 100%;
+}

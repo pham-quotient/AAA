@@ -5,43 +5,36 @@
  * and building mobile first layouts.
  ******************************************************************************/
 
-@import "toolkit";
 @import "compass";
 @import "susy";
 @import "breakpoint";
-@mixin box-sizing($value) {
-    -moz-box-sizing: $value;
-         box-sizing: $value;
-}
 
+@import "../../mixins/**/*";
 // Globbing from within sub-folders only works with relative paths.
-@import "../../variables/**/*";
+@import "../../_variables.scss";
 
-// Susy Defaults (http://susy.readthedocs.org/en/latest/settings/)
-$susy: (
-  columns:            12,
-  container:          100%,
-  gutters:            $gutter,
- // debug:              (image:show),
-  global-box-sizing:  border-box
-);
-
-.l-container {
-  @include container; // Define these elements as the grid containers.
+.l-container,
+.l-region-header-preface-right-wrapper,
+.front .l-panel-wrapper {
+  @include set-layout($max-width); // Define these elements as the grid containers.
 }
 
-.l-container {
+.front .l-main.l-container {
+  max-width: 100%;
+}
+
+.l-container,
+.l-header {
   @include clearfix;
 }
 
-.l-container > div,
-.l-region--navigation > div {
-  padding: 0 2%;
-}
+// .l-container > div,
+// .l-region--navigation > div {
+//   padding: 0 2%;
+// }
 
 .l-header-preface-wrapper,
-.l-header-middle,
-header,
+.l-page > header,
 .l-main,
 .l-hero,
 .l-highlighted,
@@ -51,63 +44,82 @@ header,
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: $vert-spacing-unit;
+  @include rem(margin-bottom, $vert-spacing-unit);
 }
-  .l-region--header-preface-left {
-    height: 45px;
-  }
-.l-region--header .block:last-child,
-.l-region--navigation {
-  position: absolute;
-  top: 56px;
-  left: 2%;
+.l-header {
+  position: relative;
 }
-.l-region--header .block:last-child {
-  left: 30%;
+.l-header-middle {
+  @include rem(padding, $vert-spacing-unit 0);
 }
 
-.l-region-header-preface-right-wrapper{
-  float: right;
+.l-region--header-preface-left {
+  padding: 0 2%;
+  height: 55px;
+}
+.l-region-header-preface-right-wrapper {
+  .l-inner {
+    float:right;
+  }
   .l-region--header-preface-right {
+    float: right;
     > div {
       float: left;
     }
-    float: right;
-    @include clearfix;
   }
 }
-//.l-header-preface-wrapper .l-container, .l-region--header-preface-right {overflow: visible;} //allow megamenu to display on mobile
+
+.l-region--navigation {
+  //@include span(4);
+  position: absolute;
+  left: 2%;
+  top: 52px;
+}
+
+.l-region--header-wrapper {
+  display: none;
+}
 
 
 @include breakpoint($tab) {
-  .l-container,
+  .l-region-header-preface-right-wrapper,
+  .l-region--header-preface-left {
+    max-width: 100%;
+    width: auto;
+    @include rem(height, 60px);
+  // overflow: hidden;
+  }
+  .l-header {
+    .l-region--header-preface-left {
+      padding: 0;
+    }
+    .l-outer {
+      @include set-layout($max-width);
+      .l-region--header-preface-left  {
+        @include span(3);
+        @include post(1);
+      }
+      .l-region-header-preface-right-wrapper {
+        .l-inner {
+          @include span(8 last);
+        }
+      }
+    }
+  }
+
   .l-region--navigation {
-    @include container(96%); // Set max-width to 96%
+  //@include span(4);
+    position: absolute;
+    left: 50%;
+    top: 0;
   }
-  .l-container > div,
-  .l-region--navigation > div {
-    padding: 0;
-  }
- .l-region--navigation {
-  top: 6px;
-  left: 51%;
- }
-  .l-region--header .block:last-child {
-    top: 11px;
-    left: 60%;
-  }
-  .l-region--header-preface-left  {
-    height: auto;
-    @include span(3);
-  }
-  .l-region-header-preface-right-wrapper {
-    @include span(9 last);
-  }
+
   .l-branding {
-    @include span(4);
+    @include span(5);
   }
   .l-region--header-wrapper {
-    @include span(8 last);
+    @include span(7 last);
+    display: block;
     .l-region--header {
       float: right;
       > div, > nav {
@@ -115,53 +127,9 @@ header,
       }
     }
   }
-  .paragraphs-item-2-columns {
-    .l-content-left {
-      @include span(6);
-    }
-    .l-content-right {
-      @include span(6 last);
-    }
-    @include clearfix;
-  }
-  .paragraphs-item-2-columns-aside {
-    .l-content-left {
-      @include span(8);
-    }
-    .l-content-right {
-      @include span(4 last);
-    }
-    @include clearfix;
-  }
-  .has-sidebar-first,
-  .has-sidebar-second,
-  .has-two-sidebars {
-    .l-content {
-     @include span(8); // Span 8 out of 12 columns.
-      .paragraphs-item-2-columns{
-        .l-content-left {
-          @include span(4);
-        }
-        .l-content-right {
-          @include span(4 last);
-        }
-      }
-      .paragraphs-item-2-columns-aside{
-        .l-content-left {
-          @include span(5);
-        }
-        .l-content-right {
-          @include span(3 last);
-        }
-      }
-    }
-    .l-region--sidebar-first,
-    .l-region--sidebar-second {
-      @include span(4 at 9); // Span the last 4 columns of 12.
-    }
-    .l-region--sidebar-second {
-      clear: right;
-    }
+
+  .l-content {
+    position: relative;
   }
   .l-region--footer-left {
     @include span(5);
@@ -172,123 +140,82 @@ header,
 }
 
 @include breakpoint($desk) {
-  .l-container,
-  .l-region--navigation{
-    @include layout(16); // Make 16 column design.
+  // .l-container,
+  // .l-region--navigation{
+  //   @include layout(16); // Make 16 column design.
+  // }
+  // .l-region--navigation {
+  //   @include container(); // Set max-width to 96%
+  // }
+  .l-page > header {
+    margin-bottom: 0;
   }
 
-  .l-region--header .block:last-child, .l-region--navigation{
+  .l-header {
+    .l-region--header-preface-left  {
+      @include span(4);
+      @include post(1);
+    }
+    .l-region-header-preface-right-wrapper  {
+      .l-inner {
+        @include span(7 last);
+        padding-right: 50px;
+      }
+    }
+  }
+  .l-region--navigation {
+    float: none;
     position: relative;
-    top: 0;
-    left: 0;
+    top: auto;
+    left: auto;
+    @include set-layout($max-width);
   }
 
-  .l-region--header-preface-left  {
-    @include span(4);
-  }
-  .l-region-header-preface-right-wrapper  {
-    @include span(6 last);
+  .l-container .l-content {
+    @include rem(margin-top, $line-height-base*2);
+    .has-no-sidebars & {
+      margin-top: 0;
+    }
+    > .panel-display > .l-region--main.has-sidebar-first {
+      @include rem(padding-top, $line-height-base*2);
+    }
   }
   .l-branding {
     @include span(5); // Span 6 out of 16 columns.
   }
   .l-region--header-wrapper{
-    @include span(11 last); // Span the last (omega) 10 columns of 16.
+    @include span(7 last); // Span the last (omega) 10 columns of 16.
+    @include suffix(1);
   }
 
-  .paragraphs-item-2-columns {
-    .l-content-left {
-      @include span(8);
-    }
-    .l-content-right {
-      @include span(8 last);
-    }
-  }
-  .paragraphs-item-2-columns-aside {
-    .l-content-left {
-      @include span(10);
-    }
-    .l-content-right {
-      @include span(4 last);
-    }
-  }
   .has-sidebar-first {
     .l-content {
-      @include span(12 last); // Span the last (omega) 12 columns of 16.
-      .paragraphs-item-2-columns {
-        .l-content-left {
-          @include span(6);
-        }
-        .l-content-right {
-          @include span(6 last);
-        }
-      }
-      .paragraphs-item-2-columns-aside {
-        .l-content-left {
-          @include span(8);
-        }
-        .l-content-right {
-          @include span(4 last);
-        }
-      }
+      @include span(9 last); // Span the last (omega) 12 columns of 16.
     }
     .l-region--sidebar-first {
-      @include span(4); // Span 4 out of 16 columns.
+      @include span(3); // Span 4 out of 16 columns.
     }
   }
   .has-sidebar-second {
     .l-content {
-      @include span(12); // Span 12 out of 16 columns.
-      .paragraphs-item-2-columns {
-        .l-content-left {
-          @include span(6);
-        }
-        .l-content-right {
-          @include span(6 last);
-        }
-      }
-      .paragraphs-item-2-columns-aside {
-        .l-content-left {
-          @include span(8);
-        }
-        .l-content-right {
-          @include span(4 last);
-        }
-      }
+      @include span(9); // Span 12 out of 16 columns.
     }
     .l-region--sidebar-second {
-      @include span(4 last); // Span the last (omega) 4 columns of 16.
-      clear: none;
+      @include span(3); // Span the last (omega) 4 columns of 16.
     }
   }
 
   .has-two-sidebars {
     .l-content {
-      @include span(8); // Span 8 out of 16 columns.
-      @include push(4 of 16);  // Push element by adding 4 out of 16 columns of left margin.
-      .paragraphs-item-2-columns {
-        .l-content-left {
-          @include span(4);
-        }
-        .l-content-right {
-          @include span(4 last);
-        }
-      }
-      .paragraphs-item-2-columns-aside {
-        .l-content-left {
-          @include span(5);
-        }
-        .l-content-right {
-          @include span(3 last);
-        }
-      }
+      @include span(6); // Span 8 out of 16 columns.
+      @include push(3);  // Push element by adding 3 out of 12 columns of left margin.
     }
     .l-region--sidebar-first,
     .l-region--sidebar-second {
-      @include span(4); // Span 4 out of 16 columns.
+      @include span(3); // Span 4 out of 16 columns.
     }
     .l-region--sidebar-first {
-      @include pull(12); // Pull element by adding 12 out of 16 columns of negative left margin.
+      @include pull(9); // Pull element by adding 9 out of 12 columns of negative left margin.
     }
     .l-region--sidebar-second {
       @include last; // This element spans the last (omega) column.
@@ -296,16 +223,37 @@ header,
     }
   }
   .l-region--footer-left {
-    @include span(7);
+    @include span(5);
   }
   .l-region--footer-right {
-    @include span(9 last);
+    @include span(7 last);
   }
 }
 
-@include breakpoint($wide) {
-  // .l-container,
-  // .l-region--navigation{
-  //   @include container(80%); // Set max-width to 80%
+@include breakpoint('screen' 1700px) {
+  //.l-container,
+  //.l-region--navigation,
+  //.l-header .l-outer,
+  //.front .l-main.l-container {
+  //  @include container(1600px); // Set max-width to 1600px
+  //}
+  .front .l-panel-wrapper {
+    max-width: 100%;
+  }
+  // .l-header {
+  //   .l-region--header-preface-left,
+  //   .l-branding {
+  //     @include rem(padding-left, $horz-spacing-unit);
+  //   }
+  //   .l-region-header-preface-right-wrapper,
+  //   .l-region--header-wrapper {
+  //     @include rem(padding-right, $horz-spacing-unit);
+  //   }
+  // }
+  // .l-footer-preface,
+  // .l-footer {
+  //   .l-region {
+  //     @include rem(padding, 0 $horz-spacing-unit);
+  //   }
   // }
 }

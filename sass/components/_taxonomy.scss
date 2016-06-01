@@ -1,0 +1,9 @@
+.taxonomy-term-description {
+ * {
+  margin: 0;
+  font-weight: bold;
+  @include rem(font-size, $font-size-base);
+  line-height: $line-height-base;
+ }
+ @include rem(margin-bottom, $line-height-base);
+}

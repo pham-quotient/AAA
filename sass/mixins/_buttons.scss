@@ -13,26 +13,30 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
+  // @if $shadow {
+  //   @include box-shadow(rgba(white, 0.1) 0 1px 0 inset, rgba(white, .075) 0 1px 0);
+  //   @include text-shadow(rgba(black, .25) 0 -1px 0);
+  // }
 }
 
-@mixin button-style($color, $background, $border, $gradient: false){
-  background-color: $background;
+@mixin button-style($color, $background, $border: false, $gradient: false, $hover: false){
   color: $color;
+  background-color: $background;
   @if $gradient {
-    @include background-image(linear-gradient(lighten($background, 5%), $background));  // top, bottom color
+    @include background-image(linear-gradient(lighten($background, 5), darken($background, 5)));  // top, bottom color
   }
-  border-color: $border;
-  *border: 0;
-  border-bottom-color: darken($border, 10%);
-  border-color: rgba(0,0,0,0.15) rgba(0,0,0,0.15) rgba(0,0,0,0.25);
-
+  @if $border {
+    border-color: $border;
+    *border: 0;
+    border-bottom-color: darken($border, 10%);
+    border-color: rgba(0,0,0,0.15) rgba(0,0,0,0.15) rgba(0,0,0,0.25);
+  }
   &,
   &:active,
   &.active {
     &:focus,
     &.focus {
       @include tab-focus;
-       color: $color;
     }
   }
 
@@ -40,7 +44,6 @@
   &.active {
     outline: 0;
     @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-     color: $color;
   }
   &:hover,
   &:focus,
@@ -50,11 +53,19 @@
   .open > &.dropdown-toggle {
     color: $color;
     text-decoration: none;
-    background-color: darken($background, 10%);
-    @if $gradient {
-      @include background-image(linear-gradient(darken($background, 10%), darken($background, 5%)));  // top, bottom color
+    @if $hover {
+      background-color: $hover;
     }
-        border-color: darken($border, 12%);
+    @else {
+      background-color: darken($background, 20);
+    }
+
+    @if $border {
+      border-color: darken($border, 25);
+    }
+    @if $gradient {
+      @include background-image(linear-gradient(darken($background, 20), darken($background, 10)));  // top, bottom color
+    }
   }
   &:active,
   &.active,
@@ -77,6 +88,14 @@
       @include box-shadow(none);
     }
   }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+
+
+
 }
 
 // Button sizes
@@ -90,4 +109,36 @@
   @else {
     border-radius: 0;
   }
+}
+
+// Button Image
+@mixin button-image($width, $height, $icon-url, $bg: false) {
+  width: $width;
+  height: $height;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: {
+    image: image-url($icon-url);
+    repeat: no-repeat;
+    position:  50% 50%;
+    size: contain;
+  }
+  @if $bg {
+    background-color: $bg;
+  }
+  @else {
+    background-color: transparent;
+  }
+  text-indent: -1000em;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+  @include opacity(.8);
+  &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      @include opacity(1);
+    }
 }

@@ -1,0 +1,15 @@
+table {
+ border: #C9C9C9;
+ }
+th {
+ background-color: #E8F1F8;
+ color: $blue;
+ font-weight: bold;
+ vertical-align: top;
+ @include rem(padding, 10px);
+ }
+/*MICHELLE EDITS: Table styling*/
+td {
+ @include rem(padding, 10px);
+ vertical-align: top;
+}

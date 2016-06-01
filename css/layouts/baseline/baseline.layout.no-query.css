@@ -4,31 +4,45 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-/* line 29, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container {
-  max-width: 100%;
+/* line 16, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container,
+.l-region-header-preface-right-wrapper,
+.front .l-panel-wrapper {
+  max-width: 96%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  width: 1200px; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
-  .l-container:after {
+  .l-container:after,
+  .l-region-header-preface-right-wrapper:after,
+  .front .l-panel-wrapper:after {
     content: " ";
     display: block;
     clear: both; }
 
-/* line 33, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container {
-  overflow: hidden;
+/* line 22, ../../../sass/layouts/baseline/baseline.layout.scss */
+.front .l-main.l-container {
+  max-width: 100%; }
+
+/* line 26, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container,
+.l-header {
   *zoom: 1; }
+  /* line 15, ../../../sass/mixins/_clearfix.scss */
+  .l-container:before, .l-container:after,
+  .l-header:before,
+  .l-header:after {
+    content: " ";
+    display: table;
+    line-height: 0; }
+  /* line 21, ../../../sass/mixins/_clearfix.scss */
+  .l-container:after,
+  .l-header:after {
+    clear: both; }
 
-/* line 37, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container > div,
-.l-region--navigation > div {
-  padding: 0 2%; }
-
-/* line 42, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 36, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-preface-wrapper,
-.l-header-middle,
-header,
+.l-page > header,
 .l-main,
 .l-hero,
 .l-highlighted,
@@ -38,33 +52,41 @@ header,
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  margin-bottom: 26px; }
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem; }
+
+/* line 49, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-header {
+  position: relative; }
+
+/* line 52, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-header-middle {
+  padding: 24px 0;
+  padding: 2.4rem 0; }
 
 /* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-preface-left {
-  height: 45px; }
+  padding: 0 2%;
+  height: 55px; }
 
-/* line 59, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header .block:last-child,
+/* line 61, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region-header-preface-right-wrapper .l-inner {
+  float: right; }
+/* line 64, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region-header-preface-right-wrapper .l-region--header-preface-right {
+  float: right; }
+  /* line 66, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
+    float: left; }
+
+/* line 72, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--navigation {
   position: absolute;
-  top: 56px;
-  left: 2%; }
+  left: 2%;
+  top: 52px; }
 
-/* line 65, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region--header .block:last-child {
-  left: 30%; }
-
-/* line 69, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region-header-preface-right-wrapper {
-  float: right; }
-  /* line 71, ../../../sass/layouts/baseline/baseline.layout.scss */
-  .l-region-header-preface-right-wrapper .l-region--header-preface-right {
-    float: right;
-    overflow: hidden;
-    *zoom: 1; }
-    /* line 72, ../../../sass/layouts/baseline/baseline.layout.scss */
-    .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
-      float: left; }
+/* line 79, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-wrapper {
+  display: none; }
 
 /*# sourceMappingURL=baseline.layout.no-query.css.map */

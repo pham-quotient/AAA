@@ -1,0 +1,255 @@
+.si-tabs {
+  @include clearfix;
+  @include rem(margin-bottom, $vert-spacing-unit);
+  .r-tabs-nav {
+    @extend %reset-list;
+  }
+  &.r-tabs {
+    .r-tabs-nav {
+      display: none;
+    }
+    .r-tabs-accordion-title {
+      display: block;
+      .no-js & {
+        display: none;
+      }
+    }
+    .r-tabs-panel,
+    .tab-content-title {
+      display: none;
+      .no-js & {
+        display: block;
+      }
+    }
+    .r-tabs-panel.r-tabs-state-active {
+       display: block;
+    }
+    /* Disabled tab */
+    .r-tabs-nav .r-tabs-state-disabled {
+      @include opacity(0.5);
+    }
+  } // end r-tabs
+
+  // Accordion Tabs
+  .panel-heading,
+  .r-tabs-accordion-title {
+    font-family: $font-primary;
+    margin: 0;
+    a {
+      display: block;
+      color: $text-color;
+      position: relative;
+      font-weight: bold;
+      @include rem(font-size, $font-size-large);
+      @include rem(padding, $line-height-base/2 $horz-spacing-unit*.75);
+      @include rem(padding-left, $horz-spacing-unit*1.5);
+      &:before {
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: inherit;
+        @include rem(font-size, $font-size-base);
+        position: absolute;
+        display: inline-block;
+      }
+    }
+  }
+  .r-tabs-accordion-title a {
+    background: $gray-lighter;
+    border: 1px solid $gray-light;
+    border-width: 1px 1px 0;
+  }
+  .panel-heading a.collapsed:before,
+  .r-tabs-accordion-title a:before {
+      @include rem(top, 15px);
+      @include rem(left, 7px);
+      display: inline-block;
+      content: "\f054";
+      color: $text-color;
+  }
+  .r-tabs-accordion-title.r-tabs-state-active a,
+  .panel-heading a.expanded {
+    &:before {
+      @include rem(top, 12px);
+      @include rem(left, 7px);
+      content: "\f078";
+    }
+  }
+  .panel-heading a.expanded {
+    &,
+    &:before {
+      color: $blue;
+    }
+  }
+  .r-tabs-accordion-title.r-tabs-state-active a {
+    background: $blue;
+    border: 1px solid $blue;
+    border-width: 1px 1px 0;
+    &,
+    &:before {
+      color: white;
+    }
+  }
+  &.accordion-tab .panel {
+     > .tab-pane {
+      @include rem(padding, $vert-spacing-unit $horz-spacing-unit $vert-spacing-unit $horz-spacing-unit*1.5);
+    }
+  }
+  // End Accordion Tabs
+  // Responsive Tabs
+  &.responsive-tab {
+    .r-tabs-nav {
+      // default tab style
+      .r-tabs-anchor {
+        @include rem(padding, 11px $horz-spacing-unit $line-height-base/2);
+        color: $gray-dark;
+        border: 1px solid $gray-light;
+        border-width: 1px 0 1px 1px;
+        position: relative;
+        background: $gray-lighter;
+        @include rem(top, 1px);
+        display: block;
+        @include transition(background .4s ease-in);
+      }
+      .last .r-tabs-anchor {
+        border-right-width: 1px;
+      }
+      // Active state tab anchor
+      .r-tabs-state-active .r-tabs-anchor {
+        background: white;
+        @include rem(padding, $line-height-base/2 $horz-spacing-unit);
+        border-bottom: 1px transparent;
+        color: $blue;
+        @include rem(bottom, -1px);
+        font-weight: bold;
+      }
+    } //end r-tabs-nav
+    .tab-wrapper {
+      border-bottom: 1px solid $gray-light;
+      > .tab-pane {
+        border: 1px solid $gray-light;
+        border-width: 1px 1px 0px;
+        @include rem(padding, $vert-spacing-unit $horz-spacing-unit);
+        .accordion-tab .tab-pane {
+
+        }
+      }
+    }
+  }  // End Responsive Tabs
+
+  @include breakpoint($desk) {
+    .tab-content-title {
+      display: block;
+    }
+    &.r-tabs {
+      .r-tabs-nav {
+        display: block;
+      }
+      .r-tabs-accordion-title {
+        display: none;
+      }
+      &.responsive-tab {
+        .r-tabs-tab {
+          display: block;
+          float: left;
+        }
+      }
+    }
+  } //end breakpoint($desk)
+
+} //end .si-tabs
+
+.si-collapsible-block,
+.si-tabs {
+  .collapse {
+    display: none;
+    .no-js & {
+      display: block;
+    }
+    &.in {
+      display: block;
+    }
+    // [converter] extracted tr&.in to tr.collapse.in
+    // [converter] extracted tbody&.in to tbody.collapse.in
+  }
+
+  tr.collapse.in    { display: table-row; }
+
+  tbody.collapse.in { display: table-row-group; }
+
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition-property(height, visibility);
+    @include transition-duration(.35s);
+    @include transition-timing-function(ease);
+  }
+  .fade {
+    opacity: 0;
+    @include transition(opacity .15s linear);
+    &.in {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+div.horizontal-tabs {
+  @include rem(margin-top, $vert-spacing-unit);
+  border: none;
+  ul.horizontal-tabs-list {
+    background: none;
+    border: none;
+    display: block;
+    margin-left: 2px;
+    @include clearfix;
+    li {
+      background: none;
+      border: none;
+      padding: 0;
+      display: block;
+      a {
+        display: block;
+        @include rem(padding, 11px $horz-spacing-unit $line-height-base/2);
+        color: $gray-dark;
+        border: 1px solid $gray-light;
+        border-width: 1px 0 1px 1px;
+        position: relative;
+        background: $gray-lighter;
+        @include rem(top, 1px);
+        strong {
+          font-weight: 400;
+        }
+      }
+      &:last-child {
+        a {
+          border-right-width: 1px;
+        }
+      }
+      &.selected {
+        background: none;
+        padding: 0;
+        a {
+          background: white;
+          @include rem(padding, $line-height-base/2 $horz-spacing-unit);
+          border-bottom: 1px transparent;
+          @include rem(bottom, -1px);
+          @include rem(top, 1px);
+          &,
+          strong {
+            font-weight: bold;
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+  fieldset.horizontal-tabs-pane {
+    @include rem(padding, $vert-spacing-unit $horz-spacing-unit);
+    border: 1px solid $gray-light;
+    border-width: 1px 1px 0;
+  }
+  border-bottom: 1px solid $gray-light;
+}

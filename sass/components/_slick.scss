@@ -14,6 +14,7 @@
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    margin: 0;
 }
 .slick-list {
     position: relative;
@@ -61,9 +62,10 @@
     }
 }
 .slick-slide {
+    @extend %reset-list;
     float: left;
-   // height: 100%;
     min-height: 1px;
+    position: relative;
     [dir="rtl"] & {
         float: right;
     }
@@ -93,77 +95,123 @@
         height: auto;
         border: 1px solid transparent;
     }
-    &.slick-active {
-      h2,
-      a {
-        color: white;
-      }
-      img {
-        max-height: 100%;
-        max-width: auto;
-      }
-      .node__content {
-        position: absolute;
-        bottom:0;
-      }
-      .slide-bg {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-      }
-      &:first-child{
-        .overlay {
-          .slide-bg {
+    .slide-inner {
+        display: block;
+        position: relative;
+        .slide-bg {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
              @include rgba-background(rgba($green,0.5));
-          }
         }
-        .solid-bg {
-          .slide-bg {
-            background: $green;
-          }
-        }
-      }
+        &.solid-bg {
+            padding-top: 50%;
+            .slide-bg {
+                background: none;
+            }
+            .node__content {
+                background: $green;
 
-      &:nth-child(2) {
-        .overlay {
-          .slide-bg {
-             @include rgba-background(rgba($blue,0.5));
-          }
+            }
         }
-        .solid-bg {
-          .slide-bg {
-            background: $blue;
+        .node__content {
+            @include text-shadow(rgba(0, 0, 0, 0.6) 1px 1px 0);
+            color: #FFF;
+            width: 100%;
+            padding: 4% 6%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            line-height: 1.5;
+            #{headings()} {
+                color: white;
+            }
+        }
+        &.overlay:hover {
+            .slide-bg {
+                background: none;
+            }
+        }
+    }
 
-          }
-        }
+    > .views-row {
+        float: left;
+        width: 25%;
+    }
+    &.slick-active {
+        > .views-row {
+            position: absolute;
+            &:first-child {
+                top:0;
+                left: 0;
+                width: 50%;
+            }
+            &:nth-child(2) {
+                top: 0;
+                left: 50%;
+                width: 50%;
+                .slide-inner {
+                    .slide-bg {
+                         @include rgba-background(rgba($blue,0.5));
+                    }
+                    &.solid-bg {
+                        .node__content {
+                            background: $blue;
 
-      }
-      &:nth-child(3) {
-        .overlay {
-          .slide-bg {
-             @include rgba-background(rgba($purple,0.5));
-          }
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                top: 50%;
+                right: 25%;
+                width: 25%;
+                 .slide-inner {
+                    .slide-bg {
+                         @include rgba-background(rgba($purple,0.5));
+                    }
+                    &.solid-bg {
+                        .node__content {
+                            background: $purple;
+
+                        }
+                    }
+                }
+           }
+            &:nth-child(4) {
+                top: 50%;
+                left: 75%;
+                width: 25%;
+                .slide-inner {
+                    .slide-bg {
+                         @include rgba-background(rgba($salmon,0.5));
+                    }
+                    &.solid-bg {
+                        .node__content {
+                            background: $salmon;
+                        }
+                    }
+                }
+            }
+            // .slide-frame {
+            //     position: absolute;
+            //     width: 100%;
+            //     height: 100%;
+            //     top:0;
+            //     left:0;
+
+            //     .slide-content {
+            //         display: block;
+            //         overflow: hidden;
+            //         text-decoration: none;
+            //         width: 100%;
+            //         height: 100%;
+            //         position: relative;
+            //     }
+            // }
         }
-        .solid-bg {
-          .slide-bg {
-             background: $purple;
-          }
-        }
-      }
-      &:nth-child(4) {
-        .overlay {
-          .slide-bg {
-             @include rgba-background(rgba($orange,0.5));
-          }
-        }
-        .solid-bg {
-          .slide-bg {
-             background: $orange;
-          }
-        }
-      }
     }
 
 }

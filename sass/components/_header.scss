@@ -2,7 +2,7 @@
   background-color: $blue;
   a {
     // link-colors($normal, $hover, $active, $visited, $focus)
-    @include link-colors($light-blue, #fff);
+    @include link-colors($blue-lightest, #fff, #fff, $blue-lightest, $blue-lightest);
   }
   .menu {
     @include float-list;
@@ -12,16 +12,16 @@
     margin: 0;
   }
   .l-header-preface-wrapper {
-    background-color: $dark-blue;
+    background-color: $blue-dark;
     .l-region--header-preface-left {
-      background-color: $darker-blue;
+      background-color: $blue-darker;
       @include breakpoint($tab, true) {
         background: none;
       }
       padding-top: $vert-spacing-unit*.5;
-      padding-bottom: $vert-spacing-unit*.25;
+      padding-bottom: none;
       img {
-        max-height: $vert-spacing-unit;
+        height: 30px !important;
         width: auto;
       }
     }
@@ -32,26 +32,47 @@
       @include breakpoint($tab, true) {
         padding-bottom: $vert-spacing-unit *.5;
       }
-      .donate-link .btn {
-        @include button;
-        @include button_style(white, lighten($dark-blue, 10%), $dark-blue);
-        @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit, $font-size-small, floor(($baseLineHeight * .75)/$font-size-small));
-        text-transform: uppercase;
-        // @include breakpoint($tab, true) {
-        //   border-width: 0;
-        // }
-      }
+      .donate-link {
+        text-align:center;
 
+        .btn {
+          @include button;
+          @include button_style(#1A5387, white, $blue-dark, false, #91BCE3);
+          @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: .1px;
+        }
+      }
+      .search-link  {
+        @include rem(margin, 0 10px 0 0);
+        a {
+        @include button;
+        @include button_style(white, #134979, darken(#134979, 1%));
+        @include button_size(7px, $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: .1px;
+          border-radius:0;
+          &:hover {
+            background: none;
+            color: $blue-light;
+          }
+          .fa {
+            @include rem(font-size, 20px)
+          }
+        }
+      }
     } // end l-region--header-preface-right
-  } // end l-region-header-preface
+
+  } // end l-header-preface-wrapper
 
   .l-region--header {
     .menu {
-      display: none;
       > li {
         > a {
-          padding: 0 1em;
-          border-left: 1px solid $light-blue;
+          @include rem(padding, 0 $horz-spacing-unit/2);
+          border-left: 1px solid $blue-lightest;
           &:hover {
             border-color: #fff;
           }
@@ -59,35 +80,19 @@
         &:first-child > a {
           border-left: none;
         }
-      }
-      @include breakpoint($tab) {
-        display: block;
-      }
+        .menu {
+          display: none;
+        }
+      } //end .menu > li
     }//end quick-link menu
-    // .icon-only {
-    //   @include btn_style(#11406a);
-    //   @include link-colors(white, $light-blue, white, white, white);
-    //   @include breakpoint($desk) {
-    //     background: none;
-    //     @include rem(font-size, 14px);
-    //     @include link-colors($light-blue, white);
-    //     border: 0;
-    //     text-shadow: none;
-    //     padding: 0;
-    //     box-shadow: none;
-    //     vertical-align: top;
-    //   }
-    // }
-
+    .search-link  {
+      @include rem(margin, 0 0 0 20px);
+    }
   } // end l-region--header
 
   .l-branding  {
-    img{
-      width: 100%;
-      max-width: 400px;
-    }
     .site-name {
-      margin: 0;
+      @include rem(margin-bottom, $vert-spacing-unit);
       a {
         display: block;
         background: {
@@ -95,13 +100,18 @@
           repeat: no-repeat;
           position:  top left;
           size: contain;
-          //color: $background;
         }
-        padding-left: 100%;
         padding-top: 13%;
         span {
           @extend %hide-text;
         }
+      }
+      @include breakpoint($wide) {
+        width: 100%;
+        @include rem(margin-bottom, $vert-spacing-unit/2);
+      }
+      @include breakpoint(screen 1980px) {
+        width: 90%
       }
     }
 

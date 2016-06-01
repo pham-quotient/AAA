@@ -1,0 +1,109 @@
+$push-left: span(11);
+.search-block-form {
+ input[type="submit"] {
+   @include button_style(white, #134979, darken(#134979, 1%));
+ background: {
+   image: image-url("search.svg");
+   repeat: no-repeat;
+   position:  center;
+   size: contain;
+ }
+ text-indent: -99999px;
+ height: 33px;
+ width: 30px;
+}
+  //.l-header & {
+  //  position: relative;
+  //  .form-type-textfield {
+  //    position: absolute;
+  //    top: 40px;
+  //    @include transition(height .4s ease-in);
+  //  }
+  //  .hidden-state {
+  //    visibility: hidden;
+  //    height: 0;
+  //    overflow: hidden;
+  //    @include opacity(0);
+  //  }
+  //
+  //  .visible-state {
+  //    visibility: visible;
+  //    @include opacity(1);
+  //    height: auto;
+  //    overflow: visible;
+  //  }
+  //}
+
+}
+
+.l-header #block-search-form {
+  position: relative;
+  width: 0%;
+  min-width: 50px;
+  height: 0%;
+  min-height: 33px;
+  overflow: hidden;
+ // float: right;
+  overflow: hidden;
+  @include transition(width .3s ease-in, height .3s ease-in);
+  //-webkit-transition: width 0.3s;
+  //-moz-transition: width 0.3s;
+  //transition: width 0.3s;
+  .form-type-textfield {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    height: 33px;
+    margin: 0;
+    display: block;
+    z-index: 10;
+    //padding-right: 35px;
+//    line-height: 33px;
+    input {
+      background: white;
+      padding: em($vert-spacing-unit/3);
+    }
+  }
+  .form-actions {
+    width: 30px;
+    height: 33px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+   // line-height: 33px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  -webkit-backface-visibility: hidden;
+  &.sb-search-open,
+  .no-js & {
+    width: auto;
+    height: 100%;
+    overflow: visible;
+
+  }
+}
+
+@include breakpoint($desk) {
+  //.block--search-form {
+  //  position: absolute;
+  //  @include rem(top, 108px);
+  //  left: $push-left;
+  //}
+  .l-header .search-block-form {
+    input[type="submit"] {
+      @include button_style(white, $blue, $blue);
+    }
+  }
+}
+
+//@include breakpoint($wide) {
+//  .block--search-form {
+//    left: round($max-width*($push-left/100%));
+//  }
+//}

@@ -120,70 +120,76 @@ html {
 }
 
 body {
-  font-family: $gt-walsheim;
-  color: $dark-gray;
-  @include rem(font-size, 16px);
-  line-height: 1.625;
+  font-family: $font-primary;
+  color: $gray-dark;
+  @include rem(font-size, $font-size-base);
+  line-height: $baseLineHeight;
 }
 
 /**
  * $LINKS
  */
 a {
-  //       link-colors($normal, $hover, $active, $visited, $focus)
-  @include link-colors($blue, $dark-blue, $blue, $blue, $blue);
+  //       link-color-defaults($normal, $hover, $active, $visited, $focus)
+  @include link-colors($link-color-default, $link-color-hover, $link-color-hover, $link-color-default, $link-color-default);
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+  &.active {
+    color: $blue;
+  }
 }
 
+
 #{headings()} {
-  font-family: $gt-walsheim;
-  @include rem(margin, 0 0 $baseLineHeight);
+  font-family: $font-primary;
+  @include rem(margin, 0 0 $line-height-base/2);
   color: $blue;
   a,
   a:visited {
     color: inherit;
     text-decoration: none;
   }
-  a:hover {
-    color: $dark-blue;
-  }
+  /* a:hover {
+    color: $blue-darker;
+  } */
 }
 
 h1 {
-  @include rem(font-size,$font-size-h1);
-  line-height: ($baseLineHeight * 2)/$font-size-h1;
+  @include rem(font-size, $font-size-h1);
+  line-height: $line-height-h1;
 }
 
 h2 {
-  @include rem(font-size,$font-size-h2);
-  line-height: ($baseLineHeight * 1.5)/$font-size-h2;
+  @include rem(font-size, $font-size-h2);
+  line-height:  $line-height-h2;
+  // @include rem(margin-top, $line-height-base*2);
+  // &:first-child {
+  //   margin-top: 0;
+  // }
+  &.section-title {
+    @include rem(margin-top, $line-height-base*2);
+  }
 }
 
 h3 {
-  @include rem(font-size,$font-size-h3);
-  line-height: ($baseLineHeight * 1.25)/$font-size-h3;
+  @include rem(font-size, $font-size-h3);
+  line-height:  $line-height-h3;
+  @include rem(margin-bottom, $line-height-base/2);
 }
 
 h4 {
-  @include rem(font-size,$font-size-h4);
-  line-height: $baseLineHeight/$font-size-h4;
+  @include rem(font-size, $font-size-h4);
+  line-height:  $line-height-h4;
+ // text-transform: uppercase;
 }
 
 h5 {
-  @include rem(font-size,$font-size-h5);
+  @include rem(font-size, $font-size-h5);
+  line-height:  $line-height-h5;
 }
 
 p {
-  @include rem(margin, 0 0 $baseLineHeight);
+  @include rem(margin, 0 0 $line-height-base);
  // &:last-child {margin-bottom: 0;}
 }
 
-ul {
-  @include rem(margin, 0 0 $baseLineHeight);
-  li {
-  @include rem(margin, $baseLineHeight/2);
-  }
-}
+

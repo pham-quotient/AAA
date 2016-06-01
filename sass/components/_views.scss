@@ -1,6 +1,141 @@
-.slick-wrapper {
-  .node__content {
-    @include rem(padding, $vert-spacing-unit $horz-spacing-unit*1.5);
+.view {
+  &.features-list {
+    .item-list ul {
+      > li {
+        @include clearfix;
+        border-bottom: 1px solid $gray-light;
+        @include rem(padding, $vert-spacing-unit/2);
+        &.views-row-last {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        .views-field-field-image-single {
+          float: left;
+          width: 30%;
+          @include rem(padding-right, $horz-spacing-unit);
+          .collection-info {
+            float: right;
+            width: 70%;
+          }
+          // .date-display-range {
+          //   @include rem(margin-bottom, $vert-spacing-unit);
+          // }
+        }
+      }
+    }
   }
+  .view-filters {
+    label,
+    .views-widget {
+     display: inline-block;
+    }
+    label {
+     @include rem(padding-right, $horz-spacing-unit);
+    }
+    .views-exposed-form .views-exposed-widget {
+     float: none;
+     display: inline-block;
+    }
+    @include rem(margin-bottom, $vert-spacing-unit*1.5);
+  }
+  .float-list {
+    ul {
+      @extend %reset-list;
+      li {
+        @include rem(margin-bottom, $vert-spacing-unit*1.5);
+      }
+    }
+    @include clearfix;
+
+    @include breakpoint($tab) {
+    > ul > li {
+      float: left;
+      img {
+        width: 100% !important;
+      }
+    }
+    .float-two,
+    .float-three,
+    .float-four,
+    .float-five {
+      > li {
+        width: percentage(1/2);
+        &.views-row-odd {
+          padding-right: gutter()/2;
+        }
+        &.views-row-even {
+          padding-left: gutter()/2;
+        }
+        &:nth-child(2n+3) {
+          clear: left;
+        }
+      }
+    }
+   } // end breakpoint($tab)
+
+    @include breakpoint($desk) {
+      .float-three,
+      .float-four,
+      .float-five {
+        > li {
+          width: percentage(1/3);
+          &:nth-child(2n) {
+            padding-right: gutter();
+          }
+          &:nth-child(2n+3) {
+            clear: none;
+          }
+          &:nth-child(3n) {
+            padding-right: 0;
+          }
+          &:nth-child(3n+4) {
+            clear: left;
+          }
+        }
+      }
+    } //end breakpoint($desk)
+
+    @include breakpoint($wide) {
+      .float-four,
+      .float-five {
+        >li {
+          &:nth-child(3n) {
+            padding-right: gutter();
+          }
+          &:nth-child(3n+4) {
+            clear: none;
+          }
+        }
+      }
+      .float-four {
+        > li {
+          width: percentage(1/4);
+          &:nth-child(4n) {
+            padding-right: 0;
+          }
+          &:nth-child(4n+5) {
+            clear: left;
+          }
+        }
+      }
+      .float-five {
+        > li {
+          width: percentage(1/5);
+          &:nth-child(5n){
+            padding-right: 0;
+          }
+          &:nth-child(5n+6) {
+            clear: left;
+          }
+        }
+      }
+    } //end breakpoint($wide)
+  } //end float-list
+
+ .item-list {
+  > ul {
+   @extend %reset-list;
+  }
+ }
 }
 
