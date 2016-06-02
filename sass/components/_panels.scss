@@ -25,6 +25,15 @@
     @include set-layout($max-width);
     padding: em($vert-spacing-unit) 0;
   }
+  .l-footer & {
+    background: none;
+    .inside {
+      max-width: 100%;
+      width: auto;
+      padding: 0;
+    }
+  }
+
 }
 
 @include breakpoint($tab) {

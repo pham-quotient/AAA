@@ -1,6 +1,6 @@
 .si-tabs {
   @include clearfix;
-  @include rem(margin-bottom, $vert-spacing-unit);
+  margin-bottom: em($vert-spacing-unit);
   .r-tabs-nav {
     @extend %reset-list;
   }
@@ -40,15 +40,15 @@
       color: $text-color;
       position: relative;
       font-weight: bold;
-      @include rem(font-size, $font-size-large);
-      @include rem(padding, $line-height-base/2 $horz-spacing-unit*.75);
-      @include rem(padding-left, $horz-spacing-unit*1.5);
+      font-size: em($font-size-large, $font-size-h3);
+      padding: em($line-height-base/2) em($horz-spacing-unit*.75);
+      padding-left: em($horz-spacing-unit*1.5);
       &:before {
         font-family: FontAwesome;
         font-style: normal;
         font-weight: 400;
         text-decoration: inherit;
-        @include rem(font-size, $font-size-base);
+        font-size: em($font-size-base);
         position: absolute;
         display: inline-block;
       }
@@ -61,8 +61,8 @@
   }
   .panel-heading a.collapsed:before,
   .r-tabs-accordion-title a:before {
-      @include rem(top, 15px);
-      @include rem(left, 7px);
+      top: em(16px, $font-size-large);
+      left: em(7px, $font-size-large);
       display: inline-block;
       content: "\f054";
       color: $text-color;
@@ -70,8 +70,8 @@
   .r-tabs-accordion-title.r-tabs-state-active a,
   .panel-heading a.expanded {
     &:before {
-      @include rem(top, 12px);
-      @include rem(left, 7px);
+      top: em(12px, $font-size-large);
+      left: em(7px, $font-size-large);
       content: "\f078";
     }
   }
@@ -92,7 +92,7 @@
   }
   &.accordion-tab .panel {
      > .tab-pane {
-      @include rem(padding, $vert-spacing-unit $horz-spacing-unit $vert-spacing-unit $horz-spacing-unit*1.5);
+      padding: .75em em($horz-spacing-unit) em($vert-spacing-unit) em($horz-spacing-unit*2);
     }
   }
   // End Accordion Tabs
@@ -101,7 +101,7 @@
     .r-tabs-nav {
       // default tab style
       .r-tabs-anchor {
-        @include rem(padding, 11px $horz-spacing-unit $line-height-base/2);
+        padding: em(11px) em($horz-spacing-unit) em($line-height-base/2);
         color: $gray-dark;
         border: 1px solid $gray-light;
         border-width: 1px 0 1px 1px;
@@ -117,10 +117,10 @@
       // Active state tab anchor
       .r-tabs-state-active .r-tabs-anchor {
         background: white;
-        @include rem(padding, $line-height-base/2 $horz-spacing-unit);
+        padding: em($line-height-base/2) em($horz-spacing-unit);
         border-bottom: 1px transparent;
         color: $blue;
-        @include rem(bottom, -1px);
+        bottom: -1px;
         font-weight: bold;
       }
     } //end r-tabs-nav
@@ -129,7 +129,7 @@
       > .tab-pane {
         border: 1px solid $gray-light;
         border-width: 1px 1px 0px;
-        @include rem(padding, $vert-spacing-unit $horz-spacing-unit);
+        padding: em($vert-spacing-unit) em($horz-spacing-unit);
         .accordion-tab .tab-pane {
 
         }
@@ -197,7 +197,7 @@
 
 
 div.horizontal-tabs {
-  @include rem(margin-top, $vert-spacing-unit);
+  margin-top: em($vert-spacing-unit);
   border: none;
   ul.horizontal-tabs-list {
     background: none;
@@ -212,13 +212,13 @@ div.horizontal-tabs {
       display: block;
       a {
         display: block;
-        @include rem(padding, 11px $horz-spacing-unit $line-height-base/2);
+        padding: em(11px) em($horz-spacing-unit) em($line-height-base/2);
         color: $gray-dark;
         border: 1px solid $gray-light;
         border-width: 1px 0 1px 1px;
         position: relative;
         background: $gray-lighter;
-        @include rem(top, 1px);
+        top: 1px;
         strong {
           font-weight: 400;
         }
@@ -233,10 +233,10 @@ div.horizontal-tabs {
         padding: 0;
         a {
           background: white;
-          @include rem(padding, $line-height-base/2 $horz-spacing-unit);
+          padding: em($line-height-base/2) em($horz-spacing-unit);
           border-bottom: 1px transparent;
-          @include rem(bottom, -1px);
-          @include rem(top, 1px);
+          bottom: -1px;
+          top: 1px;
           &,
           strong {
             font-weight: bold;

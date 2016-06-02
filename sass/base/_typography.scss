@@ -116,13 +116,13 @@
  * $BASE-TYPOGRAPHY
  */
 html {
-  font-size: 62.5%
+  font-size: 100%
 }
 
 body {
   font-family: $font-primary;
   color: $gray-dark;
-  @include rem(font-size, $font-size-base);
+  font-size: em($font-size-base, 16px);
   line-height: $baseLineHeight;
 }
 
@@ -141,7 +141,6 @@ a {
 
 #{headings()} {
   font-family: $font-primary;
-  @include rem(margin, 0 0 $line-height-base/2);
   color: $blue;
   a,
   a:visited {
@@ -154,41 +153,46 @@ a {
 }
 
 h1 {
-  @include rem(font-size, $font-size-h1);
+  font-size: em($font-size-h1);
   line-height: $line-height-h1;
+  margin: 0 0 em($line-height-base, $font-size-h1);
 }
 
 h2 {
-  @include rem(font-size, $font-size-h2);
+  font-size: em($font-size-h2);
   line-height:  $line-height-h2;
   // @include rem(margin-top, $line-height-base*2);
   // &:first-child {
   //   margin-top: 0;
   // }
+  margin: 0 0 em($line-height-base, $font-size-h2);
   &.section-title {
-    @include rem(margin-top, $line-height-base*2);
+    margin-top: em($line-height-base*2, $font-size-h2);
   }
 }
 
 h3 {
-  @include rem(font-size, $font-size-h3);
+  font-size: em($font-size-h3);
   line-height:  $line-height-h3;
-  @include rem(margin-bottom, $line-height-base/2);
+  margi: 0 0 em($line-height-base, $font-size-h3);
 }
 
 h4 {
-  @include rem(font-size, $font-size-h4);
+  font-size: em($font-size-h4);
   line-height:  $line-height-h4;
+  margin: 0 0 em($line-height-base/2, $font-size-h4);
+
  // text-transform: uppercase;
 }
 
 h5 {
-  @include rem(font-size, $font-size-h5);
+  font-size: em($font-size-h5);
   line-height:  $line-height-h5;
+  margin: 0 0 em($line-height-base/2, $font-size-h5);
 }
 
 p {
-  @include rem(margin, 0 0 $line-height-base);
+  margin: 0 0 em($line-height-base);
  // &:last-child {margin-bottom: 0;}
 }
 

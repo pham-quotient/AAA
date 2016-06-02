@@ -4,7 +4,7 @@
       > li {
         @include clearfix;
         border-bottom: 1px solid $gray-light;
-        @include rem(padding, $vert-spacing-unit/2);
+        padding: em($vert-spacing-unit/2);
         &.views-row-last {
           border-bottom: none;
           padding-bottom: 0;
@@ -12,13 +12,13 @@
         .views-field-field-image-single {
           float: left;
           width: 30%;
-          @include rem(padding-right, $horz-spacing-unit);
+          padding-right: em($horz-spacing-unit);
           .collection-info {
             float: right;
             width: 70%;
           }
           // .date-display-range {
-          //   @include rem(margin-bottom, $vert-spacing-unit);
+          //   margin-bottom: em($vert-spacing-unit);
           // }
         }
       }
@@ -30,19 +30,19 @@
      display: inline-block;
     }
     label {
-     @include rem(padding-right, $horz-spacing-unit);
+     padding-right: em($horz-spacing-unit);
     }
     .views-exposed-form .views-exposed-widget {
      float: none;
      display: inline-block;
     }
-    @include rem(margin-bottom, $vert-spacing-unit*1.5);
+    margin-bottom: em($vert-spacing-unit*1.5);
   }
   .float-list {
     ul {
       @extend %reset-list;
       li {
-        @include rem(margin-bottom, $vert-spacing-unit*1.5);
+        margin-bottom: em($vert-spacing-unit*1.5);
       }
     }
     @include clearfix;

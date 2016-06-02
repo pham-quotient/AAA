@@ -44,25 +44,25 @@
           letter-spacing: .1px;
         }
       }
-      .search-link  {
-        @include rem(margin, 0 10px 0 0);
-        a {
-        @include button;
-        @include button_style(white, #134979, darken(#134979, 1%));
-        @include button_size(7px, $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
-          text-transform: uppercase;
-          font-weight: bold;
-          letter-spacing: .1px;
-          border-radius:0;
-          &:hover {
-            background: none;
-            color: $blue-light;
-          }
-          .fa {
-            @include rem(font-size, 20px)
-          }
-        }
-      }
+      //.search-link  {
+      //  @include rem(margin, 0 10px 0 0);
+      //  a {
+      //  @include button;
+      //  @include button_style(white, #134979, darken(#134979, 1%));
+      //  @include button_size(7px, $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+      //    text-transform: uppercase;
+      //    font-weight: bold;
+      //    letter-spacing: .1px;
+      //    border-radius:0;
+      //    &:hover {
+      //      background: none;
+      //      color: $blue-light;
+      //    }
+      //    .fa {
+      //      font-size: em(20px)
+      //    }
+      //  }
+      //}
     } // end l-region--header-preface-right
 
   } // end l-header-preface-wrapper
@@ -71,7 +71,7 @@
     .menu {
       > li {
         > a {
-          @include rem(padding, 0 $horz-spacing-unit/2);
+          padding: 0 em($horz-spacing-unit/2);
           border-left: 1px solid $blue-lightest;
           &:hover {
             border-color: #fff;
@@ -85,14 +85,14 @@
         }
       } //end .menu > li
     }//end quick-link menu
-    .search-link  {
-      @include rem(margin, 0 0 0 20px);
-    }
+    //.search-link  {
+    //  @include rem(margin, 0 0 0 20px);
+    //}
   } // end l-region--header
 
   .l-branding  {
     .site-name {
-      @include rem(margin-bottom, $vert-spacing-unit);
+      margin-bottom: em($vert-spacing-unit);
       a {
         display: block;
         background: {
@@ -108,7 +108,7 @@
       }
       @include breakpoint($wide) {
         width: 100%;
-        @include rem(margin-bottom, $vert-spacing-unit/2);
+        margin-bottom: em($vert-spacing-unit/2);
       }
       @include breakpoint(screen 1980px) {
         width: 90%

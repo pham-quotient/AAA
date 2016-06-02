@@ -13,17 +13,23 @@
 // Globbing from within sub-folders only works with relative paths.
 @import "../../_variables.scss";
 
-.default-page .l-container,
-.l-region-header-preface-right-wrapper,
+.default-page .l-main,
 .pane-edan-search-search-form,
-.front .l-panel-wrapper
-.l-footer .l-container{
+.front .l-panel-wrapper,
+.l-footer-preface .l-container,
+.l-footer .l-container,
+#filterTab .inner{
   @include set-layout($max-width); // Define these elements as the grid containers.
 }
 
+.l-region-header-preface-right-wrapper {
+  max-width: 96%;
+  margin: 0 auto;
+}
 
 .l-container,
-.l-header {
+.l-header,
+.l-region-header-preface-right-wrapper{
   @include clearfix;
 }
 
@@ -43,13 +49,13 @@
 .l-region--help,
 .l-region--sidebar-first,
 .l-region--sidebar-second {
-  @include rem(margin-bottom, $vert-spacing-unit);
+  margin-bottom: em($vert-spacing-unit);
 }
 .l-header {
   position: relative;
 }
 .l-header-middle {
-  @include rem(padding, $vert-spacing-unit 0);
+  padding: em($vert-spacing-unit) 0;
 }
 
 .l-region--header-preface-left {
@@ -72,7 +78,7 @@
   //@include span(4);
   position: absolute;
   left: 2%;
-  top: 52px;
+  top: 56px;
 }
 
 .l-region--header-wrapper {
@@ -85,24 +91,22 @@
   .l-region--header-preface-left {
     max-width: 100%;
     width: auto;
-    @include rem(height, 60px);
+    height: em(60px);
   // overflow: hidden;
   }
   .l-header {
     .l-region--header-preface-left {
       padding: 0;
     }
-    .l-outer {
+    .l-container {
       @include set-layout($max-width);
-      .l-region--header-preface-left  {
-        @include span(3);
-        @include post(1);
-      }
-      .l-region-header-preface-right-wrapper {
-        .l-inner {
-          @include span(8 last);
-        }
-      }
+    }
+    .l-region--header-preface-left  {
+      @include span(3);
+      @include post(1);
+    }
+    .l-region-header-preface-right-wrapper {
+      @include span(8 last);
     }
   }
 
@@ -156,10 +160,8 @@
       @include post(1);
     }
     .l-region-header-preface-right-wrapper  {
-      .l-inner {
         @include span(7 last);
         padding-right: 50px;
-      }
     }
   }
   .l-region--navigation {
@@ -171,12 +173,12 @@
   }
 
   .l-container .l-content {
-    @include rem(margin-top, $line-height-base*2);
+    margin-top: em($line-height-base*2);
     .has-no-sidebars & {
       margin-top: 0;
     }
     > .panel-display > .l-region--main.has-sidebar-first {
-      @include rem(padding-top, $line-height-base*2);
+      padding-top: em($line-height-base*2);
     }
   }
   .l-branding {
@@ -242,11 +244,11 @@
   // .l-header {
   //   .l-region--header-preface-left,
   //   .l-branding {
-  //     @include rem(padding-left, $horz-spacing-unit);
+  //     padding-left: em($horz-spacing-unit);
   //   }
   //   .l-region-header-preface-right-wrapper,
   //   .l-region--header-wrapper {
-  //     @include rem(padding-right, $horz-spacing-unit);
+  //     padding-right: em($horz-spacing-unit);
   //   }
   // }
   // .l-footer-preface,

@@ -34,7 +34,7 @@
 //
 // Usage: @include rem($property, $values);
 // Example Usage:
-//    @include rem(font-size, 16px);
+//    font-size: em(16px);
 //    @include rem(margin, 0 24px 0 12px);
 //
 // Outputs:
@@ -101,4 +101,13 @@
   }
 
   @return $return;
+}
+
+@function em($pixels, $base: $font-size-base) {
+  @if $pixels == 0 {
+    @return 0;
+  }
+  @else {
+    @return ($pixels / $base) * 1em;
+  }
 }

@@ -1,5 +1,5 @@
 .pane-publications-panel-pane-2 {
- @include rem(margin, $vert-spacing-unit*1.5 0);
+margin: em($vert-spacing-unit*1.5) 0;
  .view-publications-latest .views-row {
   @include clearfix;
  }

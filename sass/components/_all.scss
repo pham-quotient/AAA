@@ -16,14 +16,14 @@
   ul {
     @include float-list;
     > li {
-      @include rem(margin-right, $horz-spacing-unit);
-      padding: $vert-spacing-unit*.7 0;
+      margin-right: em($horz-spacing-unit);
+      padding: em($vert-spacing-unit*.7) 0;
     }
   }
 }
 .list-icon {
-  margin-right: $horz-spacing-unit;
-  padding: $vert-spacing-unit*.7 0;
+  margin-right: em($horz-spacing-unit);
+  padding: em($vert-spacing-unit*.7) 0;
   .menu-title {
     @extend %hide-text;
   }
@@ -34,7 +34,7 @@
     margin-left: 0;
 
     @include breakpoint($desk) {
-      @include rem(margin-left, $horz-spacing-unit);
+      margin-left: em($horz-spacing-unit);
       float: left;
     }
   }
@@ -46,23 +46,23 @@
 }
 
 .rteindent1 {
-  @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+  margin: 0 0 em($vert-spacing-unit) em($horz-spacing-unit);
 }
 [style*="float: right"],
 [style*="float:right"] {
-   @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+   margin: 0 0 em($vert-spacing-unit) em($horz-spacing-unit);
 }
 [style*="float: left"]
 [style*="float:left"] {
-   @include rem(margin, 0 $horz-spacing-unit $vert-spacing-unit 0);
+   margin: 0 em($horz-spacing-unit) em($vert-spacing-unit) 0;
 }
 
 figure {
-  @include rem(margin-bottom, $vert-spacing-unit);
+  margin-bottom: em($vert-spacing-unit);
   line-height: 0;
   figcaption {
-    @include rem(font-size, 12px);
-    @include rem(padding-top, $vert-spacing-unit/2);
+    font-size: em(12px);
+    padding-top: em($vert-spacing-unit/2);
     line-height: $line-height-base*.75/$font-size-small;
     color: $gray;
   }
@@ -70,11 +70,11 @@ figure {
 
 .flt-left{
  float:left;
- @include rem(margin, 0 $horz-spacing-unit $vert-spacing-unit 0);
+ margin: 0 em($horz-spacing-unit) em($vert-spacing-unit) 0;
 }
 .flt-right {
  float:right;
- @include rem(margin, 0 0 $vert-spacing-unit $horz-spacing-unit);
+  margin: 0 0 em($vert-spacing-unit) em($horz-spacing-unit);
 }
 
 .flt-left,
@@ -87,7 +87,7 @@ figure {
   }
   p {
     .clearfix & {
-      @include rem(font-size, $font-size-base);
+      font-size: em($font-size-base);
       margin-bottom: 0;
       line-height: $line-height-base;
       color: $gray-dark;
@@ -100,8 +100,8 @@ figure {
 .flt-right p,
 .item-center p,
 .img-caption {
-    @include rem(margin-bottom, $vert-spacing-unit/2);
-    @include rem(font-size, 12px);
+    margin-bottom: em($vert-spacing-unit/2, 13px);
+    font-size: em(13px);
     line-height: $line-height-small;
     color: $gray;
 }
@@ -109,7 +109,7 @@ figure {
 .flt-right p,
 .item-center p {
   &:first-child {
-    @include rem(margin-bottom, $vert-spacing-unit/4);
+    margin-bottom: em($vert-spacing-unit/4);
   }
 }
 
@@ -160,54 +160,54 @@ figure {
 }
 
 .large {
-  @include rem(font-size, ceil($font-size-base*$large-factor));
+  font-size: em(ceil($font-size-base*$large-factor));
   line-height: $line-height-base/floor($font-size-base*$large-factor);
 
 }
 h1.large, h1 .large  {
-  @include rem(font-size, floor($font-size-h1*$large-factor));
+  font-size: em(floor($font-size-h1*$large-factor));
   line-height: $line-height-base*4/floor($font-size-h1*$large-factor);
 }
 h2.large, h2 .large   {
-  @include rem(font-size, floor($font-size-h2*$large-factor));
+  font-size: em(floor($font-size-h2*$large-factor));
   line-height: $line-height-base*2.5/floor($font-size-h2*$large-factor);
   .front & {
-    @include rem(font-size, $font-size-h1);
+    font-size: em($font-size-h1);
     line-height: $line-height-h1;
   }
 }
 h3.large, h3 .large   {
-  @include rem(font-size, floor($font-size-h3*$large-factor));
+  font-size: em(floor($font-size-h3*$large-factor));
   line-height: $line-height-base*2/floor($font-size-h3*$large-factor);
 }
 h4.large, h4 .large   {
-  @include rem(font-size, floor($font-size-h4*$large-factor));
+  font-size: em(floor($font-size-h4*$large-factor));
   line-height: $line-height-base*2/floor($font-size-h4*$large-factor);
 }
 
 .small {
-  @include rem(font-size, ceil($font-size-base*$small-factor));
+  font-size: em(ceil($font-size-base*$small-factor));
   line-height:$line-height-small;
 }
 h1.small, h1 .small {
-  @include rem(font-size, floor($font-size-h1*$small-factor));
+  font-size: em(floor($font-size-h1*$small-factor));
   line-height: $line-height-base*2.5/floor($font-size-h1*$small-factor);// $line-height*4
 }
 h2.small, h2 .small {
-  @include rem(font-size, floor($font-size-h2*$small-factor));
+  font-size: em(floor($font-size-h2*$small-factor));
   line-height: $line-height-base*2/floor($font-size-h2*$small-factor);
 }
 h3.small, h3 .small {
-  @include rem(font-size, floor($font-size-h3*$small-factor));
+  font-size: em(floor($font-size-h3*$small-factor));
   line-height: $line-height-base*1.5/floor($font-size-h3*$small-factor);
 }
 h4.small, h4 .small {
-  @include rem(font-size, floor($font-size-h4*$small-factor));
+  font-size: em(floor($font-size-h4*$small-factor));
   line-height: $line-height-base/floor($font-size-h4*$small-factor);
 }
 
 @include breakpoint($desk) {
   .page-title {
-    @include rem(margin-right, 110px);
+    margin-right: em(110px);
   }
 }

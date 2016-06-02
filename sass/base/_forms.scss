@@ -7,7 +7,7 @@ input[type="submit"] {
  @include button_size(10px, 25px, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
  text-transform: uppercase;
  border:0;
- @include rem(margin-top, $vert-spacing-unit);
+ margin-top: em($vert-spacing-unit);
   max-width: 100%;
 }
 
@@ -26,5 +26,11 @@ input[type="submit"] {
 input[type="text"] {
  background: white;
  border: 1px solid $gray-lighter;
- padding: 4px;
+ padding: em(4px);
+}
+
+fieldset.webform-component-fieldset {
+ border: none;
+ margin: 0;
+ padding: 0;
 }

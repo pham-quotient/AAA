@@ -2,7 +2,7 @@
   <header class="l-header" role="banner">
     <?php if (!empty($page['header_preface_left']) || !empty($page['header_preface_right'])): ?>
       <div class="l-header-preface-wrapper">
-      	<div class="l-outer">
+      	<div class="l-container">
 		  		<?php if (!empty($page['header_preface_left'])): ?>
             <?php print render($page['header_preface_left']); ?>
           <?php endif; ?>

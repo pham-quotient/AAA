@@ -100,8 +100,8 @@
 
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius: 0) {
-  @include rem(padding, $padding-vertical $padding-horizontal);
-  @include rem(font-size, $font-size);
+ padding: em($padding-vertical, $font-size) em($padding-horizontal, $font-size);
+  font-size: em($font-size);
   line-height: $line-height;
   @if $border-radius > 0 {
     @include border-radius($border-radius);

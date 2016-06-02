@@ -1,15 +1,15 @@
 .front {
   .l-region--main.has-sidebar-second {
     .pane-title {
-    @extend h4;
+      @extend h4;
     }
   }
   .l-region--right,
   .l-region--main.has-sidebar-second {
     .panel-pane {
-      @include rem(margin-bottom, $vert-spacing-unit);
+      margin-bottom: em($vert-spacing-unit);
       border: 1px solid $gray-light;
-      @include rem(padding, $vert-spacing-unit/2 $horz-spacing-unit);
+      padding: em($vert-spacing-unit/2) em($horz-spacing-unit);
     }
   }
   .l-region--right {
@@ -38,9 +38,9 @@
           border: 1px solid white;
           @include border-opacity(white, .3);
           display: inline-block;
-          @include rem(margin-right, 10px);
-          @include rem(padding, 15px);
-          @include rem(top, 8px);
+          margin-right: em(10px);
+          padding: em(15px);
+          top: em(8px);
           &:before {
             content:  "\f08a";
             font-family: FontAwesome;
@@ -50,7 +50,7 @@
         /*--adjust as necessary--*/
             color: #fff;
             @include opacity(.3);
-            @include rem(font-size, 18px);
+            font-size: em(18px);
             padding-right: 0.5em;
             position: absolute;
             top: 0;
@@ -64,77 +64,8 @@
     ul {
      @extend %reset-list;
      li {
-      @include rem(margin-bottom, $vert-spacing-unit);
+      margin-bottom: em($vert-spacing-unit);
      }
     }
    } // end .node--promo
-   /*MICHELLE EDITS 4/21/2016: ADDING 'FORM' TO END OF THIS RULE*/
-   .collection-search form{
-    @include rem(margin, $vert-spacing-unit 0);
-    @include rem(padding, 0 $horz-spacing-unit);
-    button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-     margin-top: 0;
-     /*float: right;*/
-	 display: inline-block;
-     /*MICHELLE EDITS: Changing width, disabling left margin*/
-	width: auto;
-	margin-right: 1.2rem; 
-	/*margin-left: 5%;*/
-    }
-	.collection-search .edan-search-form .form-item label h2 {
-	float: left;
-	color: #595959;
-	font-size: 24px;
-	font-size: 2.4rem;
-	margin-right: 1.2rem;
-	}
-    .pane-title {
-     @extend h3;
-     color: $text-color;
-    }
-    .form-text {
-     border: 1px solid $gray-lighter;
-     @include rem(padding, .7rem 1rem);
-     /*MICHELLE EDITS 4/21/2016: Disabling margin and width*/ 
-	/*margin: 0 1rem 1rem 0;*/ 
-	/*width: 44%;*/ 
-	/*float: right;*/
-	display: inline-block;
-    }
-	/*MICHELLE EDITS 4/21/2016 ADDING NEW RULE BELOW*/
-	.form-actions label { 
-		font-weight: bold; font-size: 22px; font-size: 2.2rem; 
-	}
-	/*MICHELLE EDITS 4/21/2016: ADDING NEW RULE BELOW*/
-	input.form-text {
-		width: 30%; 
-	}
-    @include breakpoint($tab) {
-     @include clearfix;
-     .pane-title {
-      float: left;
-      width: 50%;
-      margin: 0;
-      @include rem(padding-bottom, 16px);
-      border-bottom: 1px solid $gray-light;
-     }
-     .pane-content {
-      @include rem(padding, 6px 0 10px);
-      border-bottom: 1px solid $gray-light;
-      form {
-      }
-	  form.edan-search-form div {
-		display: inline-block;
-	  }
-      .form-item {
-       margin: 0;
-       /*MICHELLE EDITS: Disabling display block to allow for line break at screen breakpoint*/ 
-	/*display: block;*/
-      }
-     }
-    }
-   } //end collection-search
 } //end .front

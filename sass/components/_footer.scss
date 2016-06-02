@@ -8,7 +8,7 @@
     color: $gray-darker;
   }
   p {
-    @include rem(font-size, 20px);
+    font-size: em(20px);
     line-height: 1.3;
     &:last-child {margin-bottom: 0}
   }
@@ -25,42 +25,46 @@
 } // end l-footer-preface
 
 .l-footer .l-container {
-  * {
-    @include rem(font-size, 13px);
-    line-height: 1.538;
+  p, li {
+    font-size: em(13px, 16px);
+    //line-height: ;
   }
   ul {
     @extend %reset-list;
     .list-icon a {
-      @include rem(font-size, $font-size-base);
-      line-height: $baseLineHeight;
+      font-size: em($font-size-base, 13px);
+      line-height: $line-height-base/13px;
     }
   }
-  .menu .menu {
-    display: none;
+  .menu {
+    .menu {
+      display: none;
+    }
   }
   #block-panels-mini-footer-left {
     background: url("../images/AAA-logo-gray.png") left top no-repeat;
-    @include rem(padding-top, $line-height-base * 2);
+    padding-top: em($line-height-base*2, 13px);
   }
   .panel-pane {
-    @include rem(margin, 0 0 $line-height-base);
+    margin: 0 0 em($line-height-base);
 
   }
   h2 {
-    @include rem(font-size, 16px);
+    font-size: em(16px,13px);
     line-height: 1.25;
     margin-bottom: 0;
     color: $gray-dark;
   }
-
+  h2.pane-title {
+    font-size: em(16px);
+  }
   .panel-col-first{
     .item-list ul, .menu {
       @include float-list;
      }
      .item-list li {
         width: 40%;
-        @include rem(margin-left, 20px);
+        margin-left: em(20px, 13px);
         &:first-child {
           margin-left: 0;
         }
@@ -75,12 +79,58 @@
       }
     }
 
-    .si-terms-privacy {
-      @include rem(font-size, 10px);
-      line-height: 10;
-    }
+    //.si-terms-privacy {
+    //  font-size: em(10px);
+    //  line-height: 10;
+    //}
   } // end l-region--footer-left
 
+  .pane-constant-contact-1 {
+    .pane-content {
+      @include clearfix;
+    }
+    label {
+      @extend %hide-text;
+    }
+    .form-text, .form-submit {
+      float: left;
+    }
+    .form-text {
+      width: 63%;
+    }
+    .form-text::-webkit-input-placeholder {
+      color: $blue;
+      text-transform: uppercase;
+      font-size: em(13px);
+      font-weight: 600;
+    }
+
+    .form-text:-moz-placeholder { /* Firefox 18- */
+      color: $blue;
+      text-transform: uppercase;
+      font-size: em(13px);
+      font-weight: 600;
+    }
+
+    .form-text::-moz-placeholder {  /* Firefox 19+ */
+      color: $blue;
+      text-transform: uppercase;
+      font-size: em(13px);
+      font-weight: 600;
+    }
+
+    .form-text:-ms-input-placeholder {
+      color: $blue;
+      text-transform: uppercase;
+      font-size: em(13px);
+      font-weight: 600;
+    }
+    .form-submit {
+      margin: 0;
+      margin-left: em($horz-spacing-unit);
+    }
+
+  } //end pane-constant-contact-1
   .panel-col-last{
     .menu {
       list-style: none;
@@ -97,19 +147,25 @@
         @include flex-wrap(wrap);
         li {
           display: inline-block; /* non-flexbox browsers */
-          @include flex(1 0 47%);
-          @include rem(margin-right, 10px);
+          @include flex(1 0 43%);
+          margin-right: em($horz-spacing-unit, 13px);
           //min-width: 48%;
         }
+      }
+    }
+    @include breakpoint($tab) {
+      .menu > li {
+        margin-bottom: em($vert-spacing-unit/4);
       }
     }
     @include breakpoint($desk) {
       .pane-menu-menu-quick-links-menu,
       .pane-system-main-menu {
         float: left;
+        width: 32%;
       }
       .pane-menu-menu-quick-links-menu{
-        padding-right: $horz-spacing-unit;
+        padding-right: em($horz-spacing-unit, 13px);
       }
     }
   } // end l-region--footer-right

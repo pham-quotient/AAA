@@ -5,7 +5,7 @@
 	border: $btn-default-border solid 1px;
 	border-width: 1px 1px 0;
 	text-transform: uppercase;
-	@include rem(padding, 6px);
+	padding: em(6px);
 	background-color: $btn-default-bg;
 	@include link-colors($link-color-default, white, white, $link-color-default, $link-color-default);
 	&:hover {
@@ -34,7 +34,7 @@
 		color: $link-color-hover;
 	}
 	a {
-		@include rem(padding-left, $vert-spacing-unit);
+		padding-left: em($vert-spacing-unit);
 	}
 }
 

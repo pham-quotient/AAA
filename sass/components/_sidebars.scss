@@ -13,7 +13,7 @@
   > li {
     > a {
       display: block;
-      @include rem(padding, $vert-spacing-unit/2 $horz-spacing-unit);
+      padding: em($vert-spacing-unit/2) em($horz-spacing-unit);
       background: $salmon;
       @include link-colors(white, white, white, white, white);
       border-bottom: 1px solid white;
@@ -22,7 +22,7 @@
        background: $link-color-hover;
        text-decoration: none;
       }
-      @include rem(font-size, $font-size-base);
+      font-size: em($font-size-base);
       line-height: $line-height-base;
       font-weight: bold;
       @include font-smoothing;
@@ -33,11 +33,9 @@
     @extend h5;
     margin: 0;
   }
-  p,
-  a,
-  ul {
+  p {
     margin: 0;
-    @include rem(font-size, $font-size-small);
+    font-size: em($font-size-small);
     line-height: $line-height-small;
     position: relative;
     .more-link {
@@ -47,12 +45,12 @@
     }
   }
   img {
-    @include rem(margin-bottom, $vert-spacing-unit/2);
+    margin-bottom: em($vert-spacing-unit/2);
   }
 
  .field--name-field-page-promo,
   .views-row {
-    @include rem(padding, $vert-spacing-unit $horz-spacing-unit);
+    padding: em($vert-spacing-unit) em($horz-spacing-unit);
     border: 1px solid $gray-light;
     border-width: 0 1px 1px;
   }

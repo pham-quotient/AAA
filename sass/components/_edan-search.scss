@@ -32,7 +32,7 @@
 }
 
 .pane-edan-search-search-form {
-  @include rem(margin, $vert-spacing-unit 0);
+  margin: em($vert-spacing-unit) 0;
   .pane-title {
     display: none;
   }
@@ -93,12 +93,12 @@
     }
     .pane-title {
       display: block;
-      @include rem(font-size, $font-size-h3);
+      font-size: em($font-size-h3);
       line-height:   $vert-spacing-unit*1.5/$font-size-h3;
       color: $gray-darker;
-      height:  $vert-spacing-unit*1.5;
+      height:  em($vert-spacing-unit*1.5);
       margin: 0;
-      padding-top: 4px;
+      padding-top: em(4px);
     }
     .title-wrapper,
     .pane-content {
@@ -112,13 +112,13 @@
           position:  10% 53%;
           size: 18%;
         }
-        @include rem(padding-left, 30px);
-        height: $vert-spacing-unit*1.5;
+        padding-left: em(30px);
+        height: em($vert-spacing-unit*1.5);
       }
       input[type="text"] {
-        height: $vert-spacing-unit*1.5;
+        height: em($vert-spacing-unit*1.5);
         border: none;
-        @include rem(padding-right,100px);
+        padding-right: em(100px);
       }
       .form-text::-webkit-input-placeholder {
         color: $gray;
@@ -143,9 +143,9 @@
 
 
     .pane-border {
-      @include rem(margin-top,$vert-spacing-unit/2);
-      @include rgba-background(rgba($gray-lighter,0.97));
-      padding-top: 3px;
+      margin-top: em($vert-spacing-unit/2);
+      background: lighten($gray-lighter, 1);
+      padding-top: em(3px);
       width: 85%
     }
   }
