@@ -1,0 +1,68 @@
+@import "susy";
+@import "breakpoint";
+@import "compass";
+
+
+// Globbing from within sub-folders only works with relative paths.
+@import "../../_variables.scss";
+@import "../../mixins/**/*";
+
+// .l-container {
+//  @include container;
+//  @include clearfix;
+// }
+
+@include breakpoint($desk) {
+  .panel-display--two-col {
+    @include clearfix;
+    .l-region--hero {
+    margin-bottom: em($line-height-base*2);
+    }
+    .l-region--main.has-sidebar-first {
+      @include span(9 last);
+      .has-two-sidebars & {
+        @include span(4 of 6);
+      }
+      .has-sidebar-second &,
+      .has-sidebar-first & {
+         @include span(6 of 9);
+      }
+    }
+    .l-region--left{
+      @include span(3);
+      .has-two-sidebars & {
+        @include span(2 of 6);
+      }
+      .has-sidebar-second &,
+      .has-sidebar-first & {
+         @include span(3 of 9);
+      }
+    }
+
+    .l-region--main.has-sidebar-second {
+      @include span(7);
+      .has-sidebar-second &,
+      .has-sidebar-first & {
+        @include span(6 of 9)
+      }
+      .has-two-sidebars & {
+        @include span(4 of 6);
+      }
+    }
+    .l-region--right{
+      @include span(5 last);
+	  /* Sean Edit */
+	  margin-right: 0 !important;
+	  
+	  /* End Edit */
+      .has-two-sidebars & {
+        @include span(2 of 6);
+      }
+      .has-sidebar-second &,
+      .has-sidebar-first & {
+         @include span(3 of 9);
+      }
+    }
+  }
+
+}

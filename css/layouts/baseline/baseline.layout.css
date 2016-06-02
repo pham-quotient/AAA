@@ -136,7 +136,7 @@
   .l-region--navigation {
     position: absolute;
     left: 50%;
-    top: 0; }
+    top: 2px; }
 
   /* line 120, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-branding {

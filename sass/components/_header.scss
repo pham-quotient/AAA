@@ -27,11 +27,10 @@
     }
 
     .l-region--header-preface-right {
-      padding-top: $vert-spacing-unit*.5;
-      padding-bottom: $vert-spacing-unit;
-      @include breakpoint($tab, true) {
-        padding-bottom: $vert-spacing-unit *.5;
-      }
+      padding-top: em($vert-spacing-unit*.5);
+      padding-bottom: em($vert-spacing-unit*.5);
+     // padding-bottom: $vert-spacing-unit;
+
       .donate-link {
         text-align:center;
 

@@ -1348,13 +1348,12 @@ h4.small, .front .l-region--main.has-sidebar-second .small.pane-title, h4 .small
         width: auto; }
     /* line 29, ../sass/components/_header.scss */
     .l-header .l-header-preface-wrapper .l-region--header-preface-right {
-      padding-top: 12px;
-      padding-bottom: 24px;
-      padding-bottom: 12px; }
-      /* line 35, ../sass/components/_header.scss */
+      padding-top: 0.75em;
+      padding-bottom: 0.75em; }
+      /* line 34, ../sass/components/_header.scss */
       .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link {
         text-align: center; }
-        /* line 38, ../sass/components/_header.scss */
+        /* line 37, ../sass/components/_header.scss */
         .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .node-type-publications .field--name-field-link-single a, .node-type-publications .field--name-field-link-single .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link a {
           display: inline-block;
           *display: inline;
@@ -1415,23 +1414,23 @@ h4.small, .front .l-region--main.has-sidebar-second .small.pane-title, h4 .small
           .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .btn .badge, .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link .node-type-publications .field--name-field-link-single a .badge, .node-type-publications .field--name-field-link-single .l-header .l-header-preface-wrapper .l-region--header-preface-right .donate-link a .badge {
             color: white;
             background-color: #1A5387; }
-  /* line 73, ../sass/components/_header.scss */
+  /* line 72, ../sass/components/_header.scss */
   .l-header .l-region--header .menu > li > a {
     padding: 0 0.625em;
     border-left: 1px solid #DCE9F5; }
-    /* line 76, ../sass/components/_header.scss */
+    /* line 75, ../sass/components/_header.scss */
     .l-header .l-region--header .menu > li > a:hover {
       border-color: #fff; }
-  /* line 80, ../sass/components/_header.scss */
+  /* line 79, ../sass/components/_header.scss */
   .l-header .l-region--header .menu > li:first-child > a {
     border-left: none; }
-  /* line 83, ../sass/components/_header.scss */
+  /* line 82, ../sass/components/_header.scss */
   .l-header .l-region--header .menu > li .menu {
     display: none; }
-  /* line 94, ../sass/components/_header.scss */
+  /* line 93, ../sass/components/_header.scss */
   .l-header .l-branding .site-name {
     margin-bottom: 1.5em; }
-    /* line 96, ../sass/components/_header.scss */
+    /* line 95, ../sass/components/_header.scss */
     .l-header .l-branding .site-name a {
       display: block;
       background-image: url('../images/logo.svg?1434486770');

@@ -1,0 +1,358 @@
+
+.swiper {
+ -moz-user-select: -moz-none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ float: none;
+ margin: 0 auto;
+ @include clearfix;
+
+ #filterTab {
+ 	background: $gray-lighter;
+
+ 	line-height: 1.25;
+	font-size: 80%;
+
+ 	span {
+ 		text-transform: uppercase;
+ 	}
+ 	span, a {
+ 		display: inline-block;
+ 		padding-right: em($horz-spacing-unit/2);
+ 	}
+ 	a {
+ 		border-right: 1px solid $gray-light;
+ 		margin-right: em($horz-spacing-unit/2);
+ 		&.last {
+ 			border-right: none;
+ 		}
+ 		&.active,
+ 		&:hover {
+ 			text-decoration: underline;
+ 		}
+ 	}
+ }
+ .swiper-container {
+		width: 100%;
+			//height: 525px;
+		margin: 0 auto 20px;
+	 	background: $gray-lighter;
+	 	padding-top: 8%;
+		@include clearfix;
+
+		a {
+			&,
+			#{headings()} {
+				@include link-colors(white, white, white, white, white);
+			}
+		}
+		#{headings()} {
+			font-weight: normal;
+		}
+	}
+	.swiper-slide {
+		background: #fff;
+		width: 88%;		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.slide-page-content {
+    	width: 100%;
+    	height: 100%;
+    	position: relative;
+		-webkit-transition: opacity .3s;
+		transition: opacity .3s;
+		@include opacity(.2);
+		cursor: pointer;
+		&:hover {
+			@include opacity(.85);
+		}
+	}
+
+	.swiper-slide-active .slide-page-content {
+        @include opacity(1);
+        cursor: default
+
+	}
+
+	.slide-page-inner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0
+	}
+
+
+	.tile-wrapper {
+		position: absolute;
+		width: 25%;
+		-webkit-transition-property: width, top, left;
+		transition-property: width, top, left;
+		-webkit-transition-duration: .2s;
+		transition-duration: .2s;
+		-webkit-animation-name: tile-hover-out;
+		animation-name: tile-hover-out;
+		z-index: auto;
+		float: left;
+		overflow: hidden;
+	}
+	.tile-inner {
+		position: relative;
+		padding-top: 100%;
+	}
+	.tile-wide {
+		.tile-inner {
+			padding-top: 50%;
+		}
+	}
+	.tile-tall {
+		.tile-inner {
+			padding-top: 200%;
+		}
+	}
+	.tile-frame {
+	    padding: 2px;
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+
+	.tile-content {
+	    display: block;
+	    overflow: hidden;
+	    text-decoration: none;
+	    width: 100%;
+	    height: 100%;
+	    position: relative
+	}
+
+	.tile-image {
+	   	width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    img {
+	    	width: 100%;
+	    }
+	}
+	.tile-wide .tile-image {
+		img {
+			width: auto;
+			height: 100% !important;
+		}
+	}
+
+	.tile-overlay {
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	}
+	a:hover .tile-overlay {
+		@include rgba-background(rgba($blue, 0.85));
+	}
+
+	.tile-tag {
+		padding: em(8px, 12px) em(12px, 12px);
+		font-size: em(12px);
+		background: #f5865f;
+		z-index: 20;
+		top: 0;
+		position: absolute;
+		text-transform: uppercase;
+	}
+
+	.tile-caption {
+		font-family: $font-secondary;
+		font-style: italic;
+	}
+
+	.tile-title {
+		font-size: em($font-size-h2);
+		line-height: $line-height-h2;
+	}
+
+	.bg-green {
+		.tile-overlay {
+			background: $green;
+			&.bg-transparent {
+				@include rgba-background(rgba($green, 0.85));
+			}
+		}
+		a:hover {
+			.tile-overlay {
+				background: $green-light;
+				&.bg-transparent {
+					@include rgba-background(rgba($green-light, 0.85));
+				}
+			}
+		}
+	}
+	.bg-purple {
+		.tile-overlay {
+			background: $purple;
+			&.bg-transparent {
+				@include rgba-background(rgba($purple, 0.85));
+			}
+		}
+		a:hover {
+			.tile-overlay {
+				background: $purple-light;
+				&.bg-transparent {
+					@include rgba-background(rgba($purple-light, 0.85));
+				}
+			}
+		}
+
+	}
+	.bg-green .tile-tag {
+		background: none;
+		border: 1px solid #54c977;
+	}
+	.bg-purple .tile-tag {
+		background: none;
+		border: 1px solid #c32f66;
+	}
+	.content-hide {
+		display: none;
+	}
+
+	a:hover .content-hide {
+		display:block;
+	}
+	.content-wrapper {
+		z-index: 20;
+		padding: em($vert-spacing-unit);
+		position: absolute;
+		top: 20%;
+		left:0;
+	}
+
+	.tile-lrg {
+		width: 50%;
+		height: 100%
+	}
+	.tile-tall {
+		width: 25%;
+		height: 100%;
+	}
+	.tile-sm {
+		width: 25%;
+		height: 50%;
+	}
+	.tile-wide {
+		width: 50%;
+		height: 50%;
+	}
+
+
+	.tile-0 {
+		top: 0;
+		left: 0;
+	}
+	.slide-1 {
+		.tile-1 {
+			top: 0;
+			left: 50%;
+		}
+		.tile-2 {
+			top: 50%;
+			left: 50%;
+		}
+		.tile-3 {
+			top: 50%;
+			left: 75%;
+		}
+	}
+
+	.slide-2,
+	.slide-4 {
+		.tile-1
+		.tile-2,
+		.tile-3 {
+			top: 0;
+		}
+		.tile-1 {
+			left: 25%;
+		}
+		.tile-2 {
+			left: 50%;
+		}
+		.tile-3 {
+			left: 75%;
+		}
+		.tile-4 {
+			top: 50%;
+			left: 25%;
+		}
+		.tile-5 {
+			top: 50%;
+			left: 50%;
+		}
+	}
+	.slide-3,
+	.slide-5 {
+		.tile-1,
+		.tile-2{
+			top: 0;
+		}
+		.tile-1 {
+			left: 50%;
+		}
+		.tile-2 {
+			left: 75%;
+		}
+		.tile-3,
+		.tile-4 {
+			top: 50%;
+		}
+		.tile-3 {
+			left: 0;
+		}
+		.tile-4 {
+			left: 25%;
+		}
+	}
+
+
+		@include breakpoint($tab) {
+			#filterTab {
+				font-size: 100%;
+        padding: 1% 6%;
+        span, a {
+          padding-right: em($horz-spacing-unit);
+        }
+        a {
+          margin-right: em($horz-spacing-unit);
+        }
+
+			}
+			.swiper-container {
+				background: transparent;
+				padding-top: 0;
+			}
+		}
+}
+
+
+
+
+
+

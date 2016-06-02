@@ -1,0 +1,13 @@
+.node-type-publications {
+ .field--name-field-link-single a {
+  @extend .btn;
+ }
+ @include breakpoint($tab) {
+  .group-left {
+   float: left;
+   width: 30%;
+   margin-right: gutter();
+  }
+ }
+
+}
