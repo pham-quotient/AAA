@@ -13,15 +13,14 @@
 // Globbing from within sub-folders only works with relative paths.
 @import "../../_variables.scss";
 
-.l-container,
+.default-page .l-container,
 .l-region-header-preface-right-wrapper,
-.front .l-panel-wrapper {
+.pane-edan-search-search-form,
+.front .l-panel-wrapper
+.l-footer .l-container{
   @include set-layout($max-width); // Define these elements as the grid containers.
 }
 
-.front .l-main.l-container {
-  max-width: 100%;
-}
 
 .l-container,
 .l-header {

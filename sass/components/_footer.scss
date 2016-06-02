@@ -36,6 +36,9 @@
       line-height: $baseLineHeight;
     }
   }
+  .menu .menu {
+    display: none;
+  }
   #block-panels-mini-footer-left {
     background: url("../images/AAA-logo-gray.png") left top no-repeat;
     @include rem(padding-top, $line-height-base * 2);
@@ -88,7 +91,18 @@
         list-style-type: none;
       }
     }
-    .pane-system-main-menu .list-0 {margin-left: 0};
+    .menu-name-main-menu {
+      > .menu {
+        @include display-flex;
+        @include flex-wrap(wrap);
+        li {
+          display: inline-block; /* non-flexbox browsers */
+          @include flex(1 0 47%);
+          @include rem(margin-right, 10px);
+          //min-width: 48%;
+        }
+      }
+    }
     @include breakpoint($desk) {
       .pane-menu-menu-quick-links-menu,
       .pane-system-main-menu {

@@ -5,26 +5,26 @@
  * and building mobile first layouts.
  ******************************************************************************/
 /* line 16, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-container,
+.default-page .l-container,
 .l-region-header-preface-right-wrapper,
-.front .l-panel-wrapper {
+.pane-edan-search-search-form,
+.front .l-panel-wrapper
+.l-footer .l-container {
   max-width: 96%;
   margin-left: auto;
   margin-right: auto;
   width: 1200px; }
   /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
-  .l-container:after,
+  .default-page .l-container:after,
   .l-region-header-preface-right-wrapper:after,
-  .front .l-panel-wrapper:after {
+  .pane-edan-search-search-form:after,
+  .front .l-panel-wrapper
+  .l-footer .l-container:after {
     content: " ";
     display: block;
     clear: both; }
 
-/* line 22, ../../../sass/layouts/baseline/baseline.layout.scss */
-.front .l-main.l-container {
-  max-width: 100%; }
-
-/* line 26, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 25, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-container,
 .l-header {
   *zoom: 1; }
@@ -40,7 +40,7 @@
   .l-header:after {
     clear: both; }
 
-/* line 36, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 35, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-preface-wrapper,
 .l-page > header,
 .l-main,
@@ -55,42 +55,42 @@
   margin-bottom: 24px;
   margin-bottom: 2.4rem; }
 
-/* line 49, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 48, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header {
   position: relative; }
 
-/* line 52, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 51, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-middle {
   padding: 24px 0;
   padding: 2.4rem 0; }
 
-/* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 55, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-preface-left {
   padding: 0 2%;
   height: 55px; }
 
-/* line 61, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 60, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region-header-preface-right-wrapper .l-inner {
   float: right; }
-/* line 64, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 63, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region-header-preface-right-wrapper .l-region--header-preface-right {
   float: right; }
-  /* line 66, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 65, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
     float: left; }
 
-/* line 72, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 71, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--navigation {
   position: absolute;
   left: 2%;
   top: 52px; }
 
-/* line 79, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 78, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-wrapper {
   display: none; }
 
 @media screen and (min-width: 680px) {
-  /* line 85, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 84, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region-header-preface-right-wrapper,
   .l-region--header-preface-left {
     max-width: 100%;
@@ -98,10 +98,10 @@
     height: 60px;
     height: 6rem; }
 
-  /* line 93, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 92, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-header .l-region--header-preface-left {
     padding: 0; }
-  /* line 96, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 95, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-header .l-outer {
     max-width: 96%;
     margin-left: auto;
@@ -112,77 +112,77 @@
       content: " ";
       display: block;
       clear: both; }
-    /* line 98, ../../../sass/layouts/baseline/baseline.layout.scss */
+    /* line 97, ../../../sass/layouts/baseline/baseline.layout.scss */
     .l-header .l-outer .l-region--header-preface-left {
       width: 21.73913%;
       float: left;
       margin-right: 4.34783%;
       margin-right: 8.69565%; }
-    /* line 103, ../../../sass/layouts/baseline/baseline.layout.scss */
+    /* line 102, ../../../sass/layouts/baseline/baseline.layout.scss */
     .l-header .l-outer .l-region-header-preface-right-wrapper .l-inner {
       width: 65.21739%;
       float: right;
       margin-right: 0; }
 
-  /* line 110, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 109, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--navigation {
     position: absolute;
     left: 50%;
     top: 0; }
 
-  /* line 117, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 116, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-branding {
     width: 39.13043%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 120, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 119, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--header-wrapper {
     width: 56.52174%;
     float: right;
     margin-right: 0;
     display: block; }
-    /* line 123, ../../../sass/layouts/baseline/baseline.layout.scss */
+    /* line 122, ../../../sass/layouts/baseline/baseline.layout.scss */
     .l-region--header-wrapper .l-region--header {
       float: right; }
-      /* line 125, ../../../sass/layouts/baseline/baseline.layout.scss */
+      /* line 124, ../../../sass/layouts/baseline/baseline.layout.scss */
       .l-region--header-wrapper .l-region--header > div, .l-region--header-wrapper .l-region--header > nav {
         float: left; }
 
-  /* line 131, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 130, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-content {
     position: relative; }
 
-  /* line 134, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 133, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--footer-left {
     width: 39.13043%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 137, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 136, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--footer-right {
     width: 56.52174%;
     float: right;
     margin-right: 0; } }
 @media screen and (min-width: 980px) {
-  /* line 150, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 149, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-page > header {
     margin-bottom: 0; }
 
-  /* line 155, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 154, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-header .l-region--header-preface-left {
     width: 30.43478%;
     float: left;
     margin-right: 4.34783%;
     margin-right: 8.69565%; }
-  /* line 160, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 159, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-header .l-region-header-preface-right-wrapper .l-inner {
     width: 56.52174%;
     float: right;
     margin-right: 0;
     padding-right: 50px; }
 
-  /* line 166, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 165, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--navigation {
     float: none;
     position: relative;
@@ -198,87 +198,87 @@
       display: block;
       clear: both; }
 
-  /* line 174, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 173, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-container .l-content {
     margin-top: 48px;
     margin-top: 4.8rem; }
-    /* line 176, ../../../sass/layouts/baseline/baseline.layout.scss */
+    /* line 175, ../../../sass/layouts/baseline/baseline.layout.scss */
     .has-no-sidebars .l-container .l-content {
       margin-top: 0; }
-    /* line 179, ../../../sass/layouts/baseline/baseline.layout.scss */
+    /* line 178, ../../../sass/layouts/baseline/baseline.layout.scss */
     .l-container .l-content > .panel-display > .l-region--main.has-sidebar-first {
       padding-top: 48px;
       padding-top: 4.8rem; }
 
-  /* line 183, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 182, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-branding {
     width: 39.13043%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 186, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 185, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--header-wrapper {
     width: 56.52174%;
     float: right;
     margin-right: 0;
     padding-right: 8.69565%; }
 
-  /* line 192, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 191, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-sidebar-first .l-content {
     width: 73.91304%;
     float: right;
     margin-right: 0; }
-  /* line 195, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 194, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-sidebar-first .l-region--sidebar-first {
     width: 21.73913%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 200, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 199, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-sidebar-second .l-content {
     width: 73.91304%;
     float: left;
     margin-right: 4.34783%; }
-  /* line 203, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 202, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-sidebar-second .l-region--sidebar-second {
     width: 21.73913%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 209, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 208, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-two-sidebars .l-content {
     width: 47.82609%;
     float: left;
     margin-right: 4.34783%;
     margin-left: 26.08696%; }
-  /* line 213, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 212, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-two-sidebars .l-region--sidebar-first,
   .has-two-sidebars .l-region--sidebar-second {
     width: 21.73913%;
     float: left;
     margin-right: 4.34783%; }
-  /* line 217, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 216, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-two-sidebars .l-region--sidebar-first {
     margin-left: -78.26087%; }
-  /* line 220, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 219, ../../../sass/layouts/baseline/baseline.layout.scss */
   .has-two-sidebars .l-region--sidebar-second {
     float: right;
     margin-right: 0;
     clear: none; }
 
-  /* line 225, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 224, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--footer-left {
     width: 39.13043%;
     float: left;
     margin-right: 4.34783%; }
 
-  /* line 228, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 227, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region--footer-right {
     width: 56.52174%;
     float: right;
     margin-right: 0; } }
 @media screen and (min-width: 1700px) {
-  /* line 240, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 239, ../../../sass/layouts/baseline/baseline.layout.scss */
   .front .l-panel-wrapper {
     max-width: 100%; } }
 

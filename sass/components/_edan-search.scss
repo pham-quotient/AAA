@@ -1,0 +1,152 @@
+.pane-edan-search-search-form,
+.tb-megamenu {
+  .edan-search-form {
+    .form-type-checkbox,
+    .form-item-edan-q label{
+      @extend %hide-text;
+    }
+    input[type="submit"] {
+      @include button_style($blue, $gray-lighter, darken($gray-lighter,5));
+    }
+    input[type="text"] {
+      @include input-placeholder {
+        color: $gray-light;
+      }
+    }
+  } //end edan-search-form
+
+}
+
+.tb-megamenu {
+  .edan-search-form {
+    input[type="submit"] {
+      @include button_style(white, $blue2);
+      background: {
+        image: image-url("search.svg");
+        repeat: no-repeat;
+        position:  4% 54%;
+        size: 18%;
+      }
+    }
+  } //end edan-search-form
+}
+
+.pane-edan-search-search-form {
+  @include rem(margin, $vert-spacing-unit 0);
+  .pane-title {
+    display: none;
+  }
+  .edan-search-form {
+    position: relative;
+  //  < div {
+  //  @include clearfix;
+  //}
+    input[type="text"] {
+      width: 100%;
+      height: 50px;
+      padding-right: $vert-spacing-unit*2;
+    }
+    .form-text::-webkit-input-placeholder {
+      color: $gray-darker;
+      text-transform: uppercase;
+    }
+
+    .form-text:-moz-placeholder { /* Firefox 18- */
+      color: $gray-darker;
+      text-transform: uppercase;
+    }
+
+    .form-text::-moz-placeholder {  /* Firefox 19+ */
+      color: $gray-darker;
+     text-transform: uppercase;
+    }
+
+    .form-text:-ms-input-placeholder {
+      color: $gray-darker;
+      text-transform: uppercase;
+    }
+    input[type="submit"]  {
+      height: $vert-spacing-unit*2;
+      width: $vert-spacing-unit*2;
+      text-indent: -99999px;
+      background: {
+        image: image-url("search-blue.svg");
+        repeat: no-repeat;
+        position:  50%;
+        size: 80%;
+      }
+    }
+    //.form-item-edan-q {
+    //  float: left;
+    //  width: ;
+    //}
+    .form-actions {
+      position: absolute;
+      top:0;
+      right: 0;
+    }
+  }
+  @include breakpoint($desk) {
+    //@include clearfix;
+    .inner {
+      @include display-flex;
+    }
+    .pane-title {
+      display: block;
+      @include rem(font-size, $font-size-h3);
+      line-height:   $vert-spacing-unit*1.5/$font-size-h3;
+      color: $gray-darker;
+      height:  $vert-spacing-unit*1.5;
+      margin: 0;
+      padding-top: 4px;
+    }
+    .title-wrapper,
+    .pane-content {
+      @include flex(1 0);
+    }
+    .edan-search-form {
+      input[type="submit"] {
+        text-indent: 0;
+        width: auto;
+        background: {
+          position:  10% 53%;
+          size: 18%;
+        }
+        @include rem(padding-left, 30px);
+        height: $vert-spacing-unit*1.5;
+      }
+      input[type="text"] {
+        height: $vert-spacing-unit*1.5;
+        border: none;
+        @include rem(padding-right,100px);
+      }
+      .form-text::-webkit-input-placeholder {
+        color: $gray;
+        text-transform: capitalize;
+      }
+
+      .form-text:-moz-placeholder { /* Firefox 18- */
+        color: $gray;
+        text-transform: capitalize;
+      }
+
+      .form-text::-moz-placeholder {  /* Firefox 19+ */
+        color: $gray;
+        text-transform: capitalize;
+      }
+
+      .form-text:-ms-input-placeholder {
+        color: $gray;
+        text-transform: capitalize;
+      }
+    }
+
+
+    .pane-border {
+      @include rem(margin-top,$vert-spacing-unit/2);
+      @include rgba-background(rgba($gray-lighter,0.97));
+      padding-top: 3px;
+      width: 85%
+    }
+  }
+} //end .pane-edan-search-search-form

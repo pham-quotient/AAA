@@ -1,5 +1,8 @@
 // Global settings for all megamenu
 .tb-megamenu, .tb-megamenu .nav-collapse {
+  select, textarea, input[type="text"] {
+    height: auto;
+  }
   background: none;
   color: white;
   .nav {
@@ -128,7 +131,7 @@
               // Set ($normal, $hover, $active, $visited, $focus)
               @include link-colors($gray-darker);
               border-left: none;
-              @include rem(padding, $vert-spacing-unit/2 $vert-spacing-unit/2  $vert-spacing-unit);
+              @include rem(padding, $vert-spacing-unit/2);
               @include breakpoint($wide) {
                 @include rem(padding-right, $horz-spacing-unit);
               }
@@ -172,7 +175,13 @@
               display: none;
             }
           }
-        }
+          &:first-child {
+            > a,
+            &.active > a {
+              padding-top: 0;
+            }
+          }
+        } //end li
       }// end nav
     }// end nav-collapse
     .mega-nav .dropdown-submenu > a:after {
@@ -222,6 +231,18 @@
   }
 } // end .l-region--navigation .tb-megamenu
 
+@include breakpoint('screen' (max-width 979px)) {
+  .tb-megamenu .mega-inner {
+    padding: 10px;
+  }
+  .tb-megamenu .mega-nav > li a, .tb-megamenu .dropdown-menu .mega-nav > li a {
+    margin-left: 0;
+  }
+  .tb-megamenu .row-fluid + .row-fluid {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
 @include breakpoint($desk) {
   .l-region--navigation .tb-megamenu {
     .nav-collapse{
@@ -237,6 +258,16 @@
             .mega-caption  {
               white-space: normal;
             }
+          }
+          > a,
+          &.active > a {
+            @include rem(padding, $vert-spacing-unit/2 $vert-spacing-unit/2  $vert-spacing-unit);
+          }
+        }
+        li:first-child {
+          > a,
+          &.active > a {
+            @include rem(padding-left,$vert-spacing-unit/2);
           }
         }
       }
