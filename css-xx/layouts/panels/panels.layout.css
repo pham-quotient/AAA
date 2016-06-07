@@ -1,0 +1,78 @@
+@media screen and (min-width: 980px) {
+  /* line 16, ../../../sass/layouts/panels/panels.layout.scss */
+  .panel-display--two-col {
+    *zoom: 1; }
+    /* line 15, ../../../sass/mixins/_clearfix.scss */
+    .panel-display--two-col:before, .panel-display--two-col:after {
+      content: " ";
+      display: table;
+      line-height: 0; }
+    /* line 21, ../../../sass/mixins/_clearfix.scss */
+    .panel-display--two-col:after {
+      clear: both; }
+    /* line 18, ../../../sass/layouts/panels/panels.layout.scss */
+    .panel-display--two-col .l-region--hero {
+      margin-bottom: 48px;
+      margin-bottom: 4.8rem; }
+    /* line 21, ../../../sass/layouts/panels/panels.layout.scss */
+    .panel-display--two-col .l-region--main.has-sidebar-first {
+      width: 73.91304%;
+      float: right;
+      margin-right: 0; }
+      /* line 23, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-two-sidebars .panel-display--two-col .l-region--main.has-sidebar-first {
+        width: 63.63636%;
+        float: left;
+        margin-right: 9.09091%; }
+      /* line 26, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-sidebar-second .panel-display--two-col .l-region--main.has-sidebar-first, .has-sidebar-first .panel-display--two-col .l-region--main.has-sidebar-first {
+        width: 64.70588%;
+        float: left;
+        margin-right: 5.88235%; }
+    /* line 31, ../../../sass/layouts/panels/panels.layout.scss */
+    .panel-display--two-col .l-region--left {
+      width: 21.73913%;
+      float: left;
+      margin-right: 4.34783%; }
+      /* line 33, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-two-sidebars .panel-display--two-col .l-region--left {
+        width: 27.27273%;
+        float: left;
+        margin-right: 9.09091%; }
+      /* line 36, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-sidebar-second .panel-display--two-col .l-region--left, .has-sidebar-first .panel-display--two-col .l-region--left {
+        width: 29.41176%;
+        float: left;
+        margin-right: 5.88235%; }
+    /* line 42, ../../../sass/layouts/panels/panels.layout.scss */
+    .panel-display--two-col .l-region--main.has-sidebar-second {
+      width: 56.52174%;
+      float: left;
+      margin-right: 4.34783%; }
+      /* line 44, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-sidebar-second .panel-display--two-col .l-region--main.has-sidebar-second, .has-sidebar-first .panel-display--two-col .l-region--main.has-sidebar-second {
+        width: 64.70588%;
+        float: left;
+        margin-right: 5.88235%; }
+      /* line 48, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-two-sidebars .panel-display--two-col .l-region--main.has-sidebar-second {
+        width: 63.63636%;
+        float: left;
+        margin-right: 9.09091%; }
+    /* line 52, ../../../sass/layouts/panels/panels.layout.scss */
+    .panel-display--two-col .l-region--right {
+      width: 39.13043%;
+      float: right;
+      margin-right: 0; }
+      /* line 54, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-two-sidebars .panel-display--two-col .l-region--right {
+        width: 27.27273%;
+        float: left;
+        margin-right: 9.09091%; }
+      /* line 57, ../../../sass/layouts/panels/panels.layout.scss */
+      .has-sidebar-second .panel-display--two-col .l-region--right, .has-sidebar-first .panel-display--two-col .l-region--right {
+        width: 29.41176%;
+        float: left;
+        margin-right: 5.88235%; } }
+
+/*# sourceMappingURL=panels.layout.css.map */

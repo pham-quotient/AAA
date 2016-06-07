@@ -1,0 +1,74 @@
+/*******************************************************************************
+ * baseline.layout.scss
+ *
+ * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
+ * and building mobile first layouts.
+ ******************************************************************************/
+/* line 20, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .l-container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 24, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container {
+  overflow: hidden;
+  *zoom: 1; }
+
+/* line 28, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-container > div,
+.l-region--navigation > div {
+  padding: 0 2%; }
+
+/* line 33, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-header-preface-wrapper,
+.l-header-middle,
+.l-page > header,
+.l-main,
+.l-hero,
+.l-highlighted,
+.l-main,
+.l-footer-preface,
+.l-region--highlighted,
+.l-region--help,
+.l-region--sidebar-first,
+.l-region--sidebar-second {
+  margin-bottom: 26px; }
+
+/* line 47, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header-preface-left {
+  height: 45px; }
+
+/* line 50, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header .block:last-child,
+.l-region--navigation {
+  position: absolute;
+  top: 56px;
+  left: 2%; }
+
+/* line 56, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region--header .block:last-child {
+  left: 30%; }
+
+/* line 60, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region-header-preface-right-wrapper {
+  float: right; }
+  /* line 62, ../../../sass/layouts/baseline/baseline.layout.scss */
+  .l-region-header-preface-right-wrapper .l-region--header-preface-right {
+    float: right;
+    overflow: hidden;
+    *zoom: 1; }
+    /* line 63, ../../../sass/layouts/baseline/baseline.layout.scss */
+    .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
+      float: left; }
+
+/* line 71, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-content {
+  position: relative; }
+
+/*# sourceMappingURL=baseline.layout.no-query.css.map */
