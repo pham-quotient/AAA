@@ -183,7 +183,7 @@ if ( typeof define === 'function' && define.amd ) {
 						self.close();
 					}
 				}
-			console.log(this.inputEl);
+			//console.log(this.inputEl);
 			this.el.addEventListener( 'click', initSearchFn );
 			this.el.addEventListener( 'touchstart', initSearchFn );
 			this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });

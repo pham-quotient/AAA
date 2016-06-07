@@ -13,7 +13,7 @@ $blue-dark      : #12395c;
 $blue-darker    : #082744;
 $orange         : #e4621c;
 $pale-orange    : #efa47b;
-$salmon         : #f5865f;
+$salmon         : #de7856;//#f5865f;
 $salmon-dark    : desaturate(darken(#f5865f, 10), 10);
 $green          : #47ba69; // overlay is 85%, lighten by 20%
 $green-light    : lighten($green, 10%);
@@ -134,15 +134,17 @@ $col-half-width                 :percentage(1/($columns*2));
 // Grid Settings
 $tab                    : 'screen' 680px;
 $desk                   : 'screen' 980px;
-$wide                   : 'screen' 1450px;
+$wide                   : 'screen' 1280px;
 $horz-spacing-unit      : 20px;
 $vert-spacing-unit      : $line-height-base;
+$section-spacing        : $vert-spacing-unit*1.5;
+$section-spacing        : $vert-spacing-unit*1.5;
 $max-width              : 1400px;
 
 // Susy Defaults (http://susy.readthedocs.org/en/latest/settings/)
 $susy: (
   columns:            $columns,
-  container:          96%,
+  container:          94%,
   gutters:            1,
  // debug:              (image:show),
   global-box-sizing:  border-box

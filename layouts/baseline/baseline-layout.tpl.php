@@ -24,9 +24,9 @@
               </h1>
             <?php endif; ?>
 
-            <?php if ($site_slogan): ?>
-              <h2 class="site-slogan"><?php print $site_slogan; ?></h2>
-            <?php endif; ?>
+
+              <h2 class="site-slogan"><?php print t('The world’s preeminent resource dedicated to collecting and preserving the papers and primary records of the visual arts in America.') ?></h2>
+
           <?php endif; ?>
           <?php print render($page['branding']); ?>
       	</div>

@@ -71,24 +71,21 @@
     .fa {
       font-size: em($font-size-h1)
     }
-    @include breakpoint($desk, true) {
-      display: none;
+    .l-header & {
+      @include button_style(white, #134979, darken(#134979, 1%), false, $gray-lighter);
+      @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+      padding-bottom: em(10px, $font-size-small);
+      //font-weight: 400;
+      &:hover,
+      &.active {
+        color: $blue; 
+      }    
     }
-  }
-}
-
-@include  breakpoint('screen' max-width 979px) {
-  .tb-megamenu-menu-social-media.tb-megamenu .nav-collapse .nav > li {
-    float: left;
-  }
+  } // end btn
 }
 
 .l-region--header-preface-right .tb-megamenu {
-  margin:  0 $horz-spacing-unit/2;
-  @include breakpoint($desk, true) {
-    margin: 0;
-    margin-right:  $horz-spacing-unit;
-  }
+  margin:  0 em($horz-spacing-unit/2);
    button .icon-reorder {@extend %hide-text;}
   .nav-collapse {
     //width: 300%;
@@ -97,16 +94,33 @@
       > li {
         margin: 0;
         a {
-          padding: 0 $horz-spacing-unit/2;
+          padding: em(5px) em($horz-spacing-unit);
           //padding-left: 0;
+          font-size: em($font-size-base);
           .menu-title {
             @extend %hide-text;
           }
         }
-        &:last-child a {padding-right:0}
+        // &:last-child a {padding-right:0}
       }
     }
+    &.expanded {
+      width: 350%;
+      left: -160%;
+      background: $gray-lighter;
+      .nav {
+        > li {
+          a {
+            padding: em($vert-spacing-unit/2) em($horz-spacing-unit);
+            @include link-colors($blue, $text-color, $text-color, $blue, $blue);
+          }
+        }
+      }      
+    }
   }
+  .btn.active {
+    padding-bottom: em(27px);
+  } 
 }
 
 .l-region--navigation {
@@ -115,15 +129,7 @@
       background-color: $gray-lighter;
       width: 700%;
       @include box-shadow(rgba(black, .25) 1px 5px 5px);
-      @include breakpoint($desk) {
-        width: 100%;
-        background: none;
-        box-shadow: none;
-        .dropdown-menu {
-        background-color: $gray-lighter;
-          @include box-shadow(rgba(black, .25) 1px 5px 5px);
-        }
-      }
+
       .nav {
         li {
           > a,
@@ -132,15 +138,11 @@
               @include link-colors($gray-darker);
               border-left: none;
               padding: em($vert-spacing-unit/2);
-              @include breakpoint($wide) {
-                padding-right: em($horz-spacing-unit);
-              }
+
               &:focus, &:hover {
                 background: none;
               }
-              @include breakpoint($desk) {
-                  @include link-colors(#fff);
-              }
+
             }
 
             &.dropdown.active > .dropdown-toggle,
@@ -150,9 +152,6 @@
             &.dropdown.open.active > a:hover {
               background: none;
               color: $gray-darker;
-              @include breakpoint($desk) {
-                color: #fff;
-              }
             }
 
           .dropdown-menu {
@@ -242,10 +241,32 @@
     padding-top: 0;
     border-top: 0;
   }
+  .tb-megamenu-menu-social-media.tb-megamenu .nav-collapse .nav > li {
+    float: left;
+  }  
 }
+
+
 @include breakpoint($desk) {
+  .tb-megamenu, .tb-megamenu .nav-collapse {
+    .btn {
+      display: none;
+    }
+  }
+  .l-region--header-preface-right .tb-megamenu {
+    margin: 0;
+    // margin-right:  $horz-spacing-unit;
+  }  
+
   .l-region--navigation .tb-megamenu {
     .nav-collapse{
+      width: 100%;
+      background: none;
+      box-shadow: none;
+      .dropdown-menu {
+      background-color: $gray-lighter;
+        @include box-shadow(rgba(black, .25) 1px 5px 5px);
+      }
       .nav {
         > li {
           max-width: 16%;
@@ -263,14 +284,43 @@
           &.active > a {
             padding: em($vert-spacing-unit/2) em($vert-spacing-unit/2) em($vert-spacing-unit);
           }
-        }
-        li:first-child {
+        } // end > li
+        li {
+          &:first-child {
+            > a,
+            &.active > a {
+              padding-top: em($vert-spacing-unit/2);
+              padding-left: em($vert-spacing-unit/2);
+            }            
+          } //end first-child
           > a,
-          &.active > a {
-            padding-top: em($vert-spacing-unit/2);
-            padding-left: em($vert-spacing-unit/2);
-          }
-        }
+            &.active > a {
+              @include link-colors(#fff);
+            }          
+        } //end li
+      }
+    }
+  }
+}
+
+@include breakpoint($wide) {
+  .l-region--navigation .tb-megamenu {
+    .nav-collapse{
+      .nav {
+        li {
+          > a,
+            &.active > a {
+              padding-right: em($horz-spacing-unit);
+            }  
+            &.dropdown.active > .dropdown-toggle,
+            &.dropdown.open > .dropdown-toggle,
+            &.dropdown.open.active > .dropdown-toggle,
+            &.dropdown.open.active > a:focus,
+            &.dropdown.open.active > a:hover {
+              color: #fff;
+            }
+
+        } //end li
       }
     }
   }
@@ -288,3 +338,4 @@
     }
   }
 }
+

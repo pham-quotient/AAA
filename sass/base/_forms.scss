@@ -7,7 +7,7 @@ input[type="submit"] {
  @include button_size(10px, 25px, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
  text-transform: uppercase;
  border:0;
- margin-top: em($vert-spacing-unit);
+ margin: em($vert-spacing-unit) em($horz-spacing-unit) 0 0;
   max-width: 100%;
 }
 
@@ -26,7 +26,7 @@ input[type="submit"] {
 input[type="text"] {
  background: white;
  border: 1px solid $gray-lighter;
- padding: em(4px);
+ padding: em($vert-spacing-unit/6) em($horz-spacing-unit/2);
 }
 
 fieldset.webform-component-fieldset {

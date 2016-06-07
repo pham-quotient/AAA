@@ -4,6 +4,10 @@
       @extend h4;
     }
   }
+  .l-main {
+    position: relative;
+    top: -71px;
+  }
   .l-region--right,
   .l-region--main.has-sidebar-second {
     .panel-pane {
@@ -68,4 +72,9 @@
      }
     }
    } // end .node--promo
+  @include breakpoint($tab) {
+    .l-main {
+      top: auto;
+    }
+  }
 } //end .front

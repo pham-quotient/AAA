@@ -72,15 +72,21 @@
         > a {
           padding: 0 em($horz-spacing-unit/2);
           border-left: 1px solid $blue-lightest;
+          @include font-smoothing;
+          @include transition(font-weight .3s);
           &:hover {
-            border-color: #fff;
+            font-weight: bold;
           }
+
         }
         &:first-child > a {
           border-left: none;
         }
         .menu {
           display: none;
+        }
+        &.active-trail a {
+          font-weight: bold;
         }
       } //end .menu > li
     }//end quick-link menu
@@ -91,7 +97,7 @@
 
   .l-branding  {
     .site-name {
-      margin-bottom: em($vert-spacing-unit);
+      margin-bottom: em($vert-spacing-unit, $font-size-h1);
       a {
         display: block;
         background: {
@@ -105,12 +111,25 @@
           @extend %hide-text;
         }
       }
+      @include breakpoint($desk) {
+        margin-bottom: 0;
+      }
       @include breakpoint($wide) {
         width: 100%;
-        margin-bottom: em($vert-spacing-unit/2);
+        
       }
-      @include breakpoint(screen 1980px) {
-        width: 90%
+      // @include breakpoint(screen 1980px) {
+      //   width: 90%
+      // }
+    }
+    .site-slogan {
+      color: white;
+      font-size: em($font-size-h3);
+      line-height: $line-height-h3;
+      font-weight: 400;
+      margin-bottom: em($vert-spacing-unit, $font-size-h3);
+      @include breakpoint($tab) {
+        @include hide-text;
       }
     }
 

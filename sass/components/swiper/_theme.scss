@@ -1,44 +1,44 @@
-
+.swiper-slideshow {display: none;}
 .swiper {
- -moz-user-select: -moz-none;
- -webkit-user-select: none;
- -ms-user-select: none;
- user-select: none;
- float: none;
- margin: 0 auto;
- @include clearfix;
+	-moz-user-select: -moz-none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: none;
+	margin: 0 auto;
+	@include clearfix;
 
- #filterTab {
- 	background: $gray-lighter;
+	#filterTab {
+		background: $gray-lighter;
+    padding: em($vert-spacing-unit) 0;
+		line-height: 1.25;
+		font-size: 81.25%;
 
- 	line-height: 1.25;
-	font-size: 80%;
+		span {
+			text-transform: uppercase;
+		}
+		span, a {
+			display: inline-block;
+			padding-right: em($horz-spacing-unit);
+		}
+		a {
+			border-right: 1px solid $gray-light;
+			margin-right: em($horz-spacing-unit);
+			&.last {
+				border-right: none;
+			}
+			&.active,
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 
- 	span {
- 		text-transform: uppercase;
- 	}
- 	span, a {
- 		display: inline-block;
- 		padding-right: em($horz-spacing-unit/2);
- 	}
- 	a {
- 		border-right: 1px solid $gray-light;
- 		margin-right: em($horz-spacing-unit/2);
- 		&.last {
- 			border-right: none;
- 		}
- 		&.active,
- 		&:hover {
- 			text-decoration: underline;
- 		}
- 	}
- }
- .swiper-container {
+	.swiper-container {
 		width: 100%;
-			//height: 525px;
+		//height: 525px;
 		margin: 0 auto 20px;
-	 	background: $gray-lighter;
-	 	padding-top: 8%;
+		padding-top: 0;
 		@include clearfix;
 
 		a {
@@ -53,7 +53,7 @@
 	}
 	.swiper-slide {
 		background: #fff;
-		width: 88%;		/* Center slide text vertically */
+		width: 88%; /* Center slide text vertically */
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: -webkit-flex;
@@ -69,9 +69,9 @@
 	}
 
 	.slide-page-content {
-    	width: 100%;
-    	height: 100%;
-    	position: relative;
+		width: 100%;
+		height: 100%;
+		position: relative;
 		-webkit-transition: opacity .3s;
 		transition: opacity .3s;
 		@include opacity(.2);
@@ -82,8 +82,8 @@
 	}
 
 	.swiper-slide-active .slide-page-content {
-        @include opacity(1);
-        cursor: default
+		@include opacity(1);
+		cursor: default
 
 	}
 
@@ -94,7 +94,6 @@
 		top: 0;
 		left: 0
 	}
-
 
 	.tile-wrapper {
 		position: absolute;
@@ -124,32 +123,32 @@
 		}
 	}
 	.tile-frame {
-	    padding: 2px;
-	    width: 100%;
-	    height: 100%;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
+		padding: 2px;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	.tile-content {
-	    display: block;
-	    overflow: hidden;
-	    text-decoration: none;
-	    width: 100%;
-	    height: 100%;
-	    position: relative
+		display: block;
+		overflow: hidden;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		position: relative
 	}
 
 	.tile-image {
-	   	width: 100%;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    height: 100%;
-	    img {
-	    	width: 100%;
-	    }
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		img {
+			width: 100%;
+		}
 	}
 	.tile-wide .tile-image {
 		img {
@@ -159,11 +158,11 @@
 	}
 
 	.tile-overlay {
-	    height: 100%;
-	    width: 100%;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	a:hover .tile-overlay {
 		@include rgba-background(rgba($blue, 0.85));
@@ -185,7 +184,6 @@
 	}
 
 	.tile-title {
-		font-size: em($font-size-h2);
 		line-height: $line-height-h2;
 	}
 
@@ -235,14 +233,14 @@
 	}
 
 	a:hover .content-hide {
-		display:block;
+		display: block;
 	}
 	.content-wrapper {
 		z-index: 20;
 		padding: em($vert-spacing-unit);
 		position: absolute;
-		top: 20%;
-		left:0;
+		top: 0;
+		left: 0;
 	}
 
 	.tile-lrg {
@@ -261,7 +259,6 @@
 		width: 50%;
 		height: 50%;
 	}
-
 
 	.tile-0 {
 		top: 0;
@@ -310,7 +307,7 @@
 	.slide-3,
 	.slide-5 {
 		.tile-1,
-		.tile-2{
+		.tile-2 {
 			top: 0;
 		}
 		.tile-1 {
@@ -331,28 +328,39 @@
 		}
 	}
 
-
-		@include breakpoint($tab) {
-			#filterTab {
-				font-size: 100%;
-        padding: 1% 6%;
-        span, a {
-          padding-right: em($horz-spacing-unit);
-        }
-        a {
-          margin-right: em($horz-spacing-unit);
-        }
-
-			}
-			.swiper-container {
-				background: transparent;
-				padding-top: 0;
-			}
-		}
+}
+@include breakpoint($tab) {
+	.swiper-slideshow {
+		display: block;
+	}
 }
 
+@include breakpoint($desk) {
+  .swiper {
+    #filterTab {
+      font-size: 100%;
+    }
+    .content-wrapper {
+      top: 10%;
+    }
+    .tile-sm .content-wrapper {
+      top: 0;
+    }
+  }
+}
 
-
+@include breakpoint($wide) {
+  .swiper {
+    .tile-title {
+      font-size: em($font-size-h2);
+      line-height: $line-height-h2;
+    }
+    .content-wrapper,
+    .tile-sm .content-wrapper {
+      top: 15%;
+    }
+  }
+}
 
 
 

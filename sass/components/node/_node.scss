@@ -17,10 +17,10 @@
     font-weight: 600;
     margin-bottom: em($line-height-base*2);
   }
-  article,
+  article.node,
   .node-form {
     ul {
-      @include rem(margin, 0 0 $line-height-base/2 -20px);
+      @include rem(margin, 0 0 $line-height-base/2 0);
       li {
         @include rem(margin, $line-height-base/2 0);
       }
@@ -76,7 +76,7 @@
     article,
     .node-form  {
       h3 {
-        @include rem(margin-top, $line-height-base);
+        margin-top: em($line-height-base, $font-size-h3);
       }
       .field--label-inline {
         .field-items{

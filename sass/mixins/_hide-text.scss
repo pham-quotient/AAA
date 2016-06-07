@@ -1,4 +1,6 @@
-%hide-text {
+
+
+@mixin hide-text(){
   position:absolute;
   left:-10000px;
   top:auto;
@@ -9,3 +11,6 @@
 
 
 
+%hide-text {
+  @include hide-text;
+}

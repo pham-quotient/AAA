@@ -55,14 +55,16 @@
     text-decoration: none;
     @if $hover {
       background-color: $hover;
+      border-color: darken($hover, 5);
     }
     @else {
       background-color: darken($background, 20);
+      @if $border {
+        border-color: darken($border, 25);
+      }
     }
 
-    @if $border {
-      border-color: darken($border, 25);
-    }
+
     @if $gradient {
       @include background-image(linear-gradient(darken($background, 20), darken($background, 10)));  // top, bottom color
     }

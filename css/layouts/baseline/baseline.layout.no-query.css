@@ -4,43 +4,16 @@
  * Styling of the "laseline" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-/* line 16, ../../../sass/layouts/baseline/baseline.layout.scss */
-.default-page .l-main,
-.pane-edan-search-search-form,
-.front .l-panel-wrapper,
-.l-footer-preface .l-container,
-.l-footer .l-container,
-#filterTab .inner {
-  max-width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1400px; }
-  /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
-  .default-page .l-main:after,
-  .pane-edan-search-search-form:after,
-  .front .l-panel-wrapper:after,
-  .l-footer-preface .l-container:after,
-  .l-footer .l-container:after,
-  #filterTab .inner:after {
-    content: " ";
-    display: block;
-    clear: both; }
-
-/* line 25, ../../../sass/layouts/baseline/baseline.layout.scss */
-.l-region-header-preface-right-wrapper {
-  max-width: 96%;
-  margin: 0 auto; }
-
-/* line 30, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 26, ../../../sass/mixins/_clearfix.scss */
 .l-container,
 .l-header,
 .l-region-header-preface-right-wrapper {
   *zoom: 1; }
   /* line 15, ../../../sass/mixins/_clearfix.scss */
-  .l-container:before, .l-container:after,
+  .l-container:before,
   .l-header:before,
+  .l-region-header-preface-right-wrapper:before, .l-container:after,
   .l-header:after,
-  .l-region-header-preface-right-wrapper:before,
   .l-region-header-preface-right-wrapper:after {
     content: " ";
     display: table;
@@ -51,7 +24,40 @@
   .l-region-header-preface-right-wrapper:after {
     clear: both; }
 
-/* line 41, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 16, ../../../sass/layouts/baseline/baseline.layout.scss */
+.default-page .l-main,
+.pane-edan-search-search-form,
+.front .l-panel-wrapper,
+.l-footer-preface .l-container,
+.l-footer .l-container,
+#filterTab .inner,
+.page-user .l-main {
+  max-width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px; }
+  /* line 12, ../../../../../../../../../../../.rvm/gems/ruby-2.2.0@omega.si_aaa/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+  .default-page .l-main:after,
+  .pane-edan-search-search-form:after,
+  .front .l-panel-wrapper:after,
+  .l-footer-preface .l-container:after,
+  .l-footer .l-container:after,
+  #filterTab .inner:after,
+  .page-user .l-main:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 25, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-footer-preface .l-container {
+  width: 1250px; }
+
+/* line 28, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-region-header-preface-right-wrapper {
+  max-width: 94%;
+  margin: 0 auto; }
+
+/* line 39, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-preface-wrapper,
 .l-page > header,
 .l-main,
@@ -65,36 +71,40 @@
 .l-region--sidebar-second {
   margin-bottom: 1.5em; }
 
-/* line 54, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 52, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header {
   position: relative; }
 
-/* line 57, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 55, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-header-middle {
   padding: 1.5em 0; }
 
-/* line 61, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 59, ../../../sass/layouts/baseline/baseline.layout.scss */
+.l-branding {
+  padding: 0 3%; }
+
+/* line 62, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-preface-left {
-  padding: 0 2%;
+  padding: 0 3%;
   height: 55px; }
 
-/* line 66, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 67, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region-header-preface-right-wrapper .l-inner {
   float: right; }
-/* line 69, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 70, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region-header-preface-right-wrapper .l-region--header-preface-right {
   float: right; }
-  /* line 71, ../../../sass/layouts/baseline/baseline.layout.scss */
+  /* line 72, ../../../sass/layouts/baseline/baseline.layout.scss */
   .l-region-header-preface-right-wrapper .l-region--header-preface-right > div {
     float: left; }
 
-/* line 77, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 78, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--navigation {
   position: absolute;
-  left: 2%;
+  left: 3%;
   top: 56px; }
 
-/* line 84, ../../../sass/layouts/baseline/baseline.layout.scss */
+/* line 85, ../../../sass/layouts/baseline/baseline.layout.scss */
 .l-region--header-wrapper {
   display: none; }
 

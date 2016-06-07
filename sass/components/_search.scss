@@ -1,18 +1,19 @@
 
 .search-block-form {
- input[type="submit"] {
-   @include button_style(white, #134979, darken(#134979, 1%));
- background: {
-   image: image-url("search.svg");
-   repeat: no-repeat;
-   position:  50%;
-   size: contain;
- }
- text-indent: -99999px;
- height: 34px;
- width: 34px;
- padding: 0;
-}
+  input[type="submit"] {
+    @include button_style(white, #134979, darken(#134979, 1%));
+     background: {
+       image: image-url("search.svg");
+       repeat: no-repeat;
+       position:  50%;
+       size: 80%;
+     }
+     text-indent: -99999px;
+     height: 34px;
+     width: 34px;
+     padding: 0;
+    margin: 0;
+  }
   //.l-header & {
   //  position: relative;
   //  .form-type-textfield {
@@ -60,12 +61,19 @@
     margin: 0;
     display: block;
     z-index: 0;
+    visibility: hidden;
+
     //padding-right: 35px;
 //    line-height: 33px;
-    @include transition(top .4s ease);
+    @include transition(top .4s ease, visibility.4s ease);
     input {
       background: white;
     }
+  }
+
+  input[type="text"] {
+    @include border-radius(0);
+    -webkit-appearance: none;
   }
   .form-actions {
     width: 34px;
@@ -88,7 +96,8 @@
     overflow: visible;
     .form-type-textfield {
       top: 40px;
-      @include transition(top .4s ease);
+      visibility: visible;
+      //@include transition(top .4s ease, visibility top .4s ease);
     }
   }
 

@@ -22,7 +22,7 @@
        background: $link-color-hover;
        text-decoration: none;
       }
-      font-size: em($font-size-base);
+      font-size: em(18px);
       line-height: $line-height-base;
       font-weight: bold;
       @include font-smoothing;

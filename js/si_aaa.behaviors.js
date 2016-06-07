@@ -205,7 +205,7 @@
 					}	
 					counter++;	
 				});
-				console.log(slides);
+				//console.log(slides);
 				$parentWrapper.html(slides);
 			}
     }
@@ -290,13 +290,29 @@
 						 //console.log(searchID );
 						 searchID.remove();
 						 $('.l-header-middle .l-region--header').append(searchContent);
+						 $('#block-tb-megamenu-menu-social-media .nav-collapse').removeClass('expanded');
 						 //Drupal.si_aaa.searchBox($('.l-header-middle .search-block-form'));
 						// new UISearch('.l-header #block-search-form');
 						 new UISearch( document.getElementById( 'block-search-form' ) );
 					 }
 					else {
 						 var searchID = $('.l-header #block-search-form'),
-							 searchContent = searchID.clone();
+							   searchContent = searchID.clone(),
+							 	 //socialMedia = $('#block-menu-menu-social-media', context),
+							 	 socialMedia = $('#block-tb-megamenu-menu-social-media', context),
+							   socialBtn = $('button', socialMedia);
+             // socialBtn.click(function (e) {
+             //   $(this).toggleClass('active').parents('.tb-megamenu').toggleClass('expand');
+             // });
+		        $('button', socialMedia).click(function() {
+		          if(parseInt($(this).parent().children('.nav-collapse').height())) {
+		          	$(this).addClass('active').parent().children('.nav-collapse').removeClass('collapsed').addClass('expanded');
+		            
+		          }
+		          else {
+		            $(this).removeClass('active').parent().children('.nav-collapse').removeClass('expanded').addClass('collapsed');
+		          }
+		        });             
 						 searchID.remove();
 						 $('.l-region--header-preface-right').prepend(searchContent);
 						 //Drupal.si_aaa.searchBox($('.l-region--header-preface-right .search-block-form'));

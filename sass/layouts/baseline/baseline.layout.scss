@@ -18,25 +18,23 @@
 .front .l-panel-wrapper,
 .l-footer-preface .l-container,
 .l-footer .l-container,
-#filterTab .inner{
+#filterTab .inner,
+.page-user .l-main {
   @include set-layout($max-width); // Define these elements as the grid containers.
 }
-
+.l-footer-preface .l-container {
+  width: 1250px;
+}
 .l-region-header-preface-right-wrapper {
-  max-width: 96%;
+  max-width: 94%;
   margin: 0 auto;
 }
 
 .l-container,
 .l-header,
 .l-region-header-preface-right-wrapper{
-  @include clearfix;
+  @extend %clearfix;
 }
-
-// .l-container > div,
-// .l-region--navigation > div {
-//   padding: 0 2%;
-// }
 
 .l-header-preface-wrapper,
 .l-page > header,
@@ -58,8 +56,11 @@
   padding: em($vert-spacing-unit) 0;
 }
 
+.l-branding {
+  padding: 0 3%;
+}
 .l-region--header-preface-left {
-  padding: 0 2%;
+  padding: 0 3%;
   height: 55px;
 }
 .l-region-header-preface-right-wrapper {
@@ -77,7 +78,7 @@
 .l-region--navigation {
   //@include span(4);
   position: absolute;
-  left: 2%;
+  left: 3%;
   top: 56px;
 }
 
@@ -102,11 +103,11 @@
       @include set-layout($max-width);
     }
     .l-region--header-preface-left  {
-      @include span(3);
+      @include span(4);
       @include post(1);
     }
     .l-region-header-preface-right-wrapper {
-      @include span(8 last);
+      @include span(7 last);
     }
   }
 
@@ -119,6 +120,7 @@
 
   .l-branding {
     @include span(5);
+    padding: 0;
   }
   .l-region--header-wrapper {
     @include span(7 last);
@@ -154,13 +156,16 @@
     margin-bottom: 0;
   }
 
+  .l-header-middle {
+    margin-bottom: em($section-spacing);
+  }
   .l-header {
-    .l-region--header-preface-left  {
-      @include span(4);
-      @include post(1);
-    }
+    //.l-region--header-preface-left  {
+    //  @include span(4);
+    //  @include post(1);
+    //}
     .l-region-header-preface-right-wrapper  {
-        @include span(7 last);
+//        @include span(7 last);
         padding-right: 50px;
     }
   }
@@ -187,6 +192,7 @@
   .l-region--header-wrapper{
     @include span(7 last); // Span the last (omega) 10 columns of 16.
     @include suffix(1);
+    padding-top: em($vert-spacing-unit/2);
   }
 
   .has-sidebar-first {

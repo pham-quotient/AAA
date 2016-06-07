@@ -1,0 +1,65 @@
+.pane-node-comment-wrapper {
+  margin-top: em($section-spacing);
+  h2.comments__title {
+    margin: 0;
+  }
+  h2.comments__form-title {
+    margin-top: em($section-spacing);
+  }
+}
+.comment__links {
+  li:not(.comment-reply) {
+    a {
+      @include button;
+      // ($color, $background, $border, $gradient, $hover
+      @include button_style(white, $blue, false, false, $purple);
+      @include button_size(floor($vert-spacing-unit/6), 5px, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
+      margin-right: em($horz-spacing-unit/2);
+    }
+  }
+  li a {
+    display: block;
+  }
+  .comment-reply a {
+    @include font-icon("\f112", $link-color-default, $font-size-small, $font-size-base, 4px);
+    font-size: em($font-size-small);
+    line-height: $line-height-base/$font-size-small;
+  }
+}
+
+.comment {
+  @extend %clearfix;
+  p {
+    margin-bottom: em($vert-spacing-unit/2);
+  }
+  h3 {
+    margin: em($vert-spacing-unit, $font-size-h3) 0 em($vert-spacing-unit/2, $font-size-h3);
+    a {
+      @include link-colors($text-color, $text-color, $text-color, $text-color, $text-color);
+    }
+  }
+  border-top: 1px solid $gray-light;
+  margin-top: em($vert-spacing-unit);
+  .indented & {
+    border-top: 0;
+    border-left: 1px dotted $gray-light;
+    padding-left: em($horz-spacing-unit/2);
+    h3 {
+      margin-top: em($vert-spacing-unit/2, $font-size-h3);
+    }
+
+  }
+  .submitted {
+    font-size: em($font-size-small);
+    line-height: $line-height-base/$font-size-small;
+    font-style: italic;
+    float: left;
+    margin-right: em($horz-spacing-unit/2);
+  }
+}
+
+.comment-form-wrapper {
+  background: lighten($gray-light, 15%);
+  padding: em($horz-spacing-unit/2);
+  margin-top: em($section-spacing);
+}

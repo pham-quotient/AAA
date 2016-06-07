@@ -4,10 +4,10 @@
       > li {
         @include clearfix;
         border-bottom: 1px solid $gray-light;
-        padding: em($vert-spacing-unit/2);
+        margin: em($vert-spacing-unit) 0;
         &.views-row-last {
           border-bottom: none;
-          padding-bottom: 0;
+          margin-bottom: 0;
         }
         .views-field-field-image-single {
           float: left;
@@ -23,7 +23,27 @@
         }
       }
     }
+
   }
+  &.features-list,
+  &.exhibit-list {
+    .date-display-day-range {
+      font-style: italic;
+    }
+  }
+  .exhibit-thumbnail {
+    margin: 0 0 em($vert-spacing-unit/2) 0;
+    text-align: center;
+  }
+
+  &.exhibit-list {
+    .views-row {
+      margin-bottom: em($vert-spacing-unit);
+      border: 1px solid $gray-light;
+      padding: em($vert-spacing-unit/2) 1%;
+    }
+  }
+
   .view-filters {
     label,
     .views-widget {
@@ -45,35 +65,74 @@
         margin-bottom: em($vert-spacing-unit*1.5);
       }
     }
-    @include clearfix;
-
-    @include breakpoint($tab) {
-    > ul > li {
-      float: left;
-      img {
-        width: 100% !important;
+    @extend %clearfix;
+  }
+  @include breakpoint($tab) {
+    .exhibit-thumbnail {
+      margin: 0 em($vert-spacing-unit/2) 0 0;
+      min-width: 25%;
+      text-align: left;
+      .front & {
+        margin: 0 em($horz-spacing-unit) 0 0;
       }
     }
-    .float-two,
-    .float-three,
-    .float-four,
-    .float-five {
-      > li {
-        width: percentage(1/2);
-        &.views-row-odd {
-          padding-right: gutter()/2;
-        }
-        &.views-row-even {
-          padding-left: gutter()/2;
-        }
-        &:nth-child(2n+3) {
-          clear: left;
+    .info-wrapper {
+      @include display-flex;
+      .info {
+        @include flex(1);
+      }
+    }
+
+    .box-container {
+      @include display-flex;
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include align-content(flex-start);
+      .box {
+        @include flex(1);
+      }
+      &.box-two,
+      &.box-three {
+        .box {
+          @include flex(1 1 50%);
         }
       }
     }
-   } // end breakpoint($tab)
+    &.exhibit-list .box-container.box-two {
+      .box {
+        margin-right: 2%;
+        @include flex(1 1 46%);
+      }
+    }
+    .float-list {
+      > ul > li {
+        float: left;
+        img {
+          width: 100% !important;
+        }
+      }
+      .float-two,
+      .float-three,
+      .float-four,
+      .float-five {
+        > li {
+          width: percentage(1/2);
+          &.views-row-odd {
+            padding-right: gutter()/2;
+          }
+          &.views-row-even {
+            padding-left: gutter()/2;
+          }
+          &:nth-child(2n+3) {
+            clear: left;
+          }
+        }
+      }
+    }
+  } // end breakpoint($tab)
 
-    @include breakpoint($desk) {
+  @include breakpoint($desk) {
+    .float-list {
       .float-three,
       .float-four,
       .float-five {
@@ -93,44 +152,54 @@
           }
         }
       }
-    } //end breakpoint($desk)
+    }
+    .box-container {
+      &.box-three {
+        .box {
+          @include flex(1 1 33%);
+        }
+      }
+    }
+  } //end breakpoint($desk)
 
-    @include breakpoint($wide) {
-      .float-four,
-      .float-five {
-        >li {
-          &:nth-child(3n) {
-            padding-right: gutter();
-          }
-          &:nth-child(3n+4) {
-            clear: none;
-          }
+  @include breakpoint($wide) {
+    .float-list {
+    .float-four,
+    .float-five {
+      >li {
+        &:nth-child(3n) {
+          padding-right: gutter();
+        }
+        &:nth-child(3n+4) {
+          clear: none;
         }
       }
-      .float-four {
-        > li {
-          width: percentage(1/4);
-          &:nth-child(4n) {
-            padding-right: 0;
-          }
-          &:nth-child(4n+5) {
-            clear: left;
-          }
+    }
+    .float-four {
+      > li {
+        width: percentage(1/4);
+        &:nth-child(4n) {
+          padding-right: 0;
+        }
+        &:nth-child(4n+5) {
+          clear: left;
         }
       }
-      .float-five {
-        > li {
-          width: percentage(1/5);
-          &:nth-child(5n){
-            padding-right: 0;
-          }
-          &:nth-child(5n+6) {
-            clear: left;
-          }
+    }
+    .float-five {
+      > li {
+        width: percentage(1/5);
+        &:nth-child(5n){
+          padding-right: 0;
+        }
+        &:nth-child(5n+6) {
+          clear: left;
         }
       }
-    } //end breakpoint($wide)
-  } //end float-list
+    }
+    } //end float-list
+  } //end breakpoint($wide)
+
 
  .item-list {
   > ul {
