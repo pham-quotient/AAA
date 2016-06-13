@@ -16,7 +16,10 @@
  * - $display: The complete panels display object containing all kinds of
  *   data including the contexts and all of the other panes being displayed.
  */
-//  dpm($variables);
+if (isset($_GET['dpm-panels'])) {
+  dpm($variables);
+}
+//  
 ?>
 <?php if ($pane_prefix): ?>
   <?php print $pane_prefix; ?>

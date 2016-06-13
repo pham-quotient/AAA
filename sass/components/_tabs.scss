@@ -1,6 +1,6 @@
 .si-tabs {
   @include clearfix;
-  margin-bottom: em($vert-spacing-unit);
+  margin: em($vert-spacing-unit) 0;
   .r-tabs-nav {
     @extend %reset-list;
   }

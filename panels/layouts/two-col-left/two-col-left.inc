@@ -17,6 +17,7 @@ $plugin = array(
     'main' => t('Main Content'),
     'tab' => t('Tab Content'),
     'left' => t('Left Aside'),
+    'bottom' => t('Bottom Content'),
   ),
 );
 

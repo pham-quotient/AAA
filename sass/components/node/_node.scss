@@ -24,6 +24,7 @@
       li {
         @include rem(margin, $line-height-base/2 0);
       }
+
       &.node__links {
         margin-left: 0;
         li {

@@ -15,7 +15,7 @@
       <?php print $content['hero'] ?>
     </div>
   <?php endif; ?>
-  <?php if (!empty($content['left']) || !empty($content['main'])): ?>
+  <?php if (!empty($content['left']) || !empty($content['main']) || !empty($content['bottom'])): ?>
     <div class="l-panel-wrapperr">
       <?php if (!empty($content['main']) || !empty($content['tab'])): ?>
         <div class="l-region--main<?php print !empty($variables['content']['left']) ? ' has-sidebar-first' : ''?>">
@@ -31,7 +31,13 @@
           <?php endif; ?>
         </div>
       <?php endif; ?>
+    <?php if (!empty($content['bottom'])): ?>
+      <div<?php print drupal_attributes($region_attributes_array['bottom'])?>>
+        <?php print $content['bottom'] ?>
+      </div>
     </div>
+  <?php endif; ?>
+
   <?php endif; ?>
   <?php if (!empty($content['left'])): ?>
     <aside<?php print drupal_attributes($region_attributes_array['left'])?>>

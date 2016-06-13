@@ -34,3 +34,7 @@ fieldset.webform-component-fieldset {
  margin: 0;
  padding: 0;
 }
+
+input[name="honeypot_time"] + .pid-textfield {
+ display: none;
+}

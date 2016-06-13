@@ -18,7 +18,8 @@
       @include link-colors(white, white, white, white, white);
       border-bottom: 1px solid white;
       &:hover,
-      &.active {
+      &.active,
+      .active-trail {
        background: $link-color-hover;
        text-decoration: none;
       }
@@ -31,28 +32,31 @@
   }
   h2, h3 {
     @extend h5;
-    margin: 0;
+    margin: 0 0 em($vert-spacing-unit/4);
   }
-  p {
-    margin: 0;
-    font-size: em($font-size-small);
-    line-height: $line-height-small;
-    position: relative;
-    .more-link {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  }
+
   img {
     margin-bottom: em($vert-spacing-unit/2);
   }
 
- .field--name-field-page-promo,
-  .views-row {
+  div.panel-pane div.node {
     padding: em($vert-spacing-unit) em($horz-spacing-unit);
     border: 1px solid $gray-light;
     border-width: 0 1px 1px;
+    p, ul {
+      margin: 0;
+      font-size: em($font-size-small);
+      line-height: $line-height-small;
+      position: relative;
+      .more-link {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }    
+    ul {
+      padding-left: em($horz-spacing-unit);
+    }
   }
 
   .view-content {

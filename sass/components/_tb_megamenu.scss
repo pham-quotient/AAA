@@ -125,6 +125,11 @@
 
 .l-region--navigation {
   .tb-megamenu {
+    h2 {
+      font-size: em($font-size-base);
+      line-height: $line-height-base;
+    }
+
     .nav-collapse{
       background-color: $gray-lighter;
       width: 700%;
@@ -168,7 +173,7 @@
               &.active a {background: none;}
             }
             .mega-caption {
-               @include link-colors(#1a74c1);
+               @include link-colors($blue);
             }
             .dropdown-menu {
               display: none;

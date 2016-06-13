@@ -1,118 +1,4 @@
 /**
- * $FONT-FACE
- */
-@include font-face(
-  'Scala',
-  (
-    'eot': 'Scala/2D778A_4_0.eot',
-    'woff': 'Scala/2D778A_4_0.woff',
-    'woff2': 'Scala/2D778A_4_0.woff2',
-    'ttf': 'Scala/2D778A_4_0.ttf'
-  ));
-@include font-face(
-  'Scala',
-  (
-    'eot': 'Scala/2D778A_3_0.eot',
-    'woff': 'Scala/2D778A_3_0.woff',
-    'woff2': 'Scala/2D778A_3_0.woff2',
-    'ttf': 'Scala/2D778A_3_0.ttf'
-  ),
-  normal,
-  italic);
-@include font-face(
-  'Scala',
-  (
-    'eot': 'Scala/2D778A_5_0.eot',
-    'woff': 'Scala/2D778A_5_0.woff',
-    'woff2': 'Scala/2D778A_5_0.woff2',
-    'ttf': 'Scala/2D778A_5_0.ttf'
-  ),
-  bold);
-@include font-face(
-  'Scala',
-  (
-    'eot': 'Scala/2D778A_0_0.eot',
-    'woff': 'Scala/2D778A_0_0.woff',
-    'woff2': 'Scala/2D778A_0_0.woff2',
-    'ttf': 'Scala/2D778A_0_0.ttf'
-  ),
-  bold,
-  italic);
-@include font-face(
-  'Scala Condensed',
-  (
-    'eot': 'Scala/2D778A_2_0.eot',
-    'woff': 'Scala/2D778A_2_0.woff',
-    'woff2': 'Scala/2D778A_2_0.woff2',
-    'ttf': 'Scala/2D778A_2_0.ttf'
-  ));
-@include font-face(
-  'Scala Condensed',
-  (
-    'eot': 'Scala/2D778A_1_0.eot',
-    'woff': 'Scala/2D778A_1_0.woff',
-    'woff2': 'Scala/2D778A_1_0.woff2',
-    'ttf': 'Scala/2D778A_1_0.ttf'
-  ),
-  bold);
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Regular.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Regular.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Regular.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Regular.svg'
-  ));
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Regular-Oblique.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Regular-Oblique.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Regular-Oblique.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Regular-Oblique.svg'
-  ),
-  normal,
-  italic);
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Bold.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Bold.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Bold.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Bold.svg'
-  ),
-  bold);
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Bold-Oblique.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Bold-Oblique.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Bold-Oblique.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Bold-Oblique.svg'
-  ),
-  bold,
-  italic);
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Medium.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Medium.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Medium.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Medium.svg'
-  ),
-  600);
-@include font-face(
-  'GT Walsheim',
-  (
-    'eot': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.eot',
-    'woff': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.woff',
-    'ttf': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.ttf',
-    'svg': 'GT-Walsheim/GT-Walsheim-Medium-Oblique.svg'
-  ),
-  600,
-  italic);
-
-/**
  * $BASE-TYPOGRAPHY
  */
 html {
@@ -135,6 +21,10 @@ a {
   text-decoration: none;
   &.active {
     color: $blue;
+  }
+  &:focus,
+  &:hover {
+    text-decoration: underline;
   }
 }
 

@@ -101,9 +101,11 @@
         	slidesPerView: 'auto',
         	centeredSlides: true,
 					spaceBetween: 0,
-					loop: true
+					loop: true,
+					keyboardControl: true,
    			});
-				console.log($height);
+  			
+//				console.log($height);
 		//		$('.tile-tall').each(function(index, value) {
 //					$(this).find('.tile-frame').height($height);
 //				});

@@ -1,4 +1,18 @@
 .view {
+
+  .views-row {
+    h2 {
+      margin: em($vert-spacing-unit/2, $font-size-h2) 0;
+    }
+    h3 {
+      margin: em($vert-spacing-unit/2, $font-size-h3) 0;
+    }    
+  }
+  &.view-list {
+    .views-row {
+      margin-bottom: em($vert-spacing-unit);
+    }
+  }
   &.features-list {
     .item-list ul {
       > li {

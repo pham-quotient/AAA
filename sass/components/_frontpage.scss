@@ -13,7 +13,7 @@
     .panel-pane {
       margin-bottom: em($vert-spacing-unit);
       border: 1px solid $gray-light;
-      padding: em($vert-spacing-unit/2) em($horz-spacing-unit);
+      padding: em($font-size-base) em($horz-spacing-unit);
     }
   }
   .l-region--right {
