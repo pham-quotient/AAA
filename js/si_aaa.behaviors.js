@@ -45,6 +45,7 @@
     listClass = 'sub-list';
     list.each(function() {
       var items_per_col = new Array(),
+					newList = 
       items = $(this).find(listItem),
       min_items_per_col = Math.floor(items.length / num_cols),
       difference = items.length - (min_items_per_col * num_cols);

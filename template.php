@@ -132,7 +132,7 @@ function _render_edan_search_results(&$vars) {
 
     $attributes['id'] = isset($doc['content']['descriptiveNonRepeating']['record_ID']) ? $doc['content']['descriptiveNonRepeating']['record_ID'] : rand();
 
-
+    $doc['record_title'] = app_util_get_title( $vars['docs'][$doc_key] );
     if (!empty($doc_value['content']['descriptiveNonRepeating'])
       && !empty($doc_value['content']['descriptiveNonRepeating']['online_media'])
       && (int)$doc_value['content']['descriptiveNonRepeating']['online_media']['mediaCount']
