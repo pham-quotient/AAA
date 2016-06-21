@@ -1,0 +1,8 @@
+# Ignore these files
+.sass-cache
+css-xx/*
+
+# But not these files...
+!README.md
+!.gitignore
+
