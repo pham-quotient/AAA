@@ -6,7 +6,7 @@
   }
   .l-main {
     position: relative;
-    top: -71px;
+    top: em(-48px);
   }
   .l-region--right,
   .l-region--main.has-sidebar-second {
@@ -28,7 +28,7 @@
           color: white;
         }
         a {
-        @include link-colors(white, $link-color-hover, $link-color-hover, white, white);
+        @include link-colors(white, white, white, white, white);
         }
         background: {
          image: image-url("heart-bg.png");

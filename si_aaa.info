@@ -9,6 +9,9 @@ core = 7.x
 ; Stylesheets
 ; ========================================
 ;stylesheets[all][] = css/font-awesome/font-awesome.css
+stylesheets[all][] = css/layouts/baseline/baseline.layout.css
+stylesheets[all][] = css/layouts/baseline/baseline.layout.no-query.css
+stylesheets[all][] = css/layouts/panels/panels.layout.css
 stylesheets[all][] = css/si_aaa.normalize.css
 stylesheets[all][] = css/si_aaa.hacks.css
 stylesheets[all][] = css/si_aaa.styles.css

@@ -17,4 +17,8 @@ function si_aaa_preprocess_node(&$variables) {
 			$variables['link_attributes'] = empty($item['attributes']) ? '' : drupal_attributes($item['attributes']);
 		}
 	}
+//	dpm($variables);
+	if (isset($variables['content']['links']['node']['#links']['node-readmore'])) {
+		$variables['content']['links']['node']['#links']['node-readmore']['title'] =t('Learn more <span class="sr-only">about @title</span>', array('@title' => $node->title));
+	}
 }

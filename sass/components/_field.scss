@@ -1,0 +1,10 @@
+.field--label-inline {
+  .field-label {
+    float: left;
+    margin-right: em($horz-spacing-unit/2);
+  }
+}
+
+.field-label {
+  font-weight: 600;
+}

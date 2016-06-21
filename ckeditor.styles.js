@@ -63,6 +63,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
             */
+						{ name: 'Box w/ Border', element : 'div', attributes : { 'class' : 'block--border' }},
 						{ name: 'Left 30%', element : 'div', attributes : { 'class' : 'flt-left flt-30' }},
 						{ name: 'Left 40%', element : 'div', attributes : { 'class' : 'flt-left flt-40' }},
 						{ name: 'Left 50%', element : 'div', attributes : { 'class' : 'flt-left flt-50' }},

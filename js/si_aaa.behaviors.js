@@ -281,14 +281,17 @@
 				layout : function() {
 					var winWidth = $(window).width();
          // console.log(winWidth);
-					// if (winWidth < 679) {
+					if (winWidth > 680) {
+						$('.panel-2col .block--border').matchHeight();
 					// 	if (searchBox.is(':not(.processed)')) {
 					// 		searchBox.addClass('.processed');
 					// 	}
-					// }
+					 }
 					 if (winWidth > 979) {
 						 var searchID = $('.l-header #block-search-form'),
-							 	searchContent = searchID.clone();
+							   searchContent = searchID.clone();
+						 		 tabHeight = $('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').innerHeight() > $('.l-pane-wrapper.has-bottom-content .l-region--bottom').innerHeight() ?
+						 $('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').innerHeight() :  $('.l-pane-wrapper.has-bottom-content .l-region--bottom').innerHeight();
 						 //console.log(searchID );
 						 searchID.remove();
 						 $('.l-header-middle .l-region--header').append(searchContent);
@@ -296,6 +299,7 @@
 						 //Drupal.si_aaa.searchBox($('.l-header-middle .search-block-form'));
 						// new UISearch('.l-header #block-search-form');
 						 new UISearch( document.getElementById( 'block-search-form' ) );
+						// $('.l-pane-wrapper.has-bottom-content > div').matchHeight();
 					 }
 					else {
 						 var searchID = $('.l-header #block-search-form'),
@@ -322,6 +326,15 @@
 						 //new UISearch('.l-header #block-search-form');
 						 new UISearch( document.getElementById( 'block-search-form' ) );
 					 }
+
+					$('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').height(tabHeight);
+					$('.l-pane-wrapper.has-bottom-content .r-tabs-anchor').on("click", function () {
+            $('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').height('auto');
+						var tabHeight = $('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').innerHeight() > $('.l-pane-wrapper.has-bottom-content .l-region--bottom').innerHeight() ?
+							$('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').innerHeight() :  $('.l-pane-wrapper.has-bottom-content .l-region--bottom').innerHeight();
+							$('.l-pane-wrapper.has-bottom-content .r-tabs-panel.r-tabs-state-active').height(tabHeight);
+					});
+
 				},
 			};
 			

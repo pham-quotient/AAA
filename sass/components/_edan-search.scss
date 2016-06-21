@@ -8,8 +8,9 @@
   } //end edan-search-form
 }
 
-.tb-megamenu {
+.l-region--navigation .tb-megamenu {
   .edan-search-form {
+    position: relative;
     input[type="submit"] {
       @include button_style(white, $blue2);
       margin: 0;
@@ -24,13 +25,25 @@
       @include input-placeholder {
         color: $gray;
       }
+      @include border-radius(0);
+      height: 36px;
     }
-
+    .form-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   } //end edan-search-form
+  h2 {
+    margin-bottom: em($vert-spacing-unit/4);
+  }
+  .form-item {
+    margin-bottom: 0;
+  }
 } // end tb-megamenu
 
 .pane-edan-search-search-form {
-  margin: em($vert-spacing-unit) 0;
+  margin: em($vert-spacing-unit) auto;
   .pane-title {
     display: none;
   }
@@ -54,25 +67,6 @@
       }
     }
 
-    //.form-text::-webkit-input-placeholder {
-    //  color: $gray-darker;
-    //  text-transform: uppercase;
-    //}
-    //
-    //.form-text:-moz-placeholder { /* Firefox 18- */
-    //  color: $gray-darker;
-    //  text-transform: uppercase;
-    //}
-    //
-    //.form-text::-moz-placeholder {  /* Firefox 19+ */
-    //  color: $gray-darker;
-    // text-transform: uppercase;
-    //}
-    //
-    //.form-text:-ms-input-placeholder {
-    //  color: $gray-darker;
-    //  text-transform: uppercase;
-    //}
     input[type="submit"]  {
       @include button_style($blue, white);
       height: $vert-spacing-unit*2;
@@ -109,7 +103,7 @@
   }
   @include breakpoint($desk) {
     //@include clearfix;
-    margin: em($vert-spacing-unit) 0 em($section-spacing);
+    margin: em($vert-spacing-unit) auto em($section-spacing);
     .inner {
       @include display-flex;
     }

@@ -64,20 +64,21 @@ h2 {
 h3 {
   font-size: em($font-size-h3);
   line-height:  $line-height-h3;
-  margi: 0 0 em($line-height-base, $font-size-h3);
+  margin: 0 0 em($line-height-base, $font-size-h3);
 }
 
 h4 {
   font-size: em($font-size-h4);
   line-height:  $line-height-h4;
   margin: 0 0 em($line-height-base/2, $font-size-h4);
-
+  font-weight: bold;
  // text-transform: uppercase;
 }
 
 h5 {
   font-size: em($font-size-h5);
   line-height:  $line-height-h5;
+  font-weight: bold;
   margin: 0 0 em($line-height-base/2, $font-size-h5);
 }
 

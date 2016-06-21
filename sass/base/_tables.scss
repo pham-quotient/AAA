@@ -1,15 +1,23 @@
 table {
- border: #C9C9C9;
+
+ caption {
+  @extend h5;
+  text-align: left;
  }
+}
 th {
  background-color: #E8F1F8;
  color: $blue;
  font-weight: bold;
  vertical-align: top;
  padding: em(10px);
+ border: 1px solid $blue;
+ border-width: 1px 1px 2px;
+
  }
 /*MICHELLE EDITS: Table styling*/
 td {
  padding: em(10px);
  vertical-align: top;
+ border: 1px solid #C9C9C9;
 }

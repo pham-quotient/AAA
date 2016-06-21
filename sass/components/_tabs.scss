@@ -1,6 +1,9 @@
 .si-tabs {
   @include clearfix;
   margin: em($vert-spacing-unit) 0;
+  .l-region--tab & {
+    margin: 0;
+  }
   .r-tabs-nav {
     @extend %reset-list;
   }
@@ -107,7 +110,7 @@
         border-width: 1px 0 1px 1px;
         position: relative;
         background: $gray-lighter;
-        @include rem(top, 1px);
+        top: 1px;
         display: block;
         @include transition(background .4s ease-in);
       }
@@ -126,6 +129,9 @@
     } //end r-tabs-nav
     .tab-wrapper {
       border-bottom: 1px solid $gray-light;
+      .pane-title {
+        display: none;
+      }
       > .tab-pane {
         border: 1px solid $gray-light;
         border-width: 1px 1px 0px;
@@ -152,6 +158,11 @@
         .r-tabs-tab {
           display: block;
           float: left;
+        }
+        .tab-wrapper {
+          .pane-title {
+            display: block;
+          }
         }
       }
     }

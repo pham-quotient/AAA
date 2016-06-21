@@ -5,5 +5,11 @@
   font-size: em($font-size-base);
   line-height: $line-height-base;
  }
- margin-bottom: em($line-height-base);
+ margin-bottom: em($vert-spacing-unit);
+}
+
+.page-taxonomy {
+ article.noe {
+  margin-bottom: em($vert-spacing-unit);
+ }
 }

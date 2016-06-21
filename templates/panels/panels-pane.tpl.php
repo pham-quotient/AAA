@@ -43,9 +43,9 @@ if (isset($_GET['dpm-panels'])) {
     </div>
   <?php endif; ?>
 
-  <div class="pane-content">
-    <?php print render($content); ?>
-  </div>
+
+  <?php print render($content); ?>
+
 
   <?php if ($links): ?>
     <div class="links">

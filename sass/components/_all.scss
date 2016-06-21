@@ -5,11 +5,16 @@
 .btn {
   @include button;
   // ($color, $background, $border, $gradient, $hover
-  @include button_style(white, $blue, false, false, $purple);
+  @include button_style($text-color, white, $text-color, false, $purple);
   @include button_size(floor($vert-spacing-unit/3), $horz-spacing-unit/2, $font-size-small, floor(($line-height-base * .75)/$font-size-small));
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: .1px;
+  @include link-colors($text-color, white, white, $text-color, $text-color);
+  &.blue {
+    @include button_style(white, $blue, false, false, $purple);
+    @include link-colors(white, white, white, white, white);
+  }
 }
 
 .menu-list {
@@ -49,11 +54,13 @@
   margin: 0 0 em($vert-spacing-unit) em($horz-spacing-unit);
 }
 [style*="float: right"],
-[style*="float:right"] {
+[style*="float:right"],
+figure[style*="float:left"]{
    margin: 0 0 em($vert-spacing-unit) em($horz-spacing-unit);
 }
 [style*="float: left"]
-[style*="float:left"] {
+[style*="float:left"],
+figure[style*="float:left"]{
    margin: 0 em($horz-spacing-unit) em($vert-spacing-unit) 0;
 }
 
@@ -204,6 +211,17 @@ h3.small, h3 .small {
 h4.small, h4 .small {
   font-size: em(floor($font-size-h4*$small-factor));
   line-height: $line-height-base/floor($font-size-h4*$small-factor);
+}
+
+.info-callout {
+  font-size: em($font-size-h4);
+  font-weight: bold;
+}
+
+.block--border {
+  margin-bottom: em($vert-spacing-unit);
+  border: 1px solid $gray-light;
+  padding: em($font-size-base) em($horz-spacing-unit);
 }
 
 @include breakpoint($desk) {

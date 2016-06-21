@@ -21,272 +21,341 @@
       }
     }
   }
-  /**
- * Implements hook_css_alter().
+
+/**
+* Send an HTTP request to a the $url and check the header posted back.
+*
+* @param $url String url to which we must send the request.
+* @param $failCodeList Int array list of code for which the page is considered invalid.
+*
+* @return status and header info
+*/
+function isUrlExists($url, array $failCodeList = array(404)){
+
+  $exists = false;
+//		$proto = '((https?|ftp)\:\/\/)?';
+//			preg_match("/^$proto/", $url, $matches);
+  //	if (pre_match('
+
+  $regex = "((https?|ftp)\:\/\/)?"; // Scheme
+  $regex .= "([a-z0-9+!*(),;?&=\$_.-]+(\:[a-z0-9+!*(),;?&=\$_.-]+)?@)?"; // User and Pass
+  $regex .= "([a-z0-9-.]*)\.([a-z]{2,3})"; // Host or IP
+  $regex .= "(\:[0-9]{2,5})?"; // Port
+  $regex .= "(\/([a-z0-9+\$_-]\.?)+)*\/?"; // Path
+  $regex .= "(\?[a-z+&\$_.-][a-z0-9;:@&%=+\/\$_.-]*)?"; // GET Query
+  $regex .= "(#[a-z_.-][a-z0-9+\$_.-]*)?"; // Anchor
+  $headers = FALSE;
+  if (preg_match("/^$regex/", $url)) {
+    $handle = curl_init($url);
+
+
+    curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+    curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false);
+
+    curl_setopt($handle, CURLOPT_HEADER, true);
+
+    curl_setopt($handle, CURLOPT_NOBODY, true);
+
+    curl_setopt($handle, CURLOPT_USERAGENT, true);
+
+
+    $headers = curl_exec($handle);
+
+    curl_close($handle);
+
+
+    if (empty($failCodeList) or !is_array($failCodeList)){
+
+      $failCodeList = array(404);
+    }
+
+    if (!empty($headers)){
+
+      $exists = true;
+
+      $headers = explode(PHP_EOL, $headers);
+      foreach($failCodeList as $code){
+
+        if (is_numeric($code) and strpos($headers[0], strval($code)) !== false){
+
+          $exists = false;
+
+          break;
+        }
+      }
+    }
+  }
+
+  return array(
+    'status' => $exists,
+    'header' => $headers
+  );
+}
+
+
+/**
+ * Creates the necessary data structure for edan search results
  */
-//function si_aaa_css_alter(&$css) {
-//  $omega = drupal_get_path('theme', 'omega');
-//
-//  // The CSS_SYSTEM aggregation group doesn't make any sense. Therefore, we are
-//  // pre-pending it to the CSS_DEFAULT group. This has the same effect as giving
-//  // it a separate (low-weighted) group but also allows it to be aggregated
-//  // together with the rest of the CSS.
-//  foreach ($css as &$item) {
-//    if ($item['group'] == CSS_SYSTEM) {
-//      $item['group'] = CSS_DEFAULT;
-//      $item['weight'] = $item['weight'] - 100;
-//    }
-//  }
-//
-//  // Clean up core and contrib module CSS.
-//  $overrides = array(
-//    'aggregator' => array(
-//      'aggregator.css' => array(
-//        'theme' => 'aggregator.theme.css',
-//      ),
-//      'aggregator-rtl.css' => array(
-//        'theme' => 'aggregator.theme-rtl.css',
-//      ),
-//    ),
-//    'block' => array(
-//      'block.css' => array(
-//        'admin' => 'block.admin.css',
-//        'demo' => 'block.demo.css',
-//      ),
-//    ),
-//    'book' => array(
-//      'book.css' => array(
-//        'theme' => 'book.theme.css',
-//        'admin' => 'book.admin.css',
-//      ),
-//      'book-rtl.css' => array(
-//        'theme' => 'book.theme-rtl.css',
-//      ),
-//    ),
-//    'color' => array(
-//      'color.css' => array(
-//        'admin' => 'color.admin.css',
-//      ),
-//      'color-rtl.css' => array(
-//        'admin' => 'color.admin-rtl.css',
-//      ),
-//    ),
-//    'comment' => array(
-//      'comment.css' => array(
-//        'theme' => 'comment.theme.css',
-//      ),
-//      'comment-rtl.css' => array(
-//        'theme' => 'comment.theme-rtl.css',
-//      ),
-//    ),
-//    'contextual' => array(
-//      'contextual.css' => array(
-//        'base' => 'contextual.base.css',
-//        'theme' => 'contextual.theme.css',
-//      ),
-//      'contextual-rtl.css' => array(
-//        'base' => 'contextual.base-rtl.css',
-//        'theme' => 'contextual.theme-rtl.css',
-//      ),
-//    ),
-//    'field' => array(
-//      'theme/field.css' => array(
-//        'theme' => 'field.theme.css',
-//      ),
-//      'theme/field-rtl.css' => array(
-//        'theme' => 'field.theme-rtl.css',
-//      ),
-//    ),
-//    'field_ui' => array(
-//      'field_ui.css' => array(
-//        'admin' => 'field_ui.admin.css',
-//      ),
-//      'field_ui-rtl.css' => array(
-//        'admin' => 'field_ui.admin-rtl.css',
-//      ),
-//    ),
-//    'file' => array(
-//      'file.css' => array(
-//        'theme' => 'file.theme.css',
-//      ),
-//    ),
-//    'filter' => array(
-//      'filter.css' => array(
-//        'theme' => 'filter.theme.css',
-//      ),
-//    ),
-//    'forum' => array(
-//      'forum.css' => array(
-//        'theme' => 'forum.theme.css',
-//      ),
-//      'forum-rtl.css' => array(
-//        'theme' => 'forum.theme-rtl.css',
-//      ),
-//    ),
-//    'image' => array(
-//      'image.css' => array(
-//        'theme' => 'image.theme.css',
-//      ),
-//      'image-rtl.css' => array(
-//        'theme' => 'image.theme-rtl.css',
-//      ),
-//      'image.admin.css' => array(
-//        'admin' => 'image.admin.css',
-//      ),
-//    ),
-//    'locale' => array(
-//      'locale.css' => array(
-//        'admin' => 'locale.admin.css',
-//      ),
-//      'locale-rtl.css' => array(
-//        'admin' => 'locale.admin-rtl.css',
-//      ),
-//    ),
-//    'openid' => array(
-//      'openid.css' => array(
-//        'base' => 'openid.base.css',
-//        'theme' => 'openid.theme.css',
-//      ),
-//      'openid-rtl.css' => array(
-//        'base' => 'openid.base-rtl.css',
-//        'theme' => 'openid.theme-rtl.css',
-//      ),
-//    ),
-//    'poll' => array(
-//      'poll.css' => array(
-//        'admin' => 'poll.admin.css',
-//        'theme' => 'poll.theme.css',
-//      ),
-//      'poll-rtl.css' => array(
-//        'theme' => 'poll.theme-rtl.css',
-//      ),
-//    ),
-//    'search' => array(
-//      'search.css' => array(
-//        'theme' => 'search.theme.css',
-//      ),
-//      'search-rtl.css' => array(
-//        'theme' => 'search.theme-rtl.css',
-//      ),
-//    ),
-//    'system' => array(
-//      'system.base.css' => array(
-//        'base' => 'system.base.css',
-//      ),
-//      'system.base-rtl.css' => array(
-//        'base' => 'system.base-rtl.css',
-//      ),
-//      'system.theme.css' => array(
-//        'theme' => 'system.theme.css',
-//      ),
-//      'system.theme-rtl.css' => array(
-//        'theme' => 'system.theme-rtl.css',
-//      ),
-//      'system.admin.css' => array(
-//        'admin' => 'system.admin.css',
-//      ),
-//      'system.admin-rtl.css' => array(
-//        'admin' => 'system.admin-rtl.css',
-//      ),
-//      'system.menus.css' => array(
-//        'theme' => 'system.menus.theme.css',
-//      ),
-//      'system.menus-rtl.css' => array(
-//        'theme' => 'system.menus.theme-rtl.css',
-//      ),
-//      'system.messages.css' => array(
-//        'theme' => 'system.messages.theme.css',
-//      ),
-//      'system.messages-rtl.css' => array(
-//        'theme' => 'system.messages.theme-rtl.css',
-//      ),
-//    ),
-//    'taxonomy' => array(
-//      'taxonomy.css' => array(
-//        'admin' => 'taxonomy.admin.css',
-//      ),
-//    ),
-//    'user' => array(
-//      'user.css' => array(
-//        'base' => 'user.base.css',
-//        'admin' => 'user.admin.css',
-//        'theme' => 'user.theme.css',
-//      ),
-//      'user-rtl.css' => array(
-//        'admin' => 'user.admin-rtl.css',
-//        'theme' => 'user.theme-rtl.css',
-//      ),
-//    ),
-//  );
-//
-//  // Check if we are on an admin page. Otherwise, we can skip admin CSS.
-//  $path = current_path();
-//  $types = path_is_admin($path) ? array('base', 'theme', 'admin') : array('base', 'theme');
-//  // Add a special case for the block demo page.
-//  $types = strpos($path, 'admin/structure/block/demo') === 0 ? array_merge($types, array('demo')) : $types;
-//
-//  // Override module provided CSS with clean and modern alternatives provided
-//  // by Omega.
-//  foreach ($overrides as $module => $files) {
-//    // We gathered the CSS files with paths relative to the providing module.
-//    $path = drupal_get_path('module', $module);
-//
-//    foreach ($files as $file => $items) {
-//      if (isset($css[$path . '/' . $file])) {
-//        // Keep a copy of the original file array so we can merge that with our
-//        // overrides in order to keep the 'weight' and 'group' declarations.
-//        $original = $css[$path . '/' . $file];
-//        unset($css[$path . '/' . $file]);
-//
-//        // Omega 4.x tries to follow the pattern described in
-//        // http://drupal.org/node/1089868 for declaring CSS files. Therefore, it
-//        // may take more than a single file to override a .css file added by
-//        // core. This gives us better granularity when overriding .css files
-//        // in a sub-theme.
-//        foreach ($types as $type) {
-//          if (isset($items[$type])) {
-//            $original['weight'] = isset($original['weight']) ? $original['weight'] : 0;
-//
-//            // Always add a tiny value to the weight, to conserve the insertion order.
-//            $original['weight'] += count($css) / 10000;
-//
-//            $css[$omega . '/css/modules/' . $module . '/' . $items[$type]] = array(
-//              'data' => $omega . '/css/modules/' . $module . '/' . $items[$type],
-//            ) + $original;
-//          }
-//        }
-//      }
-//    }
-//  }
-//
-//  // Exclude CSS files as declared in the theme settings.
-//  if (omega_extension_enabled('assets')) {
-//    omega_css_js_alter($css, 'css');
-//  }
-//
-//  // Allow themes to specify no-query fallback CSS files.
-//  require_once "$omega/includes/assets.inc";
-//  $mapping = omega_assets_generate_mapping($css);
-//  $pattern = $GLOBALS['language']->direction == LANGUAGE_RTL ? '/\.no-query(-rtl)?\.css$/' : '/\.no-query\.css$/';
-//  foreach (preg_grep($pattern, $mapping) as $key => $fallback) {
-//    // Don't modify browser settings if they have already been modified.
-//    if ($css[$key]['browsers']['IE'] === TRUE && $css[$key]['browsers']['!IE'] === TRUE) {
-//      $css[$key]['browsers'] = array(
-//        '!IE' => FALSE,
-//        'IE' => 'lte IE 8',
-//      );
-//
-//      // Make sure that we don't break any CSS aggregation groups.
-//      $css[$key]['weight'] += 100;
-//    }
-//  }
-//
-//  // When using omega_livereload force CSS to be added with link tags, rather
-//  // than @import. This prevents Chrome from crashing when using the inspector
-//  // while livereload is enabled.
-//  if (omega_extension_enabled('development') && omega_theme_get_setting('omega_livereload', TRUE)) {
-//    foreach ($css as $key => $value) {
-//      $css[$key]['preprocess'] = FALSE;
-//    }
-//  }
-//}
+function _render_edan_search_results(&$vars) {
+  //$query = drupal_get_destination();
+  $query_params = drupal_get_query_parameters();
+
+  // Expand upon the results_summary variable coming from the EDAN Search module.
+  $page = isset($query_params['page']) ? ((int)$query_params['page'] + 1) : 1;
+  $total_results = $vars['results_summary'];
+  $num_found = $vars['numFound'];
+  $end = $page*$num_found;
+  $start = $end-($num_found-1);
+  $vars['results_summary'] = 'Showing ' . $start . ' - ' . $end . ' of ' . $total_results;
+
+  // Facet Filter Menus
+  // Process URL
+  $url = '?' . drupal_http_build_query($query_params);
+  if(module_exists('edan_extended')) {
+    $filters = _edan_extended_process_facet_filters( $vars['facets_raw'], $url );
+    // Render Filter Menus
+    $vars['filter_menus'] = _si_render_filter_menus( $filters );
+  }
+
+  // Process Facet Filters
+  $docs = array();
+  // Set up the background_style and grid_3_region_class variables for the template.
+  foreach ($vars['docs'] as $doc_key => $doc_value) {
+    $doc = $doc_value;
+    $doc['newMedia'] = '';
+    $attributes = array();
+    $attributes['class'][] = 'edan-search-result';
+    $attributes['class'][] = isset($doc['flags']['in_list']) && $doc['flags']['in_list'] === TRUE ? ' in-list' : '';
+    $attributes['class'][] = isset($doc['flags']['in_unit']) && $doc['flags']['in_unit'] === TRUE ? ' in-unit' : '';
+    $attributes['class'] = array_filter($attributes['class']);
+
+    $attributes['id'] = isset($doc['content']['descriptiveNonRepeating']['record_ID']) ? $doc['content']['descriptiveNonRepeating']['record_ID'] : rand();
+
+
+    if (!empty($doc_value['content']['descriptiveNonRepeating'])
+      && !empty($doc_value['content']['descriptiveNonRepeating']['online_media'])
+      && (int)$doc_value['content']['descriptiveNonRepeating']['online_media']['mediaCount']
+    ) {
+      $media = $doc_value['content']['descriptiveNonRepeating']['online_media']['media'][0];
+      $colorbox = module_exists('colorbox');
+      $doc['newMedia'] =  $media['type'] == 'Images' ?_process_image($media, $colorbox) : $media;
+    }
+
+    $attributes['class'][] = empty($doc['newMedia']) ? 'no-media' : 'has-media';
+
+    $doc['row_attributes'] = $attributes;
+
+    // TODO: The setting of the local_record_link is temporary.
+    // AAA would like all of their URLs to match their current website.
+    // Examples:
+    // /collections/betty-parsons-gallery-records-and-personal-papers-7211
+    // /collections/interviews/oral-history-interview-mark-adams-and-beth-van-hoesen-12674
+    // /collections/items/detail/l-brent-kington-his-workshop-1134
+    $base_record_url = url(_edan_record_variable_get('menu_record_page'), array('absolute' => true, 'alias' => false));
+    $doc['local_record_link'] = $base_record_url . '/' . $doc_value['type'] . '/' . str_replace($doc_value['type'] . '-', '', $doc_value['id']) . '/';
+
+    // Get the record title.
+
+    if (isset($doc['#title_link']) && !empty($doc['#title_link'])) {
+      $query = array_merge($doc['#title_link']['query'], $query);
+      $doc['#title'] = l($doc['#title_plain'], $doc['#title_link']['path'], array('query' => $query, 'fragment' => $doc['#title_link']['fragment'], 'html' => TRUE));
+      $doc['#title_link']['query'] = $query;
+    }
+    // Set up the record type and date.
+    $record_type = $date = '';
+    if (!empty($doc_value['content']['freetext'])) {
+      $doc['record_type'] = !empty($doc_value['content']['freetext']['objectType'][1]['content']) ? $doc_value['content']['freetext']['objectType'][1]['content'] : $doc_value['content']['freetext']['objectType'][0]['content'];
+
+      if (!empty($doc_value['content']['freetext']['date'][1]['content'])) {
+        $date = $doc_value['content']['freetext']['date'][1]['content'];
+      }
+      if (!empty($doc_value['content']['freetext']['date'][0]['content'])) {
+        $date = $doc_value['content']['freetext']['date'][0]['content'];
+      }
+      $doc['date'] = $date;
+    }
+    // Set up the single search result grid item.
+    if (array_key_exists('indexedStructured', $doc['content'])) {
+      // create a template for the array we're expecting:
+      $structuredIndexTemplate = array(
+        'geoLocation' => array(
+          0 => array(
+            'points' => array(
+              'point' => array(
+                'latitude' => array(
+                  'content'
+                ),
+                'longitude' => array(
+                  'content'
+                )
+              )
+            )
+          )
+        )
+      );
+      $structuredIndex = array_merge($structuredIndexTemplate, $doc['content']['indexedStructured']);
+      $latitude = isset($structuredIndex['geoLocation'][0]['points']['point']['latitude']['content'])
+        ? $structuredIndex['geoLocation'][0]['points']['point']['latitude']['content']
+        : '';
+      $longitude = isset($structuredIndex['geoLocation'][0]['points']['point']['longitude']['content'])
+        ? $structuredIndex['geoLocation'][0]['points']['point']['longitude']['content']
+        : '';
+      if (strlen($latitude) > 0 || strlen($longitude) > 0) {
+        $doc['content']['freetext']['geoLocation_0'] = array(
+          array(
+            'label' => t('Geographic Location'),
+            'content' => $latitude . ', ' . $longitude
+          )
+        );
+      }
+    }
+    $docs[$doc_key] = $doc;
+  }
+  $vars['docs'] = $docs;
+}
+
+/**
+ * Render Filter Menus
+ */
+function _si_render_filter_menus( $filters ) {
+
+  $filter_menus = $element = $titles = $tabs = array();
+  $tabID = drupal_clean_css_identifier('si-tabs-'. REQUEST_TIME . rand());
+  // Create the links to remove facets.
+  $link = $fq_url_params = '';
+  $base_params = $fq_params = array();
+  $params = drupal_get_query_parameters();
+  $original_params = isset($params['edan_fq']) ? $params['edan_fq'] : '';
+
+  if(isset($params['edan_q']) && isset($params['edan_local'])) {
+    $base_params = array(
+      'edan_q' => $params['edan_q'],
+      'edan_local' => $params['edan_local'],
+    );
+  }
+
+  $fq_params['edan_fq'] = isset($params['edan_fq']) ? $params['edan_fq'] : '';
+
+  $filter_menus['remove_facets_links'] = '';
+
+  if(!empty($fq_params['edan_fq'])) {
+    $filter_menus['remove_facets_links'] .= '<h5>Remove Faceted Filters</h5>' . "\n";
+    $filter_menus['remove_facets_links'] .= '<ul>' . "\n";
+    foreach($fq_params['edan_fq'] as $fq_key => $fq_value) {
+      // Build-out the fq[] url parameters.
+      if(!empty($fq_params['edan_fq'])) {
+        // Temporarily unset the fq[].
+        unset($fq_params['edan_fq'][$fq_key]);
+        if(!empty($fq_params['edan_fq'])) {
+          // Re-index the edan_fq array.
+          $fq_params['edan_fq'] = array_values($fq_params['edan_fq']);
+          $fq_url_params = '&' . drupal_http_build_query($fq_params);
+        }
+      }
+      // Set the link.
+      $link = '/' . current_path() . '?' . drupal_http_build_query($base_params) . $fq_url_params;
+      // Reset the fq[].
+      $fq_params['edan_fq'] = $original_params;
+      // Format the link text.
+      $facet_string = str_replace(':"', ': ', ucwords($fq_value));
+      $facet_string = str_replace('"', '', $facet_string);
+      $facet_string = str_replace('_', ' ', $facet_string);
+      $filter_menus['remove_facets_links'] .= '<li><a href="' . $link . '" title="Click to remove facet">' . t($facet_string . '&nbsp;&nbsp; x') . '</a></li>' . "\n";
+    }
+    $filter_menus['remove_facets_links'] .= '</ul>' . "\n";
+  }
+
+  // Build the list items and div containers with menus in each.
+
+  foreach($filters as $fl_key => $fl_value) {
+    if (!empty($fl_value)) {
+      asort($fl_value);
+      $titles[] = ucwords($fl_key);
+      $div = count($fl_value) > 5 ? '<div class="facet-values split-list">' : '<div class="facet-values">';
+      $div .= "\n" .'<ul>' . "\n";
+
+      foreach ($fl_value as $filter_key => $filter_value) {
+        $div .= '<li class="search-menu-item clearfix"><a href="' . $filter_value . '">' . $filter_key . '</a></li>' ."\n";
+      }
+      $div .='</ul>' ."\n". '</div>';
+      $tabs[] = $div;
+    }
+  }
+  $element = array(
+    '#theme' => 'si_field_collection_tabs',
+    '#titles' => $titles,
+    '#tabs' => $tabs,
+    '#tabID' => $tabID,
+    '#tabMode' => 'responsive_tab',
+    '#prefix' => '<div class="si-tabs responsive-tab" id="'.$tabID .'">',
+    '#suffix' => '</div>',
+    //'#attached' => $attached,
+  );
+
+
+  $js_settings = array();
+  $js_settings['siResponsiveTabs']['tabIDs'][$tabID] =  array(
+    'mode' => 'responsive_tab',
+    'open' => 0,
+  );
+
+  $element['#attached']['js'][] = array(
+    'type' => 'setting',
+    'data' => $js_settings,
+  );
+  $filter_menus['tabs'] = $element;
+  return $filter_menus;
+
+}
+
+/**
+ * add IDS links to images
+ * @param $asset
+ * @param $colorbox
+ * @return array
+ */
+function _process_image($asset, $colorbox) {
+  $item = $asset;
+  $options = array();
+  $edan_image = variable_get('si_edan_image', array());
+  $item['content'] = $asset['content'];
+  $item['thumbnail'] = isset($asset['thumbnail']) ? $asset['thumbnail'] : '';
+  $link = drupal_parse_url($asset['content']);
+  $parsed = parse_url($link['path']);
+
+  $response = isUrlExists($asset['content']);
+  if ($response['status']) {
+    $status = $colorbox = TRUE;
+    $attributes = array();
+    foreach($response['header'] as $header) {
+      $header = trim($header);
+      if ($header == 'X-Frame-Options: SAMEORIGIN') {
+        $colorbox = FALSE;
+      }
+    }
+  }
+
+  if ($colorbox) {
+    $options['attributes']['class'][] = 'colorbox-load';
+    $options['query']['iframe'] = 'true';
+    $options['query']['width'] = '85%';
+    $options['query']['height'] = '85%';
+
+  }
+
+  $idsID = isset($asset['idsId']) ? $asset['idsId'] : $asset['content'];
+  $ids_link = 'http://ids.si.edu/ids/deliveryService';
+  $ids_dynamic = 'http://ids.si.edu/ids/dynamic';
+  $query = $link['query'];
+  $query['max_w'] = isset($edan_image['medium']) ? $edan_image['medium'] : 600;
+  $item['content'] = url($ids_link, array('query' => $query)) . '&id=' . $idsID;
+  $query['max_w'] = isset($edan_image['thumb']) ? $edan_image['thumb'] : 200;
+  $item['thumbnail'] = url($ids_link, array('query' => $query)) . '&id=' . $idsID;
+  $link['query']['max_w'] = isset($edan_image['max_width']) ? $edan_image['max_width'] : 980;
+  $options['absolute'] = TRUE;
+  $options['html'] = TRUE;
+  $item['link'] = url($ids_dynamic, $options) . '&id=' . $idsID . '&container.fullpage';
+
+  return $item;
+}

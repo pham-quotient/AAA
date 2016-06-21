@@ -38,7 +38,6 @@
 }
 
 .l-header-preface-wrapper,
-.l-page > header,
 .l-main,
 .l-hero,
 .l-highlighted,
@@ -178,14 +177,11 @@
     @include set-layout($max-width);
   }
 
-  .l-container .l-content {
+  .page--landing .l-container .l-content {
     margin-top: em($line-height-base*2);
-    .has-no-sidebars & {
-      margin-top: 0;
-    }
-    > .panel-display > .l-region--main.has-sidebar-first {
-      padding-top: em($line-height-base*2);
-    }
+    //> .panel-display > .l-region--main.has-sidebar-first {
+    //  padding-top: em($line-height-base*2);
+    //}
   }
   .l-branding {
     @include span(5); // Span 6 out of 16 columns.

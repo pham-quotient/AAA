@@ -3,7 +3,7 @@
     dpm($variables);
   }
 ?>
-<div<?php print $attributes; ?>>
+<div class="l-page">
   <header class="l-header" role="banner">
     <?php if (!empty($page['header_preface_left']) || !empty($page['header_preface_right'])): ?>
       <div class="l-header-preface-wrapper">
@@ -62,9 +62,6 @@
 
     <div class="l-content" role="main">
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>

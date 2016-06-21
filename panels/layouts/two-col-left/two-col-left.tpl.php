@@ -14,35 +14,40 @@
     <div<?php print drupal_attributes($region_attributes_array['hero'])?>>
       <?php print $content['hero'] ?>
     </div>
-  <?php endif; ?>
-  <?php if (!empty($content['left']) || !empty($content['main']) || !empty($content['bottom'])): ?>
-    <div class="l-panel-wrapperr">
-      <?php if (!empty($content['main']) || !empty($content['tab'])): ?>
+  <?php
+    unset($content['hero']);
+  endif; ?>
+  <?php if (!empty($content)): ?>
+
+      <?php if (!empty($content['main']) || !empty($content['tab']) || !empty($content['bottom'])): ?>
         <div class="l-region--main<?php print !empty($variables['content']['left']) ? ' has-sidebar-first' : ''?>">
-          <?php if (!empty($content['main'])): ?>
-            <div<?php print drupal_attributes($region_attributes_array['main'])?>>
-              <?php print $content['main'] ?>
-            </div>
+          <?php if (!empty($content['main'])): ?> 
+            <div<?php print drupal_attributes($region_attributes_array['main'])?>> 
+              <?php print $content['main'] ?> 
+            </div> 
           <?php endif; ?>
-          <?php if (!empty($content['tab'])): ?>
-            <div<?php print drupal_attributes($region_attributes_array['tab'])?>>
-              <?php print $content['tab'] ?>
+          <?php if (!empty($content['tab']) || !empty($content['bottom'])): ?>
+            <div class="l-pane-wrapper<?php print !empty($content['bottom']) ? ' has-bottom-content' : '' ?>">
+              <?php if (!empty($content['tab'])): ?>  
+                <div<?php print drupal_attributes($region_attributes_array['tab'])?>>  
+                  <?php print $content['tab'] ?>  
+                </div>  
+              <?php endif; ?>
+              <?php if (!empty($content['bottom'])): ?>  
+                <div<?php print drupal_attributes($region_attributes_array['bottom'])?>>  
+                  <?php print $content['bottom'] ?>  
+                </div>  
+              <?php endif; ?>               
             </div>
           <?php endif; ?>
         </div>
       <?php endif; ?>
-    <?php if (!empty($content['bottom'])): ?>
-      <div<?php print drupal_attributes($region_attributes_array['bottom'])?>>
-        <?php print $content['bottom'] ?>
-      </div>
-    </div>
-  <?php endif; ?>
 
-  <?php endif; ?>
-  <?php if (!empty($content['left'])): ?>
-    <aside<?php print drupal_attributes($region_attributes_array['left'])?>>
-      <?php print $content['left'] ?>
-    </aside>
+      <?php if (!empty($content['left'])): ?>
+        <aside<?php print drupal_attributes($region_attributes_array['left'])?>>
+          <?php print $content['left'] ?>
+        </aside>
+      <?php endif; ?>
   <?php endif; ?>
 
 </div>

@@ -3,7 +3,7 @@
     dpm($variables);
   }
 ?>
-<div<?php print $attributes; ?>>
+<div class="l-page">
   <header class="l-header" role="banner">
     <?php if (!empty($page['header_preface_left']) || !empty($page['header_preface_right'])): ?>
       <div class="l-header-preface-wrapper">

@@ -1,0 +1,68 @@
+.node-type-survey {
+  .main-content {
+    position: relative;
+  }
+  .pane-node-field-resource-url  {
+    span {
+      @extend %hide-text;
+    }
+  }
+  .pane-node-field-survey-disclaimer {
+    margin-top: em($vert-spacing-unit);
+  }
+  .field--name-field-subjects {
+    a {
+      display: block;
+    }
+  }
+  .l-region--bottom {
+    //float: right;
+    //width: 30%;
+    //  @include flex(1 0 26%);
+    //margin-left: 4%;
+    padding: em($vert-spacing-unit) em($horz-spacing-unit);
+     border: 1px solid $gray-light;
+    // border-width: 1px 0 1px 1px;
+    //  background: $gray-lighter;
+    //.panel-pane {
+    //
+    //  padding: em($vert-spacing-unit) em($horz-spacing-unit);
+    //  border: 1px solid $gray-light;
+    // // border-width: 1px 0 1px 1px;
+    //  background: $gray-lighter;
+    //}
+  }
+
+  .field--name-field-survey-disclaimer {
+    font-style: italic;
+  }
+  @include breakpoint($tab) {
+    h1.has-button {
+      margin-right: em(150px);
+    }
+    .pane-node-field-resource-url {
+      position: absolute;
+      top: em($section-spacing);
+      right: 0;
+    }
+  }
+
+  @include breakpoint($desk) {
+    .l-pane-wrapper.has-bottom-content {
+     // @include display-flex;
+      position: relative;
+      .si-tabs.responsive-tab .tab-wrapper > .tab-pane {
+        @include background-image(linear-gradient(to right, white, white span(9),$gray-light span(9), $gray-light span(9)+.1%, white span(9)+.1%, white 100%));
+        padding-right: span(3)+gutter()+1.5%;
+      }
+
+      .l-region--bottom {
+        position: absolute;
+        top: em(122px);
+        left: span(9)+.1%;
+        padding: 0 em($horz-spacing-unit) em($vert-spacing-unit/2);
+        border: none;
+      }
+    }
+  }
+}

@@ -1,12 +1,4 @@
 .page-node {
-  &.node-type-survey {
-    .field--name-field-collection-title {
-      font-size: em($font-size-h1);
-    }
-    .field--name-field-inclusive-dates {
-      font-size: em($font-size-h2);
-    }
-  }
   .node__submitted {
     p {
       a {
@@ -17,6 +9,12 @@
     font-weight: 600;
     margin-bottom: em($line-height-base*2);
   }
+  .field--name-field-subheading {
+    margin: em($vert-spacing-unit) 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
   article.node,
   .node-form {
     ul {
@@ -26,10 +24,13 @@
       }
 
       &.node__links {
-        margin-left: 0;
+        margin: 0;
         li {
-          @include rem(margin, $line-height-base 0);
+          margin: 0;
         }
+        //li {
+        //  @include rem(margin, $line-height-base 0);
+        //}
       }
     }
     .field-collection-container {
@@ -46,16 +47,13 @@
       }
     }
     .field--type-location {
-      margin-bottom: $line-height-base;
+      margin-bottom: em($vert-spacing-unit);
       .street-address {
         .additional {
           display: block;
         }
       }
     }
-
-
-
     .field--name-field-accordion {
         @include rem(margin-top, $vert-spacing-unit);
     }
@@ -68,77 +66,94 @@
       @extend .highlight;
     }
   } // end article, node-form
-} //end page-node
 
-
-.node--book--full ul { width: 100%; }
-@include breakpoint($tab) {
-  .page-node {
-    article,
-    .node-form  {
-      h3 {
-        margin-top: em($line-height-base, $font-size-h3);
-      }
-      .field--label-inline {
-        .field-items{
-          float:right;
-          width: 75%;
+  @include breakpoint($tab) {
+      article,
+      .node-form  {
+        h3 {
+          margin-top: em($line-height-base, $font-size-h3);
         }
-        .field-label {
-          float: left;
-          width: 25%;
-          font-weight: 600;
-          padding-right: em($horz-spacing-unit);
-        }
-      }
-      .field--name-field-hours {
-        .entity-field-collection-item {
-          margin: 0;
-          border: 1px solid $gray-light;
-          border-width: 0 1px 1px;
-          background: $gray-lighter;
-          &:first-child {
-            border-top: 1px solid $gray-light;
+        .field--label-inline {
+          .field-items{
+            float:right;
+            width: 75%;
           }
-          .field--name-field-hours-name {
+          .field-label {
             float: left;
             width: 25%;
-            @include rem(padding, $line-height-base $horz-spacing-unit);
             font-weight: 600;
-          }
-          .field--name-field-hours-details {
-            float:right;
-            width: 75% !important;
-            @include rem(padding, $line-height-base $horz-spacing-unit);
-            background: white;
+            padding-right: em($horz-spacing-unit);
           }
         }
-      }
-    }
-    &.node-type-location article,
-    article.node--location {
-          .field--label-inline {
+        .field--name-field-hours {
+          .entity-field-collection-item {
+            margin: 0;
             border: 1px solid $gray-light;
             border-width: 0 1px 1px;
             background: $gray-lighter;
             &:first-child {
               border-top: 1px solid $gray-light;
             }
-            .field-label {
+            .field--name-field-hours-name {
+              float: left;
+              width: 25%;
               @include rem(padding, $line-height-base $horz-spacing-unit);
+              font-weight: 600;
             }
-            .field-items {
+            .field--name-field-hours-details {
+              float:right;
+              width: 75% !important;
               @include rem(padding, $line-height-base $horz-spacing-unit);
               background: white;
-              p:last-child {
-                margin: 0;
-              }
             }
           }
-          .field--type-location {
-            margin-bottom: 0;
+        }
+      }
+      &.node-type-location article,
+      article.node--location {
+        .field--label-inline {
+          border: 1px solid $gray-light;
+          border-width: 0 1px 1px;
+          background: $gray-lighter;
+          &:first-child {
+            border-top: 1px solid $gray-light;
           }
+          .field-label {
+            @include rem(padding, $line-height-base $horz-spacing-unit);
+          }
+          .field-items {
+            @include rem(padding, $line-height-base $horz-spacing-unit);
+            background: white;
+            p:last-child {
+              margin: 0;
+            }
+          }
+        }
+        .field--type-location {
+          margin-bottom: 0;
+        }
 
+      }
+  } //end breakpoint($tab)
+
+
+  @include breakpoint($desk) {
+    .l-region--main {
+      .field--name-field-location {
+        @include clearfix;
+        padding-top: em($section-spacing);
+      }
+      .location {
+        @include span(3);
+      }
+      .gmap-gmap {
+        @include span(9 last);
+        width: span(9) !important;
+        margin-top: em(-$vert-spacing-unit);
+      }
     }
-  }
-} //end breakpoint($tab)
+  } // end breakpoint($desk)
+} //end page-node
+
+
+.node--book--full ul { width: 100%; }
