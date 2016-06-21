@@ -42,27 +42,31 @@
    */
   Drupal.si_aaa.splitList = function(list, num_cols, listItem) {
     //listItem = 'li',
-    listClass = 'sub-list';
-    list.each(function() {
+
+    var newContent = '',
+        listClass = 'sub-list';
+    list.children('ul').each(function() {
       var items_per_col = new Array(),
-					newList = 
-      items = $(this).find(listItem),
-      min_items_per_col = Math.floor(items.length / num_cols),
-      difference = items.length - (min_items_per_col * num_cols);
+      		items = $(this).find(listItem),
+      		min_items_per_col = Math.floor(items.length / num_cols),
+      		difference = items.length - (min_items_per_col * num_cols);
+
       for (var i = 0; i < num_cols; i++) {
         items_per_col[i] = i < difference ?  min_items_per_col + 1 : min_items_per_col;
       }
       for (var i = 0; i < num_cols; i++) {
         var subClass = 'list-' + i;
-        $(this).append($('<ul ></ul>').addClass(listClass +' ' + subClass));
+        newContent += '<ul class="' + subClass + '">';
         for (var j = 0; j < items_per_col[i]; j++) {
           var pointer = 0;
           for (var k = 0; k < i; k++) {
             pointer += items_per_col[k];
           }
-          $(this).find('.' + subClass).last().append(items[j + pointer]);
+          newContent += items[j + pointer];
         }
+        newContent += '</ul>';
       }
+      console.log(newContent)
     });
   };
 
@@ -359,7 +363,7 @@
 				TO = setTimeout(resizeStuff, 100);
 			}).resize();
 
-      Drupal.si_aaa.splitList($('.split-list ul', context), 2, 'li');
+      Drupal.si_aaa.splitList($('.split-list', context), 2, 'li');
     }
   }
 
