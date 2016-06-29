@@ -153,7 +153,7 @@ function _render_edan_search_results(&$vars) {
     // /collections/interviews/oral-history-interview-mark-adams-and-beth-van-hoesen-12674
     // /collections/items/detail/l-brent-kington-his-workshop-1134
     $base_record_url = url(_edan_record_variable_get('menu_record_page'), array('absolute' => true, 'alias' => false));
-    $doc['local_record_link'] = $base_record_url . '/' . $doc_value['type'] . '/' . str_replace($doc_value['type'] . '-', '', $doc_value['id']) . '/';
+    $doc['local_record_link'] = $base_record_url . '/' . $doc_value['type'] . '/' . str_replace($doc_value['type'] . '-', '', $doc_value['url']) . '/';
 
     // Get the record title.
 
@@ -166,6 +166,7 @@ function _render_edan_search_results(&$vars) {
     $record_type = $date = '';
     if (!empty($doc_value['content']['freetext'])) {
       $doc['record_type'] = !empty($doc_value['content']['freetext']['objectType'][1]['content']) ? $doc_value['content']['freetext']['objectType'][1]['content'] : $doc_value['content']['freetext']['objectType'][0]['content'];
+      $doc['record_type'] = str_replace('/', ' / ', $doc['record_type']);
 
       if (!empty($doc_value['content']['freetext']['date'][1]['content'])) {
         $date = $doc_value['content']['freetext']['date'][1]['content'];
@@ -348,9 +349,9 @@ function _process_image($asset, $colorbox) {
   $ids_link = 'http://ids.si.edu/ids/deliveryService';
   $ids_dynamic = 'http://ids.si.edu/ids/dynamic';
   $query = $link['query'];
-  $query['max_w'] = isset($edan_image['medium']) ? $edan_image['medium'] : 600;
+  $query['max_h'] = isset($edan_image['medium']) ? $edan_image['medium'] : 600;
   $item['content'] = url($ids_link, array('query' => $query)) . '&id=' . $idsID;
-  $query['max_w'] = isset($edan_image['thumb']) ? $edan_image['thumb'] : 200;
+  $query['max_h'] = isset($edan_image['thumb']) ? $edan_image['thumb'] : 200;
   $item['thumbnail'] = url($ids_link, array('query' => $query)) . '&id=' . $idsID;
   $link['query']['max_w'] = isset($edan_image['max_width']) ? $edan_image['max_width'] : 980;
   $options['absolute'] = TRUE;

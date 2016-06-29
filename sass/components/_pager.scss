@@ -1,0 +1,12 @@
+.pager {
+  font-size: em($font-size-small);
+}
+.pager__item--current {
+  color: white;
+  background: $blue;
+}
+
+.pager__item {
+  line-height: $line-height-small;
+  padding: em(10px, $line-height-small);
+}

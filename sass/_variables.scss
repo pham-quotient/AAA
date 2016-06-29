@@ -13,7 +13,7 @@ $blue-dark      : #12395c;
 $blue-darker    : #082744;
 $orange         : #e4621c;
 $pale-orange    : #efa47b;
-$salmon         : #de7856;//#f5865f;
+$salmon         : #f5865f;
 $salmon-dark    : desaturate(darken(#f5865f, 10), 10);
 $green          : #47ba69; // overlay is 85%, lighten by 20%
 $green-light    : lighten($green, 10%);
@@ -34,7 +34,7 @@ $gray-dark       : #595959;
 $gray-darker     : #2c2c2c;
 
 $sidebar-bg      : $purple;
-$sidebar-active  : #0B6B77;
+$sidebar-active  : $blue-green;
 $text-color      : $gray-dark;
 
 $border-gray     : $gray-light;
@@ -50,19 +50,18 @@ $font-size-large         : floor($font-size-base * $large-factor);  //20px
 $font-size-small         : ceil($font-size-base * $small-factor); // 13px
 
 $font-size-h1            : ceil($font-size-base * 2.375); // 38px
-$font-size-h2            : ceil($font-size-base * 2); // 32px
-//$font-size-h3            : ceil($font-size-base * 1.75); // 28px
-$font-size-h3            : $font-size-base * 1.3125; // ~21px
-$font-size-h4            : $font-size-base*1.125;
-$font-size-h5            : $font-size-base; // 16x
+$font-size-h2            : $font-size-base * 1.9375; // 31px
+$font-size-h3            : ceil($font-size-base * 1.5625); // 25px
+$font-size-h4            : $font-size-base * 1.3125; // ~21px
+$font-size-h5            : $font-size-base*1.125;
 
 $baseLineHeight          : 1.5;
 $line-height-base        : round($font-size-base * $baseLineHeight);  //26px
-$line-height-small       : $line-height-base*.75/$font-size-small; // 18/14
+$line-height-small       : $font-size-base/$font-size-small; // 18/14
 
 $line-height-h1          : $line-height-base*2/$font-size-h1;
 $line-height-h2          : $line-height-base*1.5/$font-size-h2;
-$line-height-h3          : $line-height-base/$font-size-h3;
+$line-height-h3          : $line-height-base*1.5/$font-size-h3;
 $line-height-h4          : $line-height-base/$font-size-h4;
 $line-height-h5          : $line-height-base/$font-size-h5;
 

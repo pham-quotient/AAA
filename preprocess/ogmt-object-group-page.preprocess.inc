@@ -5,31 +5,26 @@
  */
 function si_aaa_preprocess_ogmt_object_group_page(&$variables) {
 	$si_ogmt = variable_get('si_ogmt_view', array());
-	
+  $variables['parent_title'] = $variables['node'] ='';
 
 	if (isset($si_ogmt['si_content']) && empty($variables['page'])) {
 		list($name, $display) = explode(':', $si_ogmt['si_content']);
 		$variables['si_content'] =views_embed_view($name, $display, $variables['objectGroupId']);
 
-	}	
+	}
 	$variables['menu'] = si_ogmt_build_menu($variables['raw_object_group_page']);
+  if (!empty( $variables['raw_object_group_page']['page'])) {
+    $variables['parent_title'] = $variables['raw_object_group_page']['title'];
+  }
 
-	$variables['parent_title'] = !empty( $variables['raw_object_group_page']['page']) ? $variables['raw_object_group_page']['title'] : '';
-	//$variables['breadcrumb']  = '';
-	//$crumbs = array();
-//	$links = variable_get('si_ogmt_breadcrumbs', array());
-//	if (!empty($links)) {
-//		$crumbs[] =  l(t('Home'), '<front>');
-//		foreach($links as $link => $text) {
-//			$crumbs[] = l(t($text), $link);
-//		}
-//		if (!empty( $variables['raw_object_group_page']['page'])) {
-//	  	$bp = _ogmt_variable_get('menu_base_pages');
-//  		$bp .= '/' . $variables['raw_object_group_page']['url'];
-//			$crumbs[] = l($variables['raw_object_group_page']['title'], $bp);
-//		}
-//		$variables['breadcrumb'] =  theme('breadcrumb', array('breadcrumb' => $crumbs));
-//	}
+  else {
+    $query = db_query('SELECT entity_id FROM {field_data_ogmt_objectgroupid} WHERE ogmt_objectgroupid_value = :oid', array('oid' => $variables['objectGroupId']));
+    $nid = $query->fetchField();
+    if ($nid) {
+      $node = node_load($nid);
+      $variables['node'] = node_view($node, 'teaser');
+    }
+  }
 }
 
 

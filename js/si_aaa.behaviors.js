@@ -258,7 +258,17 @@
 					// var searchBox = $('.l-header .search-block-form', context),
 					// 		searchField = $('input[type="text"]', searchBox),
 					// 		searchSubmit = $('input:submit', searchBox);
-
+					var edanSummary = $('.edan-search-prefix .toggle-view', context);
+					edanSummary.append('<a href="#" class="list-btn button"><span class="sr-only">List View</span></a><a href="#" class="grid-btn button active"><span class="sr-only">Grid View</span></a>');
+					$("a", edanSummary).click(function(e) {
+						var $this = $(this),
+							$view = $this.hasClass('list-btn') ? 'list-view' : 'grid-view';
+						$this.parent('.toggle-view').children('a').removeClass('active');
+						$this.addClass('active');
+						e.preventDefault();
+						e.stopPropagation();
+						$this.parents('.edan-search').removeClass('list-view').removeClass('grid-view').addClass($view);
+					});
 				//	$('body', context).addClass('js');
 
 					if($('body', context).is(':not(.imce)')) {

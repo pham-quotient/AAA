@@ -1,0 +1,29 @@
+.edan-search-prefix {
+  @extend %clearfix;
+  .edan-results-summary {
+    float: left;
+  }
+  .toggle-view {
+    float: right;
+    a {
+      display: inline-block;
+      height: 27px;
+      width: 27px;
+      background: {
+        image: image-url("toggle-btn.png");
+        repeat: no-repeat;
+        position:  top left;
+      }
+      &.active {
+        background-position: bottom left;
+      }
+      &.grid-btn {
+        margin-left: em(20px);
+        background-position: top right;
+        &.active {
+          background-position: bottom right;
+        }
+      }
+    }
+  }
+}

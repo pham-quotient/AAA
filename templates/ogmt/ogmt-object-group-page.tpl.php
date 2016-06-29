@@ -11,24 +11,20 @@ dpm($variables);
   <div class="l-region--main<?php print $menu ? ' has-sidebar-first' : '' ?>">
 
 
-    <div class="ogmt-og-content-wrapper">
-      <h1 class="object-title">
-        <?php if ($parent_title): ?>
-          <span>
-            <?php print $parent_title; ?>
-         </span>
-        <?php endif; ?>
-        <?php print $title; ?>
-      </h1>
+
       <div class="ogmt-og-content">
-      <?php if ($si_content): ?>
-        <?php print $si_content; ?> 
-        <?php else: ?>
-          <?php if (isset($feature_image_url)): ?>
-          <div class="object-thumbnail">
-            <img src="<?php print $feature_image_url; ?>" />
-          </div>
+        <?php if ($parent_title): ?>
+          <div class="parent-title">
+              <?php print $parent_title; ?>
+           </div>
         <?php endif; ?>
+
+        <?php if ($node): ?>
+        <?php print render($node); ?>
+        <?php else: ?>
+          <h1 class="page-title">
+            <?php print $title; ?>
+          </h1>
       <?php print $content; // RB moved 20160112 - was just above the closing endif, previous line ?>
 
       <?php endif; ?>
@@ -36,7 +32,6 @@ dpm($variables);
 
 
     </div>
-  	</div>
     <?php if ($search_results): ?>
       <?php print $search_results; ?>
     <?php endif; ?>
