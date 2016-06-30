@@ -74,6 +74,7 @@
   input[type="text"] {
     @include border-radius(0);
     -webkit-appearance: none;
+    width: em(143px);
   }
   .form-actions {
     width: 34px;

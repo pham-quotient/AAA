@@ -1,91 +1,33 @@
 .ogmt-group-wrapper {
-  .l-region--main-content {
+  .l-region--main {
     padding: em($section-spacing) 0;
   }
- .ogmt-og-content-wrapper {
+ .ogmt-og-content {
   @include clearfix;
   padding-bottom: em($vert-spacing-unit/2);
   border-bottom: 3px solid $border-gray;
   margin-bottom: em($vert-spacing-unit);
  }
 
-  .ogmt-thumbnail, .object-thumbnail {
-    float: left;
-    width: span(3);
-    margin-right: gutter();
+  .field--name-field-exhibit-date {
+    margin: em($vert-spacing-unit) 0;
   }
 
-  .object-title {
-    span {
-      display: block;
-      color: $gray;
-      font-size: 75%;
-    }
+  .parent-title {
+    color: $gray;
+    margin-bottom: em($vert-spacing-unit/2);
+   // font-size: em($);
   }
-  .ogmt-og-menu {
-    ul {
-      @extend %reset-list;
-      li {
-        a {
-          background: $gray-lighter;
-          display: block;
-          border: 1px solid darken($gray-lighter, 5);
-          border-width: 1px 1px 0;
-          padding: em(floor($vert-spacing-unit/4)) em($horz-spacing-unit/2);
-          width: 100%;
-          &.active,
-          &:hover {
-            background: $gray-light;
-            border-color: darken($gray-light, 5);
-          }
-          &.active {
-            color: $text-color;
-            @include font-icon("\f077", $text-color, $font-size-base, 25px, 5px, 5px);
-          }
 
-        }
-        &:last-child {
-          a {
-            border-bottom-width: 1px;
-          }
-        }
-      }
-    }
-  } // end ogmt-og-menu
   @include breakpoint($tab) {
-    .ogmt-thumbnail, .object-thumbnail {
-      width: 20%;
-    }
-
-  }
-  @include breakpoint($desk) {
-   .ogmt-thumbnail, .object-thumbnail {
-      width: 15%;
-    }
-    .ogmt-og-content-wrapper {
-      @include clearfix;
-    }
-    .ogmt-og-content.has-menu {
-      width: span(9);
+    .ogmt-thumbnail, .object-thumbnail, .field--name-ogmt-feature {
       float: left;
-    }
-    .ogmt-og-menu {
-      border-top: 1px solid darken($gray-lighter, 5);
-      background: $gray-lighter;
-      float: right;
       width: span(3);
-      margin-left: gutter();
-      ul li {
-        display: block;
-        a.active {
-          padding: em(floor($vert-spacing-unit/4)) em($horz-spacing-unit/2);
-          &:before {
-            content: '';
-          }
-        }
+      margin: 0 em(20px) em(10px) 0;
+      img {
+        width: 100%;
       }
     }
-
-  } // end breakpoint($desk)
+  }
 
 } // end ogmt-group-wrapper

@@ -8,5 +8,6 @@
 
 .pager__item {
   line-height: $line-height-small;
-  padding: em(10px, $line-height-small);
+  padding: em(5px, $font-size-small);
+  margin: em($vert-spacing-unit, $font-size-small) 0;
 }

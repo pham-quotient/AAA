@@ -1,5 +1,5 @@
 <?php 
-  dpm($variables);
+//  dpm($variables);
 ?>
 <!-- Remove Facets Links -->
 <?php if($active_facets): ?>
@@ -10,7 +10,9 @@
 
 <!-- Render the Filter Tab Menus -->
 <?php if($filter_menus['tabs']): ?>
-  <?php print drupal_render($filter_menus['tabs']); ?>
+  <div class="edan-facets">
+    <?php print drupal_render($filter_menus['tabs']); ?>
+  </div>
 <?php endif; ?>
 <div class="edan-search-prefix">
     <?php print $pager; ?>
@@ -19,16 +21,16 @@
   <div class="toggle-view">
   </div>
 </div>
-<div class="edan-search <?php print variable_get('si_edan_default', 'list-view'); ?>">
+<div class="edan-search-wrapper <?php print variable_get('si_edan_default', 'list-view'); ?>">
   <div class="<?php print $container_class; ?>">
     <ul class="search-results<?php print $results_class; ?>">
       <?php foreach ($docs as $doc): ?>
         <li <?php print drupal_attributes($doc['row_attributes']); ?>>
           <div class="edan-row">
 
-              <a href="<?php print $doc_value['local_record_link']; ?>" class="result-overivew">
+              <a href="<?php print $doc['local_record_link']; ?>" class="result-overivew">
               <div class="edan-record-type"><?php print $doc['record_type']; ?></div>
-              <?php if(isset($doc['newMedia'])): ?>
+              <?php if(!empty($doc['newMedia'])): ?>
                 <div class="thumbnail">
                   <img src="<?php print $doc['newMedia']['thumbnail'];?>" alt="thumbnail image for <?php print $doc['record_title']; ?>">
                 </div>
@@ -54,4 +56,7 @@
   </div>
 
 </div>
-<?php print $pager; ?>
+<div class="edan-search-footer">
+  <?php print $pager; ?>
+</div>
+

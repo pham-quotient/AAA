@@ -1,0 +1,35 @@
+.facet-values {
+  ul {
+    @extend %reset-list;
+    > li.search-menu-item {
+      border: 1px solid $gray-lighter;
+      border-width: 0 1px 1px;
+      padding: em($vert-spacing-unit/4) em(5px);
+      &:first-child {
+        border-top: 1px solid $gray-lighter;
+      }
+    }
+
+  }
+}
+
+#remove_facets_links {
+  margin: em($vert-spacing-unit) 0;
+  ul {
+    @extend %reset-list;
+    li {
+      display: inline-block;
+      padding: 0 em(5px);
+      margin: em($vert-spacing-unit/3) em(10px) em($vert-spacing-unit/3) 0;
+      border: solid 1px $gray-lighter;
+      > a {
+
+        //@include font-icon("\f00d", $blue, $link-color-hover, $font-size-small, $font-size-small, 4px, 2px, true);
+        &:after {
+          content: 'x';
+          padding-left: em(5px);
+        }
+      }
+    }
+  }
+}

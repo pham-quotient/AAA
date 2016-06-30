@@ -21,7 +21,7 @@
     display: block;
   }
   .comment-reply a {
-    @include font-icon("\f112", $link-color-default, $font-size-small, $font-size-base, 4px);
+    @include font-icon("\f112", $link-color-default, $link-color-hover, $font-size-small, $font-size-base, 4px);
     font-size: em($font-size-small);
     line-height: $line-height-base/$font-size-small;
   }

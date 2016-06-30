@@ -220,7 +220,6 @@ function _render_edan_search_results(&$vars) {
  * Render Filter Menus
  */
 function _si_render_filter_menus( $filters ) {
-
   $filter_menus = $element = $titles = $tabs = array();
   $tabID = drupal_clean_css_identifier('si-tabs-'. REQUEST_TIME . rand());
   // Create the links to remove facets.

@@ -45,7 +45,7 @@ $font-secondary          : Scala, Helvetica, Arial, sans-serif;
 $baseFontSize            : 10;
 $font-size-base          : 16px;
 $large-factor            : 1.25;
-$small-factor            : 0.8125;
+$small-factor            : 0.875;
 $font-size-large         : floor($font-size-base * $large-factor);  //20px
 $font-size-small         : ceil($font-size-base * $small-factor); // 13px
 
@@ -139,7 +139,6 @@ $desk                   : 'screen' 980px;
 $wide                   : 'screen' 1280px;
 $horz-spacing-unit      : 20px;
 $vert-spacing-unit      : $line-height-base;
-$section-spacing        : $vert-spacing-unit*1.5;
 $section-spacing        : $vert-spacing-unit*1.5;
 $max-width              : 1400px;
 

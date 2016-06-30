@@ -1,79 +1,61 @@
-<?php 
-/**
- * Theme Edan Search Results
- */ 
-dpm($variables);
-?>
-
 <?php
-/**
- * EDAN Search Results Template
- *
- * @file edan-search-results.tpl.php
- * @version 0.1
- */
+ dpm($variables);
 ?>
-
-<!-- Remove Facets Links -->
-<div id="remove_facets_links">
-  <?php print $filter_menus['remove_facets_links']; ?>
-</div>
-
-<!-- Render the Filter Tab Menus -->
-<div id="filterTabs" class="si-tabs responsive-tab edan-extended-search-tabs">
-  <?php print $filter_menus['list_items']; ?>
-  <?php print $filter_menus['divs']; ?>
-</div>
-
-<div class="edan-search clearfix">
-
-  <!-- Render the Top Pager -->
-  <?php echo $pager; ?>
-
-  <!-- Render the EDAN Search Results Summary -->
-  <div class="edan-results-summary">
-    <?php print($results_summary); ?>
+  <!-- Remove Facets Links -->
+<?php if($active_facets): ?>
+  <div id="remove_facets_links">
+    <?php print $active_facets; ?>
   </div>
+<?php endif; ?>
 
-  <!-- Render the EDAN Search Results -->
-  <div class="grid-3-region clearfix">
+  <!-- Render the Filter Tab Menus -->
+<?php if($filter_menus['tabs']): ?>
+  <div class="edan-facets">
+    <?php print drupal_render($filter_menus['tabs']); ?>
+  </div>
+<?php endif; ?>
+  <div class="edan-search-prefix">
+    <?php print $pager; ?>
+    <div class="edan-results-summary"><?php print($results_summary); ?></div>
 
-    <?php foreach ($docs as $doc_key => $doc_value): ?>
+    <div class="toggle-view">
+    </div>
+  </div>
+  <div class="edan-search-wrapper <?php print variable_get('si_edan_default', 'list-view'); ?>">
+    <div class="<?php print $container_class; ?>">
+      <ul class="search-results<?php print $results_class; ?>">
+        <?php foreach ($docs as $doc): ?>
+          <li <?php print drupal_attributes($doc['row_attributes']); ?>>
+            <div class="edan-row">
 
-      <?php
-      // Set up the record type and date.
-      $record_type = $date = '';
-      $record_type_class = !empty($doc_value['background_style']) ? ' edan-record-type-filled-background' : '';
-      $text_shadow_style = !empty($doc_value['background_style']) ? 'text-shadow: 2px 2px #000' : '';
-      if(!empty($doc_value['content']['freetext'])) {
-        if(!empty($doc_value['content']['freetext']['objectType'][1]['content'])) {
-          $record_type = '<div class="edan-record-type' . $record_type_class . '">' . $doc_value['content']['freetext']['objectType'][1]['content'] . '</div>';
-        } else {
-          $record_type = '<div class="edan-record-type' . $record_type_class . '">' . $doc_value['content']['freetext']['objectType'][0]['content'] . '</div>';
-        }
-        if(!empty($doc_value['content']['freetext']['date'][1]['content'])) {
-          $date = '<div class="edan-date" style="' . $text_shadow_style . '">' . $doc_value['content']['freetext']['date'][1]['content'] . '</div>';
-        }
-        if(!empty($doc_value['content']['freetext']['date'][0]['content'])) {
-          $date = '<div class="edan-date" style="' . $text_shadow_style . '">' . $doc_value['content']['freetext']['date'][0]['content'] . '</div>';
-        }
-      }
-      // Set up the single search result grid item.
-      $single_search_result = '<a href="' . $doc_value['local_record_link'] . '">' . "\n";
-      $single_search_result .= '<div class="grid-3-region--' . $doc_value['grid_3_region_class'] . '" style="' . $doc_value['background_style'] . '">' . $record_type . "\n";
-      $single_search_result .= '<h5 class="title" style="' . $text_shadow_style . '">' . $doc_value['record_title'] . '</h5>' . "\n";
-      $single_search_result .= $date . "\n";
-      $single_search_result .= '</div>' . "\n";
-      $single_search_result .= '</a>' . "\n";
-      ?>
+              <a href="<?php print $doc['local_record_link']; ?>" class="result-overivew">
+                <div class="edan-record-type"><?php print $doc['record_type']; ?></div>
+                <?php if(!empty($doc['newMedia']) ): ?>
+                  <div class="thumbnail">
+                    <img src="<?php print $doc['newMedia']['thumbnail'];?>" alt="thumbnail image for <?php print $doc['record_title']; ?>">
+                  </div>
+                <?php endif; ?>
+                <div class="overview-info">
+                  <h3 class="object-title"><?php print $doc['record_title']; ?></h3>
+                  <?php if ($doc['date']): ?>
+                    <div class="edan-date"><?php print $doc['date']; ?></div>
+                  <?php endif; ?>
 
-      <?php print $single_search_result; ?>
+                </div>
+              </a>
+              <?php if(module_exists('devel') && isset($_GET['dpm']) && user_access('access devel information')):
+                dpm($doc);
+              elseif (isset($_GET['dump'])):
+                print '<pre>' . var_export($doc, TRUE) . '</pre>';
+              endif; ?>
+            </div>
+          </li>
+        <?php endforeach; ?>
 
-    <?php endforeach; ?>
+      </ul>
+    </div>
 
   </div>
-
-  <!-- Render the Bottom Pager -->
-  <?php echo $pager; ?>
-
-</div>
+  <div class="edan-search-footer">
+    <?php print $pager; ?>
+  </div>

@@ -10,8 +10,6 @@ dpm($variables);
 <div class="ogmt-group-wrapper two-col-left panel-display panel-display--two-col">
   <div class="l-region--main<?php print $menu ? ' has-sidebar-first' : '' ?>">
 
-
-
       <div class="ogmt-og-content">
         <?php if ($parent_title): ?>
           <div class="parent-title">

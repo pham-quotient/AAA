@@ -1,4 +1,4 @@
-@mixin font-icon($icon, $color: $text-color, $font-size: $font-size-base, $margin: $font-size, $top:0, $pos:0, $after: false) {
+@mixin font-icon($icon, $color: $text-color, $hover-color: $link-color-hover, $font-size: $font-size-base, $margin: $font-size, $top:0, $pos:0, $after: false) {
  position: relative;
  display: inline-block;
 
@@ -13,8 +13,11 @@
     color: $color;
     position: absolute;
     font-size: em($font-size);
-   top: em($top, $font-size);
-   right: em($pos, $font-size);
+    top: em($top, $font-size);
+    right: em($pos, $font-size);
+   }
+   &:hover:after {
+     color: $hover-color;
    }
  }
  @else {
@@ -28,8 +31,11 @@
     color: $color;
     position: absolute;
     font-size: em($font-size);
-   top: em($top, $font-size);
-   left: em($pos, $font-size);
+    top: em($top, $font-size);
+    left: em($pos, $font-size);
+   }
+   &:hover:before {
+     color: $hover-color;
    }
  }
 

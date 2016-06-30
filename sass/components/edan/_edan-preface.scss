@@ -4,24 +4,35 @@
     float: left;
   }
   .toggle-view {
-    float: right;
-    a {
-      display: inline-block;
-      height: 27px;
-      width: 27px;
-      background: {
-        image: image-url("toggle-btn.png");
-        repeat: no-repeat;
-        position:  top left;
-      }
-      &.active {
-        background-position: bottom left;
-      }
-      &.grid-btn {
-        margin-left: em(20px);
-        background-position: top right;
+    display: none;
+  }
+  .edan-results-summary {
+    float: left;
+    font-size: em($font-size-small);
+    line-height: $line-height-small;
+  }
+  @include breakpoint($tab) {
+    .toggle-view {
+      float: right;
+      display: block;
+      a {
+        display: inline-block;
+        height: em(24px);
+        width: em(24px);
+        background: {
+          image: image-url("toggle-btn.png");
+          repeat: no-repeat;
+          position:  top left;
+        }
         &.active {
-          background-position: bottom right;
+          background-position: bottom left;
+        }
+        &.grid-btn {
+          margin-left: em(10px);
+          background-position: top right;
+          &.active {
+            background-position: bottom right;
+          }
         }
       }
     }

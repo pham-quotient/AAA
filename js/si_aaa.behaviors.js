@@ -267,7 +267,7 @@
 						$this.addClass('active');
 						e.preventDefault();
 						e.stopPropagation();
-						$this.parents('.edan-search').removeClass('list-view').removeClass('grid-view').addClass($view);
+						$('.edan-search-wrapper', context).removeClass('list-view').removeClass('grid-view').addClass($view);
 					});
 				//	$('body', context).addClass('js');
 
